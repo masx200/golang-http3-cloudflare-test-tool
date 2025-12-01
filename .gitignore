@@ -12,3 +12,4 @@ target/doc
 host_check
 host_connectivity_check
 host_connectivity_check.exe
+node_modules
