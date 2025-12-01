@@ -338,7 +338,7 @@ func testHTTP3Connection(testURL, hostHeader, targetIP string, port int, timeout
 	statusCode := uint16(resp.StatusCode)
 	serverHeader := resp.Header.Get("Server")
 
-	return resp.StatusCode < 500, "h3", statusCode, serverHeader, latencyMs, nil
+	return (resp.StatusCode < 300 && resp.StatusCode >=200), "h3", statusCode, serverHeader, latencyMs, nil
 }
 
 // 测试HTTP/2连接
