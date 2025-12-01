@@ -332,6 +332,7 @@ func testHTTP3Connection(testURL, hostHeader, targetIP string, port int, timeout
 	req.Header.Set("Host", hostHeader)
 	req.Header.Set("User-Agent", "curl/8.12.1")
 
+	start := time.Now()
 	resp, err := client.Do(req)
 	if err != nil {
 		transport.Close() // 关闭传输器
@@ -339,7 +340,7 @@ func testHTTP3Connection(testURL, hostHeader, targetIP string, port int, timeout
 	}
 	defer resp.Body.Close()
 
-	latencyMs := uint64(time.Since(time.Now()).Milliseconds())
+	latencyMs := uint64(time.Since(start).Milliseconds())
 	statusCode := uint16(resp.StatusCode)
 	serverHeader := resp.Header.Get("Server")
 
@@ -400,7 +401,7 @@ func testHTTP2Connection(testURL, hostHeader, targetIP string, port int, timeout
 	statusCode := uint16(resp.StatusCode)
 	serverHeader := resp.Header.Get("Server")
 
-	return resp.StatusCode < 500, "h2", statusCode, serverHeader, latencyMs, nil
+	return (resp.StatusCode < 300 && resp.StatusCode >=200), "h2", statusCode, serverHeader, latencyMs, nil
 }
 
 // 保存结果到JSON文件
