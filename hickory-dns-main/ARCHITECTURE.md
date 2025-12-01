@@ -44,7 +44,7 @@ Old and Outdated crates:
 
 - **[async-std-resolver](crates/async-std-resolver)** - removed in favor of
   features in hickory-resolver in 0.25.0
-- **[trust-dns-*](https://github.com/bluejekyll/trust-dns/tree/v0.23.1/)** -
+- **[trust-dns-\*](https://github.com/bluejekyll/trust-dns/tree/v0.23.1/)** -
   removed in favor of features in hickory-proto, crate in
   [v0.24.0](https://github.com/hickory-dns/hickory-dns/tree/v0.24.0)
 - **[trust-dns-rustls](https://github.com/bluejekyll/trust-dns/tree/v0.21.0/crates/rustls)** -

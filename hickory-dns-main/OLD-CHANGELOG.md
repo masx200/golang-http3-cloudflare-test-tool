@@ -686,7 +686,7 @@ https://github.com/hickory-dns/hickory-dns/compare/v0.25.0-alpha.4...v0.25.0-alp
   japaric
 - (recursor) add DNSSEC validation to the recursive resolver #2253
 - (proto) add a trust anchor file parser #2257 by japaric
-- (tests) just: document conformance-* tasks #2266 by japaric
+- (tests) just: document conformance-\* tasks #2266 by japaric
 - (tests) Add conformance tests for NSEC3 #2238 by pvdrz
 - (tests) import DNSSEC conformance test suite repository #2222 by japaric
 - (client) Adds deref call in assertion for hickory-client README example #2173
@@ -786,7 +786,7 @@ explains the reasoning behind this move.
 - (all) Fix links to client documentation #1808 by clint-white
 - (all) fix cleanliness for 1.65 #1821 by bluejekyll
 - (proto) Fix stuck of dns over tls with clear text SNI #1826 by mokeyish
-- (all) Fix enabling only dns-over-* feature #1833 by NobodyXu
+- (all) Fix enabling only dns-over-\* feature #1833 by NobodyXu
 - (proto) OpenSSL 3.0 compliant #1841 by HLFH
 - (server) FIX WIP: Zone Parser panics when hostname entry has a leading
   whitespace. #1842 by wuerges
@@ -1116,7 +1116,7 @@ explains the reasoning behind this move.
 
 - (async-std-resolver) Re-export AsyncStdConnection(Provider) (@romanb) #1354
 - (proto) Mutate edns & remove edns options (@leshow) #1363
-- (proto) Change Edns set_* to -> &mut Self (@leshow) #1369
+- (proto) Change Edns set\_\* to -> &mut Self (@leshow) #1369
 - (resolver) Enable RuntimeProvider in DoT implementations (@chengyuhui) #1373
 - (proto) Optimize name parsing (@saethlin) #1388
 - (proto) Remove a lot of bounds checks in BinDecoder by tracking position with
@@ -1308,7 +1308,7 @@ explains the reasoning behind this move.
 - _breaking_ Generally, any interface that took a 0.1 Future, now returns or
   consumes a std::future::Future
 - _breaking_ (client) rebranded from `trust-dns` to `trust-dns-client`
-- _breaking_ (named) moved from `trust-dns-server` to `trust-dns`, in bin/**
+- _breaking_ (named) moved from `trust-dns-server` to `trust-dns`, in bin/\*\*
 - _breaking_ (all) all internals updated to std::future and async/await
   (requires `Rust 1.39` minimum)
 - _breaking_ (client) AsyncClient now returns a connect future which resolves to
@@ -1957,7 +1957,7 @@ ServerFuture.
 
 ### Changed
 
-- Upgraded OpenSSL to 0.8.* #50
+- Upgraded OpenSSL to 0.8.\* #50
 - Cleaned up the Server implementation to isolate connection handlers
 - Deprecated old Client will possibly remove in the future
 
@@ -2120,8 +2120,8 @@ ServerFuture.
 
 - Generic record type lookup
 - reverse_lookup for IP to Name lookups
-- ipv4_lookup for looking up _only_ ipv4 (lookup_ip has options for dual-stack)
-- ipv6_lookup for looking up _only_ ipv6 (lookup_ip has options for dual-stack)
+- ipv4*lookup for looking up \_only* ipv4 (lookup_ip has options for dual-stack)
+- ipv6*lookup for looking up \_only* ipv6 (lookup_ip has options for dual-stack)
 - mx_lookup for querying mail exchanges
 - srv_lookup for service records and also a specialized form for ease of use
   lookup_service

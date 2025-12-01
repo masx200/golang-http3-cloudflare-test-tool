@@ -1,7 +1,14 @@
 (function () {
-  var implementors = Object.fromEntries([["reqwest", [[
-    'impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.StructuralPartialEq.html" title="trait core::marker::StructuralPartialEq">StructuralPartialEq</a> for <a class="struct" href="reqwest/tls/struct.Version.html" title="struct reqwest::tls::Version">Version</a>',
-  ]]]]);
+  var implementors = Object.fromEntries([
+    [
+      "reqwest",
+      [
+        [
+          'impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.StructuralPartialEq.html" title="trait core::marker::StructuralPartialEq">StructuralPartialEq</a> for <a class="struct" href="reqwest/tls/struct.Version.html" title="struct reqwest::tls::Version">Version</a>',
+        ],
+      ],
+    ],
+  ]);
   if (window.register_implementors) {
     window.register_implementors(implementors);
   } else {

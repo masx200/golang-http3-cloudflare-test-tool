@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"struct":["InvalidProtocol","Protocol"]};
+window.SIDEBAR_ITEMS = { struct: ["InvalidProtocol", "Protocol"] };

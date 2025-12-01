@@ -1,27 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="rustdoc">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="rustdoc" />
     <meta
       name="description"
       content="Shortcut method to quickly make a blocking `GET` request."
-    >
+    />
     <title>get in reqwest::blocking - Rust</title>
     <script>
       if (window.location.protocol !== "file:") {
         document.head.insertAdjacentHTML(
           "beforeend",
           "SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Italic-81dc35de.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-MediumItalic-ccf7e434.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2"
-            .split(",").map((f) =>
-              `<link rel="preload" as="font" type="font/woff2"href="/-/rustdoc.static/${f}">`
-            ).join(""),
+            .split(",")
+            .map(
+              (f) =>
+                `<link rel="preload" as="font" type="font/woff2"href="/-/rustdoc.static/${f}">`,
+            )
+            .join(""),
         );
       }
     </script>
-    <link rel="stylesheet" href="/-/rustdoc.static/normalize-9960930a.css">
-    <link rel="stylesheet" href="/-/rustdoc.static/rustdoc-ca0dd0c4.css">
+    <link rel="stylesheet" href="/-/rustdoc.static/normalize-9960930a.css" />
+    <link rel="stylesheet" href="/-/rustdoc.static/rustdoc-ca0dd0c4.css" />
     <meta
       name="rustdoc-vars"
       data-root-path="../../"
@@ -34,34 +37,41 @@
       data-search-js="search-8d3311b9.js"
       data-stringdex-js="stringdex-828709d0.js"
       data-settings-js="settings-c38705f0.js"
-    >
+    />
     <script src="/-/rustdoc.static/storage-e2aeef58.js"></script>
     <script
       defer
       src="sidebar-items-20251012-1.92.0-nightly-2300c2aef.js"
     ></script>
-    <script defer src="/-/rustdoc.static/main-ce535bd0.js"></script><noscript
-    ><link
-        rel="stylesheet"
-        href="/-/rustdoc.static/noscript-263c88ec.css"
-      ></noscript><link
+    <script defer src="/-/rustdoc.static/main-ce535bd0.js"></script>
+    <noscript
+      ><link rel="stylesheet" href="/-/rustdoc.static/noscript-263c88ec.css"
+    /></noscript>
+    <link
       rel="alternate icon"
       type="image/png"
       href="/-/rustdoc.static/favicon-32x32-eab170b8.png"
-    >
+    />
     <link
       rel="icon"
       type="image/svg+xml"
       href="/-/rustdoc.static/favicon-044be391.svg"
-    >
+    />
   </head>
   <body class="rustdoc fn">
-    <!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><rustdoc-topbar
-    ><h2><a href="#">get</a></h2></rustdoc-topbar><nav class="sidebar">
+    <!--[if lte IE 11
+      ]><div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+      </div><!
+    [endif]--><rustdoc-topbar
+      ><h2><a href="#">get</a></h2></rustdoc-topbar
+    >
+    <nav class="sidebar">
       <div class="sidebar-crate">
         <h2>
-          <a href="../../reqwest/index.html">reqwest</a><span class="version"
-          >0.12.24</span>
+          <a href="../../reqwest/index.html">reqwest</a
+          ><span class="version">0.12.24</span>
         </h2>
       </div>
       <div class="sidebar-elems">
@@ -74,7 +84,9 @@
           </ul>
         </section>
         <div id="rustdoc-modnav">
-          <h2><a href="index.html">In reqwest::<wbr>blocking</a></h2>
+          <h2>
+            <a href="index.html">In reqwest::<wbr />blocking</a>
+          </h2>
         </div>
       </div>
     </nav>
@@ -84,8 +96,9 @@
         <section id="main-content" class="content">
           <div class="main-heading">
             <div class="rustdoc-breadcrumbs">
-              <a href="../index.html">reqwest</a>::<wbr><a href="index.html"
-              >blocking</a>
+              <a href="../index.html">reqwest</a>::<wbr /><a href="index.html"
+                >blocking</a
+              >
             </div>
             <h1>
               Function <span class="fn">get</span>&nbsp;<button
@@ -94,25 +107,34 @@
               >
                 Copy item path
               </button>
-            </h1><rustdoc-toolbar></rustdoc-toolbar><span class="sub-heading"><a
+            </h1>
+            <rustdoc-toolbar></rustdoc-toolbar
+            ><span class="sub-heading"
+              ><a
                 class="src"
                 href="../../src/reqwest/blocking/mod.rs.html#106-108"
-              >Source</a>
+                >Source</a
+              >
             </span>
           </div>
           <pre
             class="rust item-decl"
-          ><code>pub fn get&lt;T: <a class="trait" href="../trait.IntoUrl.html" title="trait reqwest::IntoUrl">IntoUrl</a>&gt;(url: T) -&gt; <a class="type" href="../type.Result.html" title="type reqwest::Result">Result</a>&lt;<a class="struct" href="struct.Response.html" title="struct reqwest::blocking::Response">Response</a>&gt;</code></pre><span
-            class="item-info"
-          ><div class="stab portability">
-              Available on <strong>non-WebAssembly and crate feature <code
-                >blocking</code></strong> only.
-            </div></span><details class="toggle top-doc" open>
+          ><code>pub fn get&lt;T: <a class="trait" href="../trait.IntoUrl.html" title="trait reqwest::IntoUrl">IntoUrl</a>&gt;(url: T) -&gt; <a class="type" href="../type.Result.html" title="type reqwest::Result">Result</a>&lt;<a class="struct" href="struct.Response.html" title="struct reqwest::blocking::Response">Response</a>&gt;</code></pre>
+          <span class="item-info"
+            ><div class="stab portability">
+              Available on
+              <strong
+                >non-WebAssembly and crate feature <code>blocking</code></strong
+              >
+              only.
+            </div></span
+          >
+          <details class="toggle top-doc" open>
             <summary class="hideme"><span>Expand description</span></summary>
             <div class="docblock">
               <p>
-                Shortcut method to quickly make a <em>blocking</em> <code
-                >GET</code> request.
+                Shortcut method to quickly make a <em>blocking</em>
+                <code>GET</code> request.
               </p>
               <p>
                 <strong>NOTE</strong>: This function creates a new internal
@@ -124,9 +146,7 @@
                 <a class="doc-anchor" href="#examples">§</a>Examples
               </h2>
               <div class="example-wrap">
-                <pre
-                  class="rust rust-example-rendered"
-                >
+                <pre class="rust rust-example-rendered">
 <code><span class="kw">let </span>body = reqwest::blocking::get(<span class="string">"https://www.rust-lang.org"</span>)<span class="question-mark">?
     </span>.text()<span class="question-mark">?</span>;</code></pre>
               </div>

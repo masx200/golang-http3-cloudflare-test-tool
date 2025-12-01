@@ -1,7 +1,7 @@
 window.SIDEBAR_ITEMS = {
-  "fn": ["get"],
-  "mod": ["multipart"],
-  "struct": [
+  fn: ["get"],
+  mod: ["multipart"],
+  struct: [
     "Body",
     "Client",
     "ClientBuilder",

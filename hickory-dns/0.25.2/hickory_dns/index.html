@@ -1,27 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="rustdoc">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="rustdoc" />
     <meta
       name="description"
       content="Configuration module for the server binary, `named`."
-    >
+    />
     <title>hickory_dns - Rust</title>
     <script>
       if (window.location.protocol !== "file:") {
         document.head.insertAdjacentHTML(
           "beforeend",
           "SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Italic-81dc35de.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-MediumItalic-ccf7e434.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2"
-            .split(",").map((f) =>
-              `<link rel="preload" as="font" type="font/woff2"href="/-/rustdoc.static/${f}">`
-            ).join(""),
+            .split(",")
+            .map(
+              (f) =>
+                `<link rel="preload" as="font" type="font/woff2"href="/-/rustdoc.static/${f}">`,
+            )
+            .join(""),
         );
       }
     </script>
-    <link rel="stylesheet" href="/-/rustdoc.static/normalize-9960930a.css">
-    <link rel="stylesheet" href="/-/rustdoc.static/rustdoc-ca0dd0c4.css">
+    <link rel="stylesheet" href="/-/rustdoc.static/normalize-9960930a.css" />
+    <link rel="stylesheet" href="/-/rustdoc.static/rustdoc-ca0dd0c4.css" />
     <meta
       name="rustdoc-vars"
       data-root-path="../"
@@ -34,34 +37,38 @@
       data-search-js="search-8d3311b9.js"
       data-stringdex-js="stringdex-c3e638e9.js"
       data-settings-js="settings-c38705f0.js"
-    >
+    />
     <script src="/-/rustdoc.static/storage-e2aeef58.js"></script>
     <script defer src="../crates-20251019-1.92.0-nightly-f04e3dfc8.js"></script>
-    <script defer src="/-/rustdoc.static/main-ce535bd0.js"></script><noscript
-    ><link
-        rel="stylesheet"
-        href="/-/rustdoc.static/noscript-263c88ec.css"
-      ></noscript><link
+    <script defer src="/-/rustdoc.static/main-ce535bd0.js"></script>
+    <noscript
+      ><link rel="stylesheet" href="/-/rustdoc.static/noscript-263c88ec.css"
+    /></noscript>
+    <link
       rel="alternate icon"
       type="image/png"
       href="/-/rustdoc.static/favicon-32x32-eab170b8.png"
-    >
+    />
     <link
       rel="icon"
       type="image/svg+xml"
       href="/-/rustdoc.static/favicon-044be391.svg"
-    >
+    />
   </head>
   <body class="rustdoc mod crate">
-    <!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><rustdoc-topbar
-    ><h2><a href="#">Crate hickory_dns</a></h2></rustdoc-topbar><nav
-      class="sidebar"
+    <!--[if lte IE 11
+      ]><div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+      </div><!
+    [endif]--><rustdoc-topbar
+      ><h2><a href="#">Crate hickory_dns</a></h2></rustdoc-topbar
     >
+    <nav class="sidebar">
       <div class="sidebar-crate">
         <h2>
-          <a href="../hickory_dns/index.html">hickory_<wbr>dns</a><span
-            class="version"
-          >0.25.2</span>
+          <a href="../hickory_dns/index.html">hickory_<wbr />dns</a
+          ><span class="version">0.25.2</span>
         </h2>
       </div>
       <div class="sidebar-elems">
@@ -84,16 +91,18 @@
         <section id="main-content" class="content">
           <div class="main-heading">
             <h1>
-              Crate <span>hickory_<wbr>dns</span>&nbsp;<button
+              Crate <span>hickory_<wbr />dns</span>&nbsp;<button
                 id="copy-path"
                 title="Copy item path to clipboard"
               >
                 Copy item path
               </button>
-            </h1><rustdoc-toolbar></rustdoc-toolbar><span class="sub-heading"><a
-                class="src"
-                href="../src/hickory_dns/lib.rs.html#8-848"
-              >Source</a>
+            </h1>
+            <rustdoc-toolbar></rustdoc-toolbar
+            ><span class="sub-heading"
+              ><a class="src" href="../src/hickory_dns/lib.rs.html#8-848"
+                >Source</a
+              >
             </span>
           </div>
           <details class="toggle top-doc" open>
@@ -113,7 +122,8 @@
                 class="struct"
                 href="struct.Config.html"
                 title="struct hickory_dns::Config"
-              >Config</a>
+                >Config</a
+              >
             </dt>
             <dd>Server configuration</dd>
             <dt>
@@ -121,14 +131,16 @@
                 class="struct"
                 href="struct.ServerZoneConfig.html"
                 title="struct hickory_dns::ServerZoneConfig"
-              >Server<wbr>Zone<wbr>Config</a>
+                >Server<wbr />Zone<wbr />Config</a
+              >
             </dt>
             <dt>
               <a
                 class="struct"
                 href="struct.TlsCertConfig.html"
                 title="struct hickory_dns::TlsCertConfig"
-              >TlsCert<wbr>Config</a>
+                >TlsCert<wbr />Config</a
+              >
             </dt>
             <dd>Configuration for a TLS certificate</dd>
             <dt>
@@ -136,7 +148,8 @@
                 class="struct"
                 href="struct.ZoneConfig.html"
                 title="struct hickory_dns::ZoneConfig"
-              >Zone<wbr>Config</a>
+                >Zone<wbr />Config</a
+              >
             </dt>
             <dd>Configuration for a zone</dd>
           </dl>
@@ -149,7 +162,8 @@
                 class="enum"
                 href="enum.ExternalStoreConfig.html"
                 title="enum hickory_dns::ExternalStoreConfig"
-              >External<wbr>Store<wbr>Config</a>
+                >External<wbr />Store<wbr />Config</a
+              >
             </dt>
             <dd>Enumeration over store types for external nameservers.</dd>
             <dt>
@@ -157,7 +171,8 @@
                 class="enum"
                 href="enum.ServerStoreConfig.html"
                 title="enum hickory_dns::ServerStoreConfig"
-              >Server<wbr>Store<wbr>Config</a>
+                >Server<wbr />Store<wbr />Config</a
+              >
             </dt>
             <dd>Enumeration over store types for secondary nameservers.</dd>
             <dt>
@@ -165,7 +180,8 @@
                 class="enum"
                 href="enum.ZoneTypeConfig.html"
                 title="enum hickory_dns::ZoneTypeConfig"
-              >Zone<wbr>Type<wbr>Config</a>
+                >Zone<wbr />Type<wbr />Config</a
+              >
             </dt>
             <dd>Enumeration over each zone type’s configuration.</dd>
           </dl>

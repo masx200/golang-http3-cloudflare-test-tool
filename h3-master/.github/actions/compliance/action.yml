@@ -1,12 +1,12 @@
-name: 'Spec compliance report'
-description: 'Generate compliance report and publish on Github pages'
+name: "Spec compliance report"
+description: "Generate compliance report and publish on Github pages"
 
 inputs:
   report-script:
-    description: 'Path to script that generates a compliance report'
+    description: "Path to script that generates a compliance report"
     required: true
   h3-dir:
-    description: 'Path to the directory where h3 is cloned'
+    description: "Path to the directory where h3 is cloned"
     required: false
     default: ${{ github.workspace }}
 

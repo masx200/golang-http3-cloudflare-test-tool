@@ -1,7 +1,7 @@
 window.SIDEBAR_ITEMS = {
-  "fn": ["get"],
-  "mod": ["header", "multipart"],
-  "struct": [
+  fn: ["get"],
+  mod: ["header", "multipart"],
+  struct: [
     "Body",
     "Client",
     "ClientBuilder",
@@ -14,6 +14,6 @@ window.SIDEBAR_ITEMS = {
     "Url",
     "Version",
   ],
-  "trait": ["IntoUrl", "ResponseBuilderExt"],
-  "type": ["Result"],
+  trait: ["IntoUrl", "ResponseBuilderExt"],
+  type: ["Result"],
 };

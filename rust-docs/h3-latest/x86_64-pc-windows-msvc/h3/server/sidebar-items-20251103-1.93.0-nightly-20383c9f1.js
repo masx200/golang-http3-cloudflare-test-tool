@@ -1,1 +1,4 @@
-window.SIDEBAR_ITEMS = {"fn":["builder"],"struct":["Builder","Connection","RequestResolver","RequestStream"]};
+window.SIDEBAR_ITEMS = {
+  fn: ["builder"],
+  struct: ["Builder", "Connection", "RequestResolver", "RequestStream"],
+};

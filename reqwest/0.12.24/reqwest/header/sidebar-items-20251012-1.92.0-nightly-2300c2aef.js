@@ -1,5 +1,5 @@
 window.SIDEBAR_ITEMS = {
-  "constant": [
+  constant: [
     "ACCEPT",
     "ACCEPT_CHARSET",
     "ACCEPT_ENCODING",
@@ -82,8 +82,8 @@ window.SIDEBAR_ITEMS = {
     "X_FRAME_OPTIONS",
     "X_XSS_PROTECTION",
   ],
-  "enum": ["Entry"],
-  "struct": [
+  enum: ["Entry"],
+  struct: [
     "Drain",
     "GetAll",
     "HeaderMap",
@@ -105,5 +105,5 @@ window.SIDEBAR_ITEMS = {
     "Values",
     "ValuesMut",
   ],
-  "trait": ["AsHeaderName", "IntoHeaderName"],
+  trait: ["AsHeaderName", "IntoHeaderName"],
 };

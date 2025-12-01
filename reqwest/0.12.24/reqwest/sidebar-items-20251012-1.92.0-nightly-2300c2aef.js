@@ -1,6 +1,6 @@
 window.SIDEBAR_ITEMS = {
-  "fn": ["get"],
-  "mod": [
+  fn: ["get"],
+  mod: [
     "blocking",
     "cookie",
     "dns",
@@ -10,7 +10,7 @@ window.SIDEBAR_ITEMS = {
     "retry",
     "tls",
   ],
-  "struct": [
+  struct: [
     "Body",
     "Client",
     "ClientBuilder",
@@ -26,6 +26,6 @@ window.SIDEBAR_ITEMS = {
     "Url",
     "Version",
   ],
-  "trait": ["IntoUrl", "ResponseBuilderExt", "UnixSocketProvider"],
-  "type": ["Result"],
+  trait: ["IntoUrl", "ResponseBuilderExt", "UnixSocketProvider"],
+  type: ["Result"],
 };

@@ -1,5 +1,5 @@
 window.SIDEBAR_ITEMS = {
-  "struct": [
+  struct: [
     "Certificate",
     "CertificateRevocationList",
     "Identity",

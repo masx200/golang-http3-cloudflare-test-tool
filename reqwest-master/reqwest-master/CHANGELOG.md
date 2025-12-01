@@ -771,10 +771,12 @@
   }
   let client = builder.build()?;
   ```
+
 - Changed `RequestBuilder` to be a by-value builder of by-ref.
 
   See the previous note about `ClientBuilder` for affected code and how to
   change it.
+
 - Removed the `unstable` cargo-feature, and moved `reqwest::unstable::async` to
   `reqwest::async`.
 - Changed `multipart::Part::mime()` to `mime_str()`.
@@ -788,6 +790,7 @@
   let part = multipart::Part::file(path)?
       .mime_str("text/plain")?;
   ```
+
 - The upgrade to `hyper` 0.12 means a temporary removal of the typed headers.
 
   The `RequestBuilder` has simple methods to set headers using strings, which
@@ -898,6 +901,7 @@
 
   To handle any panics that come from `Client::new`, the builder can be used
   instead.
+
 - `ClientBuilder` and `RequestBuilder` hold their errors till consumed (#189).
 
   This means a bunch of `?` will be going away, but means using the builders
@@ -906,6 +910,7 @@
 
   To get errors back immediately, the `Request` type can be used directly, by
   building pieces separately and calling setters.
+
 - `async::Response::body()` now returns a reference to the body instead of
   consuming the `Response`.
 - A default timeout for `reqwest::Client` is used set to 30 seconds (#181)

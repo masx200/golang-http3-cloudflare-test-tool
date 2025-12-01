@@ -86,7 +86,12 @@ jobs:
       matrix:
         os: [ubuntu-latest]
         toolchain: [stable, beta]
-        features: [i-implement-a-third-party-backend-and-opt-into-breaking-changes, tracing, 'tracing,i-implement-a-third-party-backend-and-opt-into-breaking-changes']
+        features:
+          [
+            i-implement-a-third-party-backend-and-opt-into-breaking-changes,
+            tracing,
+            "tracing,i-implement-a-third-party-backend-and-opt-into-breaking-changes",
+          ]
         target: [x86_64-unknown-linux-gnu]
         include:
           # Add a 32-bit target test configuration
@@ -110,7 +115,7 @@ jobs:
           toolchain: ${{ matrix.toolchain }}
           target: ${{ matrix.target }}
       - run: cargo test --features ${{ matrix.features }} --target ${{ matrix.target }}
-        env:  #[cfg(feature = "datagram")] unexpected `cfg` condition value: `datagram`
+        env: #[cfg(feature = "datagram")] unexpected `cfg` condition value: `datagram`
           RUSTFLAGS: "-A unexpected_cfgs"
       - name: h3Spec
         run: ./ci/h3spec.sh
