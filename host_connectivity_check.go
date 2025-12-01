@@ -40,6 +40,7 @@ var (
 	concurrency = flag.Int("concurrency", 10, "并发测试数量")
 	timeout     = flag.Int("timeout", 10, "超时时间(秒)")
 	inputFile   = flag.String("input", "hosts.json", "输入文件路径")
+	SERVERSNI   = flag.String("sni", "local-aria2-webui.masx200.ddns-ip.net", "SNI名称")
 )
 
 var (
@@ -191,12 +192,16 @@ func testSingleHost(host string) []TestResult {
 	// 为每个IP创建测试结果
 	results := make([]TestResult, len(targetIPs))
 	for i, targetIP := range targetIPs {
-		// 构建测试URL
-		testURL := fmt.Sprintf("https://%s:%d/", host, defaultPort)
+		// 构建测试URL - 使用SERVERSNI而不是host，因为SNI和IP可以是不同的
+		serverHost := *SERVERSNI
+		if serverHost == "" {
+			serverHost = host // 如果没有指定SNI，回退到host
+		}
+		testURL := fmt.Sprintf("https://%s:%d/", serverHost, defaultPort)
 
 		// 测试HTTP/3连接
 		success, protocol, statusCode, serverHeader, latencyMs, err := testHTTP3Connection(
-			testURL, host, targetIP, defaultPort, *timeout)
+			testURL, serverHost, targetIP, defaultPort, *timeout)
 
 		if err != nil {
 			if *verbose {
@@ -204,7 +209,7 @@ func testSingleHost(host string) []TestResult {
 			}
 			// 回退到HTTP/2
 			success, protocol, statusCode, serverHeader, latencyMs, err = testHTTP2Connection(
-				testURL, host, targetIP, defaultPort, *timeout)
+				testURL, serverHost, targetIP, defaultPort, *timeout)
 		}
 
 		ipVersion := "IPv4"
