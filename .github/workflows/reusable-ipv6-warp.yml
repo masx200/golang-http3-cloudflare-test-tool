@@ -56,10 +56,12 @@ jobs:
     - name: Register and connect to WARP
       run: |
         echo "--- Registering WARP client ---"
-        sudo warp-cli register
+        sudo warp-cli registration new
 
         echo "--- Connecting to WARP ---"
         sudo warp-cli connect
+        sleep 10
+        sudo warp-cli status
 
         # 初始化循环变量
         MAX_ATTEMPTS=6  # 60 seconds / 10 seconds per attempt
