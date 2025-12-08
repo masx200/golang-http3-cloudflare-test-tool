@@ -74,6 +74,7 @@ jobs:
           git push --set-upstream origin "$BRANCH_NAME"
 
           echo "branch-name=$BRANCH_NAME" >> $GITHUB_OUTPUT
+          echo "base-branch=$BASE_BRANCH" >> $GITHUB_OUTPUT
 
     - name: Debug branch info
       if: steps.verify-changed-files.outputs.changed == 'true'
@@ -82,6 +83,7 @@ jobs:
         echo "Remote branches:"
         git branch -r
         echo "Push output branch: ${{ steps.push-changes.outputs.branch-name }}"
+        echo "Base branch: ${{ steps.push-changes.outputs.base-branch }}"
 
     - name: Create Pull Request
       if: steps.verify-changed-files.outputs.changed == 'true'
@@ -108,6 +110,7 @@ jobs:
           - [ ] Validate report formatting
 
           🤖 Generated with [Claude Code](https://claude.com/claude-code)
+        base: ${{ steps.push-changes.outputs.base-branch }}
         branch: ${{ steps.push-changes.outputs.branch-name }}
         delete-branch: true
         labels: |
