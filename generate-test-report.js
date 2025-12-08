@@ -156,33 +156,72 @@ class TestReportGenerator {
     } else {
       // 按错误类型分组统计
       const errorGroups = this.groupErrorsByType();
+      const groupedTests = this.groupFailedTestsByErrorType();
 
-      report += `### 错误类型统计\n\n`;
-      Object.entries(errorGroups).forEach(([errorType, count]) => {
-        report += `- **${errorType}**: ${count} 次\n`;
+      report += `### 📊 错误类型统计\n\n`;
+      Object.entries(errorGroups)
+        .sort(([, a], [, b]) => b - a) // 按出现次数降序排列
+        .forEach(([errorType, count]) => {
+          const percentage = ((count / this.failedTests.length) * 100).toFixed(1);
+          report += `- **${errorType}**: ${count} 次 (${percentage}%)\n`;
+        });
+
+      // 按错误类型详细展示失败的测试
+      report += `\n### 🔍 按错误类型分类的失败测试详情\n\n`;
+
+      Object.entries(groupedTests)
+        .sort(([, a], [, b]) => b.length - a.length) // 按测试数量降序排列
+        .forEach(([errorType, tests]) => {
+          report += `#### ${errorType} (${tests.length} 次测试)\n\n`;
+          report += `| 序号 | 主机/域名 | 目标IP | IP版本 | 协议 | 状态码 | 延迟(ms) | 服务器 | 错误信息 |\n`;
+          report += `|------|-----------|--------|--------|------|--------|----------|--------|----------|\n`;
+
+          tests.forEach((test) => {
+            const host =
+              test.host.length > 200
+                ? test.host.substring(0, 170) + "..."
+                : test.host;
+            const errorMsg =
+              test.error_msg.length > 500
+                ? test.error_msg.substring(0, 470) + "..."
+                : test.error_msg;
+            const serverHeader =
+              test.server_header.length > 150
+                ? test.server_header.substring(0, 120) + "..."
+                : test.server_header;
+
+            report += `| ${test.index} | ${host} | ${test.target_ip} | ${test.ip_version} | ${test.protocol} | ${
+              test.status_code || "N/A"
+            } | ${test.latency_ms} | ${serverHeader} | ${errorMsg} |\n`;
+          });
+
+          report += `\n`;
+        });
+
+      // 错误分析总结
+      report += `### 📈 错误分析总结\n\n`;
+
+      // 按主错误类型分组进行统计
+      const mainErrorTypes = {};
+      Object.entries(errorGroups).forEach(([fullErrorType, count]) => {
+        const mainType = fullErrorType.split(':')[0]; // 获取主错误类型
+        mainErrorTypes[mainType] = (mainErrorTypes[mainType] || 0) + count;
       });
 
-      report += `\n### 失败测试列表\n\n`;
-      report += `| 序号 | 主机/域名 | 目标IP | IP版本 | 协议 | 状态码 | 延迟(ms) | 服务器 | 错误信息 |\n`;
-      report += `|------|-----------|--------|--------|------|--------|----------|--------|----------|\n`;
+      report += `#### 主错误类型分布\n\n`;
+      Object.entries(mainErrorTypes)
+        .sort(([, a], [, b]) => b - a)
+        .forEach(([mainType, count]) => {
+          const percentage = ((count / this.failedTests.length) * 100).toFixed(1);
+          report += `- **${mainType}**: ${count} 次 (${percentage}%)\n`;
+        });
 
-      this.failedTests.forEach((test) => {
-        const host =
-          test.host.length > 200
-            ? test.host.substring(0, 170) + "..."
-            : test.host;
-        const errorMsg =
-          test.error_msg.length > 500
-            ? test.error_msg.substring(0, 470) + "..."
-            : test.error_msg;
-        const serverHeader =
-          test.server_header.length > 150
-            ? test.server_header.substring(0, 120) + "..."
-            : test.server_header;
+      report += `\n#### 错误模式分析\n\n`;
 
-        report += `| ${test.index} | ${host} | ${test.target_ip} | ${test.ip_version} | ${test.protocol} | ${
-          test.status_code || "N/A"
-        } | ${test.latency_ms} | ${serverHeader} | ${errorMsg} |\n`;
+      // 分析常见的错误模式
+      const patterns = this.analyzeErrorPatterns(groupedTests);
+      Object.entries(patterns).forEach(([pattern, analysis]) => {
+        report += `**${pattern}**: ${analysis}\n\n`;
       });
     }
 
@@ -299,40 +338,438 @@ class TestReportGenerator {
 
     this.failedTests.forEach((test) => {
       let errorType = "未知错误";
+      let errorSubType = null;
 
       if (test.error_msg) {
+        const errorMsg = test.error_msg.toLowerCase();
+
+        // 连接超时类错误
         if (
-          test.error_msg.includes("timeout") ||
-          test.error_msg.includes("超时")
+          errorMsg.includes("timeout") ||
+          errorMsg.includes("超时") ||
+          errorMsg.includes("deadline exceeded") ||
+          errorMsg.includes("context deadline exceeded")
         ) {
           errorType = "连接超时";
-        } else if (
-          test.error_msg.includes("connection") ||
-          test.error_msg.includes("连接")
+
+          if (errorMsg.includes("i/o timeout")) {
+            errorSubType = "I/O超时";
+          } else if (errorMsg.includes("context")) {
+            errorSubType = "上下文超时";
+          } else if (errorMsg.includes("dial")) {
+            errorSubType = "连接建立超时";
+          } else if (errorMsg.includes("tls")) {
+            errorSubType = "TLS握手超时";
+          } else {
+            errorSubType = "其他超时";
+          }
+        }
+        // 连接被拒绝类错误
+        else if (
+          errorMsg.includes("connection refused") ||
+          errorMsg.includes("actively refused") ||
+          errorMsg.includes("connectex: no connection could be made") ||
+          errorMsg.includes("connect: connection refused") ||
+          errorMsg.includes("拒绝") ||
+          errorMsg.includes("refused")
         ) {
-          errorType = "连接错误";
-        } else if (
-          test.error_msg.includes("DNS") ||
-          test.error_msg.includes("解析")
+          errorType = "连接被拒绝";
+
+          if (errorMsg.includes("connectex")) {
+            errorSubType = "Windows连接错误";
+          } else if (errorMsg.includes("actively refused")) {
+            errorSubType = "目标主动拒绝";
+          } else {
+            errorSubType = "通用连接拒绝";
+          }
+        }
+        // DNS解析错误
+        else if (
+          errorMsg.includes("dns") ||
+          errorMsg.includes("no such host") ||
+          errorMsg.includes("name resolution") ||
+          errorMsg.includes("解析") ||
+          errorMsg.includes("nxdomain") ||
+          errorMsg.includes("servfail")
         ) {
           errorType = "DNS解析错误";
-        } else if (
-          test.error_msg.includes("TLS") ||
-          test.error_msg.includes("SSL") ||
-          test.error_msg.includes("证书")
+
+          if (errorMsg.includes("timeout")) {
+            errorSubType = "DNS超时";
+          } else if (errorMsg.includes("nxdomain")) {
+            errorSubType = "域名不存在";
+          } else if (errorMsg.includes("servfail")) {
+            errorSubType = "DNS服务器失败";
+          } else {
+            errorSubType = "其他DNS错误";
+          }
+        }
+        // TLS/SSL错误
+        else if (
+          errorMsg.includes("tls") ||
+          errorMsg.includes("ssl") ||
+          errorMsg.includes("certificate") ||
+          errorMsg.includes("certificate verify failed") ||
+          errorMsg.includes("handshake") ||
+          errorMsg.includes("证书") ||
+          errorMsg.includes("tls handshake")
         ) {
           errorType = "TLS/SSL错误";
-        } else if (test.protocol === "none") {
-          errorType = "协议协商失败";
+
+          if (errorMsg.includes("certificate")) {
+            errorSubType = "证书错误";
+          } else if (errorMsg.includes("handshake")) {
+            errorSubType = "握手失败";
+          } else if (errorMsg.includes("verify")) {
+            errorSubType = "验证失败";
+          } else {
+            errorSubType = "其他TLS错误";
+          }
+        }
+        // 网络不可达错误
+        else if (
+          errorMsg.includes("network is unreachable") ||
+          errorMsg.includes("no route to host") ||
+          errorMsg.includes("host unreachable") ||
+          errorMsg.includes("network unreachable") ||
+          errorMsg.includes("不可达") ||
+          errorMsg.includes("路由")
+        ) {
+          errorType = "网络不可达";
+
+          if (errorMsg.includes("host")) {
+            errorSubType = "主机不可达";
+          } else if (errorMsg.includes("network")) {
+            errorSubType = "网络不可达";
+          } else {
+            errorSubType = "其他路由错误";
+          }
+        }
+        // 连接重置错误
+        else if (
+          errorMsg.includes("connection reset") ||
+          errorMsg.includes("reset by peer") ||
+          errorMsg.includes("broken pipe") ||
+          errorMsg.includes("连接重置") ||
+          errorMsg.includes("连接中断")
+        ) {
+          errorType = "连接中断";
+
+          if (errorMsg.includes("peer")) {
+            errorSubType = "对端重置";
+          } else if (errorMsg.includes("broken")) {
+            errorSubType = "管道破裂";
+          } else {
+            errorSubType = "其他连接中断";
+          }
+        }
+        // 协议相关错误
+        else if (
+          errorMsg.includes("protocol") ||
+          errorMsg.includes("alpn") ||
+          errorMsg.includes("http") ||
+          errorMsg.includes("h2") ||
+          errorMsg.includes("h3") ||
+          errorMsg.includes("protocol error")
+        ) {
+          errorType = "协议错误";
+
+          if (errorMsg.includes("alpn")) {
+            errorSubType = "ALPN协商失败";
+          } else if (errorMsg.includes("http")) {
+            errorSubType = "HTTP协议错误";
+          } else if (errorMsg.includes("h3") || errorMsg.includes("quic")) {
+            errorSubType = "HTTP/3错误";
+          } else if (errorMsg.includes("h2")) {
+            errorSubType = "HTTP/2错误";
+          } else {
+            errorSubType = "其他协议错误";
+          }
+        }
+        // 代理相关错误
+        else if (
+          errorMsg.includes("proxy") ||
+          errorMsg.includes("socks") ||
+          errorMsg.includes("代理")
+        ) {
+          errorType = "代理错误";
+        }
+        // 防火墙和安全软件阻止
+        else if (
+          errorMsg.includes("blocked") ||
+          errorMsg.includes("firewall") ||
+          errorMsg.includes("security") ||
+          errorMsg.includes("blocked") ||
+          errorMsg.includes("阻止") ||
+          errorMsg.includes("防火墙")
+        ) {
+          errorType = "安全阻止";
         }
       } else {
         errorType = "无错误信息";
       }
 
-      errorGroups[errorType] = (errorGroups[errorType] || 0) + 1;
+      // 使用复合错误类型（主类型: 子类型）
+      const finalErrorType = errorSubType ? `${errorType}: ${errorSubType}` : errorType;
+      errorGroups[finalErrorType] = (errorGroups[finalErrorType] || 0) + 1;
     });
 
     return errorGroups;
+  }
+
+  /**
+   * 按错误类型对失败测试进行分组
+   */
+  groupFailedTestsByErrorType() {
+    const groupedTests = {};
+
+    this.failedTests.forEach((test) => {
+      let errorType = "未知错误";
+      let errorSubType = null;
+
+      if (test.error_msg) {
+        const errorMsg = test.error_msg.toLowerCase();
+
+        // 使用与上面相同的分类逻辑
+        if (
+          errorMsg.includes("timeout") ||
+          errorMsg.includes("超时") ||
+          errorMsg.includes("deadline exceeded") ||
+          errorMsg.includes("context deadline exceeded")
+        ) {
+          errorType = "连接超时";
+
+          if (errorMsg.includes("i/o timeout")) {
+            errorSubType = "I/O超时";
+          } else if (errorMsg.includes("context")) {
+            errorSubType = "上下文超时";
+          } else if (errorMsg.includes("dial")) {
+            errorSubType = "连接建立超时";
+          } else if (errorMsg.includes("tls")) {
+            errorSubType = "TLS握手超时";
+          } else {
+            errorSubType = "其他超时";
+          }
+        }
+        else if (
+          errorMsg.includes("connection refused") ||
+          errorMsg.includes("actively refused") ||
+          errorMsg.includes("connectex: no connection could be made") ||
+          errorMsg.includes("connect: connection refused") ||
+          errorMsg.includes("拒绝") ||
+          errorMsg.includes("refused")
+        ) {
+          errorType = "连接被拒绝";
+
+          if (errorMsg.includes("connectex")) {
+            errorSubType = "Windows连接错误";
+          } else if (errorMsg.includes("actively refused")) {
+            errorSubType = "目标主动拒绝";
+          } else {
+            errorSubType = "通用连接拒绝";
+          }
+        }
+        else if (
+          errorMsg.includes("dns") ||
+          errorMsg.includes("no such host") ||
+          errorMsg.includes("name resolution") ||
+          errorMsg.includes("解析") ||
+          errorMsg.includes("nxdomain") ||
+          errorMsg.includes("servfail")
+        ) {
+          errorType = "DNS解析错误";
+
+          if (errorMsg.includes("timeout")) {
+            errorSubType = "DNS超时";
+          } else if (errorMsg.includes("nxdomain")) {
+            errorSubType = "域名不存在";
+          } else if (errorMsg.includes("servfail")) {
+            errorSubType = "DNS服务器失败";
+          } else {
+            errorSubType = "其他DNS错误";
+          }
+        }
+        else if (
+          errorMsg.includes("tls") ||
+          errorMsg.includes("ssl") ||
+          errorMsg.includes("certificate") ||
+          errorMsg.includes("certificate verify failed") ||
+          errorMsg.includes("handshake") ||
+          errorMsg.includes("证书") ||
+          errorMsg.includes("tls handshake")
+        ) {
+          errorType = "TLS/SSL错误";
+
+          if (errorMsg.includes("certificate")) {
+            errorSubType = "证书错误";
+          } else if (errorMsg.includes("handshake")) {
+            errorSubType = "握手失败";
+          } else if (errorMsg.includes("verify")) {
+            errorSubType = "验证失败";
+          } else {
+            errorSubType = "其他TLS错误";
+          }
+        }
+        else if (
+          errorMsg.includes("network is unreachable") ||
+          errorMsg.includes("no route to host") ||
+          errorMsg.includes("host unreachable") ||
+          errorMsg.includes("network unreachable") ||
+          errorMsg.includes("不可达") ||
+          errorMsg.includes("路由")
+        ) {
+          errorType = "网络不可达";
+
+          if (errorMsg.includes("host")) {
+            errorSubType = "主机不可达";
+          } else if (errorMsg.includes("network")) {
+            errorSubType = "网络不可达";
+          } else {
+            errorSubType = "其他路由错误";
+          }
+        }
+        else if (
+          errorMsg.includes("connection reset") ||
+          errorMsg.includes("reset by peer") ||
+          errorMsg.includes("broken pipe") ||
+          errorMsg.includes("连接重置") ||
+          errorMsg.includes("连接中断")
+        ) {
+          errorType = "连接中断";
+
+          if (errorMsg.includes("peer")) {
+            errorSubType = "对端重置";
+          } else if (errorMsg.includes("broken")) {
+            errorSubType = "管道破裂";
+          } else {
+            errorSubType = "其他连接中断";
+          }
+        }
+        else if (
+          errorMsg.includes("protocol") ||
+          errorMsg.includes("alpn") ||
+          errorMsg.includes("http") ||
+          errorMsg.includes("h2") ||
+          errorMsg.includes("h3") ||
+          errorMsg.includes("protocol error")
+        ) {
+          errorType = "协议错误";
+
+          if (errorMsg.includes("alpn")) {
+            errorSubType = "ALPN协商失败";
+          } else if (errorMsg.includes("http")) {
+            errorSubType = "HTTP协议错误";
+          } else if (errorMsg.includes("h3") || errorMsg.includes("quic")) {
+            errorSubType = "HTTP/3错误";
+          } else if (errorMsg.includes("h2")) {
+            errorSubType = "HTTP/2错误";
+          } else {
+            errorSubType = "其他协议错误";
+          }
+        }
+        else if (
+          errorMsg.includes("proxy") ||
+          errorMsg.includes("socks") ||
+          errorMsg.includes("代理")
+        ) {
+          errorType = "代理错误";
+        }
+        else if (
+          errorMsg.includes("blocked") ||
+          errorMsg.includes("firewall") ||
+          errorMsg.includes("security") ||
+          errorMsg.includes("blocked") ||
+          errorMsg.includes("阻止") ||
+          errorMsg.includes("防火墙")
+        ) {
+          errorType = "安全阻止";
+        }
+      } else {
+        errorType = "无错误信息";
+      }
+
+      const finalErrorType = errorSubType ? `${errorType}: ${errorSubType}` : errorType;
+
+      if (!groupedTests[finalErrorType]) {
+        groupedTests[finalErrorType] = [];
+      }
+      groupedTests[finalErrorType].push(test);
+    });
+
+    return groupedTests;
+  }
+
+  /**
+   * 分析错误模式
+   */
+  analyzeErrorPatterns(groupedTests) {
+    const patterns = {};
+
+    // 分析超时相关的模式
+    const timeoutTests = groupedTests["连接超时: I/O超时"] || [];
+    const connectionRefusedTests = groupedTests["连接被拒绝: Windows连接错误"] || [];
+
+    if (timeoutTests.length > 0) {
+      // 分析超时测试的IP模式
+      const ipPatterns = {};
+      timeoutTests.forEach(test => {
+        const ipPrefix = test.target_ip.split('.').slice(0, 2).join('.');
+        ipPatterns[ipPrefix] = (ipPatterns[ipPrefix] || 0) + 1;
+      });
+
+      const topIpPattern = Object.entries(ipPatterns)
+        .sort(([, a], [, b]) => b - a)[0];
+
+      if (topIpPattern) {
+        patterns[`超时集中度分析`] = `共有 ${timeoutTests.length} 次超时，主要集中在IP段 ${topIpPattern[0]}（${topIpPattern[1]} 次），可能存在网络路由问题或目标服务器负载过高`;
+      }
+    }
+
+    if (connectionRefusedTests.length > 0) {
+      // 分析连接被拒绝的IP模式
+      patterns[`连接拒绝分析`] = `共有 ${connectionRefusedTests.length} 次连接被拒绝，这些目标可能存在防火墙阻止、服务未运行或网络配置问题`;
+    }
+
+    // 分析协议分布
+    const protocolDistribution = {};
+    Object.values(groupedTests).flat().forEach(test => {
+      protocolDistribution[test.protocol] = (protocolDistribution[test.protocol] || 0) + 1;
+    });
+
+    const noProtocolCount = protocolDistribution["none"] || 0;
+    if (noProtocolCount > 0) {
+      patterns[`协议协商分析`] = `有 ${noProtocolCount} 次失败是因为协议协商失败（protocol: none），说明无法与目标建立HTTP/3或其他现代协议连接`;
+    }
+
+    // 分析IP版本分布
+    const ipv4Count = Object.values(groupedTests).flat().filter(t => t.ip_version === "IPv4").length;
+    const ipv6Count = Object.values(groupedTests).flat().filter(t => t.ip_version === "IPv6").length;
+
+    if (ipv4Count > 0 && ipv6Count === 0) {
+      patterns[`IP版本分析`] = `所有失败的测试都使用IPv4，IPv6连接可能更稳定或目标服务器的IPv6配置更好`;
+    } else if (ipv6Count > 0 && ipv4Count === 0) {
+      patterns[`IP版本分析`] = `所有失败的测试都使用IPv6，IPv4连接可能更稳定或目标服务器的IPv4配置更好`;
+    } else if (ipv4Count > 0 && ipv6Count > 0) {
+      patterns[`IP版本分析`] = `IPv4失败 ${ipv4Count} 次，IPv6失败 ${ipv6Count} 次，两种协议都存在问题`;
+    }
+
+    // 分析特定的主机模式
+    const hostCounts = {};
+    Object.values(groupedTests).flat().forEach(test => {
+      hostCounts[test.host] = (hostCounts[test.host] || 0) + 1;
+    });
+
+    const problematicHosts = Object.entries(hostCounts)
+      .filter(([, count]) => count > 2)
+      .sort(([, a], [, b]) => b - a)
+      .slice(0, 3);
+
+    if (problematicHosts.length > 0) {
+      const hostList = problematicHosts.map(([host, count]) => `${host} (${count}次)`).join(', ');
+      patterns[`问题主机分析`] = `以下主机出现多次失败：${hostList}，建议重点检查这些主机的网络状态和服务可用性`;
+    }
+
+    return patterns;
   }
 
   /**
@@ -340,6 +777,8 @@ class TestReportGenerator {
    */
   generateJsonReport() {
     const topLatencyRecords = this.getTopLatencyRecords();
+    const errorGroups = this.groupErrorsByType();
+    const groupedTests = this.groupFailedTestsByErrorType();
 
     return {
       report_info: {
@@ -357,18 +796,51 @@ class TestReportGenerator {
         top_latency_count: topLatencyRecords.length,
         latency_ranges: this.getLatencyRanges(topLatencyRecords),
       },
+      error_analysis: {
+        error_types: errorGroups,
+        grouped_tests: groupedTests,
+        error_patterns: this.analyzeErrorPatterns(groupedTests),
+        main_error_distribution: this.getMainErrorDistribution(errorGroups),
+      },
       statistics: {
         by_ip_version: {
           ipv4: this.failedTests.filter((t) => t.ip_version === "IPv4").length,
           ipv6: this.failedTests.filter((t) => t.ip_version === "IPv6").length,
         },
         by_protocol: this.getProtocolStatistics(),
-        by_error_type: this.groupErrorsByType(),
+        by_error_type: errorGroups,
       },
       failed_tests: this.failedTests,
       // successful_tests: this.successfulTests,
       top_latency_records: topLatencyRecords,
     };
+  }
+
+  /**
+   * 获取主错误类型分布
+   */
+  getMainErrorDistribution(errorGroups) {
+    const mainTypes = {};
+
+    Object.entries(errorGroups).forEach(([fullErrorType, count]) => {
+      const mainType = fullErrorType.split(':')[0].trim();
+      mainTypes[mainType] = (mainTypes[mainType] || 0) + count;
+    });
+
+    // 计算百分比
+    const total = Object.values(mainTypes).reduce((sum, count) => sum + count, 0);
+    const distribution = {};
+
+    Object.entries(mainTypes)
+      .sort(([, a], [, b]) => b - a)
+      .forEach(([type, count]) => {
+        distribution[type] = {
+          count: count,
+          percentage: ((count / total) * 100).toFixed(1)
+        };
+      });
+
+    return distribution;
   }
 
   /**
