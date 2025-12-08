@@ -139,5 +139,5 @@ jobs:
           --head "${{ steps.push-changes.outputs.branch-name }}" \
           --title "Auto-update test results and reports" \
           --body "$PR_BODY" \
-          --label "automated,test-results" \
+          # --label "automated,test-results" \
           --repo "${{ github.repository }}"
