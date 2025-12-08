@@ -101,35 +101,43 @@ jobs:
         echo "Push output branch: ${{ steps.push-changes.outputs.branch-name }}"
         echo "Base branch: ${{ steps.push-changes.outputs.base-branch }}"
 
-    - name: Create Pull Request
+    - name: Setup GitHub CLI
       if: steps.verify-changed-files.outputs.changed == 'true'
-      uses: peter-evans/create-pull-request@v6
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        commit-message: "Auto-update test results and reports"
-        title: "Auto-update test results and reports"
-        body: |
-          ## Summary
+      run: |
+        echo "GitHub CLI version:"
+        gh version
 
-          This PR contains automated updates from the test workflow:
+    - name: Create Pull Request with GitHub CLI
+      if: steps.verify-changed-files.outputs.changed == 'true'
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        PR_BODY=$(cat << 'EOF'
+        ## Summary
 
-          - ✅ Extract script completed successfully
-          - ✅ Check script completed successfully
-          - ✅ Start script completed successfully
+        This PR contains automated updates from the test workflow:
 
-          The workflow has generated updated test results and reports.
+        - ✅ Extract script completed successfully
+        - ✅ Check script completed successfully
+        - ✅ Start script completed successfully
 
-          ## Test plan
+        The workflow has generated updated test results and reports.
 
-          - [ ] Review the generated test results
-          - [ ] Verify connectivity check data
-          - [ ] Validate report formatting
+        ## Test plan
 
-          🤖 Generated with [Claude Code](https://claude.com/claude-code)
-        base: ${{ steps.push-changes.outputs.base-branch }}
-        branch: ${{ steps.push-changes.outputs.branch-name }}
-        delete-branch: true
-        labels: |
-          automated
-          test-results
-        draft: false
+        - [ ] Review the generated test results
+        - [ ] Verify connectivity check data
+        - [ ] Validate report formatting
+
+        🤖 Generated with [Claude Code](https://claude.com/claude-code)
+        EOF
+        )
+
+        # Create the pull request using gh CLI
+        gh pr create \
+          --base "${{ steps.push-changes.outputs.base-branch }}" \
+          --head "${{ steps.push-changes.outputs.branch-name }}" \
+          --title "Auto-update test results and reports" \
+          --body "$PR_BODY" \
+          --label "automated,test-results" \
+          --repo "${{ github.repository }}"
