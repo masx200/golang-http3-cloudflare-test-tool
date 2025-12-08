@@ -64,7 +64,12 @@ jobs:
 
     - name: Push changes
       if: steps.verify-changed-files.outputs.changed == 'true'
-      run: git push
+      run: |
+          BASE_BRANCH="${{ github.ref_name }}"
+          BRANCH_NAME="auto-update/${BASE_BRANCH}/$(date +%Y%m%d-%H%M%S)-${{ github.run_id }}"
+
+          git checkout -b "$BRANCH_NAME"
+          git push
 
     - name: Create Pull Request
       if: steps.verify-changed-files.outputs.changed == 'true' 
