@@ -1,0 +1,29 @@
+name: Main CI Workflow
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  # 第一个 job：设置 IPv6
+  setup-ipv6:
+    # 使用我们刚刚创建的可复用工作流
+    name: Setup IPv6 via WARP
+    uses: ./.github/workflows/reusable-ipv6-warp.yml
+
+  # 第二个 job：执行需要 IPv6 的测试
+  run-tests-with-ipv6:
+    # 这个 job 依赖于 setup-ipv6 job 的完成
+    needs: setup-ipv6
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Use IPv6 address from setup job
+      run: |
+        echo "The runner's IPv6 address from the setup job is: ${{ needs.setup-ipv6.outputs.ipv6_address }}"
+        echo "Now we can run tests that require IPv6..."
+        # 在这里执行你的测试
+        curl -6 -v -I https://ipv6.test-ipv6.com/
