@@ -19,7 +19,7 @@ jobs:
       ipv6_address: ${{ steps.verify.outputs.ipv6_address }}
 
     steps:
-- name: Install Cloudflare WARP
+    - name: Install Cloudflare WARP
       run: |
         # 检测操作系统类型
         . /etc/os-release
