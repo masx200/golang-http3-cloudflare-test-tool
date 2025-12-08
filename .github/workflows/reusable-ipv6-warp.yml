@@ -19,14 +19,39 @@ jobs:
       ipv6_address: ${{ steps.verify.outputs.ipv6_address }}
 
     steps:
-    - name: Install Cloudflare WARP
+- name: Install Cloudflare WARP
       run: |
-        sudo apt-get update
-        sudo apt-get install -y curl gnupg lsb-release
-        curl -fsSL https://pkg.cloudflare.com/pubkey.gpg | sudo gpg --dearmor -o /usr/share/keyrings/cloudflare-warp-archive-keyring.gpg
-        echo "deb [signed-by=/usr/share/keyrings/cloudflare-warp-archive-keyring.gpg] https://pkg.cloudflare.com/warp $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/cloudflare-warp.list
-        sudo apt-get update
-        sudo apt-get install -y cloudflare-warp
+        # 检测操作系统类型
+        . /etc/os-release
+        OS=$ID
+
+        if [[ "$OS" == "ubuntu" || "$OS" == "debian" ]]; then
+          echo "--- Installing for Debian/Ubuntu ---"
+          # 按照官方文档更新 GPG 密钥和仓库
+          sudo apt-get update
+          sudo apt-get install -y curl gpg lsb-release
+          curl -fsSL https://pkg.cloudflareclient.com/pubkey.gpg | sudo gpg --yes --dearmor --output /usr/share/keyrings/cloudflare-warp-archive-keyring.gpg
+          echo "deb [signed-by=/usr/share/keyrings/cloudflare-warp-archive-keyring.gpg] https://pkg.cloudflareclient.com/ $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/cloudflare-client.list
+          sudo apt-get update && sudo apt-get install -y cloudflare-warp
+
+        elif [[ "$OS" == "rhel" || "$OS" == "centos" || "$OS" == "fedora" || "$OS" == "rocky" || "$OS" == "almalinux" ]]; then
+          echo "--- Installing for RHEL/CentOS/Fedora ---"
+          # 按照官方文档更新 GPG 密钥和仓库
+          # 使用 || true 防止在旧密钥不存在时报错
+          sudo rpm -e 'gpg-pubkey(4fa1c3ba-61abda35)' || true
+          sudo rpm --import https://pkg.cloudflareclient.com/pubkey.gpg
+          curl -fsSL https://pkg.cloudflareclient.com/cloudflare-warp-ascii.repo | sudo tee /etc/yum.repos.d/cloudflare-warp.repo
+          
+          # 使用 dnf (较新系统) 或 yum (较旧系统)
+          if command -v dnf &> /dev/null; then
+            sudo dnf update -y && sudo dnf install -y cloudflare-warp
+          else
+            sudo yum update -y && sudo yum install -y cloudflare-warp
+          fi
+        else
+          echo "Unsupported OS: $OS"
+          exit 1
+        fi
 
     - name: Register and connect to WARP
       run: |
