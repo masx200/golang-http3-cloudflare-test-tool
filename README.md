@@ -20,19 +20,19 @@
 
 ## 🚀 快速开始
 
-     ### 安装依赖
+### 安装依赖
 
      ```bash
      go mod tidy
      ```
 
-     ### 构建项目
+### 构建项目
 
      ```bash
      go build -o http3-test-tool main.go
      ```
 
-     ### 运行测试
+### 运行测试
 
      ```bash
      # 使用默认配置
@@ -50,7 +50,7 @@
 
 ## 📋 使用示例
 
-     ### 1. 基本测试
+### 1. 基本测试
 
      ```bash
      # 测试 Cloudflare 服务
@@ -61,7 +61,7 @@
        -doh-url "https://xget.a1u06h9fe9y5bozbmgz3.qzz.io/cloudflare-dns.com/dns-query"
      ```
 
-     ### 2. 使用配置文件
+### 2. 使用配置文件
 
      创建 `config.json`:
 
@@ -95,7 +95,7 @@
      ./http3-test-tool -config config.json
      ```
 
-     ### 3. DNS 解析模式
+### 3. DNS 解析模式
 
      ```bash
      # DNS over HTTPS (DoH) - RFC 8484
@@ -143,19 +143,19 @@
 
 ## ⚙️ 配置选项
 
-     ### 命令行参数
+### 命令行参数
 
-     | 参数 | 默认值 | 说明 |
-     |------|--------|------|
-     | `-config` | "" | 配置文件路径 |
-     | `-domain` | "" | 测试域名 |
-     | `-doh-url` | "https://xget.a1u06h9fe9y5bozbmgz3.qzz.io/cloudflare-dns.com/dns-query" | DoH 服务 URL |
-     | `-resolve-mode` | "https" | DNS 解析模式 (https, a_aaaa, direct) |
-     | `-test-url` | "https://hello-world-deno-deploy.a1u06h9fe9y5bozbmgz3.qzz.io" | 测试 URL |
-     | `-port` | 443 | 目标端口 |
-     | `-verbose` | false | 详细输出模式 |
+     | 参数            | 默认值                                                                  | 说明                                 |
+     | --------------- | ----------------------------------------------------------------------- | ------------------------------------ |
+     | `-config`       | ""                                                                      | 配置文件路径                         |
+     | `-domain`       | ""                                                                      | 测试域名                             |
+     | `-doh-url`      | "https://xget.a1u06h9fe9y5bozbmgz3.qzz.io/cloudflare-dns.com/dns-query" | DoH 服务 URL                         |
+     | `-resolve-mode` | "https"                                                                 | DNS 解析模式 (https, a_aaaa, direct) |
+     | `-test-url`     | "https://hello-world-deno-deploy.a1u06h9fe9y5bozbmgz3.qzz.io"           | 测试 URL                             |
+     | `-port`         | 443                                                                     | 目标端口                             |
+     | `-verbose`      | false                                                                   | 详细输出模式                         |
 
-     ### 配置文件格式
+### 配置文件格式
 
      ```json
      {
@@ -189,13 +189,13 @@
 
 ## 🛠️ 开发指南
 
-     ### 构建
+### 构建
 
      ```bash
      go build -v ./...
      ```
 
-     ### 测试
+### 测试
 
      ```bash
      # 运行所有测试
@@ -207,7 +207,7 @@
      go test -v ./load_balance/
      ```
 
-     ### 性能分析
+### 性能分析
 
      ```bash
      # 启用 pprof 调试
@@ -216,22 +216,22 @@
 
 ## 📚 核心组件
 
-     ### 1. DNS 解析引擎
+### 1. DNS 解析引擎
      - **DoH (DNS over HTTPS)**: RFC 8484 标准实现
      - **传统 DNS**: A/AAAA 记录查询
      - **直接模式**: 使用预定义 IP 地址
 
-     ### 2. HTTP/3 传输层
+### 2. HTTP/3 传输层
      - 基于 QUIC 协议实现
      - 连接池和轮询机制
      - 自定义 IP 绑定支持
 
-     ### 3. 协议回退机制
+### 3. 协议回退机制
      - HTTP/3 (QUIC) → HTTP/2 (TCP) → HTTP/1.1
      - 自动检测和切换
      - 详细连接状态报告
 
-     ### 4. 负载均衡系统
+### 4. 负载均衡系统
      - 随机负载均衡算法
      - 主被动健康检查
      - 故障转移策略
@@ -245,14 +245,14 @@
 
 ## 🌍 支持的协议
 
-    | 协议 | 说明 | 状态 |
-    |------|------|------|
-    | HTTP/3 | 基于 QUIC 的下一代 HTTP | ✅ 支持 |
-    | HTTP/2 | 二进制帧协议 | ✅ 支持 |
-    | HTTP/1.1 | 传统文本协议 | ✅ 支持 |
-    | DoH | DNS over HTTPS | ✅ 支持 |
-    | DoQ | DNS over QUIC | ✅ 支持 |
-    | DoT | DNS over TLS | ✅ 支持 |
+    | 协议     | 说明                    | 状态   |
+    | -------- | ----------------------- | ------ |
+    | HTTP/3   | 基于 QUIC 的下一代 HTTP | ✅ 支持 |
+    | HTTP/2   | 二进制帧协议            | ✅ 支持 |
+    | HTTP/1.1 | 传统文本协议            | ✅ 支持 |
+    | DoH      | DNS over HTTPS          | ✅ 支持 |
+    | DoQ      | DNS over QUIC           | ✅ 支持 |
+    | DoT      | DNS over TLS            | ✅ 支持 |
 
 ## 🤝 贡献指南
 
