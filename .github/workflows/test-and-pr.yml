@@ -67,7 +67,23 @@ jobs:
       id: push-changes
       if: steps.verify-changed-files.outputs.changed == 'true'
       run: |
-          BASE_BRANCH="${{ github.ref_name }}"
+          # Determine the correct base branch
+          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+            BASE_BRANCH="${{ github.base_ref }}"
+          else
+            # Extract branch name from refs/heads/branch-name or refs/pull/XX/merge
+            BASE_BRANCH=$(echo "${{ github.ref }}" | sed 's|^refs/heads/||' | sed 's|^refs/pull/[0-9]*/merge||')
+            # If it's a pull request merge, use the base ref
+            if [[ "$BASE_BRANCH" == "" ]]; then
+              BASE_BRANCH="main"
+            fi
+          fi
+
+          # Fallback to main if base branch is still empty or invalid
+          if [[ "$BASE_BRANCH" == "" ]] || [[ "$BASE_BRANCH" =~ [0-9]+/merge ]]; then
+            BASE_BRANCH="main"
+          fi
+
           BRANCH_NAME="auto-update/${BASE_BRANCH}/$(date +%Y%m%d-%H%M%S)-${{ github.run_id }}"
 
           git checkout -b "$BRANCH_NAME"
