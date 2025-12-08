@@ -15,6 +15,7 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
+      actions: read
 
     steps:
     - name: Checkout repository
@@ -63,6 +64,7 @@ jobs:
         git commit -m "Auto-update test results and reports [skip ci]"
 
     - name: Push changes
+      id: push-changes
       if: steps.verify-changed-files.outputs.changed == 'true'
       run: |
           BASE_BRANCH="${{ github.ref_name }}"
@@ -71,8 +73,18 @@ jobs:
           git checkout -b "$BRANCH_NAME"
           git push --set-upstream origin "$BRANCH_NAME"
 
+          echo "branch-name=$BRANCH_NAME" >> $GITHUB_OUTPUT
+
+    - name: Debug branch info
+      if: steps.verify-changed-files.outputs.changed == 'true'
+      run: |
+        echo "Current branch: $(git branch --show-current)"
+        echo "Remote branches:"
+        git branch -r
+        echo "Push output branch: ${{ steps.push-changes.outputs.branch-name }}"
+
     - name: Create Pull Request
-      if: steps.verify-changed-files.outputs.changed == 'true' 
+      if: steps.verify-changed-files.outputs.changed == 'true'
       uses: peter-evans/create-pull-request@v6
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
@@ -96,8 +108,9 @@ jobs:
           - [ ] Validate report formatting
 
           🤖 Generated with [Claude Code](https://claude.com/claude-code)
-        branch: auto-update-results
+        branch: ${{ steps.push-changes.outputs.branch-name }}
         delete-branch: true
         labels: |
           automated
           test-results
+        draft: false
