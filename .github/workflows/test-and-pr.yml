@@ -10,6 +10,7 @@ on:
 jobs:
   test-and-pr:
     runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, 'Auto-update test results and reports')"
 
     permissions:
       contents: write
@@ -66,7 +67,7 @@ jobs:
       run: git push
 
     - name: Create Pull Request
-      if: steps.verify-changed-files.outputs.changed == 'true' && github.event_name == 'workflow_dispatch'
+      if: steps.verify-changed-files.outputs.changed == 'true' 
       uses: peter-evans/create-pull-request@v6
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
