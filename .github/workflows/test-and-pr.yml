@@ -1,0 +1,97 @@
+name: Run Tests and Create PR
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  test-and-pr:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        #cache: 'npm'
+
+    - name: Setup Go
+      uses: actions/setup-go@v5
+      with:
+        go-version: '1.21'
+
+    - name: Install dependencies
+      run: npm install -g cnpm --registry=https://registry.npmmirror.com && cnpm install 
+
+    - name: Run extract script
+      run: npm run extract
+
+    - name: Run check script
+      run: npm run check
+
+    - name: Run start script
+      run: npm run start
+
+    - name: Check for changes
+      id: verify-changed-files
+      run: |
+        if [ -n "$(git status --porcelain)" ]; then
+          echo "changed=true" >> $GITHUB_OUTPUT
+        else
+          echo "changed=false" >> $GITHUB_OUTPUT
+        fi
+
+    - name: Commit changes
+      if: steps.verify-changed-files.outputs.changed == 'true'
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add .
+        git commit -m "Auto-update test results and reports [skip ci]"
+
+    - name: Push changes
+      if: steps.verify-changed-files.outputs.changed == 'true'
+      run: git push
+
+    - name: Create Pull Request
+      if: steps.verify-changed-files.outputs.changed == 'true' && github.event_name == 'workflow_dispatch'
+      uses: peter-evans/create-pull-request@v6
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        commit-message: "Auto-update test results and reports"
+        title: "Auto-update test results and reports"
+        body: |
+          ## Summary
+
+          This PR contains automated updates from the test workflow:
+
+          - ✅ Extract script completed successfully
+          - ✅ Check script completed successfully
+          - ✅ Start script completed successfully
+
+          The workflow has generated updated test results and reports.
+
+          ## Test plan
+
+          - [ ] Review the generated test results
+          - [ ] Verify connectivity check data
+          - [ ] Validate report formatting
+
+          🤖 Generated with [Claude Code](https://claude.com/claude-code)
+        branch: auto-update-results
+        delete-branch: true
+        labels: |
+          automated
+          test-results
