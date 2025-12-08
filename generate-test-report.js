@@ -168,16 +168,16 @@ class TestReportGenerator {
 
       this.failedTests.forEach((test) => {
         const host =
-          test.host.length > 20
-            ? test.host.substring(0, 17) + "..."
+          test.host.length > 200
+            ? test.host.substring(0, 170) + "..."
             : test.host;
         const errorMsg =
-          test.error_msg.length > 50
-            ? test.error_msg.substring(0, 47) + "..."
+          test.error_msg.length > 500
+            ? test.error_msg.substring(0, 470) + "..."
             : test.error_msg;
         const serverHeader =
-          test.server_header.length > 15
-            ? test.server_header.substring(0, 12) + "..."
+          test.server_header.length > 150
+            ? test.server_header.substring(0, 120) + "..."
             : test.server_header;
 
         report += `| ${test.index} | ${host} | ${test.target_ip} | ${test.ip_version} | ${test.protocol} | ${
@@ -203,11 +203,11 @@ class TestReportGenerator {
 |------|-----------|--------|--------|------|------|----------|--------|`;
 
         topLatencyRecords.forEach((test) => {
-          const host = test.host.length > 20
-            ? test.host.substring(0, 17) + "..."
+          const host = test.host.length > 200
+            ? test.host.substring(0, 170) + "..."
             : test.host;
-          const serverHeader = test.server_header.length > 15
-            ? test.server_header.substring(0, 12) + "..."
+          const serverHeader = test.server_header.length > 150
+            ? test.server_header.substring(0, 120) + "..."
             : test.server_header;
           const status = test.success ? '✅ 成功' : '❌ 失败';
 
@@ -469,7 +469,7 @@ class TestReportGenerator {
         console.log("\n🚀 最佳延迟记录 (前5条):");
         topLatencyRecords.forEach((test, index) => {
           const status = test.success ? '✅' : '❌';
-          const host = test.host.length > 25 ? test.host.substring(0, 22) + "..." : test.host;
+          const host = test.host.length > 250 ? test.host.substring(0, 220) + "..." : test.host;
           console.log(`  ${index + 1}. ${status} ${host} - ${test.latency_ms}ms (${test.protocol})`);
         });
       }
