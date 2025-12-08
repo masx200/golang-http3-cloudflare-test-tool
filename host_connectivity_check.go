@@ -154,12 +154,17 @@ func testSingleHost(host string) []TestResult {
 
 	var targetIPs []string
 	var err error
+	var originalHost string = host // 保存原始host用于显示
 
 	if isIP {
-		// 如果是IP，直接使用
-		targetIPs = []string{host}
+		// 如果是IP，去掉方括号后使用（如果有的话）
+		targetIP := host
+		if strings.HasPrefix(host, "[") && strings.HasSuffix(host, "]") {
+			targetIP = host[1 : len(host)-1]
+		}
+		targetIPs = []string{targetIP}
 		if *verbose {
-			fmt.Printf("  %s 是IP地址，直接使用\n", host)
+			fmt.Printf("  %s 是IP地址，直接使用\n", originalHost)
 		}
 	} else {
 		// 如果是域名，进行DNS解析
@@ -244,9 +249,15 @@ func testSingleHost(host string) []TestResult {
 	return results
 }
 
-// 判断是否为IP地址
+// 判断是否为IP地址（处理带方括号的IPv6地址）
 func isIPAddress(host string) bool {
-	ip := net.ParseIP(host)
+	// 去掉首尾的方括号（如果有的话）
+	trimmedHost := host
+	if strings.HasPrefix(host, "[") && strings.HasSuffix(host, "]") {
+		trimmedHost = host[1 : len(host)-1]
+	}
+
+	ip := net.ParseIP(trimmedHost)
 	return ip != nil
 }
 
