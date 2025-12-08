@@ -36,7 +36,8 @@ func main() {
 	// 读取所有行并提取host
 	var hosts []string
 	scanner := bufio.NewScanner(file)
-	hostRegex := regexp.MustCompile(`@([^:]+):`)
+	// 修复IPv6地址解析问题：支持方括号内的IPv6地址和普通主机名/IPv4
+	hostRegex := regexp.MustCompile(`@(\[[^\]]+\]|[^:]+):`)
 
 	for scanner.Scan() {
 		line := strings.TrimSpace(scanner.Text())
@@ -44,7 +45,7 @@ func main() {
 			continue
 		}
 
-		// 提取host
+		// 提取host - 支持IPv6地址（方括号内）和普通主机名/IPv4
 		matches := hostRegex.FindStringSubmatch(line)
 		if len(matches) > 1 {
 			host := matches[1]

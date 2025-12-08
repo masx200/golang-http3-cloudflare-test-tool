@@ -1,329 +1,500 @@
 [
   {
-    "host": "172.64.146.16"
-  },
-  {
-    "host": "www.digitalocean.com"
-  },
-  {
-    "host": "bowen.ns.cloudflare.com"
-  },
-  {
-    "host": "rustam.ns.cloudflare.com"
-  },
-  {
-    "host": "172.67.110.232"
-  },
-  {
-    "host": "172.64.38.15"
-  },
-  {
-    "host": "sullivan.ns.cloudflare.com"
-  },
-  {
-    "host": "singapore.com"
-  },
-  {
-    "host": "braden.ns.cloudflare.com"
-  },
-  {
-    "host": "103.160.204.59"
-  },
-  {
-    "host": "172.64.147.73"
-  },
-  {
-    "host": "icook.tw"
-  },
-  {
-    "host": "cris.ns.cloudflare.com"
-  },
-  {
-    "host": "172.64.157.120"
-  },
-  {
-    "host": "172.64.40.9"
-  },
-  {
-    "host": "162.159.44.208"
-  },
-  {
-    "host": "www.glassdoor.com"
-  },
-  {
-    "host": "icook.hk"
-  },
-  {
-    "host": "108.162.198.54"
-  },
-  {
-    "host": "172.67.106.26"
-  },
-  {
-    "host": "abdullah.ns.cloudflare.com"
-  },
-  {
-    "host": "172.64.156.195"
-  },
-  {
-    "host": "172.67.243.218"
-  },
-  {
-    "host": "cf.877774.xyz"
-  },
-  {
-    "host": "www.visa.cn"
-  },
-  {
-    "host": "www.visa.com.sg"
-  },
-  {
-    "host": "www.hugedomains.com"
-  },
-  {
-    "host": "dylan.ns.cloudflare.com"
-  },
-  {
-    "host": "198.62.62.4"
-  },
-  {
-    "host": "172.64.33.67"
-  },
-  {
-    "host": "www.7749tv.com"
-  },
-  {
-    "host": "iplocation.io"
-  },
-  {
-    "host": "lewis.ns.cloudflare.com"
-  },
-  {
-    "host": "www.ipchicken.com"
-  },
-  {
-    "host": "moura.ns.cloudflare.com"
-  },
-  {
-    "host": "04c6cf21-1294-4fae-8bf8-715bbc897b60.masx201.dpdns.org"
-  },
-  {
-    "host": "104.17.142.12"
-  },
-  {
-    "host": "steamdb.info"
-  },
-  {
-    "host": "asia.877774.xyz"
-  },
-  {
-    "host": "whatismyipaddress.com"
-  },
-  {
-    "host": "huxley.ns.cloudflare.com"
-  },
-  {
-    "host": "172.64.148.15"
-  },
-  {
-    "host": "uriah.ns.cloudflare.com"
-  },
-  {
-    "host": "japan.com"
-  },
-  {
-    "host": "172.64.41.88"
-  },
-  {
-    "host": "ashton.ns.cloudflare.com"
-  },
-  {
     "host": "162.159.36.104"
-  },
-  {
-    "host": "162.159.39.118"
-  },
-  {
-    "host": "www.udemy.com"
   },
   {
     "host": "www.whatismyip.com"
   },
   {
-    "host": "ipv4.ip.sb"
+    "host": "[2606:4700:9add::880:52fc]"
   },
   {
-    "host": "julio.ns.cloudflare.com"
-  },
-  {
-    "host": "stock.hostmonit.com"
-  },
-  {
-    "host": "comicabc.com"
-  },
-  {
-    "host": "www.csgo.com"
-  },
-  {
-    "host": "dnschecker.org"
-  },
-  {
-    "host": "172.64.49.165"
-  },
-  {
-    "host": "kyree.ns.cloudflare.com"
-  },
-  {
-    "host": "172.64.35.24"
-  },
-  {
-    "host": "otto.ns.cloudflare.com"
-  },
-  {
-    "host": "172.64.201.25"
-  },
-  {
-    "host": "172.64.159.6"
-  },
-  {
-    "host": "162.159.45.170"
-  },
-  {
-    "host": "ip.gs"
-  },
-  {
-    "host": "toy-people.com"
-  },
-  {
-    "host": "cmcc.877774.xyz"
-  },
-  {
-    "host": "172.64.229.249"
-  },
-  {
-    "host": "cfip.xxxxxxxx.tk"
-  },
-  {
-    "host": "pranab.ns.cloudflare.com"
-  },
-  {
-    "host": "bestcf.030101.xyz"
-  },
-  {
-    "host": "cu.877774.xyz"
-  },
-  {
-    "host": "162.159.38.89"
-  },
-  {
-    "host": "decker.ns.cloudflare.com"
-  },
-  {
-    "host": "time.is"
-  },
-  {
-    "host": "www.pcmag.com"
-  },
-  {
-    "host": "www.who.int"
-  },
-  {
-    "host": "172.64.153.172"
-  },
-  {
-    "host": "172.64.144.188"
-  },
-  {
-    "host": "72806a5a-a251-48b4-a523-dfbd1c981ec0.ce225219-fea4-47a0-bb82-70b612b27ab7.netlib.re"
-  },
-  {
-    "host": "cf.zhetengsha.eu.org"
-  },
-  {
-    "host": "damien.ns.cloudflare.com"
-  },
-  {
-    "host": "162.159.133.85"
-  },
-  {
-    "host": "wilson.ns.cloudflare.com"
-  },
-  {
-    "host": "silkbook.com"
-  },
-  {
-    "host": "www.4chan.org"
-  },
-  {
-    "host": "ae8a9c24-83de.masx200.ddns-ip.net"
-  },
-  {
-    "host": "104.17.68.85"
-  },
-  {
-    "host": "na.877774.xyz"
-  },
-  {
-    "host": "172.67.120.0"
-  },
-  {
-    "host": "172.67.49.134"
-  },
-  {
-    "host": "ct.877774.xyz"
-  },
-  {
-    "host": "www.okcupid.com"
-  },
-  {
-    "host": "shopify.com"
-  },
-  {
-    "host": "ip.sb"
-  },
-  {
-    "host": "trevor.ns.cloudflare.com"
-  },
-  {
-    "host": "www.visa.com.hk"
-  },
-  {
-    "host": "04c6cf21-1294-4fae-8bf8-715bbc897b60.masx200.netlib.re"
-  },
-  {
-    "host": "172.67.181.209"
-  },
-  {
-    "host": "www.ipget.net"
-  },
-  {
-    "host": "craig.ns.cloudflare.com"
-  },
-  {
-    "host": "www.gov.ua"
-  },
-  {
-    "host": "eur.877774.xyz"
-  },
-  {
-    "host": "www.wto.org"
-  },
-  {
-    "host": "benedict.ns.cloudflare.com"
-  },
-  {
-    "host": "gamer.com.tw"
+    "host": "icook.tw"
   },
   {
     "host": "172.67.79.211"
   },
   {
-    "host": "xn--b6gac.eu.org"
+    "host": "172.67.243.218"
+  },
+  {
+    "host": "abdullah.ns.cloudflare.com"
+  },
+  {
+    "host": "bestcf.030101.xyz"
+  },
+  {
+    "host": "damien.ns.cloudflare.com"
+  },
+  {
+    "host": "time.is"
+  },
+  {
+    "host": "172.64.153.172"
+  },
+  {
+    "host": "162.159.39.118"
+  },
+  {
+    "host": "162.159.44.208"
+  },
+  {
+    "host": "172.67.181.209"
+  },
+  {
+    "host": "172.64.156.195"
+  },
+  {
+    "host": "cf.877774.xyz"
+  },
+  {
+    "host": "172.64.157.120"
+  },
+  {
+    "host": "www.glassdoor.com"
+  },
+  {
+    "host": "shopify.com"
+  },
+  {
+    "host": "104.16.61.163"
+  },
+  {
+    "host": "julio.ns.cloudflare.com"
+  },
+  {
+    "host": "yx-auto.pages.dev"
+  },
+  {
+    "host": "172.64.38.15"
   },
   {
     "host": "ipinfo.in"
   },
   {
+    "host": "www.ipchicken.com"
+  },
+  {
+    "host": "iplocation.io"
+  },
+  {
+    "host": "www.wto.org"
+  },
+  {
+    "host": "172.64.35.24"
+  },
+  {
+    "host": "172.64.41.88"
+  },
+  {
+    "host": "icook.hk"
+  },
+  {
+    "host": "craig.ns.cloudflare.com"
+  },
+  {
+    "host": "www.udemy.com"
+  },
+  {
+    "host": "gamer.com.tw"
+  },
+  {
+    "host": "wilson.ns.cloudflare.com"
+  },
+  {
+    "host": "162.159.133.85"
+  },
+  {
+    "host": "ashton.ns.cloudflare.com"
+  },
+  {
+    "host": "162.159.38.89"
+  },
+  {
+    "host": "xn--b6gac.eu.org"
+  },
+  {
+    "host": "stock.hostmonit.com"
+  },
+  {
+    "host": "rustam.ns.cloudflare.com"
+  },
+  {
+    "host": "cris.ns.cloudflare.com"
+  },
+  {
+    "host": "www.gov.ua"
+  },
+  {
+    "host": "cf.zhetengsha.eu.org"
+  },
+  {
+    "host": "cfip.xxxxxxxx.tk"
+  },
+  {
+    "host": "[2606:4700:4403::7357:544f]"
+  },
+  {
+    "host": "braden.ns.cloudflare.com"
+  },
+  {
+    "host": "[2606:4700:440f::53aa:4126]"
+  },
+  {
+    "host": "cu.877774.xyz"
+  },
+  {
+    "host": "175.212.207.13"
+  },
+  {
+    "host": "172.64.147.73"
+  },
+  {
+    "host": "172.64.33.67"
+  },
+  {
+    "host": "www.visa.com.sg"
+  },
+  {
+    "host": "61.83.202.17"
+  },
+  {
+    "host": "211.229.77.184"
+  },
+  {
+    "host": "[2606:4700:83bd::7d8:2b47]"
+  },
+  {
+    "host": "52.76.110.129"
+  },
+  {
+    "host": "119.194.220.146"
+  },
+  {
+    "host": "cf.877771.xyz"
+  },
+  {
+    "host": "172.64.144.188"
+  },
+  {
+    "host": "104.18.37.40"
+  },
+  {
+    "host": "cloudflare-ip.mofashi.ltd"
+  },
+  {
+    "host": "168.138.184.172"
+  },
+  {
+    "host": "172.64.146.16"
+  },
+  {
+    "host": "www.4chan.org"
+  },
+  {
+    "host": "[2606:4700:964f::6e2c:588e]"
+  },
+  {
+    "host": "172.64.151.55"
+  },
+  {
+    "host": "172.64.201.25"
+  },
+  {
+    "host": "172.64.49.165"
+  },
+  {
+    "host": "huxley.ns.cloudflare.com"
+  },
+  {
+    "host": "www.visa.com.hk"
+  },
+  {
+    "host": "www.pcmag.com"
+  },
+  {
+    "host": "whatismyipaddress.com"
+  },
+  {
+    "host": "222.105.131.225"
+  },
+  {
+    "host": "saas.sin.fan"
+  },
+  {
+    "host": "104.17.79.11"
+  },
+  {
     "host": "tasteatlas.com"
+  },
+  {
+    "host": "115.22.115.218"
+  },
+  {
+    "host": "162.159.45.170"
+  },
+  {
+    "host": "172.64.148.15"
+  },
+  {
+    "host": "www.digitalocean.com"
+  },
+  {
+    "host": "168.138.165.174"
+  },
+  {
+    "host": "www.visa.cn"
+  },
+  {
+    "host": "[2606:4700:8de6::5fa2:799e]"
+  },
+  {
+    "host": "198.62.62.4"
+  },
+  {
+    "host": "172.64.159.6"
+  },
+  {
+    "host": "ip.gs"
+  },
+  {
+    "host": "[2606:4700:4409::5b5b:7758]"
+  },
+  {
+    "host": "dnschecker.org"
+  },
+  {
+    "host": "na.877774.xyz"
+  },
+  {
+    "host": "dylan.ns.cloudflare.com"
+  },
+  {
+    "host": "singapore.com"
+  },
+  {
+    "host": "www.ipget.net"
+  },
+  {
+    "host": "asia.877774.xyz"
+  },
+  {
+    "host": "www.7749tv.com"
+  },
+  {
+    "host": "silkbook.com"
+  },
+  {
+    "host": "www.hugedomains.com"
+  },
+  {
+    "host": "comicabc.com"
+  },
+  {
+    "host": "172.64.229.249"
+  },
+  {
+    "host": "04c6cf21-1294-4fae-8bf8-715bbc897b60.masx201.dpdns.org"
+  },
+  {
+    "host": "121.188.182.190"
+  },
+  {
+    "host": "toy-people.com"
+  },
+  {
+    "host": "158.101.77.33"
+  },
+  {
+    "host": "decker.ns.cloudflare.com"
+  },
+  {
+    "host": "104.17.142.12"
+  },
+  {
+    "host": "eur.877774.xyz"
+  },
+  {
+    "host": "ip.sb"
+  },
+  {
+    "host": "www.okcupid.com"
+  },
+  {
+    "host": "japan.com"
+  },
+  {
+    "host": "steamdb.info"
+  },
+  {
+    "host": "175.215.175.175"
+  },
+  {
+    "host": "104.18.78.214"
+  },
+  {
+    "host": "172.67.120.0"
+  },
+  {
+    "host": "104.17.68.85"
+  },
+  {
+    "host": "www.csgo.com"
+  },
+  {
+    "host": "kyree.ns.cloudflare.com"
+  },
+  {
+    "host": "bowen.ns.cloudflare.com"
+  },
+  {
+    "host": "172.67.49.134"
+  },
+  {
+    "host": "04c6cf21-1294-4fae-8bf8-715bbc897b60.masx200.netlib.re"
+  },
+  {
+    "host": "108.162.198.54"
+  },
+  {
+    "host": "bestcf.top"
+  },
+  {
+    "host": "172.64.154.18"
+  },
+  {
+    "host": "43.153.179.6"
+  },
+  {
+    "host": "cf.0sm.com"
+  },
+  {
+    "host": "cdn.2020111.xyz"
+  },
+  {
+    "host": "ipv4.ip.sb"
+  },
+  {
+    "host": "20.247.137.183"
+  },
+  {
+    "host": "72806a5a-a251-48b4-a523-dfbd1c981ec0.ce225219-fea4-47a0-bb82-70b612b27ab7.netlib.re"
+  },
+  {
+    "host": "104.18.37.13"
+  },
+  {
+    "host": "172.67.110.232"
+  },
+  {
+    "host": "111.171.108.67"
+  },
+  {
+    "host": "[2606:4700:4408::18c5:3304]"
+  },
+  {
+    "host": "138.2.18.82"
+  },
+  {
+    "host": "[2606:4700:440b::3e6e:5f06]"
+  },
+  {
+    "host": "104.18.39.196"
+  },
+  {
+    "host": "104.19.175.123"
+  },
+  {
+    "host": "otto.ns.cloudflare.com"
+  },
+  {
+    "host": "172.67.106.26"
+  },
+  {
+    "host": "cf.090227.xyz"
+  },
+  {
+    "host": "moura.ns.cloudflare.com"
+  },
+  {
+    "host": "benedict.ns.cloudflare.com"
+  },
+  {
+    "host": "pranab.ns.cloudflare.com"
+  },
+  {
+    "host": "104.18.254.88"
+  },
+  {
+    "host": "sullivan.ns.cloudflare.com"
+  },
+  {
+    "host": "104.19.223.58"
+  },
+  {
+    "host": "140.238.50.134"
+  },
+  {
+    "host": "cfip.1323123.xyz"
+  },
+  {
+    "host": "trevor.ns.cloudflare.com"
+  },
+  {
+    "host": "103.160.204.59"
+  },
+  {
+    "host": "lewis.ns.cloudflare.com"
+  },
+  {
+    "host": "104.16.45.84"
+  },
+  {
+    "host": "cmcc.877774.xyz"
+  },
+  {
+    "host": "ae8a9c24-83de.masx200.ddns-ip.net"
+  },
+  {
+    "host": "141.147.185.63"
+  },
+  {
+    "host": "freeyx.cloudflare88.eu.org"
+  },
+  {
+    "host": "uriah.ns.cloudflare.com"
+  },
+  {
+    "host": "ct.877774.xyz"
+  },
+  {
+    "host": "59.31.68.195"
+  },
+  {
+    "host": "[2606:4700:83be::11:74f]"
+  },
+  {
+    "host": "104.16.223.179"
+  },
+  {
+    "host": "cloudflare.182682.xyz"
+  },
+  {
+    "host": "3.0.50.69"
+  },
+  {
+    "host": "172.64.40.9"
+  },
+  {
+    "host": "104.18.42.26"
+  },
+  {
+    "host": "34.143.159.175"
+  },
+  {
+    "host": "104.18.14.76"
+  },
+  {
+    "host": "61.85.1.77"
   }
 ]
