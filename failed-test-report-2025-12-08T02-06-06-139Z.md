@@ -25,33 +25,33 @@
 
 ### 失败测试列表
 
-| 序号 | 主机/域名 | 目标IP | IP版本 | 协议 | 状态码 | 延迟(ms) | 服务器 | 错误信息 |
-|------|-----------|--------|--------|------|--------|----------|--------|----------|
-| 164 | 61.83.202.17 | 61.83.202.17 | IPv4 | none | N/A | 0 | N/A | dial tcp 61.83.202.17:443: connectex: No connec... |
-| 196 | 211.229.77.184 | 211.229.77.184 | IPv4 | none | N/A | 0 | N/A | dial tcp 211.229.77.184:443: connectex: No conn... |
-| 206 | 175.212.207.13 | 175.212.207.13 | IPv4 | none | N/A | 0 | N/A | dial tcp 175.212.207.13:443: i/o timeout |
-| 213 | cfip.xxxxxxxx.tk | 198.41.212.130 | IPv4 | none | N/A | 0 | N/A | dial tcp 198.41.212.130:443: i/o timeout |
-| 240 | 52.76.110.129 | 52.76.110.129 | IPv4 | none | N/A | 0 | N/A | dial tcp 52.76.110.129:443: i/o timeout |
-| 241 | 119.194.220.146 | 119.194.220.146 | IPv4 | none | N/A | 0 | N/A | dial tcp 119.194.220.146:443: i/o timeout |
-| 280 | 172.64.201.25 | 172.64.201.25 | IPv4 | none | N/A | 0 | N/A | dial tcp 172.64.201.25:443: i/o timeout |
-| 284 | 222.105.131.225 | 222.105.131.225 | IPv4 | none | N/A | 0 | N/A | dial tcp 222.105.131.225:443: i/o timeout |
-| 332 | bestcf.top | Unknown | Unknown | none | N/A | 0 | N/A | DNS解析无结果 |
-| 333 | 115.22.115.218 | 115.22.115.218 | IPv4 | none | N/A | 0 | N/A | dial tcp 115.22.115.218:443: i/o timeout |
-| 347 | cdn.2020111.xyz | 104.16.123.96 | IPv4 | h3 | 403 | 327 | cloudflare | No error message |
-| 348 | cdn.2020111.xyz | 104.16.124.96 | IPv4 | h3 | 403 | 328 | cloudflare | No error message |
-| 353 | 158.101.77.33 | 158.101.77.33 | IPv4 | h2 | N/A | 0 | N/A | Get "https://local-aria2-webui.masx200.ddns-ip.... |
-| 361 | 175.215.175.175 | 175.215.175.175 | IPv4 | none | N/A | 0 | N/A | dial tcp 175.215.175.175:443: connectex: No con... |
-| 386 | 43.153.179.6 | 43.153.179.6 | IPv4 | none | N/A | 0 | N/A | dial tcp 43.153.179.6:443: connectex: No connec... |
-| 401 | 121.188.182.190 | 121.188.182.190 | IPv4 | none | N/A | 0 | N/A | dial tcp 121.188.182.190:443: i/o timeout |
-| 430 | 172.67.49.134 | 172.67.49.134 | IPv4 | none | N/A | 0 | N/A | dial tcp 172.67.49.134:443: i/o timeout |
-| 434 | 111.171.108.67 | 111.171.108.67 | IPv4 | none | N/A | 0 | N/A | dial tcp 111.171.108.67:443: i/o timeout |
-| 435 | 138.2.18.82 | 138.2.18.82 | IPv4 | none | N/A | 0 | N/A | dial tcp 138.2.18.82:443: i/o timeout |
-| 439 | 59.31.68.195 | 59.31.68.195 | IPv4 | none | N/A | 0 | N/A | dial tcp 59.31.68.195:443: connectex: No connec... |
-| 467 | trevor.ns.cloudfl... | 108.162.195.154 | IPv4 | none | N/A | 0 | N/A | dial tcp 108.162.195.154:443: i/o timeout |
-| 473 | 141.147.185.63 | 141.147.185.63 | IPv4 | h2 | N/A | 0 | N/A | Get "https://local-aria2-webui.masx200.ddns-ip.... |
-| 474 | 61.85.1.77 | 61.85.1.77 | IPv4 | none | N/A | 0 | N/A | dial tcp 61.85.1.77:443: connectex: No connecti... |
-| 475 | 3.0.50.69 | 3.0.50.69 | IPv4 | none | N/A | 0 | N/A | dial tcp 3.0.50.69:443: i/o timeout |
-| 483 | cloudflare.182682... | 2606:4700:e7::3151:47a9 | IPv6 | none | N/A | 0 | N/A | dial tcp [2606:4700:e7::3151:47a9]:443: i/o tim... |
+| 序号 | 主机/域名                             | 目标IP                  | IP版本  | 协议 | 状态码 | 延迟(ms) | 服务器     | 错误信息                                           |
+| ---- | ------------------------------------- | ----------------------- | ------- | ---- | ------ | -------- | ---------- | -------------------------------------------------- |
+| 164  | 61.83.202.17                          | 61.83.202.17            | IPv4    | none | N/A    | 0        | N/A        | dial tcp 61.83.202.17:443: connectex: No connec... |
+| 196  | 211.229.77.184                        | 211.229.77.184          | IPv4    | none | N/A    | 0        | N/A        | dial tcp 211.229.77.184:443: connectex: No conn... |
+| 206  | 175.212.207.13                        | 175.212.207.13          | IPv4    | none | N/A    | 0        | N/A        | dial tcp 175.212.207.13:443: i/o timeout           |
+| 213  | cfip.xxxxxxxx.tk                      | 198.41.212.130          | IPv4    | none | N/A    | 0        | N/A        | dial tcp 198.41.212.130:443: i/o timeout           |
+| 240  | 52.76.110.129                         | 52.76.110.129           | IPv4    | none | N/A    | 0        | N/A        | dial tcp 52.76.110.129:443: i/o timeout            |
+| 241  | 119.194.220.146                       | 119.194.220.146         | IPv4    | none | N/A    | 0        | N/A        | dial tcp 119.194.220.146:443: i/o timeout          |
+| 280  | 172.64.201.25                         | 172.64.201.25           | IPv4    | none | N/A    | 0        | N/A        | dial tcp 172.64.201.25:443: i/o timeout            |
+| 284  | 222.105.131.225                       | 222.105.131.225         | IPv4    | none | N/A    | 0        | N/A        | dial tcp 222.105.131.225:443: i/o timeout          |
+| 332  | local-aria2-webui.masx200.ddns-ip.net | Unknown                 | Unknown | none | N/A    | 0        | N/A        | DNS解析无结果                                      |
+| 333  | 115.22.115.218                        | 115.22.115.218          | IPv4    | none | N/A    | 0        | N/A        | dial tcp 115.22.115.218:443: i/o timeout           |
+| 347  | ifconfig.co                           | 104.16.123.96           | IPv4    | h3   | 403    | 327      | cloudflare | No error message                                   |
+| 348  | ifconfig.co                           | 104.16.124.96           | IPv4    | h3   | 403    | 328      | cloudflare | No error message                                   |
+| 353  | 158.101.77.33                         | 158.101.77.33           | IPv4    | h2   | N/A    | 0        | N/A        | Get "https://local-aria2-webui.masx200.ddns-ip.... |
+| 361  | 175.215.175.175                       | 175.215.175.175         | IPv4    | none | N/A    | 0        | N/A        | dial tcp 175.215.175.175:443: connectex: No con... |
+| 386  | 43.153.179.6                          | 43.153.179.6            | IPv4    | none | N/A    | 0        | N/A        | dial tcp 43.153.179.6:443: connectex: No connec... |
+| 401  | 121.188.182.190                       | 121.188.182.190         | IPv4    | none | N/A    | 0        | N/A        | dial tcp 121.188.182.190:443: i/o timeout          |
+| 430  | 172.67.49.134                         | 172.67.49.134           | IPv4    | none | N/A    | 0        | N/A        | dial tcp 172.67.49.134:443: i/o timeout            |
+| 434  | 111.171.108.67                        | 111.171.108.67          | IPv4    | none | N/A    | 0        | N/A        | dial tcp 111.171.108.67:443: i/o timeout           |
+| 435  | 138.2.18.82                           | 138.2.18.82             | IPv4    | none | N/A    | 0        | N/A        | dial tcp 138.2.18.82:443: i/o timeout              |
+| 439  | 59.31.68.195                          | 59.31.68.195            | IPv4    | none | N/A    | 0        | N/A        | dial tcp 59.31.68.195:443: connectex: No connec... |
+| 467  | trevor.ns.cloudfl...                  | 108.162.195.154         | IPv4    | none | N/A    | 0        | N/A        | dial tcp 108.162.195.154:443: i/o timeout          |
+| 473  | 141.147.185.63                        | 141.147.185.63          | IPv4    | h2   | N/A    | 0        | N/A        | Get "https://local-aria2-webui.masx200.ddns-ip.... |
+| 474  | 61.85.1.77                            | 61.85.1.77              | IPv4    | none | N/A    | 0        | N/A        | dial tcp 61.85.1.77:443: connectex: No connecti... |
+| 475  | 3.0.50.69                             | 3.0.50.69               | IPv4    | none | N/A    | 0        | N/A        | dial tcp 3.0.50.69:443: i/o timeout                |
+| 483  | cloudflare.182682...                  | 2606:4700:e7::3151:47a9 | IPv6    | none | N/A    | 0        | N/A        | dial tcp [2606:4700:e7::3151:47a9]:443: i/o tim... |
 
 
 ---
@@ -61,7 +61,7 @@
 以下显示了延迟最低的测试记录，包括成功和失败的测试：
 
 | 序号 | 主机/域名 | 目标IP | IP版本 | 协议 | 状态 | 延迟(ms) | 服务器 |
-|------|-----------|--------|--------|------|------|----------|--------|| 320 | kyree.ns.cloudfla... | 162.159.44.207 | IPv4 | h3 | ✅ 成功 | 118 | cloudflare |
+| ---- | --------- | ------ | ------ | ---- | ---- | -------- | ------ || 320 | kyree.ns.cloudfla... | 162.159.44.207 | IPv4 | h3 | ✅ 成功 | 118 | cloudflare |
 | 17 | abdullah.ns.cloud... | 162.159.44.203 | IPv4 | h3 | ✅ 成功 | 133 | cloudflare |
 | 414 | ct.877774.xyz | 172.64.229.161 | IPv4 | h3 | ✅ 成功 | 142 | cloudflare |
 | 420 | ct.877774.xyz | 172.64.229.236 | IPv4 | h3 | ✅ 成功 | 150 | cloudflare |

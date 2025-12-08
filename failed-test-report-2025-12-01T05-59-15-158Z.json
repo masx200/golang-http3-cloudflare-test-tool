@@ -36,7 +36,7 @@
     },
     {
       "index": 321,
-      "host": "www.who.int",
+      "host": "yx-auto.pages.dev",
       "target_ip": "192.133.11.1",
       "ip_version": "IPv4",
       "protocol": "h3",

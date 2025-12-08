@@ -23,14 +23,14 @@
 
 ### 失败测试列表
 
-| 序号 | 主机/域名 | 目标IP | IP版本 | 协议 | 状态码 | 延迟(ms) | 服务器 | 错误信息 |
-|------|-----------|--------|--------|------|--------|----------|--------|----------|
-| 93 | www.who.int | 192.133.11.1 | IPv4 | h3 | 403 | 754 | cloudflare | No error message |
-| 357 | 172.64.201.25 | 172.64.201.25 | IPv4 | none | N/A | 0 | N/A | dial tcp 172.64.201.25:443: i/o timeout |
-| 392 | 172.67.49.134 | 172.67.49.134 | IPv4 | none | N/A | 0 | N/A | dial tcp 172.67.49.134:443: i/o timeout |
-| 393 | trevor.ns.cloudfl... | 108.162.195.154 | IPv4 | none | N/A | 0 | N/A | dial tcp 108.162.195.154:443: i/o timeout |
-| 402 | cfip.xxxxxxxx.tk | 104.20.255.53 | IPv4 | none | N/A | 0 | N/A | dial tcp 104.20.255.53:443: i/o timeout |
-| 406 | cfip.xxxxxxxx.tk | 198.41.212.130 | IPv4 | none | N/A | 0 | N/A | dial tcp 198.41.212.130:443: i/o timeout |
+| 序号 | 主机/域名            | 目标IP          | IP版本 | 协议 | 状态码 | 延迟(ms) | 服务器     | 错误信息                                  |
+| ---- | -------------------- | --------------- | ------ | ---- | ------ | -------- | ---------- | ----------------------------------------- |
+| 93   | yx-auto.pages.dev    | 192.133.11.1    | IPv4   | h3   | 403    | 754      | cloudflare | No error message                          |
+| 357  | 172.64.201.25        | 172.64.201.25   | IPv4   | none | N/A    | 0        | N/A        | dial tcp 172.64.201.25:443: i/o timeout   |
+| 392  | 172.67.49.134        | 172.67.49.134   | IPv4   | none | N/A    | 0        | N/A        | dial tcp 172.67.49.134:443: i/o timeout   |
+| 393  | trevor.ns.cloudfl... | 108.162.195.154 | IPv4   | none | N/A    | 0        | N/A        | dial tcp 108.162.195.154:443: i/o timeout |
+| 402  | cfip.xxxxxxxx.tk     | 104.20.255.53   | IPv4   | none | N/A    | 0        | N/A        | dial tcp 104.20.255.53:443: i/o timeout   |
+| 406  | cfip.xxxxxxxx.tk     | 198.41.212.130  | IPv4   | none | N/A    | 0        | N/A        | dial tcp 198.41.212.130:443: i/o timeout  |
 
 
 ---
@@ -40,7 +40,7 @@
 以下显示了延迟最低的测试记录，包括成功和失败的测试：
 
 | 序号 | 主机/域名 | 目标IP | IP版本 | 协议 | 状态 | 延迟(ms) | 服务器 |
-|------|-----------|--------|--------|------|------|----------|--------|| 12 | sullivan.ns.cloud... | 162.159.44.161 | IPv4 | h3 | ✅ 成功 | 124 | cloudflare |
+| ---- | --------- | ------ | ------ | ---- | ---- | -------- | ------ || 12 | sullivan.ns.cloud... | 162.159.44.161 | IPv4 | h3 | ✅ 成功 | 124 | cloudflare |
 | 95 | moura.ns.cloudfla... | 162.159.44.217 | IPv4 | h3 | ✅ 成功 | 124 | cloudflare |
 | 22 | cris.ns.cloudflar... | 162.159.44.202 | IPv4 | h3 | ✅ 成功 | 128 | cloudflare |
 | 295 | ct.877774.xyz | 172.64.229.195 | IPv4 | h3 | ✅ 成功 | 128 | cloudflare |
