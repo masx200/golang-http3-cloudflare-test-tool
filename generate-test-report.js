@@ -2,7 +2,7 @@
 
 import { existsSync, readFileSync, writeFileSync } from "fs";
 import { basename, join } from "path";
-import { Command } from 'commander';
+import { Command } from "commander";
 
 /**
  * 生成HTTP/3连接测试失败报告
@@ -19,7 +19,7 @@ class TestReportGenerator {
     this.options = {
       topLatencyCount: options.topLatencyCount || 100,
       includeLatencySection: options.includeLatencySection !== false,
-      ...options
+      ...options,
     };
     this.statistics = {
       total: 0,
@@ -85,11 +85,20 @@ class TestReportGenerator {
       }
 
       // 计算延迟统计
-      if (result.latency_ms && typeof result.latency_ms === 'number' && result.latency_ms > 0) {
+      if (
+        result.latency_ms && typeof result.latency_ms === "number" &&
+        result.latency_ms > 0
+      ) {
         totalLatency += result.latency_ms;
         validLatencyCount++;
-        this.statistics.minLatency = Math.min(this.statistics.minLatency, result.latency_ms);
-        this.statistics.maxLatency = Math.max(this.statistics.maxLatency, result.latency_ms);
+        this.statistics.minLatency = Math.min(
+          this.statistics.minLatency,
+          result.latency_ms,
+        );
+        this.statistics.maxLatency = Math.max(
+          this.statistics.maxLatency,
+          result.latency_ms,
+        );
       }
     });
 
@@ -99,13 +108,16 @@ class TestReportGenerator {
       100
     ).toFixed(2);
 
-    this.statistics.avgLatency = validLatencyCount > 0 ?
-      (totalLatency / validLatencyCount).toFixed(2) : 0;
+    this.statistics.avgLatency = validLatencyCount > 0
+      ? (totalLatency / validLatencyCount).toFixed(2)
+      : 0;
 
     console.log(
       `分析完成: 失败 ${this.statistics.failed} 条，成功 ${this.statistics.success} 条`,
     );
-    console.log(`延迟统计: 平均 ${this.statistics.avgLatency}ms，最小 ${this.statistics.minLatency}ms，最大 ${this.statistics.maxLatency}ms`);
+    console.log(
+      `延迟统计: 平均 ${this.statistics.avgLatency}ms，最小 ${this.statistics.minLatency}ms，最大 ${this.statistics.maxLatency}ms`,
+    );
   }
 
   /**
@@ -113,9 +125,9 @@ class TestReportGenerator {
    */
   getTopLatencyRecords(count = this.options.topLatencyCount) {
     // 过滤出有有效延迟数据的记录
-    const validLatencyTests = this.allTests.filter(test =>
+    const validLatencyTests = this.allTests.filter((test) =>
       test.latency_ms &&
-      typeof test.latency_ms === 'number' &&
+      typeof test.latency_ms === "number" &&
       test.latency_ms > 0
     );
 
@@ -142,7 +154,11 @@ class TestReportGenerator {
 - **成功测试数**: ${this.statistics.success}
 - **失败率**: ${this.statistics.failureRate}%
 - **平均延迟**: ${this.statistics.avgLatency}ms
-- **最小延迟**: ${this.statistics.minLatency === Infinity ? 'N/A' : this.statistics.minLatency + 'ms'}
+- **最小延迟**: ${
+      this.statistics.minLatency === Infinity
+        ? "N/A"
+        : this.statistics.minLatency + "ms"
+    }
 - **最大延迟**: ${this.statistics.maxLatency}ms
 
 ---
@@ -162,7 +178,9 @@ class TestReportGenerator {
       Object.entries(errorGroups)
         .sort(([, a], [, b]) => b - a) // 按出现次数降序排列
         .forEach(([errorType, count]) => {
-          const percentage = ((count / this.failedTests.length) * 100).toFixed(1);
+          const percentage = ((count / this.failedTests.length) * 100).toFixed(
+            1,
+          );
           report += `- **${errorType}**: ${count} 次 (${percentage}%)\n`;
         });
 
@@ -173,26 +191,26 @@ class TestReportGenerator {
         .sort(([, a], [, b]) => b.length - a.length) // 按测试数量降序排列
         .forEach(([errorType, tests]) => {
           report += `#### ${errorType} (${tests.length} 次测试)\n\n`;
-          report += `| 序号 | 主机/域名 | 目标IP | IP版本 | 协议 | 状态码 | 延迟(ms) | 服务器 | 错误信息 |\n`;
-          report += `|------|-----------|--------|--------|------|--------|----------|--------|----------|\n`;
+          report +=
+            `| 序号 | 主机/域名 | 目标IP | IP版本 | 协议 | 状态码 | 延迟(ms) | 服务器 | 错误信息 |\n`;
+          report +=
+            `|------|-----------|--------|--------|------|--------|----------|--------|----------|\n`;
 
           tests.forEach((test) => {
-            const host =
-              test.host.length > 200
-                ? test.host.substring(0, 170) + "..."
-                : test.host;
-            const errorMsg =
-              test.error_msg.length > 500
-                ? test.error_msg.substring(0, 470) + "..."
-                : test.error_msg;
-            const serverHeader =
-              test.server_header.length > 150
-                ? test.server_header.substring(0, 120) + "..."
-                : test.server_header;
+            const host = test.host.length > 200
+              ? test.host.substring(0, 170) + "..."
+              : test.host;
+            const errorMsg = test.error_msg.length > 500
+              ? test.error_msg.substring(0, 470) + "..."
+              : test.error_msg;
+            const serverHeader = test.server_header.length > 150
+              ? test.server_header.substring(0, 120) + "..."
+              : test.server_header;
 
-            report += `| ${test.index} | ${host} | ${test.target_ip} | ${test.ip_version} | ${test.protocol} | ${
-              test.status_code || "N/A"
-            } | ${test.latency_ms} | ${serverHeader} | ${errorMsg} |\n`;
+            report +=
+              `| ${test.index} | ${host} | ${test.target_ip} | ${test.ip_version} | ${test.protocol} | ${
+                test.status_code || "N/A"
+              } | ${test.latency_ms} | ${serverHeader} | ${errorMsg} |\n`;
           });
 
           report += `\n`;
@@ -204,7 +222,7 @@ class TestReportGenerator {
       // 按主错误类型分组进行统计
       const mainErrorTypes = {};
       Object.entries(errorGroups).forEach(([fullErrorType, count]) => {
-        const mainType = fullErrorType.split(':')[0]; // 获取主错误类型
+        const mainType = fullErrorType.split(":")[0]; // 获取主错误类型
         mainErrorTypes[mainType] = (mainErrorTypes[mainType] || 0) + count;
       });
 
@@ -212,7 +230,9 @@ class TestReportGenerator {
       Object.entries(mainErrorTypes)
         .sort(([, a], [, b]) => b - a)
         .forEach(([mainType, count]) => {
-          const percentage = ((count / this.failedTests.length) * 100).toFixed(1);
+          const percentage = ((count / this.failedTests.length) * 100).toFixed(
+            1,
+          );
           report += `- **${mainType}**: ${count} 次 (${percentage}%)\n`;
         });
 
@@ -225,7 +245,7 @@ class TestReportGenerator {
       });
     }
 
-      // 添加延迟最低的记录部分
+    // 添加延迟最低的记录部分
     if (this.options.includeLatencySection) {
       const topLatencyRecords = this.getTopLatencyRecords();
 
@@ -248,29 +268,30 @@ class TestReportGenerator {
           const serverHeader = test.server_header.length > 150
             ? test.server_header.substring(0, 120) + "..."
             : test.server_header;
-          const status = test.success ? '✅ 成功' : '❌ 失败';
+          const status = test.success ? "✅ 成功" : "❌ 失败";
 
-          report += `| ${test.index} | ${host} | ${test.target_ip} | ${test.ip_version} | ${test.protocol} | ${status} | ${test.latency_ms} | ${serverHeader} |\n`;
+          report +=
+            `| ${test.index} | ${host} | ${test.target_ip} | ${test.ip_version} | ${test.protocol} | ${status} | ${test.latency_ms} | ${serverHeader} |\n`;
         });
 
         // 延迟分布统计
         report += `\n### 延迟分布分析\n\n`;
 
         const latencyRanges = {
-          '超快 (<50ms)': 0,
-          '快 (50-100ms)': 0,
-          '正常 (100-200ms)': 0,
-          '慢 (200-500ms)': 0,
-          '很慢 (>500ms)': 0
+          "超快 (<50ms)": 0,
+          "快 (50-100ms)": 0,
+          "正常 (100-200ms)": 0,
+          "慢 (200-500ms)": 0,
+          "很慢 (>500ms)": 0,
         };
 
-        topLatencyRecords.forEach(test => {
+        topLatencyRecords.forEach((test) => {
           const latency = test.latency_ms;
-          if (latency < 50) latencyRanges['超快 (<50ms)']++;
-          else if (latency < 100) latencyRanges['快 (50-100ms)']++;
-          else if (latency < 200) latencyRanges['正常 (100-200ms)']++;
-          else if (latency < 500) latencyRanges['慢 (200-500ms)']++;
-          else latencyRanges['很慢 (>500ms)']++;
+          if (latency < 50) latencyRanges["超快 (<50ms)"]++;
+          else if (latency < 100) latencyRanges["快 (50-100ms)"]++;
+          else if (latency < 200) latencyRanges["正常 (100-200ms)"]++;
+          else if (latency < 500) latencyRanges["慢 (200-500ms)"]++;
+          else latencyRanges["很慢 (>500ms)"]++;
         });
 
         Object.entries(latencyRanges).forEach(([range, count]) => {
@@ -363,8 +384,7 @@ class TestReportGenerator {
           } else {
             errorSubType = "其他超时";
           }
-        }
-        // 连接被拒绝类错误
+        } // 连接被拒绝类错误
         else if (
           errorMsg.includes("connection refused") ||
           errorMsg.includes("actively refused") ||
@@ -382,8 +402,7 @@ class TestReportGenerator {
           } else {
             errorSubType = "通用连接拒绝";
           }
-        }
-        // DNS解析错误
+        } // DNS解析错误
         else if (
           errorMsg.includes("dns") ||
           errorMsg.includes("no such host") ||
@@ -403,8 +422,7 @@ class TestReportGenerator {
           } else {
             errorSubType = "其他DNS错误";
           }
-        }
-        // TLS/SSL错误
+        } // TLS/SSL错误
         else if (
           errorMsg.includes("tls") ||
           errorMsg.includes("ssl") ||
@@ -425,8 +443,7 @@ class TestReportGenerator {
           } else {
             errorSubType = "其他TLS错误";
           }
-        }
-        // 网络不可达错误
+        } // 网络不可达错误
         else if (
           errorMsg.includes("network is unreachable") ||
           errorMsg.includes("no route to host") ||
@@ -444,8 +461,7 @@ class TestReportGenerator {
           } else {
             errorSubType = "其他路由错误";
           }
-        }
-        // 连接重置错误
+        } // 连接重置错误
         else if (
           errorMsg.includes("connection reset") ||
           errorMsg.includes("reset by peer") ||
@@ -462,8 +478,7 @@ class TestReportGenerator {
           } else {
             errorSubType = "其他连接中断";
           }
-        }
-        // 协议相关错误
+        } // 协议相关错误
         else if (
           errorMsg.includes("protocol") ||
           errorMsg.includes("alpn") ||
@@ -485,16 +500,14 @@ class TestReportGenerator {
           } else {
             errorSubType = "其他协议错误";
           }
-        }
-        // 代理相关错误
+        } // 代理相关错误
         else if (
           errorMsg.includes("proxy") ||
           errorMsg.includes("socks") ||
           errorMsg.includes("代理")
         ) {
           errorType = "代理错误";
-        }
-        // 防火墙和安全软件阻止
+        } // 防火墙和安全软件阻止
         else if (
           errorMsg.includes("blocked") ||
           errorMsg.includes("firewall") ||
@@ -510,7 +523,9 @@ class TestReportGenerator {
       }
 
       // 使用复合错误类型（主类型: 子类型）
-      const finalErrorType = errorSubType ? `${errorType}: ${errorSubType}` : errorType;
+      const finalErrorType = errorSubType
+        ? `${errorType}: ${errorSubType}`
+        : errorType;
       errorGroups[finalErrorType] = (errorGroups[finalErrorType] || 0) + 1;
     });
 
@@ -550,8 +565,7 @@ class TestReportGenerator {
           } else {
             errorSubType = "其他超时";
           }
-        }
-        else if (
+        } else if (
           errorMsg.includes("connection refused") ||
           errorMsg.includes("actively refused") ||
           errorMsg.includes("connectex: no connection could be made") ||
@@ -568,8 +582,7 @@ class TestReportGenerator {
           } else {
             errorSubType = "通用连接拒绝";
           }
-        }
-        else if (
+        } else if (
           errorMsg.includes("dns") ||
           errorMsg.includes("no such host") ||
           errorMsg.includes("name resolution") ||
@@ -588,8 +601,7 @@ class TestReportGenerator {
           } else {
             errorSubType = "其他DNS错误";
           }
-        }
-        else if (
+        } else if (
           errorMsg.includes("tls") ||
           errorMsg.includes("ssl") ||
           errorMsg.includes("certificate") ||
@@ -609,8 +621,7 @@ class TestReportGenerator {
           } else {
             errorSubType = "其他TLS错误";
           }
-        }
-        else if (
+        } else if (
           errorMsg.includes("network is unreachable") ||
           errorMsg.includes("no route to host") ||
           errorMsg.includes("host unreachable") ||
@@ -627,8 +638,7 @@ class TestReportGenerator {
           } else {
             errorSubType = "其他路由错误";
           }
-        }
-        else if (
+        } else if (
           errorMsg.includes("connection reset") ||
           errorMsg.includes("reset by peer") ||
           errorMsg.includes("broken pipe") ||
@@ -644,8 +654,7 @@ class TestReportGenerator {
           } else {
             errorSubType = "其他连接中断";
           }
-        }
-        else if (
+        } else if (
           errorMsg.includes("protocol") ||
           errorMsg.includes("alpn") ||
           errorMsg.includes("http") ||
@@ -666,15 +675,13 @@ class TestReportGenerator {
           } else {
             errorSubType = "其他协议错误";
           }
-        }
-        else if (
+        } else if (
           errorMsg.includes("proxy") ||
           errorMsg.includes("socks") ||
           errorMsg.includes("代理")
         ) {
           errorType = "代理错误";
-        }
-        else if (
+        } else if (
           errorMsg.includes("blocked") ||
           errorMsg.includes("firewall") ||
           errorMsg.includes("security") ||
@@ -688,7 +695,9 @@ class TestReportGenerator {
         errorType = "无错误信息";
       }
 
-      const finalErrorType = errorSubType ? `${errorType}: ${errorSubType}` : errorType;
+      const finalErrorType = errorSubType
+        ? `${errorType}: ${errorSubType}`
+        : errorType;
 
       if (!groupedTests[finalErrorType]) {
         groupedTests[finalErrorType] = [];
@@ -707,13 +716,14 @@ class TestReportGenerator {
 
     // 分析超时相关的模式
     const timeoutTests = groupedTests["连接超时: I/O超时"] || [];
-    const connectionRefusedTests = groupedTests["连接被拒绝: Windows连接错误"] || [];
+    const connectionRefusedTests =
+      groupedTests["连接被拒绝: Windows连接错误"] || [];
 
     if (timeoutTests.length > 0) {
       // 分析超时测试的IP模式
       const ipPatterns = {};
-      timeoutTests.forEach(test => {
-        const ipPrefix = test.target_ip.split('.').slice(0, 2).join('.');
+      timeoutTests.forEach((test) => {
+        const ipPrefix = test.target_ip.split(".").slice(0, 2).join(".");
         ipPatterns[ipPrefix] = (ipPatterns[ipPrefix] || 0) + 1;
       });
 
@@ -721,41 +731,54 @@ class TestReportGenerator {
         .sort(([, a], [, b]) => b - a)[0];
 
       if (topIpPattern) {
-        patterns[`超时集中度分析`] = `共有 ${timeoutTests.length} 次超时，主要集中在IP段 ${topIpPattern[0]}（${topIpPattern[1]} 次），可能存在网络路由问题或目标服务器负载过高`;
+        patterns[`超时集中度分析`] =
+          `共有 ${timeoutTests.length} 次超时，主要集中在IP段 ${
+            topIpPattern[0]
+          }（${topIpPattern[1]} 次），可能存在网络路由问题或目标服务器负载过高`;
       }
     }
 
     if (connectionRefusedTests.length > 0) {
       // 分析连接被拒绝的IP模式
-      patterns[`连接拒绝分析`] = `共有 ${connectionRefusedTests.length} 次连接被拒绝，这些目标可能存在防火墙阻止、服务未运行或网络配置问题`;
+      patterns[`连接拒绝分析`] =
+        `共有 ${connectionRefusedTests.length} 次连接被拒绝，这些目标可能存在防火墙阻止、服务未运行或网络配置问题`;
     }
 
     // 分析协议分布
     const protocolDistribution = {};
-    Object.values(groupedTests).flat().forEach(test => {
-      protocolDistribution[test.protocol] = (protocolDistribution[test.protocol] || 0) + 1;
+    Object.values(groupedTests).flat().forEach((test) => {
+      protocolDistribution[test.protocol] =
+        (protocolDistribution[test.protocol] || 0) + 1;
     });
 
     const noProtocolCount = protocolDistribution["none"] || 0;
     if (noProtocolCount > 0) {
-      patterns[`协议协商分析`] = `有 ${noProtocolCount} 次失败是因为协议协商失败（protocol: none），说明无法与目标建立HTTP/3或其他现代协议连接`;
+      patterns[`协议协商分析`] =
+        `有 ${noProtocolCount} 次失败是因为协议协商失败（protocol: none），说明无法与目标建立HTTP/3或其他现代协议连接`;
     }
 
     // 分析IP版本分布
-    const ipv4Count = Object.values(groupedTests).flat().filter(t => t.ip_version === "IPv4").length;
-    const ipv6Count = Object.values(groupedTests).flat().filter(t => t.ip_version === "IPv6").length;
+    const ipv4Count =
+      Object.values(groupedTests).flat().filter((t) => t.ip_version === "IPv4")
+        .length;
+    const ipv6Count =
+      Object.values(groupedTests).flat().filter((t) => t.ip_version === "IPv6")
+        .length;
 
     if (ipv4Count > 0 && ipv6Count === 0) {
-      patterns[`IP版本分析`] = `所有失败的测试都使用IPv4，IPv6连接可能更稳定或目标服务器的IPv6配置更好`;
+      patterns[`IP版本分析`] =
+        `所有失败的测试都使用IPv4，IPv6连接可能更稳定或目标服务器的IPv6配置更好`;
     } else if (ipv6Count > 0 && ipv4Count === 0) {
-      patterns[`IP版本分析`] = `所有失败的测试都使用IPv6，IPv4连接可能更稳定或目标服务器的IPv4配置更好`;
+      patterns[`IP版本分析`] =
+        `所有失败的测试都使用IPv6，IPv4连接可能更稳定或目标服务器的IPv4配置更好`;
     } else if (ipv4Count > 0 && ipv6Count > 0) {
-      patterns[`IP版本分析`] = `IPv4失败 ${ipv4Count} 次，IPv6失败 ${ipv6Count} 次，两种协议都存在问题`;
+      patterns[`IP版本分析`] =
+        `IPv4失败 ${ipv4Count} 次，IPv6失败 ${ipv6Count} 次，两种协议都存在问题`;
     }
 
     // 分析特定的主机模式
     const hostCounts = {};
-    Object.values(groupedTests).flat().forEach(test => {
+    Object.values(groupedTests).flat().forEach((test) => {
       hostCounts[test.host] = (hostCounts[test.host] || 0) + 1;
     });
 
@@ -765,8 +788,11 @@ class TestReportGenerator {
       .slice(0, 3);
 
     if (problematicHosts.length > 0) {
-      const hostList = problematicHosts.map(([host, count]) => `${host} (${count}次)`).join(', ');
-      patterns[`问题主机分析`] = `以下主机出现多次失败：${hostList}，建议重点检查这些主机的网络状态和服务可用性`;
+      const hostList = problematicHosts.map(([host, count]) =>
+        `${host} (${count}次)`
+      ).join(", ");
+      patterns[`问题主机分析`] =
+        `以下主机出现多次失败：${hostList}，建议重点检查这些主机的网络状态和服务可用性`;
     }
 
     return patterns;
@@ -791,7 +817,9 @@ class TestReportGenerator {
       },
       latency_statistics: {
         average_latency_ms: parseFloat(this.statistics.avgLatency),
-        min_latency_ms: this.statistics.minLatency === Infinity ? null : this.statistics.minLatency,
+        min_latency_ms: this.statistics.minLatency === Infinity
+          ? null
+          : this.statistics.minLatency,
         max_latency_ms: this.statistics.maxLatency,
         top_latency_count: topLatencyRecords.length,
         latency_ranges: this.getLatencyRanges(topLatencyRecords),
@@ -823,12 +851,15 @@ class TestReportGenerator {
     const mainTypes = {};
 
     Object.entries(errorGroups).forEach(([fullErrorType, count]) => {
-      const mainType = fullErrorType.split(':')[0].trim();
+      const mainType = fullErrorType.split(":")[0].trim();
       mainTypes[mainType] = (mainTypes[mainType] || 0) + count;
     });
 
     // 计算百分比
-    const total = Object.values(mainTypes).reduce((sum, count) => sum + count, 0);
+    const total = Object.values(mainTypes).reduce(
+      (sum, count) => sum + count,
+      0,
+    );
     const distribution = {};
 
     Object.entries(mainTypes)
@@ -836,7 +867,7 @@ class TestReportGenerator {
       .forEach(([type, count]) => {
         distribution[type] = {
           count: count,
-          percentage: ((count / total) * 100).toFixed(1)
+          percentage: ((count / total) * 100).toFixed(1),
         };
       });
 
@@ -849,22 +880,22 @@ class TestReportGenerator {
   getLatencyRanges(records = null) {
     const targetRecords = records || this.allTests;
     const latencyRanges = {
-      '超快 (<50ms)': 0,
-      '快 (50-100ms)': 0,
-      '正常 (100-200ms)': 0,
-      '慢 (200-500ms)': 0,
-      '很慢 (>500ms)': 0
+      "超快 (<50ms)": 0,
+      "快 (50-100ms)": 0,
+      "正常 (100-200ms)": 0,
+      "慢 (200-500ms)": 0,
+      "很慢 (>500ms)": 0,
     };
 
-    targetRecords.forEach(test => {
-      if (!test.latency_ms || typeof test.latency_ms !== 'number') return;
+    targetRecords.forEach((test) => {
+      if (!test.latency_ms || typeof test.latency_ms !== "number") return;
 
       const latency = test.latency_ms;
-      if (latency < 50) latencyRanges['超快 (<50ms)']++;
-      else if (latency < 100) latencyRanges['快 (50-100ms)']++;
-      else if (latency < 200) latencyRanges['正常 (100-200ms)']++;
-      else if (latency < 500) latencyRanges['慢 (200-500ms)']++;
-      else latencyRanges['很慢 (>500ms)']++;
+      if (latency < 50) latencyRanges["超快 (<50ms)"]++;
+      else if (latency < 100) latencyRanges["快 (50-100ms)"]++;
+      else if (latency < 200) latencyRanges["正常 (100-200ms)"]++;
+      else if (latency < 500) latencyRanges["慢 (200-500ms)"]++;
+      else latencyRanges["很慢 (>500ms)"]++;
     });
 
     return latencyRanges;
@@ -919,7 +950,13 @@ class TestReportGenerator {
     if (this.statistics.avgLatency > 0) {
       console.log("\n📊 延迟统计:");
       console.log(`  平均延迟: ${this.statistics.avgLatency}ms`);
-      console.log(`  最小延迟: ${this.statistics.minLatency === Infinity ? 'N/A' : this.statistics.minLatency + 'ms'}`);
+      console.log(
+        `  最小延迟: ${
+          this.statistics.minLatency === Infinity
+            ? "N/A"
+            : this.statistics.minLatency + "ms"
+        }`,
+      );
       console.log(`  最大延迟: ${this.statistics.maxLatency}ms`);
     }
 
@@ -940,9 +977,15 @@ class TestReportGenerator {
       if (topLatencyRecords.length > 0) {
         console.log("\n🚀 最佳延迟记录 (前5条):");
         topLatencyRecords.forEach((test, index) => {
-          const status = test.success ? '✅' : '❌';
-          const host = test.host.length > 250 ? test.host.substring(0, 220) + "..." : test.host;
-          console.log(`  ${index + 1}. ${status} ${host} - ${test.latency_ms}ms (${test.protocol})`);
+          const status = test.success ? "✅" : "❌";
+          const host = test.host.length > 250
+            ? test.host.substring(0, 220) + "..."
+            : test.host;
+          console.log(
+            `  ${
+              index + 1
+            }. ${status} ${host} - ${test.latency_ms}ms (${test.protocol})`,
+          );
         });
       }
     }
@@ -951,8 +994,8 @@ class TestReportGenerator {
   }
 }
 
-import { fileURLToPath } from 'node:url';
-import { dirname } from 'node:path';
+import { fileURLToPath } from "node:url";
+import { dirname } from "node:path";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -962,17 +1005,23 @@ function main() {
   // 解析命令行参数
   const program = new Command();
   program
-    .name('generate-test-report')
-    .description('HTTP/3 连接测试报告生成器')
-    .version('2.0.0')
-    .option('-f, --file <path>', '测试结果文件路径', 'connectivity_results.json')
-    .option('-c, --count <number>', '延迟最低的记录数量', '100')
-    .option('--no-latency-section', '不包含延迟最低记录部分')
-    .option('-o, --output <format>', '输出格式 (markdown, json, both)', 'both');
+    .name("generate-test-report")
+    .description("HTTP/3 连接测试报告生成器")
+    .version("2.0.0")
+    .option(
+      "-f, --file <path>",
+      "测试结果文件路径",
+      "connectivity_results.json",
+    )
+    .option("-c, --count <number>", "延迟最低的记录数量", "100")
+    .option("--no-latency-section", "不包含延迟最低记录部分")
+    .option("-o, --output <format>", "输出格式 (markdown, json, both)", "both");
 
   program.parse(process.argv);
   const options = program.opts();
-  const resultsFilePath = options.file.startsWith('/') ? options.file : join(__dirname, options.file);
+  const resultsFilePath = options.file.startsWith("/")
+    ? options.file
+    : join(__dirname, options.file);
 
   console.log("HTTP/3 连接测试失败报告生成器 v2.0.0");
   console.log("=".repeat(40));
@@ -1009,9 +1058,15 @@ function main() {
   // 显示延迟统计信息
   const topLatencyRecords = generator.getTopLatencyRecords();
   if (topLatencyRecords.length > 0) {
-    console.log(`📊 延迟最低的 ${topLatencyRecords.length} 条记录已添加到报告中`);
+    console.log(
+      `📊 延迟最低的 ${topLatencyRecords.length} 条记录已添加到报告中`,
+    );
     console.log(`   最快延迟: ${topLatencyRecords[0].latency_ms}ms`);
-    console.log(`   最慢延迟: ${topLatencyRecords[topLatencyRecords.length - 1].latency_ms}ms`);
+    console.log(
+      `   最慢延迟: ${
+        topLatencyRecords[topLatencyRecords.length - 1].latency_ms
+      }ms`,
+    );
   }
 }
 
