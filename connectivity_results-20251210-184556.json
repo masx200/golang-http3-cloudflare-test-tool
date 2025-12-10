@@ -5225,26 +5225,26 @@
     "error_msg": null
   },
   {
-    "host": "111.171.108.67",
-    "target_ip": "111.171.108.67",
+    "host": "104.26.6.112",
+    "target_ip": "104.26.6.112",
     "ip_version": "IPv4",
     "success": false,
     "status_code": null,
     "protocol": "none",
     "latency_ms": 0,
     "server_header": null,
-    "error_msg": "dial tcp 111.171.108.67:443: i/o timeout"
+    "error_msg": "dial tcp 104.26.6.112:443: i/o timeout"
   },
   {
-    "host": "175.212.207.13",
-    "target_ip": "175.212.207.13",
+    "host": "104.26.6.112",
+    "target_ip": "104.26.6.112",
     "ip_version": "IPv4",
     "success": false,
     "status_code": null,
     "protocol": "none",
     "latency_ms": 0,
     "server_header": null,
-    "error_msg": "dial tcp 175.212.207.13:443: i/o timeout"
+    "error_msg": "dial tcp 104.26.6.112:443: i/o timeout"
   },
   {
     "host": "172.67.49.134",
@@ -5269,25 +5269,25 @@
     "error_msg": "dial tcp 172.64.201.25:443: i/o timeout"
   },
   {
-    "host": "119.194.220.146",
-    "target_ip": "119.194.220.146",
+    "host": "104.26.6.112",
+    "target_ip": "104.26.6.112",
     "ip_version": "IPv4",
     "success": false,
     "status_code": null,
     "protocol": "none",
     "latency_ms": 0,
     "server_header": null,
-    "error_msg": "dial tcp 119.194.220.146:443: i/o timeout"
+    "error_msg": "dial tcp 104.26.6.112:443: i/o timeout"
   },
   {
-    "host": "121.188.182.190",
-    "target_ip": "121.188.182.190",
+    "host": "104.26.6.112",
+    "target_ip": "104.26.6.112",
     "ip_version": "IPv4",
     "success": false,
     "status_code": null,
     "protocol": "none",
     "latency_ms": 0,
     "server_header": null,
-    "error_msg": "dial tcp 121.188.182.190:443: i/o timeout"
+    "error_msg": "dial tcp 104.26.6.112:443: i/o timeout"
   }
 ]
