@@ -5,13 +5,14 @@ import { fileURLToPath } from "url";
 // 获取当前文件的目录路径
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const oldTextArray = ["104.26.6.112", "104.26.6.112", "104.26.6.112", "104.26.6.112"]
-
+const oldTextArray = [
+  "104.26.6.112",
+  "104.26.6.112",
+  "104.26.6.112",
+  "104.26.6.112",
+];
 
 for (const oldText of oldTextArray) {
-
-
-
   // 配置要替换的文本
 
   const newText = "104.26.6.112";
@@ -55,7 +56,7 @@ for (const oldText of oldTextArray) {
         // 替换文本
         const newContent = content.replace(
           new RegExp(escapeRegExp(oldText), "g"),
-          newText,
+          newText
         );
 
         // 写入文件
@@ -106,5 +107,4 @@ for (const oldText of oldTextArray) {
 
   // 运行程序
   main();
-
 }
