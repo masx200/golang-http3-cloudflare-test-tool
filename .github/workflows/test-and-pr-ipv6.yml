@@ -1,4 +1,4 @@
-name: Run Tests and Create PR
+name: Run Tests and Create PR Ipv6
 
 on:
   push:
