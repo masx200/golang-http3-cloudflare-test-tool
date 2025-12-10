@@ -131,7 +131,16 @@ jobs:
       run: npm run check
 
     - name: Run start script
-      run: npm run start
+      run: |
+        # 查找最新生成的 connectivity_results 文件
+        LATEST_FILE=$(ls -t connectivity_results-*.json | head -n 1)
+        if [ -n "$LATEST_FILE" ]; then
+          echo "使用文件: $LATEST_FILE"
+          node generate-test-report.js -f "$LATEST_FILE"
+        else
+          echo "未找到 connectivity_results-*.json 文件，使用默认文件"
+          npm run start
+        fi
 
     - name: Check for changes
       id: verify-changed-files

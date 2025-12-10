@@ -69,12 +69,16 @@ func main() {
 	// 测试所有host
 	results := testHostsConnectivity(hosts)
 
+	// 生成带时间戳的文件名
+	timestamp := time.Now().Format("20060102-150405")
+	outputFile := fmt.Sprintf("connectivity_results-%s.json", timestamp)
+
 	// 输出结果到JSON文件
-	if err := saveResults(results, "connectivity_results.json"); err != nil {
+	if err := saveResults(results, outputFile); err != nil {
 		log.Fatalf("保存结果失败: %v", err)
 	}
 
-	fmt.Printf("\n测试完成！结果已保存到 connectivity_results.json\n")
+	fmt.Printf("\n测试完成！结果已保存到 %s\n", outputFile)
 
 	// 统计结果
 	successResults := filterResults(results, true)
