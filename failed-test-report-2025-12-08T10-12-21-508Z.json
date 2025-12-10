@@ -2332,14 +2332,14 @@
         },
         {
           "index": 481,
-          "host": "115.22.115.218",
-          "target_ip": "115.22.115.218",
+          "host": "104.26.6.112",
+          "target_ip": "104.26.6.112",
           "ip_version": "IPv4",
           "protocol": "none",
           "status_code": null,
           "latency_ms": 0,
           "server_header": "N/A",
-          "error_msg": "dial tcp 115.22.115.218:443: i/o timeout",
+          "error_msg": "dial tcp 104.26.6.112:443: i/o timeout",
           "timestamp": "2025-12-08T10:12:21.506Z",
           "success": false
         },
@@ -2397,14 +2397,14 @@
         },
         {
           "index": 495,
-          "host": "52.76.110.129",
-          "target_ip": "52.76.110.129",
+          "host": "104.26.6.112",
+          "target_ip": "104.26.6.112",
           "ip_version": "IPv4",
           "protocol": "none",
           "status_code": null,
           "latency_ms": 0,
           "server_header": "N/A",
-          "error_msg": "dial tcp 52.76.110.129:443: i/o timeout",
+          "error_msg": "dial tcp 104.26.6.112:443: i/o timeout",
           "timestamp": "2025-12-08T10:12:21.506Z",
           "success": false
         }
@@ -4705,14 +4705,14 @@
     },
     {
       "index": 481,
-      "host": "115.22.115.218",
-      "target_ip": "115.22.115.218",
+      "host": "104.26.6.112",
+      "target_ip": "104.26.6.112",
       "ip_version": "IPv4",
       "protocol": "none",
       "status_code": null,
       "latency_ms": 0,
       "server_header": "N/A",
-      "error_msg": "dial tcp 115.22.115.218:443: i/o timeout",
+      "error_msg": "dial tcp 104.26.6.112:443: i/o timeout",
       "timestamp": "2025-12-08T10:12:21.506Z",
       "success": false
     },
@@ -4809,14 +4809,14 @@
     },
     {
       "index": 495,
-      "host": "52.76.110.129",
-      "target_ip": "52.76.110.129",
+      "host": "104.26.6.112",
+      "target_ip": "104.26.6.112",
       "ip_version": "IPv4",
       "protocol": "none",
       "status_code": null,
       "latency_ms": 0,
       "server_header": "N/A",
-      "error_msg": "dial tcp 52.76.110.129:443: i/o timeout",
+      "error_msg": "dial tcp 104.26.6.112:443: i/o timeout",
       "timestamp": "2025-12-08T10:12:21.506Z",
       "success": false
     }
