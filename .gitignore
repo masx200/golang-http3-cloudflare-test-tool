@@ -14,3 +14,4 @@ host_connectivity_check
 host_connectivity_check.exe
 node_modules
 #上游节点-workers.txt
+*.exe

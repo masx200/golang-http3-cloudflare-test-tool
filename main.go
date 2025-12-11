@@ -30,6 +30,7 @@ type InputTask struct {
 	PreferIPv6       *bool    `json:"prefer_ipv6"`
 	ResolveMode      string   `json:"resolve_mode"`
 	DirectIPs        []string `json:"direct_ips"`
+	DoHIP            string   `json:"dohip"`
 }
 
 // TestResult 对应Rust中的TestResult结构
@@ -57,6 +58,7 @@ var (
 	testURL     = flag.String("test-url", "https://hello-world-deno-deploy.a1u06h9fe9y5bozbmgz3.qzz.io", "测试URL")
 	port        = flag.Int("port", 443, "目标端口")
 	verbose     = flag.Bool("verbose", false, "详细输出")
+	doHIP       = flag.String("dohip", "", "强制解析 ykxkqhbc8x.apuk83ea3z.de5.net 到指定IP")
 )
 
 func main() {
@@ -76,6 +78,7 @@ func main() {
 			DohURL:           *dohURL,
 			Port:             *port,
 			ResolveMode:      *resolveMode,
+			DoHIP:            *doHIP,
 		}
 		tasks = append(tasks, task)
 	} else {
@@ -225,7 +228,7 @@ func resolveDomain(task *InputTask) ([]string, error) {
 	case "https":
 		// 使用DoH (RFC 8484标准)
 		fmt.Printf("    -> 使用DoH查询 (RFC 8484): %s\n", task.DohResolveDomain)
-		return dohLookup(task.DohResolveDomain, task.DohURL)
+		return dohLookup(task.DohResolveDomain, task.DohURL, task.DoHIP)
 	case "a_aaaa":
 		// 传统A/AAAA记录查询
 		fmt.Printf("    -> 使用传统DNS查询: %s\n", task.DohResolveDomain)
@@ -239,12 +242,20 @@ func resolveDomain(task *InputTask) ([]string, error) {
 }
 
 // DoH查询
-func dohLookup(domain, dohURL string) ([]string, error) {
+func dohLookup(domain, dohURL string, dohip string) ([]string, error) {
 	msg := new(dns.Msg)
 	msg.SetQuestion(dns.Fqdn(domain), dns.TypeA)
 
+	// 准备DoH服务器的IP地址
+	var dohIPs []string
+	if dohip != "" {
+		// 如果提供了dohip参数，使用指定的IP
+		dohIPs = append(dohIPs, dohip)
+		fmt.Printf("    -> 使用强制DoH服务器IP: %s\n", dohip)
+	}
+
 	// 首先尝试A记录
-	ips, err := performDoHQuery(msg, dohURL)
+	ips, err := performDoHQuery(msg, dohURL, dohIPs...)
 	if err != nil {
 		fmt.Printf("    -> DoH查询A记录失败: %v\n", err)
 	} else if len(ips) > 0 {
@@ -253,7 +264,7 @@ func dohLookup(domain, dohURL string) ([]string, error) {
 
 	// 如果A记录没有结果，尝试AAAA记录
 	msg.SetQuestion(dns.Fqdn(domain), dns.TypeAAAA)
-	ips, err = performDoHQuery(msg, dohURL)
+	ips, err = performDoHQuery(msg, dohURL, dohIPs...)
 	if err != nil {
 		fmt.Printf("    -> DoH查询AAAA记录失败: %v\n", err)
 		return nil, err

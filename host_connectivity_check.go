@@ -43,6 +43,7 @@ var (
 	SERVERSNI   = flag.String("sni", "local-aria2-webui.masx200.ddns-ip.net", "SNI名称")
 	DOHURL      = flag.String("doh", "https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query", "DoH查询URL")
 	PORT        = flag.Int("port", 443, "目标端口")
+	DOHIP       = flag.String("dohip", "", "强制解析 ykxkqhbc8x.apuk83ea3z.de5.net 到指定IP")
 )
 
 func main() {
@@ -175,7 +176,7 @@ func testSingleHost(host string) []TestResult {
 		if *verbose {
 			fmt.Printf("  %s 是域名，进行DoH解析...\n", host)
 		}
-		targetIPs, err = dohLookup(host, *DOHURL)
+		targetIPs, err = dohLookup(host, *DOHURL, *DOHIP)
 		if err != nil {
 			return []TestResult{{
 				Host:         host,
@@ -266,13 +267,23 @@ func isIPAddress(host string) bool {
 }
 
 // DoH查询
-func dohLookup(domain, dohURL string) ([]string, error) {
+func dohLookup(domain, dohURL string, dohip string) ([]string, error) {
 	var allIPs []string
+
+	// 准备DoH服务器的IP地址
+	var dohIPs []string
+	if dohip != "" {
+		// 如果提供了dohip参数，使用指定的IP
+		dohIPs = append(dohIPs, dohip)
+		if *verbose {
+			fmt.Printf("  使用强制DoH服务器IP: %s\n", dohip)
+		}
+	}
 
 	// 查询A记录
 	msg := new(dns.Msg)
 	msg.SetQuestion(dns.Fqdn(domain), dns.TypeA)
-	aIPs, err := performDoHQuery(msg, dohURL)
+	aIPs, err := performDoHQuery(msg, dohURL, dohIPs...)
 	if err != nil && *verbose {
 		fmt.Printf("  DoH查询A记录失败: %v\n", err)
 	} else if len(aIPs) > 0 {
@@ -284,7 +295,7 @@ func dohLookup(domain, dohURL string) ([]string, error) {
 
 	// 查询AAAA记录
 	msg.SetQuestion(dns.Fqdn(domain), dns.TypeAAAA)
-	aaaaIPs, err := performDoHQuery(msg, dohURL)
+	aaaaIPs, err := performDoHQuery(msg, dohURL, dohIPs...)
 	if err != nil && *verbose {
 		fmt.Printf("  DoH查询AAAA记录失败: %v\n", err)
 	} else if len(aaaaIPs) > 0 {
