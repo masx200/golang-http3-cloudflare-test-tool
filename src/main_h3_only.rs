@@ -37,7 +37,7 @@ impl Default for H3TestConfig {
             domain: "local-aria2-webui.masx200.ddns-ip.net".to_string(),
             port: 443,
             path: "/".to_string(),
-            doh_server: "https://xget.a1u06h9fe9y5bozbmgz3.qzz.io/cloudflare-dns.com/dns-query".to_string(),
+            doh_server: "https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query".to_string(),
             timeout_seconds: 10,
             prefer_ipv6: false,
         }
@@ -52,8 +52,7 @@ async fn query_dns_over_https(
     doh_server: &str,
 ) -> Result<Vec<IpAddr>> {
     // 创建 DNS 查询
-    let name = Name::from_ascii(domain)
-        .context(format!("无效的域名: {}", domain))?;
+    let name = Name::from_ascii(domain).context(format!("无效的域名: {}", domain))?;
     let query = Query::query(name, record_type);
 
     // 创建 DNS 消息
@@ -66,9 +65,7 @@ async fn query_dns_over_https(
     let mut request_bytes = Vec::new();
     {
         let mut encoder = trust_dns_proto::serialize::binary::BinEncoder::new(&mut request_bytes);
-        message
-            .emit(&mut encoder)
-            .context("序列化 DNS 查询失败")?;
+        message.emit(&mut encoder).context("序列化 DNS 查询失败")?;
     }
 
     // 使用 base64url 编码（不包含填充）
@@ -94,14 +91,10 @@ async fn query_dns_over_https(
     }
 
     // 获取响应体
-    let response_bytes = response
-        .bytes()
-        .await
-        .context("读取响应体失败")?;
+    let response_bytes = response.bytes().await.context("读取响应体失败")?;
 
     // 解析 DNS 响应
-    let dns_response =
-        Message::from_vec(&response_bytes).context("解析 DNS 响应失败")?;
+    let dns_response = Message::from_vec(&response_bytes).context("解析 DNS 响应失败")?;
 
     // 提取 IP 地址
     let mut ip_addresses = Vec::new();
@@ -142,7 +135,10 @@ impl H3Tester {
     }
 
     pub async fn test_connection(&self) -> Result<()> {
-        info!("🚀 开始 HTTP/3 测试: {}:{}", self.config.domain, self.config.port);
+        info!(
+            "🚀 开始 HTTP/3 测试: {}:{}",
+            self.config.domain, self.config.port
+        );
         info!("🔧 使用 DoH 服务器: {}", self.config.doh_server);
 
         // 1. 创建 HTTP 客户端用于 DoH 查询
@@ -156,7 +152,14 @@ impl H3Tester {
         let mut all_ips = HashSet::new();
 
         // 查询 A 记录 (IPv4)
-        match query_dns_over_https(&client, &self.config.domain, RecordType::A, &self.config.doh_server).await {
+        match query_dns_over_https(
+            &client,
+            &self.config.domain,
+            RecordType::A,
+            &self.config.doh_server,
+        )
+        .await
+        {
             Ok(ipv4_addresses) => {
                 info!("✅ 找到 {} 个 IPv4 地址", ipv4_addresses.len());
                 for ip in &ipv4_addresses {
@@ -170,7 +173,14 @@ impl H3Tester {
         }
 
         // 查询 AAAA 记录 (IPv6)
-        match query_dns_over_https(&client, &self.config.domain, RecordType::AAAA, &self.config.doh_server).await {
+        match query_dns_over_https(
+            &client,
+            &self.config.domain,
+            RecordType::AAAA,
+            &self.config.doh_server,
+        )
+        .await
+        {
             Ok(ipv6_addresses) => {
                 info!("✅ 找到 {} 个 IPv6 地址", ipv6_addresses.len());
                 for ip in &ipv6_addresses {
@@ -201,7 +211,13 @@ impl H3Tester {
         // 4. 为每个 IP 地址测试 HTTP/3 连接
         let mut success_count = 0;
         for (index, ip) in ips.iter().enumerate() {
-            info!("\n🔄 正在测试第 {}/{} 个 IP: {}:{}", index + 1, ip_count, ip, self.config.port);
+            info!(
+                "\n🔄 正在测试第 {}/{} 个 IP: {}:{}",
+                index + 1,
+                ip_count,
+                ip,
+                self.config.port
+            );
 
             if let Err(e) = self.test_single_connection(*ip).await {
                 error!("❌ IP {} 测试失败: {:?}", ip, e);
@@ -211,7 +227,10 @@ impl H3Tester {
             }
         }
 
-        info!("\n📊 测试总结: {}/{} 个 IP 测试成功", success_count, ip_count);
+        info!(
+            "\n📊 测试总结: {}/{} 个 IP 测试成功",
+            success_count, ip_count
+        );
 
         Ok(())
     }
@@ -280,17 +299,14 @@ impl H3Tester {
             .body(())
             .map_err(|e| anyhow!("构建请求失败: {}", e))?;
 
-        let mut stream = send_request.send_request(req)
+        let mut stream = send_request
+            .send_request(req)
             .await
             .map_err(h3_error_to_anyhow)?;
 
-        stream.finish()
-            .await
-            .map_err(h3_error_to_anyhow)?;
+        stream.finish().await.map_err(h3_error_to_anyhow)?;
 
-        let resp = stream.recv_response()
-            .await
-            .map_err(h3_error_to_anyhow)?;
+        let resp = stream.recv_response().await.map_err(h3_error_to_anyhow)?;
 
         let status = resp.status();
         let version = resp.version();
@@ -304,7 +320,10 @@ impl H3Tester {
             total_bytes += chunk.remaining();
         }
 
-        info!("✅ HTTP/3 测试成功！状态码: {}, 响应大小: {} 字节", status, total_bytes);
+        info!(
+            "✅ HTTP/3 测试成功！状态码: {}, 响应大小: {} 字节",
+            status, total_bytes
+        );
 
         // 清理资源
         drop(client_endpoint);
@@ -362,7 +381,7 @@ pub async fn run() -> Result<()> {
                 .long("doh-server")
                 .value_name("URL")
                 .help("DNS over HTTPS 服务器 URL")
-                .default_value("https://xget.a1u06h9fe9y5bozbmgz3.qzz.io/cloudflare-dns.com/dns-query"),
+                .default_value("https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query"),
         )
         .arg(
             Arg::new("prefer-ipv6")

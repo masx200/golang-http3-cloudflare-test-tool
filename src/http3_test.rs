@@ -264,7 +264,11 @@ pub async fn resolve_domain_with_rfc8484(client: &Client, task: &InputTask) -> R
         }
     }
 
-    if ips.is_empty() && task.doh_resolve_domain.contains("local-aria2-webui.masx200.ddns-ip.net") {
+    if ips.is_empty()
+        && task
+            .doh_resolve_domain
+            .contains("local-aria2-webui.masx200.ddns-ip.net")
+    {
         println!("    -> 使用備用的Cloudflare IP...");
         add_fallback_cloudflare_ips(&mut ips);
     }
@@ -454,7 +458,7 @@ async fn test_http3_network_requests() -> Result<()> {
             "doh_resolve_domain": "local-aria2-webui.masx200.ddns-ip.net",
             "test_sni_host": "local-aria2-webui.masx200.ddns-ip.net",
             "test_host_header": "local-aria2-webui.masx200.ddns-ip.net",
-            "doh_url": "https://xget.a1u06h9fe9y5bozbmgz3.qzz.io/cloudflare-dns.com/dns-query",
+            "doh_url": "https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query",
             "port": 443,
             "prefer_ipv6": false,
             "resolve_mode": "https",
@@ -464,7 +468,7 @@ async fn test_http3_network_requests() -> Result<()> {
             "doh_resolve_domain": "local-aria2-webui.masx200.ddns-ip.net",
             "test_sni_host": "local-aria2-webui.masx200.ddns-ip.net",
             "test_host_header": "local-aria2-webui.masx200.ddns-ip.net",
-            "doh_url": "https://xget.a1u06h9fe9y5bozbmgz3.qzz.io/cloudflare-dns.com/dns-query",
+            "doh_url": "https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query",
             "port": 443,
             "prefer_ipv6": false,
             "resolve_mode": "https",
@@ -474,7 +478,7 @@ async fn test_http3_network_requests() -> Result<()> {
             "doh_resolve_domain": "www.google.com",
             "test_sni_host": "www.google.com",
             "test_host_header": "www.google.com",
-            "doh_url": "https://xget.a1u06h9fe9y5bozbmgz3.qzz.io/cloudflare-dns.com/dns-query",
+            "doh_url": "https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query",
             "port": 443,
             "prefer_ipv6": false,
             "resolve_mode": "https",

@@ -40,13 +40,13 @@
 
 #### DNS解析错误: 其他DNS错误 (5 次测试)
 
-| 序号 | 主机/域名           | 目标IP  | IP版本  | 协议 | 状态码 | 延迟(ms) | 服务器 | 错误信息                                                                                                                                                                          |
-| ---- | ------------------- | ------- | ------- | ---- | ------ | -------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 6    | stock.hostmonit.com | Unknown | Unknown | none | N/A    | 0        | N/A    | DNS解析失败: Post "https://xget.a1u06h9fe9y5bozbmgz3.qzz.io/cloudflare-dns.com/dns-query": dial tcp: lookup xget.a1u06h9fe9y5bozbmgz3.qzz.io on 127.0.0.53:53: server misbehaving |
-| 7    | palera.in           | Unknown | Unknown | none | N/A    | 0        | N/A    | DNS解析失败: Post "https://xget.a1u06h9fe9y5bozbmgz3.qzz.io/cloudflare-dns.com/dns-query": dial tcp: lookup xget.a1u06h9fe9y5bozbmgz3.qzz.io on 127.0.0.53:53: server misbehaving |
-| 8    | www.4chan.org       | Unknown | Unknown | none | N/A    | 0        | N/A    | DNS解析失败: Post "https://xget.a1u06h9fe9y5bozbmgz3.qzz.io/cloudflare-dns.com/dns-query": dial tcp: lookup xget.a1u06h9fe9y5bozbmgz3.qzz.io on 127.0.0.53:53: server misbehaving |
-| 9    | fbi.gov             | Unknown | Unknown | none | N/A    | 0        | N/A    | DNS解析失败: Post "https://xget.a1u06h9fe9y5bozbmgz3.qzz.io/cloudflare-dns.com/dns-query": dial tcp: lookup xget.a1u06h9fe9y5bozbmgz3.qzz.io on 127.0.0.53:53: server misbehaving |
-| 10   | www.ipchicken.com   | Unknown | Unknown | none | N/A    | 0        | N/A    | DNS解析无结果                                                                                                                                                                     |
+| 序号 | 主机/域名           | 目标IP  | IP版本  | 协议 | 状态码 | 延迟(ms) | 服务器 | 错误信息                                                                                                                                                                                                                 |
+| ---- | ------------------- | ------- | ------- | ---- | ------ | -------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 6    | stock.hostmonit.com | Unknown | Unknown | none | N/A    | 0        | N/A    | DNS解析失败: Post "https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query": dial tcp: lookup xget.a1u06h9fe9y5bozbmgz3.qzz.io on 127.0.0.53:53: server misbehaving |
+| 7    | palera.in           | Unknown | Unknown | none | N/A    | 0        | N/A    | DNS解析失败: Post "https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query": dial tcp: lookup xget.a1u06h9fe9y5bozbmgz3.qzz.io on 127.0.0.53:53: server misbehaving |
+| 8    | www.4chan.org       | Unknown | Unknown | none | N/A    | 0        | N/A    | DNS解析失败: Post "https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query": dial tcp: lookup xget.a1u06h9fe9y5bozbmgz3.qzz.io on 127.0.0.53:53: server misbehaving |
+| 9    | fbi.gov             | Unknown | Unknown | none | N/A    | 0        | N/A    | DNS解析失败: Post "https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query": dial tcp: lookup xget.a1u06h9fe9y5bozbmgz3.qzz.io on 127.0.0.53:53: server misbehaving |
+| 10   | www.ipchicken.com   | Unknown | Unknown | none | N/A    | 0        | N/A    | DNS解析无结果                                                                                                                                                                                                            |
 
 ### 📈 错误分析总结
 
@@ -73,7 +73,7 @@ none），说明无法与目标建立HTTP/3或其他现代协议连接
 以下显示了延迟最低的测试记录，包括成功和失败的测试：
 
 | 序号 | 主机/域名 | 目标IP | IP版本 | 协议 | 状态 | 延迟(ms) | 服务器 |
-|------|-----------|--------|--------|------|------|----------|--------|| 261 |
+| ---- | --------- | ------ | ------ | ---- | ---- | -------- | ------ || 261 |
 icook.hk | 2606:4700:3031::6815:5ad2 | IPv6 | h2 | ✅ 成功 | 60 | cloudflare | |
 219 | 104.19.175.123 | 104.19.175.123 | IPv4 | h2 | ✅ 成功 | 61 | cloudflare |
 | 279 | www.wto.org | 104.18.41.190 | IPv4 | h2 | ✅ 成功 | 62 | cloudflare | |

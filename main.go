@@ -52,7 +52,7 @@ type TestResult struct {
 var (
 	configFile  = flag.String("config", "", "配置文件路径")
 	domain      = flag.String("domain", "", "测试域名")
-	dohURL      = flag.String("doh-url", "https://xget.a1u06h9fe9y5bozbmgz3.qzz.io/cloudflare-dns.com/dns-query", "DoH服务URL")
+	dohURL      = flag.String("doh-url", "https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query", "DoH服务URL")
 	resolveMode = flag.String("resolve-mode", "https", "解析模式: https, a_aaaa, direct")
 	testURL     = flag.String("test-url", "https://hello-world-deno-deploy.a1u06h9fe9y5bozbmgz3.qzz.io", "测试URL")
 	port        = flag.Int("port", 443, "目标端口")
@@ -132,7 +132,7 @@ func getDefaultTasks() []InputTask {
 			DohResolveDomain: "hello-world-deno-deploy.a1u06h9fe9y5bozbmgz3.qzz.io",
 			TestSniHost:      "hello-world-deno-deploy.a1u06h9fe9y5bozbmgz3.qzz.io",
 			TestHostHeader:   "hello-world-deno-deploy.a1u06h9fe9y5bozbmgz3.qzz.io",
-			DohURL:           "https://xget.a1u06h9fe9y5bozbmgz3.qzz.io/cloudflare-dns.com/dns-query",
+			DohURL:           "https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query",
 			Port:             443,
 			ResolveMode:      "https",
 		},
@@ -140,7 +140,7 @@ func getDefaultTasks() []InputTask {
 			DohResolveDomain: "local-aria2-webui.masx200.ddns-ip.net",
 			TestSniHost:      "local-aria2-webui.masx200.ddns-ip.net",
 			TestHostHeader:   "local-aria2-webui.masx200.ddns-ip.net",
-			DohURL:           "https://xget.a1u06h9fe9y5bozbmgz3.qzz.io/cloudflare-dns.com/dns-query",
+			DohURL:           "https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query",
 			Port:             443,
 			ResolveMode:      "https",
 		},
@@ -148,7 +148,7 @@ func getDefaultTasks() []InputTask {
 			DohResolveDomain: "local-aria2-webui.masx200.ddns-ip.net",
 			TestSniHost:      "local-aria2-webui.masx200.ddns-ip.net",
 			TestHostHeader:   "local-aria2-webui.masx200.ddns-ip.net",
-			DohURL:           "https://xget.a1u06h9fe9y5bozbmgz3.qzz.io/cloudflare-dns.com/dns-query",
+			DohURL:           "https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query",
 			Port:             443,
 			DirectIPs:        []string{"162.159.140.220", "172.67.214.232"},
 			ResolveMode:      "direct",

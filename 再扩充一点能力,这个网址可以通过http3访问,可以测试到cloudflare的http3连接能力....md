@@ -131,7 +131,7 @@ async fn resolve_https_record(client: \&Client, domain: &str) \-\>
 Result\<Vec\<String\>\> {\
 // 使用 Type 65 (HTTPS) 查询\
 let dns_url \= format\!(\
-"https://xget.a1u06h9fe9y5bozbmgz3.qzz.io/cloudflare-dns.com/dns-query?name={}\&type=HTTPS",\
+"https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query?name={}\&type=HTTPS",\
 domain\
 );
 

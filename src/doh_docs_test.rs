@@ -78,7 +78,7 @@ mod doh_docs_integration_tests {
 
         // 使用Cloudflare DoH JSON API (可靠且稳定)
         let doh_url = format!(
-            "https://xget.a1u06h9fe9y5bozbmgz3.qzz.io/cloudflare-dns.com/dns-query?name={}&type={}",
+            "https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query?name={}&type={}",
             urlencoding::encode(domain),
             qtype
         );
@@ -183,8 +183,14 @@ mod doh_docs_integration_tests {
 
         // 首先测试一个已知的域名来验证DoH API是否工作
         let test_domains = vec![
-            ("local-aria2-webui.masx200.ddns-ip.net", "known working domain"),
-            ("local-aria2-webui.masx200.ddns-ip.net", "known working domain"),
+            (
+                "local-aria2-webui.masx200.ddns-ip.net",
+                "known working domain",
+            ),
+            (
+                "local-aria2-webui.masx200.ddns-ip.net",
+                "known working domain",
+            ),
             (TARGET_DOMAIN, "target domain"),
         ];
 

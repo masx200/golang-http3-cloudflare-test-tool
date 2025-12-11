@@ -84,9 +84,6 @@
     "host": "104.18.42.26"
   },
   {
-    "host": "104.26.6.112"
-  },
-  {
     "host": "172.64.41.88"
   },
   {
@@ -231,9 +228,6 @@
     "host": "local-aria2-webui.masx200.ddns-ip.net"
   },
   {
-    "host": "104.26.6.112"
-  },
-  {
     "host": "172.64.156.195"
   },
   {
@@ -283,9 +277,6 @@
   },
   {
     "host": "abdullah.ns.cloudflare.com"
-  },
-  {
-    "host": "104.26.6.112"
   },
   {
     "host": "time.is"
@@ -439,9 +430,6 @@
   },
   {
     "host": "172.64.201.25"
-  },
-  {
-    "host": "104.26.6.112"
   },
   {
     "host": "trevor.ns.cloudflare.com"

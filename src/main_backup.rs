@@ -310,7 +310,7 @@ async fn main() -> Result<()> {
             "doh_resolve_domain": "hello-world-deno-deploy.a1u06h9fe9y5bozbmgz3.qzz.io",
             "test_sni_host": "hello-world-deno-deploy.a1u06h9fe9y5bozbmgz3.qzz.io",
             "test_host_header": "hello-world-deno-deploy.a1u06h9fe9y5bozbmgz3.qzz.io",
-            "doh_url": "https://xget.a1u06h9fe9y5bozbmgz3.qzz.io/cloudflare-dns.com/dns-query",
+            "doh_url": "https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query",
             "port": 443,
             "prefer_ipv6": true,
             "resolve_mode": "https"
@@ -319,7 +319,7 @@ async fn main() -> Result<()> {
             "doh_resolve_domain": "local-aria2-webui.masx200.ddns-ip.net",
             "test_sni_host": "local-aria2-webui.masx200.ddns-ip.net",
             "test_host_header": "local-aria2-webui.masx200.ddns-ip.net",
-            "doh_url": "https://xget.a1u06h9fe9y5bozbmgz3.qzz.io/cloudflare-dns.com/dns-query",
+            "doh_url": "https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query",
             "port": 443,
             "prefer_ipv6": true,
             "resolve_mode": "https"
@@ -328,7 +328,7 @@ async fn main() -> Result<()> {
             "doh_resolve_domain": "local-aria2-webui.masx200.ddns-ip.net",
             "test_sni_host": "local-aria2-webui.masx200.ddns-ip.net",
             "test_host_header": "local-aria2-webui.masx200.ddns-ip.net",
-            "doh_url": "https://xget.a1u06h9fe9y5bozbmgz3.qzz.io/cloudflare-dns.com/dns-query",
+            "doh_url": "https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query",
             "port": 443,
             "prefer_ipv6": true,
             "resolve_mode": "a_aaaa"
@@ -337,7 +337,7 @@ async fn main() -> Result<()> {
             "doh_resolve_domain": "local-aria2-webui.masx200.ddns-ip.net",
             "test_sni_host": "local-aria2-webui.masx200.ddns-ip.net",
             "test_host_header": "local-aria2-webui.masx200.ddns-ip.net",
-            "doh_url": "https://xget.a1u06h9fe9y5bozbmgz3.qzz.io/cloudflare-dns.com/dns-query",
+            "doh_url": "https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query",
             "port": 443,
             "prefer_ipv6": true,
             "direct_ips": ["162.159.140.220", "172.67.214.232"],

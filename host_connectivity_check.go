@@ -41,7 +41,7 @@ var (
 	timeout     = flag.Int("timeout", 10, "超时时间(秒)")
 	inputFile   = flag.String("input", "hosts.json", "输入文件路径")
 	SERVERSNI   = flag.String("sni", "local-aria2-webui.masx200.ddns-ip.net", "SNI名称")
-	DOHURL      = flag.String("doh", "https://xget.a1u06h9fe9y5bozbmgz3.qzz.io/cloudflare-dns.com/dns-query", "DoH查询URL")
+	DOHURL      = flag.String("doh", "https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query", "DoH查询URL")
 	PORT        = flag.Int("port", 443, "目标端口")
 )
 

@@ -9,7 +9,7 @@ mod tests {
 
     // DoH 服务器 URL
     const DOH_SERVER: &str =
-        "https://xget.a1u06h9fe9y5bozbmgz3.qzz.io/cloudflare-dns.com/dns-query";
+        "https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query";
 
     // 要查询的域名
     const DOMAIN_TO_QUERY: &str = "hello-world-deno-deploy.a1u06h9fe9y5bozbmgz3.qzz.io";
