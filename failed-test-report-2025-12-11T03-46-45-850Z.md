@@ -34,7 +34,7 @@
 
 | 序号 | 主机/域名 | 目标IP | IP版本 | 协议 | 状态码 | 延迟(ms) | 服务器 | 错误信息 |
 |------|-----------|--------|--------|------|--------|----------|--------|----------|
-| 80 | 140.238.50.134 | 140.238.50.134 | IPv4 | h2 | N/A | 0 | N/A | Get "https://local-aria2-webui.masx200.ddns-ip.net:443/": context deadline exceeded |
+| 80 | 104.26.6.112 | 104.26.6.112 | IPv4 | h2 | N/A | 0 | N/A | Get "https://local-aria2-webui.masx200.ddns-ip.net:443/": context deadline exceeded |
 
 ### 📈 错误分析总结
 

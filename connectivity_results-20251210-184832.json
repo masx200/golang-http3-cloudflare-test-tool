@@ -374,8 +374,8 @@
     "error_msg": "dial tcp [2606:4700:3031::ac43:9db6]:443: connect: network is unreachable"
   },
   {
-    "host": "140.238.50.134",
-    "target_ip": "140.238.50.134",
+    "host": "104.26.6.112",
+    "target_ip": "104.26.6.112",
     "ip_version": "IPv4",
     "success": true,
     "status_code": 200,
