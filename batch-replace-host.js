@@ -56,7 +56,7 @@ for (const oldText of oldTextArray) {
         // 替换文本
         const newContent = content.replace(
           new RegExp(escapeRegExp(oldText), "g"),
-          newText
+          newText,
         );
 
         // 写入文件
