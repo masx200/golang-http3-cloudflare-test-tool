@@ -473,7 +473,7 @@
     },
     {
       "index": 165,
-      "host": "6a507fac-b8e4-45be-b2f0-9310f72c7eca.b.3.b.f.0.7.4.0.1.0.0.2.ip6.arpa",
+      "host": "yx-auto.pages.dev",
       "target_ip": "2606:4700:3031::ac43:868b",
       "ip_version": "IPv6",
       "protocol": "h2",
@@ -538,7 +538,7 @@
     },
     {
       "index": 121,
-      "host": "ae8a9c24-83de.masx200.ddns-ip.net",
+      "host": "yx-auto.pages.dev",
       "target_ip": "172.67.157.182",
       "ip_version": "IPv4",
       "protocol": "h2",
@@ -1357,7 +1357,7 @@
     },
     {
       "index": 164,
-      "host": "6a507fac-b8e4-45be-b2f0-9310f72c7eca.b.3.b.f.0.7.4.0.1.0.0.2.ip6.arpa",
+      "host": "yx-auto.pages.dev",
       "target_ip": "2606:4700:3030::6815:63c",
       "ip_version": "IPv6",
       "protocol": "h2",
