@@ -349,7 +349,7 @@
     "protocol": "",
     "latency_ms": null,
     "server_header": null,
-    "error_msg": "DNS解析失败: Post \"https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query\": context deadline exceeded"
+    "error_msg": "DNS解析失败: Post \"https://deno-dns-over-https-server.g18uibxgnb.de5.net/\": context deadline exceeded"
   },
   {
     "host": "172.67.110.232",
@@ -1944,7 +1944,7 @@
     "protocol": "",
     "latency_ms": null,
     "server_header": null,
-    "error_msg": "DNS解析失败: Post \"https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query\": context deadline exceeded"
+    "error_msg": "DNS解析失败: Post \"https://deno-dns-over-https-server.g18uibxgnb.de5.net/\": context deadline exceeded"
   },
   {
     "host": "cf.090227.xyz",
@@ -2813,7 +2813,7 @@
     "protocol": "",
     "latency_ms": null,
     "server_header": null,
-    "error_msg": "DNS解析失败: Post \"https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query\": context deadline exceeded"
+    "error_msg": "DNS解析失败: Post \"https://deno-dns-over-https-server.g18uibxgnb.de5.net/\": context deadline exceeded"
   },
   {
     "host": "162.159.133.85",
@@ -3858,7 +3858,7 @@
     "protocol": "",
     "latency_ms": null,
     "server_header": null,
-    "error_msg": "DNS解析失败: Post \"https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query\": context deadline exceeded"
+    "error_msg": "DNS解析失败: Post \"https://deno-dns-over-https-server.g18uibxgnb.de5.net/\": context deadline exceeded"
   },
   {
     "host": "stock.hostmonit.com",

@@ -37,7 +37,7 @@
           "status_code": null,
           "latency_ms": 0,
           "server_header": "N/A",
-          "error_msg": "DNS解析失败: Post \"https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query\": context deadline exceeded",
+          "error_msg": "DNS解析失败: Post \"https://deno-dns-over-https-server.g18uibxgnb.de5.net/\": context deadline exceeded",
           "timestamp": "2025-12-12T07:32:51.561Z",
           "success": false
         },
@@ -89,7 +89,7 @@
           "status_code": null,
           "latency_ms": 0,
           "server_header": "N/A",
-          "error_msg": "DNS解析失败: Post \"https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query\": context deadline exceeded",
+          "error_msg": "DNS解析失败: Post \"https://deno-dns-over-https-server.g18uibxgnb.de5.net/\": context deadline exceeded",
           "timestamp": "2025-12-12T07:32:51.561Z",
           "success": false
         },
@@ -102,7 +102,7 @@
           "status_code": null,
           "latency_ms": 0,
           "server_header": "N/A",
-          "error_msg": "DNS解析失败: Post \"https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query\": context deadline exceeded",
+          "error_msg": "DNS解析失败: Post \"https://deno-dns-over-https-server.g18uibxgnb.de5.net/\": context deadline exceeded",
           "timestamp": "2025-12-12T07:32:51.561Z",
           "success": false
         },
@@ -128,7 +128,7 @@
           "status_code": null,
           "latency_ms": 0,
           "server_header": "N/A",
-          "error_msg": "DNS解析失败: Post \"https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query\": context deadline exceeded",
+          "error_msg": "DNS解析失败: Post \"https://deno-dns-over-https-server.g18uibxgnb.de5.net/\": context deadline exceeded",
           "timestamp": "2025-12-12T07:32:51.561Z",
           "success": false
         }
@@ -283,7 +283,7 @@
       "status_code": null,
       "latency_ms": 0,
       "server_header": "N/A",
-      "error_msg": "DNS解析失败: Post \"https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query\": context deadline exceeded",
+      "error_msg": "DNS解析失败: Post \"https://deno-dns-over-https-server.g18uibxgnb.de5.net/\": context deadline exceeded",
       "timestamp": "2025-12-12T07:32:51.561Z",
       "success": false
     },
@@ -374,7 +374,7 @@
       "status_code": null,
       "latency_ms": 0,
       "server_header": "N/A",
-      "error_msg": "DNS解析失败: Post \"https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query\": context deadline exceeded",
+      "error_msg": "DNS解析失败: Post \"https://deno-dns-over-https-server.g18uibxgnb.de5.net/\": context deadline exceeded",
       "timestamp": "2025-12-12T07:32:51.561Z",
       "success": false
     },
@@ -413,7 +413,7 @@
       "status_code": null,
       "latency_ms": 0,
       "server_header": "N/A",
-      "error_msg": "DNS解析失败: Post \"https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query\": context deadline exceeded",
+      "error_msg": "DNS解析失败: Post \"https://deno-dns-over-https-server.g18uibxgnb.de5.net/\": context deadline exceeded",
       "timestamp": "2025-12-12T07:32:51.561Z",
       "success": false
     },
@@ -478,7 +478,7 @@
       "status_code": null,
       "latency_ms": 0,
       "server_header": "N/A",
-      "error_msg": "DNS解析失败: Post \"https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query\": context deadline exceeded",
+      "error_msg": "DNS解析失败: Post \"https://deno-dns-over-https-server.g18uibxgnb.de5.net/\": context deadline exceeded",
       "timestamp": "2025-12-12T07:32:51.561Z",
       "success": false
     }

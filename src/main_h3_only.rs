@@ -37,7 +37,7 @@ impl Default for H3TestConfig {
             domain: "local-aria2-webui.masx200.ddns-ip.net".to_string(),
             port: 443,
             path: "/".to_string(),
-            doh_server: "https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query".to_string(),
+            doh_server: "https://deno-dns-over-https-server.g18uibxgnb.de5.net/".to_string(),
             timeout_seconds: 10,
             prefer_ipv6: false,
         }
@@ -381,7 +381,7 @@ pub async fn run() -> Result<()> {
                 .long("doh-server")
                 .value_name("URL")
                 .help("DNS over HTTPS 服务器 URL")
-                .default_value("https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query"),
+                .default_value("https://deno-dns-over-https-server.g18uibxgnb.de5.net/"),
         )
         .arg(
             Arg::new("prefer-ipv6")

@@ -12,7 +12,7 @@
   "timeout_seconds": 30,
   "enable_ipv6": false,
   "dns_resolve_mode": "https",
-  "doh_server": "https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query",
+  "doh_server": "https://deno-dns-over-https-server.g18uibxgnb.de5.net/",
   "test_paths": ["/", "/cdn-cgi/trace", "/health", "/api/v4/ping"],
   "use_fallback": true,
   "max_field_section_size": 8192,

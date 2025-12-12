@@ -131,7 +131,7 @@ async fn resolve_https_record(client: \&Client, domain: &str) \-\>
 Result\<Vec\<String\>\> {\
 // 使用 Type 65 (HTTPS) 查询\
 let dns_url \= format\!(\
-"https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query?name={}\&type=HTTPS",\
+"https://deno-dns-over-https-server.g18uibxgnb.de5.net/?name={}\&type=HTTPS",\
 domain\
 );
 

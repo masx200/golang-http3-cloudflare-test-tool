@@ -78,7 +78,7 @@ mod doh_docs_integration_tests {
 
         // 使用Cloudflare DoH JSON API (可靠且稳定)
         let doh_url = format!(
-            "https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query?name={}&type={}",
+            "https://deno-dns-over-https-server.g18uibxgnb.de5.net/?name={}&type={}",
             urlencoding::encode(domain),
             qtype
         );
