@@ -310,8 +310,7 @@ let doh_http_client \= Client::builder()\
 
 Plaintext
 
-\>\>\> 正在通过
-https://deno-dns-over-https-server.g18uibxgnb.de5.net/解析
+\>\>\> 正在通过 https://deno-dns-over-https-server.g18uibxgnb.de5.net/解析
 hello-world-deno-deploy.a1u06h9fe9y5bozbmgz3.qzz.io 的 HTTPS 记录
 (二进制模式)...\
 \-\> 解析成功，获取到 3 个 IP Hint: \[104.21.33.118, 172.67.162.86,
