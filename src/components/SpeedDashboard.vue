@@ -135,6 +135,12 @@
                 </span>
                 <span v-else>-</span>
               </template>
+              <template v-slot:item.testDate="{ item }">
+                <span v-if="item.generatedAt">
+                  {{ formatDate(item.generatedAt) }}
+                </span>
+                <span v-else>-</span>
+              </template>
             </v-data-table>
           </v-card-text>
         </v-card>
@@ -184,6 +190,7 @@ export default {
       { title: '延迟(ms)', key: 'latency_ms', sortable: true },
       { title: '服务器', key: 'server_header', sortable: true },
       { title: '状态', key: 'success', sortable: true },
+      { title: '测试日期', key: 'testDate', sortable: true },
       { title: '错误信息', key: 'error_msg', sortable: false },
       { title: '测试环境', key: 'testEnvironment', sortable: false }
     ]
@@ -234,6 +241,21 @@ export default {
       if (latency < 200) return 'lime'
       if (latency < 500) return 'orange'
       return 'red'
+    }
+
+    // 格式化日期
+    const formatDate = (dateString) => {
+      try {
+        const date = new Date(dateString)
+        return date.toLocaleDateString('zh-CN', {
+          year: 'numeric',
+          month: '2-digit',
+          day: '2-digit'
+        })
+      } catch (error) {
+        console.error('Date formatting error:', error)
+        return dateString || '-'
+      }
     }
     
     // 加载数据
@@ -443,6 +465,7 @@ export default {
       protocolOptions,
       statusOptions,
       getLatencyColor,
+      formatDate,
       applyFilters,
       clearFilters,
       refreshData
