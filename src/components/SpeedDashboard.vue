@@ -156,7 +156,7 @@ export default {
       asName: null,
       ipVersion: null,
       protocol: null,
-      statusFilter: 'all' // 'all', 'success', 'failed'
+      statusFilter: 'success' // 'all', 'success', 'failed'
     })
 
     // 状态筛选选项
@@ -305,7 +305,9 @@ export default {
 
         testReports.value = reports
         allResults.value = results
-        filteredResults.value = results
+
+        // 应用默认筛选条件
+        applyFilters()
       } catch (error) {
         console.error('Error loading data:', error)
       } finally {
@@ -371,7 +373,7 @@ export default {
         asName: null,
         ipVersion: null,
         protocol: null,
-        statusFilter: 'all'
+        statusFilter: 'success'
       }
       filteredResults.value = [...allResults.value]
     }
