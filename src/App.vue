@@ -1,11 +1,17 @@
-<template>
-  <v-app>
+<template><v-app>
     <v-main>
-      <HelloWorld />
+      <SpeedDashboard />
     </v-main>
   </v-app>
 </template>
 
-<script setup lang="ts">
-  //
+<script>
+import SpeedDashboard from './components/SpeedDashboard.vue'
+
+export default {
+  name: 'App',
+  components: {
+    SpeedDashboard
+  }
+}
 </script>
