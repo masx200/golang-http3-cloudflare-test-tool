@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "extract": "go run -v ./extract_hosts.go",
-    "check": "go run -v  host_connectivity_check.go -verbose  -dohip 104.21.95.9 --doh-url https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query",
-    "start": "node generate-test-report.js"
+    "check": "node ip-info.js && go run -v  host_connectivity_check.go -verbose  -dohip 104.21.95.9 --doh-url https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query",
+    "start": "node ip-info.js && node generate-test-report.js"
   },
   "repository": {
     "type": "git",

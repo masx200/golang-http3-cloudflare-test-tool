@@ -1,8 +1,45 @@
 #!/usr/bin/env node
 
-import { existsSync, readFileSync, writeFileSync } from "fs";
+import { existsSync, readFileSync, writeFileSync, appendFileSync, readdirSync, statSync } from "fs";
 import { basename, join } from "path";
 import { Command } from "commander";
+import IPInfoFetcher from "./ip-info.js";
+
+/**
+ * 查找最新生成的 connectivity_results 文件
+ * @returns {string} 最新文件的路径，如果没有找到则返回默认文件名
+ */
+function findLatestConnectivityResultsFile() {
+  try {
+    // 读取当前目录下的所有文件
+    const files = readdirSync(process.cwd());
+
+    // 筛选出 connectivity_results-*.json 格式的文件
+    const connectivityFiles = files
+      .filter(file => file.startsWith('connectivity_results-') && file.endsWith('.json'))
+      .map(file => {
+        const filePath = join(process.cwd(), file);
+        const stats = statSync(filePath);
+        return {
+          name: file,
+          path: filePath,
+          mtime: stats.mtime
+        };
+      })
+      .sort((a, b) => b.mtime - a.mtime); // 按修改时间降序排序
+
+    if (connectivityFiles.length > 0) {
+      console.log(`找到最新的 connectivity_results 文件: ${connectivityFiles[0].name}`);
+      return connectivityFiles[0].path;
+    } else {
+      console.log("未找到 connectivity_results-*.json 文件，使用默认文件名");
+      return join(__dirname, "connectivity_results.json");
+    }
+  } catch (error) {
+    console.error("查找文件时出错:", error.message);
+    return join(__dirname, "connectivity_results.json");
+  }
+}
 
 /**
  * 生成HTTP/3连接测试失败报告
@@ -16,9 +53,12 @@ class TestReportGenerator {
     this.allTests = []; // 存储所有测试结果（包括成功的）
     this.failedTests = [];
     this.successfulTests = [];
+    this.ipInfo = null; // 存储IP信息
+    this.ipFetcher = new IPInfoFetcher(); // IP信息获取器
     this.options = {
       topLatencyCount: options.topLatencyCount || 100,
       includeLatencySection: options.includeLatencySection !== false,
+      includeIPInfo: options.includeIPInfo !== false,
       ...options,
     };
     this.statistics = {
@@ -30,6 +70,33 @@ class TestReportGenerator {
       minLatency: Infinity,
       maxLatency: 0,
     };
+  }
+
+  /**
+   * 获取IP地址信息
+   */
+  async fetchIPInfo() {
+    if (this.options.includeIPInfo) {
+      try {
+        console.log("正在获取当前IP地址信息...");
+        this.ipInfo = await this.ipFetcher.fetchIPInfo();
+        return true;
+      } catch (error) {
+        console.error("获取IP信息失败:", error.message);
+        // 设置默认IP信息，避免报告生成失败
+        this.ipInfo = {
+          ip: "unknown",
+          country: "unknown",
+          country_code: "unknown",
+          asn: "unknown",
+          as_name: "unknown",
+          source: "failed",
+          error: error.message
+        };
+        return false;
+      }
+    }
+    return false;
   }
 
   /**
@@ -161,7 +228,15 @@ class TestReportGenerator {
     }
 - **最大延迟**: ${this.statistics.maxLatency}ms
 
----
+`;
+
+    // 添加IP信息部分
+    if (this.options.includeIPInfo && this.ipInfo) {
+      const ipInfoMarkdown = this.ipFetcher.formatAsMarkdown();
+      report += ipInfoMarkdown;
+    }
+
+    report += `---
 
 ## 失败测试详情
 
@@ -809,7 +884,7 @@ class TestReportGenerator {
     const errorGroups = this.groupErrorsByType();
     const groupedTests = this.groupFailedTestsByErrorType();
 
-    return {
+    const reportData = {
       report_info: {
         generated_at: new Date().toISOString(),
         source_file: basename(this.resultsFilePath),
@@ -845,6 +920,13 @@ class TestReportGenerator {
       // successful_tests: this.successfulTests,
       top_latency_records: topLatencyRecords,
     };
+
+    // 添加IP信息到JSON报告
+    if (this.options.includeIPInfo && this.ipInfo) {
+      reportData.test_environment = this.ipFetcher.formatAsJSON();
+    }
+
+    return reportData;
   }
 
   /**
@@ -1004,9 +1086,12 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 // 主执行函数
-function main() {
+async function main() {
   // 解析命令行参数
   const program = new Command();
+  // 获取默认的测试结果文件路径（查找最新的文件）
+  const defaultFile = findLatestConnectivityResultsFile();
+
   program
     .name("generate-test-report")
     .description("HTTP/3 连接测试报告生成器")
@@ -1014,23 +1099,32 @@ function main() {
     .option(
       "-f, --file <path>",
       "测试结果文件路径",
-      "connectivity_results.json",
+      defaultFile,
     )
     .option("-c, --count <number>", "延迟最低的记录数量", "100")
     .option("--no-latency-section", "不包含延迟最低记录部分")
+    .option("--no-ip-info", "不包含IP地址信息")
     .option("-o, --output <format>", "输出格式 (markdown, json, both)", "both");
 
   program.parse(process.argv);
   const options = program.opts();
-  const resultsFilePath = options.file.startsWith("/")
-    ? options.file
-    : join(__dirname, options.file);
+
+  // 处理文件路径：如果已经是绝对路径，直接使用；否则使用相对路径
+  let resultsFilePath;
+  if (options.file.startsWith("/") || /^[A-Za-z]:/.test(options.file)) {
+    // 绝对路径（Linux/macOS 或 Windows）
+    resultsFilePath = options.file;
+  } else {
+    // 相对路径
+    resultsFilePath = join(process.cwd(), options.file);
+  }
 
   console.log("HTTP/3 连接测试失败报告生成器 v2.0.0");
   console.log("=".repeat(40));
   console.log(`数据文件: ${resultsFilePath}`);
   console.log(`延迟记录数量: ${options.count}`);
   console.log(`输出格式: ${options.output}`);
+  console.log(`IP信息: ${options.ipInfo !== false ? "启用" : "禁用"}`);
 
   // 检查文件是否存在
   if (!existsSync(resultsFilePath)) {
@@ -1043,8 +1137,15 @@ function main() {
   const generatorOptions = {
     topLatencyCount: parseInt(options.count),
     includeLatencySection: options.latencySection !== false,
+    includeIPInfo: options.ipInfo !== false,
   };
   const generator = new TestReportGenerator(resultsFilePath, generatorOptions);
+
+  // 获取IP信息
+  if (generatorOptions.includeIPInfo) {
+    console.log("\n正在获取测试环境信息...");
+    await generator.fetchIPInfo();
+  }
 
   // 加载和分析测试结果
   const results = generator.loadResults();
@@ -1070,6 +1171,14 @@ function main() {
         topLatencyRecords[topLatencyRecords.length - 1].latency_ms
       }ms`,
     );
+  }
+
+  // 显示IP信息摘要
+  if (generatorOptions.includeIPInfo && generator.ipInfo) {
+    console.log("\n🌐 测试环境信息:");
+    console.log(`   IP地址: ${generator.ipInfo.ip}`);
+    console.log(`   位置: ${generator.ipInfo.country} (${generator.ipInfo.country_code})`);
+    console.log(`   网络: ${generator.ipInfo.as_name || generator.ipInfo.org || "N/A"}`);
   }
 }
 
