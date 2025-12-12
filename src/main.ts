@@ -8,6 +8,7 @@
 import { registerPlugins } from "@/plugins";
 
 // Components
+//@ts-ignore
 import App from "./App.vue";
 
 // Composables

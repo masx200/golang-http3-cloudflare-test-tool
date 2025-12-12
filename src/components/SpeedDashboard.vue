@@ -214,7 +214,7 @@ export default {
         loading.value = true
         
         // 使用 import.meta.glob 读取所有 failed-test-report-*.json 文件
-        const reportFiles = import.meta.glob('../../failed-test-report-*.json', { as: 'raw' })
+        const reportFiles = import.meta.glob('../../failed-test-report-*.json', { query: '?raw', import: 'default' })
         
         const reports = []
         const results = []
