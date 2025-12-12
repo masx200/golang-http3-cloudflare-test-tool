@@ -232,19 +232,21 @@ export default {
     const loadData = async () => {
       try {
         loading.value = true
-        
+
         // 使用 import.meta.glob 读取所有 failed-test-report-*.json 文件
         const reportFiles = import.meta.glob('../../failed-test-report-*.json', { query: '?raw', import: 'default' })
-        
-        const reports = []
-        const results = []
-        
-        for (const path in reportFiles) {
+
+        console.log('Loading report files in parallel:', Object.keys(reportFiles).length)
+
+        // 并行加载所有报告文件
+        const filePromises = Object.entries(reportFiles).map(async ([path, loadFile]) => {
           try {
-            const content = await reportFiles[path]()
+            const content = await loadFile()
             const report = JSON.parse(content)
-            reports.push(report)
-            
+            console.log(`Loaded report: ${path}`)
+
+            const results = []
+
             // 添加成功测试
             if (report.top_latency_records && Array.isArray(report.top_latency_records)) {
               report.top_latency_records.forEach(test => {
@@ -256,7 +258,6 @@ export default {
                   asName: report.test_environment?.ip_info?.as_name
                 }
                 results.push(result)
-                console.log('Added success test:', result)
               })
             }
 
@@ -271,18 +272,36 @@ export default {
                   asName: report.test_environment?.ip_info?.as_name
                 }
                 results.push(result)
-                console.log('Added failed test:', result)
               })
             }
+
+            console.log(`Processed ${results.length} test results from ${path}`)
+            return { report, results }
           } catch (error) {
             console.error(`Error loading report ${path}:`, error)
+            return { report: null, results: [] }
           }
-        }
+        })
+
+        // 等待所有文件加载完成
+        const fileResults = await Promise.all(filePromises)
+
+        // 合并所有结果
+        const reports = []
+        const results = []
+
+        fileResults.forEach(({ report, results: testResults }) => {
+          if (report) {
+            reports.push(report)
+          }
+          results.push(...testResults)
+        })
 
         console.log('All loaded results:', results)
         console.log('Unique countries:', [...new Set(results.map(r => r.country))])
         console.log('Unique ASNs:', [...new Set(results.map(r => r.asn))])
         console.log('Unique AS Names:', [...new Set(results.map(r => r.asName))])
+        console.log(`Parallel loading completed: ${results.length} total results from ${reports.length} reports`)
 
         testReports.value = reports
         allResults.value = results
