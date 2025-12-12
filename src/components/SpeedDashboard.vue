@@ -53,18 +53,12 @@
             </v-row>
             <v-row>
               <v-col cols="12" md="3">
-                <v-checkbox
-                  v-model="filters.showSuccess"
-                  label="显示成功测试"
+                <v-select
+                  v-model="filters.statusFilter"
+                  :items="statusOptions"
+                  label="测试状态"
                   @update:model-value="applyFilters"
-                ></v-checkbox>
-              </v-col>
-              <v-col cols="12" md="3">
-                <v-checkbox
-                  v-model="filters.showFailed"
-                  label="显示失败测试"
-                  @update:model-value="applyFilters"
-                ></v-checkbox>
+                ></v-select>
               </v-col>
               <v-col cols="12" md="3">
                 <v-btn @click="clearFilters" color="primary" block>清除筛选</v-btn>
@@ -150,9 +144,15 @@ export default {
       asn: null,
       ipVersion: null,
       protocol: null,
-      showSuccess: true,
-      showFailed: true
+      statusFilter: 'all' // 'all', 'success', 'failed'
     })
+
+    // 状态筛选选项
+    const statusOptions = [
+      { title: '全部', value: 'all' },
+      { title: '成功', value: 'success' },
+      { title: '失败', value: 'failed' }
+    ]
     
     // 表格头
     const headers = [
@@ -294,12 +294,10 @@ export default {
       }
       
       // 按成功/失败筛选
-      if (!filters.value.showSuccess) {
-        results = results.filter(r => !r.success)
-      }
-      
-      if (!filters.value.showFailed) {
+      if (filters.value.statusFilter === 'success') {
         results = results.filter(r => r.success)
+      } else if (filters.value.statusFilter === 'failed') {
+        results = results.filter(r => !r.success)
       }
       
       filteredResults.value = results
@@ -312,8 +310,7 @@ export default {
         asn: null,
         ipVersion: null,
         protocol: null,
-        showSuccess: true,
-        showFailed: true
+        statusFilter: 'all'
       }
       filteredResults.value = [...allResults.value]
     }
@@ -338,6 +335,7 @@ export default {
       countryOptions,
       asnOptions,
       protocolOptions,
+      statusOptions,
       getLatencyColor,
       applyFilters,
       clearFilters,
