@@ -101,16 +101,15 @@ cloudflare | | 69 | cloudflare-ip.mofashi.ltd | 2606:4700:3037::ac43:9bac | IPv6
 | | 90 | zread.ai | 172.67.202.78 | IPv4 | h2 | ✅ 成功 | 70 | cloudflare | |
 101 | cf.zhetengsha.eu.org | 2a06:98c1:3105::6812:230f | IPv6 | h2 | ✅ 成功 |
 70 | cloudflare | | 114 | cf.0sm.com | 2606:4700:3032::6815:785 | IPv6 | h2 | ✅
-成功 | 70 | cloudflare | | 121 | ae8a9c24-83de.masx200.ddns-ip.net |
-104.21.14.41 | IPv4 | h2 | ✅ 成功 | 70 | cloudflare | | 134 | ct.877774.xyz |
-172.64.229.173 | IPv4 | h2 | ✅ 成功 | 70 | cloudflare | | 304 | ipv4.ip.sb |
-172.67.75.172 | IPv4 | h2 | ✅ 成功 | 70 | cloudflare | | 308 | 172.67.75.172 |
-172.67.75.172 | IPv4 | h2 | ✅ 成功 | 70 | cloudflare | | 314 | www.gov.ua |
-2606:4700:3033::ac43:d17f | IPv6 | h2 | ✅ 成功 | 70 | cloudflare | | 386 |
-decker.ns.cloudflare.com | 2a06:98c1:50::ac40:239b | IPv6 | h2 | ✅ 成功 | 70 |
-cloudflare | | 430 | palera.in | 2606:4700:3035::6815:3a48 | IPv6 | h2 | ✅ 成功
-| 70 | cloudflare | | 463 |
-04c6cf21-1294-4fae-8bf8-715bbc897b60.masx201.dpdns.org |
+成功 | 70 | cloudflare | | 121 | yx-auto.pages.dev | 104.21.14.41 | IPv4 | h2 |
+✅ 成功 | 70 | cloudflare | | 134 | ct.877774.xyz | 172.64.229.173 | IPv4 | h2 |
+✅ 成功 | 70 | cloudflare | | 304 | ipv4.ip.sb | 172.67.75.172 | IPv4 | h2 | ✅
+成功 | 70 | cloudflare | | 308 | 172.67.75.172 | 172.67.75.172 | IPv4 | h2 | ✅
+成功 | 70 | cloudflare | | 314 | www.gov.ua | 2606:4700:3033::ac43:d17f | IPv6 |
+h2 | ✅ 成功 | 70 | cloudflare | | 386 | decker.ns.cloudflare.com |
+2a06:98c1:50::ac40:239b | IPv6 | h2 | ✅ 成功 | 70 | cloudflare | | 430 |
+palera.in | 2606:4700:3035::6815:3a48 | IPv6 | h2 | ✅ 成功 | 70 | cloudflare |
+| 463 | yx-auto.pages.dev |
 2606:4700:3033::ac43:a162 | IPv6 | h2 | ✅ 成功 | 70 | cloudflare | | 36 |
 dnschecker.org | 172.67.73.216 | IPv4 | h2 | ✅ 成功 | 71 | cloudflare | | 59 |
 ip.gs | 2606:4700:3035::ac43:a01c | IPv6 | h2 | ✅ 成功 | 71 | cloudflare | | 84
@@ -129,7 +128,7 @@ cloudflare | | 372 | toy-people.com | 2606:4700:20::681a:324 | IPv6 | h2 | ✅
 成功 | 71 | cloudflare | | 374 | toy-people.com | 2606:4700:20::ac43:4812 | IPv6
 | h2 | ✅ 成功 | 71 | cloudflare | | 427 | palera.in | 104.21.58.72 | IPv4 | h2
 | ✅ 成功 | 71 | cloudflare | | 461 |
-04c6cf21-1294-4fae-8bf8-715bbc897b60.masx201.dpdns.org | 172.67.161.98 | IPv4 |
+yx-auto.pages.dev | 172.67.161.98 | IPv4 |
 h2 | ✅ 成功 | 71 | cloudflare | | 10 | www.ipchicken.com | 104.26.7.112 | IPv4
 | h2 | ✅ 成功 | 72 | cloudflare | | 12 | www.wto.org | 104.18.41.190 | IPv4 |
 h2 | ✅ 成功 | 72 | cloudflare | | 37 | dnschecker.org | 2606:4700:20::681a:659

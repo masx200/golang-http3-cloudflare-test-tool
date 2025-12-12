@@ -162,8 +162,8 @@
 | 381  | www.gov.ua                                                                          | 2606:4700:3033::ac43:d17f            | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3033::ac43:d17f]:443: connect: network is unreachable            |
 | 384  | www.digitalocean.com                                                                | 2606:4700::6813:ae44                 | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700::6813:ae44]:443: connect: network is unreachable                 |
 | 385  | www.digitalocean.com                                                                | 2606:4700::6813:ad44                 | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700::6813:ad44]:443: connect: network is unreachable                 |
-| 388  | ae8a9c24-83de.masx200.ddns-ip.net                                                   | 2606:4700:3030::6815:e29             | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3030::6815:e29]:443: connect: network is unreachable             |
-| 389  | ae8a9c24-83de.masx200.ddns-ip.net                                                   | 2606:4700:3031::ac43:9db6            | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3031::ac43:9db6]:443: connect: network is unreachable            |
+| 388  | yx-auto.pages.dev                                                                   | 2606:4700:3030::6815:e29             | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3030::6815:e29]:443: connect: network is unreachable             |
+| 389  | yx-auto.pages.dev                                                                   | 2606:4700:3031::ac43:9db6            | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3031::ac43:9db6]:443: connect: network is unreachable            |
 | 393  | tasteatlas.com                                                                      | 2606:4700::6811:2469                 | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700::6811:2469]:443: connect: network is unreachable                 |
 | 394  | tasteatlas.com                                                                      | 2606:4700::6811:2569                 | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700::6811:2569]:443: connect: network is unreachable                 |
 | 397  | cf.zhetengsha.eu.org                                                                | 2606:4700:310c::ac42:2c4d            | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:310c::ac42:2c4d]:443: connect: network is unreachable            |
@@ -189,8 +189,8 @@
 | 440  | moura.ns.cloudflare.com                                                             | 2606:4700:58::a29f:2cd9              | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:58::a29f:2cd9]:443: connect: network is unreachable              |
 | 441  | moura.ns.cloudflare.com                                                             | 2803:f800:50::6ca2:c3d9              | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2803:f800:50::6ca2:c3d9]:443: connect: network is unreachable              |
 | 442  | moura.ns.cloudflare.com                                                             | 2a06:98c1:50::ac40:23d9              | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2a06:98c1:50::ac40:23d9]:443: connect: network is unreachable              |
-| 445  | 04c6cf21-1294-4fae-8bf8-715bbc897b60.masx201.dpdns.org                              | 2606:4700:3034::6815:9e6             | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3034::6815:9e6]:443: connect: network is unreachable             |
-| 446  | 04c6cf21-1294-4fae-8bf8-715bbc897b60.masx201.dpdns.org                              | 2606:4700:3033::ac43:a162            | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3033::ac43:a162]:443: connect: network is unreachable            |
+| 445  | yx-auto.pages.dev                              | 2606:4700:3034::6815:9e6             | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3034::6815:9e6]:443: connect: network is unreachable             |
+| 446  | yx-auto.pages.dev                              | 2606:4700:3033::ac43:a162            | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3033::ac43:a162]:443: connect: network is unreachable            |
 | 450  | huxley.ns.cloudflare.com                                                            | 2606:4700:58::a29f:2cbc              | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:58::a29f:2cbc]:443: connect: network is unreachable              |
 | 451  | huxley.ns.cloudflare.com                                                            | 2803:f800:50::6ca2:c3bc              | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2803:f800:50::6ca2:c3bc]:443: connect: network is unreachable              |
 | 452  | huxley.ns.cloudflare.com                                                            | 2a06:98c1:50::ac40:23bc              | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2a06:98c1:50::ac40:23bc]:443: connect: network is unreachable              |
@@ -263,7 +263,7 @@ IPv4 | h3 | ✅ 成功 | 47 | cloudflare | | 14 | julio.ns.cloudflare.com |
 172.64.35.209 | IPv4 | h3 | ✅ 成功 | 48 | cloudflare | | 226 | 172.64.49.165 |
 172.64.49.165 | IPv4 | h3 | ✅ 成功 | 48 | cloudflare | | 371 | fbi.gov |
 104.16.148.244 | IPv4 | h3 | ✅ 成功 | 48 | cloudflare | | 443 |
-04c6cf21-1294-4fae-8bf8-715bbc897b60.masx201.dpdns.org | 172.67.161.98 | IPv4 |
+yx-auto.pages.dev | 172.67.161.98 | IPv4 |
 h3 | ✅ 成功 | 48 | cloudflare | | 339 | ipv4.ip.sb | 104.26.13.31 | IPv4 | h3 |
 ✅ 成功 | 49 | cloudflare | | 430 | www.whatismyip.com | 104.26.12.23 | IPv4 |
 h3 | ✅ 成功 | 49 | cloudflare | | 87 | www.okcupid.com | 104.16.223.254 | IPv4
@@ -354,12 +354,12 @@ moura.ns.cloudflare.com | 172.64.35.217 | IPv4 | h3 | ✅ 成功 | 64 | cloudfla
 256 | yx-auto.pages.dev | 172.66.44.144 | IPv4 | h3 | ✅ 成功 | 65 | cloudflare
 | | 324 | cmcc.877774.xyz | 104.16.148.3 | IPv4 | h3 | ✅ 成功 | 65 | cloudflare
 | | 333 | cmcc.877774.xyz | 104.16.148.12 | IPv4 | h3 | ✅ 成功 | 65 |
-cloudflare | | 386 | ae8a9c24-83de.masx200.ddns-ip.net | 104.21.14.41 | IPv4 |
-h3 | ✅ 成功 | 65 | cloudflare | | 6 | bowen.ns.cloudflare.com | 108.162.195.83
-| IPv4 | h3 | ✅ 成功 | 66 | cloudflare | | 162 | www.udemy.com | 104.16.142.237
-| IPv4 | h3 | ✅ 成功 | 66 | cloudflare | | 200 | damien.ns.cloudflare.com |
-172.64.35.168 | IPv4 | h3 | ✅ 成功 | 66 | cloudflare | | 318 | cmcc.877774.xyz
-| 104.16.149.10 | IPv4 | h3 | ✅ 成功 | 66 | cloudflare |
+cloudflare | | 386 | yx-auto.pages.dev | 104.21.14.41 | IPv4 | h3 | ✅ 成功 | 65
+| cloudflare | | 6 | bowen.ns.cloudflare.com | 108.162.195.83 | IPv4 | h3 | ✅
+成功 | 66 | cloudflare | | 162 | www.udemy.com | 104.16.142.237 | IPv4 | h3 | ✅
+成功 | 66 | cloudflare | | 200 | damien.ns.cloudflare.com | 172.64.35.168 | IPv4
+| h3 | ✅ 成功 | 66 | cloudflare | | 318 | cmcc.877774.xyz | 104.16.149.10 |
+IPv4 | h3 | ✅ 成功 | 66 | cloudflare |
 
 ### 延迟分布分析
 

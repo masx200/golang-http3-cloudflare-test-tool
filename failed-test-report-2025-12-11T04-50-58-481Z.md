@@ -76,8 +76,8 @@
 | 125  | [2606:4700:9add::880:52fc]                                            | 2606:4700:9add::880:52fc                | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:9add::880:52fc]:443: connect: network is unreachable                |
 | 128  | cf.zhetengsha.eu.org                                                  | 2606:4700:440a::ac40:98f1               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:440a::ac40:98f1]:443: connect: network is unreachable               |
 | 129  | cf.zhetengsha.eu.org                                                  | 2a06:98c1:3105::6812:230f               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2a06:98c1:3105::6812:230f]:443: connect: network is unreachable               |
-| 133  | ae8a9c24-83de.masx200.ddns-ip.net                                     | 2606:4700:3030::6815:e29                | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3030::6815:e29]:443: connect: network is unreachable                |
-| 134  | ae8a9c24-83de.masx200.ddns-ip.net                                     | 2606:4700:3031::ac43:9db6               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3031::ac43:9db6]:443: connect: network is unreachable               |
+| 133  | yx-auto.pages.dev                                                     | 2606:4700:3030::6815:e29                | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3030::6815:e29]:443: connect: network is unreachable                |
+| 134  | yx-auto.pages.dev                                                     | 2606:4700:3031::ac43:9db6               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3031::ac43:9db6]:443: connect: network is unreachable               |
 | 141  | cf.0sm.com                                                            | 2606:4700:3032::6815:785                | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3032::6815:785]:443: connect: network is unreachable                |
 | 142  | cf.0sm.com                                                            | 2606:4700:3037::ac43:bb91               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3037::ac43:bb91]:443: connect: network is unreachable               |
 | 145  | ifconfig.co                                                           | 2606:4700:3037::6815:365b               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3037::6815:365b]:443: connect: network is unreachable               |
@@ -89,8 +89,8 @@
 | 163  | huxley.ns.cloudflare.com                                              | 2606:4700:58::a29f:2cbc                 | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:58::a29f:2cbc]:443: connect: network is unreachable                 |
 | 164  | huxley.ns.cloudflare.com                                              | 2803:f800:50::6ca2:c3bc                 | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2803:f800:50::6ca2:c3bc]:443: connect: network is unreachable                 |
 | 165  | huxley.ns.cloudflare.com                                              | 2a06:98c1:50::ac40:23bc                 | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2a06:98c1:50::ac40:23bc]:443: connect: network is unreachable                 |
-| 168  | 6a507fac-b8e4-45be-b2f0-9310f72c7eca.b.3.b.f.0.7.4.0.1.0.0.2.ip6.arpa | 2606:4700:3030::6815:63c                | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3030::6815:63c]:443: connect: network is unreachable                |
-| 169  | 6a507fac-b8e4-45be-b2f0-9310f72c7eca.b.3.b.f.0.7.4.0.1.0.0.2.ip6.arpa | 2606:4700:3031::ac43:868b               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3031::ac43:868b]:443: connect: network is unreachable               |
+| 168  | yx-auto.pages.dev | 2606:4700:3030::6815:63c                | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3030::6815:63c]:443: connect: network is unreachable                |
+| 169  | yx-auto.pages.dev | 2606:4700:3031::ac43:868b               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3031::ac43:868b]:443: connect: network is unreachable               |
 | 173  | www.hugedomains.com                                                   | 2606:4700:20::681a:725                  | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:20::681a:725]:443: connect: network is unreachable                  |
 | 174  | www.hugedomains.com                                                   | 2606:4700:20::ac43:46bf                 | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:20::ac43:46bf]:443: connect: network is unreachable                 |
 | 175  | www.hugedomains.com                                                   | 2606:4700:20::681a:625                  | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:20::681a:625]:443: connect: network is unreachable                  |
@@ -188,8 +188,8 @@
 | 443  | cris.ns.cloudflare.com                                                | 2606:4700:58::a29f:2cca                 | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:58::a29f:2cca]:443: connect: network is unreachable                 |
 | 444  | cris.ns.cloudflare.com                                                | 2803:f800:50::6ca2:c3ca                 | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2803:f800:50::6ca2:c3ca]:443: connect: network is unreachable                 |
 | 445  | cris.ns.cloudflare.com                                                | 2a06:98c1:50::ac40:23ca                 | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2a06:98c1:50::ac40:23ca]:443: connect: network is unreachable                 |
-| 448  | 04c6cf21-1294-4fae-8bf8-715bbc897b60.masx201.dpdns.org                | 2606:4700:3034::6815:9e6                | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3034::6815:9e6]:443: connect: network is unreachable                |
-| 449  | 04c6cf21-1294-4fae-8bf8-715bbc897b60.masx201.dpdns.org                | 2606:4700:3033::ac43:a162               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3033::ac43:a162]:443: connect: network is unreachable               |
+| 448  | yx-auto.pages.dev                | 2606:4700:3034::6815:9e6                | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3034::6815:9e6]:443: connect: network is unreachable                |
+| 449  | yx-auto.pages.dev                | 2606:4700:3033::ac43:a162               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3033::ac43:a162]:443: connect: network is unreachable               |
 | 453  | trevor.ns.cloudflare.com                                              | 2606:4700:58::a29f:2c9a                 | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:58::a29f:2c9a]:443: connect: network is unreachable                 |
 | 454  | trevor.ns.cloudflare.com                                              | 2803:f800:50::6ca2:c39a                 | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2803:f800:50::6ca2:c39a]:443: connect: network is unreachable                 |
 | 455  | trevor.ns.cloudflare.com                                              | 2a06:98c1:50::ac40:239a                 | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2a06:98c1:50::ac40:239a]:443: connect: network is unreachable                 |
@@ -245,7 +245,7 @@ cloudflare | | 308 | cmcc.877774.xyz | 104.16.149.244 | IPv4 | h3 | ✅ 成功 |
 IPv4 | h3 | ✅ 成功 | 68 | cloudflare | | 389 | www.visa.com.hk | 104.18.21.69 |
 IPv4 | h3 | ✅ 成功 | 73 | cloudflare | | 282 | 172.64.146.16 | 172.64.146.16 |
 IPv4 | h3 | ✅ 成功 | 74 | cloudflare | | 446 |
-04c6cf21-1294-4fae-8bf8-715bbc897b60.masx201.dpdns.org | 172.67.161.98 | IPv4 |
+yx-auto.pages.dev | 172.67.161.98 | IPv4 |
 h3 | ✅ 成功 | 80 | cloudflare | | 106 | ct.877774.xyz | 172.64.229.174 | IPv4 |
 h3 | ✅ 成功 | 81 | cloudflare | | 184 | www.whatismyip.com | 104.26.13.23 |
 IPv4 | h3 | ✅ 成功 | 84 | cloudflare | | 242 | cu.877774.xyz | 104.26.4.112 |
@@ -257,7 +257,7 @@ IPv4 | h3 | ✅ 成功 | 85 | cloudflare | | 457 | whatismyipaddress.com |
 162.159.152.2 | IPv4 | h3 | ✅ 成功 | 88 | cloudflare | | 51 | gamer.com.tw |
 104.18.2.197 | IPv4 | h3 | ✅ 成功 | 89 | cloudflare | | 120 | iplocation.io |
 104.26.11.222 | IPv4 | h3 | ✅ 成功 | 90 | cloudflare | | 166 |
-6a507fac-b8e4-45be-b2f0-9310f72c7eca.b.3.b.f.0.7.4.0.1.0.0.2.ip6.arpa |
+yx-auto.pages.dev |
 172.67.134.139 | IPv4 | h3 | ✅ 成功 | 92 | cloudflare | | 314 |
 sullivan.ns.cloudflare.com | 172.64.35.161 | IPv4 | h3 | ✅ 成功 | 92 |
 cloudflare | | 89 | stock.hostmonit.com | 172.67.187.251 | IPv4 | h3 | ✅ 成功 |
@@ -342,10 +342,10 @@ cloudflare | | 171 | www.hugedomains.com | 172.67.70.191 | IPv4 | h3 | ✅ 成�
 112 | cloudflare | | 362 | www.glassdoor.com | 104.17.64.70 | IPv4 | h3 | ✅
 成功 | 112 | cloudflare | | 98 | steamdb.info | 104.20.34.212 | IPv4 | h3 | ✅
 成功 | 113 | cloudflare | | 104 | ct.877774.xyz | 172.64.229.161 | IPv4 | h3 |
-✅ 成功 | 113 | cloudflare | | 132 | ae8a9c24-83de.masx200.ddns-ip.net |
-172.67.157.182 | IPv4 | h3 | ✅ 成功 | 113 | cloudflare | | 156 | 162.159.44.208
-| 162.159.44.208 | IPv4 | h3 | ✅ 成功 | 113 | cloudflare | | 311 | ipv4.ip.sb |
-172.67.75.172 | IPv4 | h3 | ✅ 成功 | 113 | cloudflare |
+✅ 成功 | 113 | cloudflare | | 132 | yx-auto.pages.dev | 172.67.157.182 | IPv4 |
+h3 | ✅ 成功 | 113 | cloudflare | | 156 | 162.159.44.208 | 162.159.44.208 | IPv4
+| h3 | ✅ 成功 | 113 | cloudflare | | 311 | ipv4.ip.sb | 172.67.75.172 | IPv4 |
+h3 | ✅ 成功 | 113 | cloudflare |
 
 ### 延迟分布分析
 

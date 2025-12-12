@@ -90,7 +90,7 @@ none），说明无法与目标建立HTTP/3或其他现代协议连接
 | 119  | huxley.ns.cloudflare.com                                              | 2803:f800:50::6ca2:c3bc              | IPv6   | h2   | ✅ 成功 | 62       | cloudflare |
 | 120  | huxley.ns.cloudflare.com                                              | 2a06:98c1:50::ac40:23bc              | IPv6   | h2   | ✅ 成功 | 62       | cloudflare |
 | 132  | www.hugedomains.com                                                   | 172.67.70.191                        | IPv4   | h2   | ✅ 成功 | 62       | cloudflare |
-| 147  | 6a507fac-b8e4-45be-b2f0-9310f72c7eca.b.3.b.f.0.7.4.0.1.0.0.2.ip6.arpa | 104.21.6.60                          | IPv4   | h2   | ✅ 成功 | 62       | cloudflare |
+| 147  | yx-auto.pages.dev | 104.21.6.60                          | IPv4   | h2   | ✅ 成功 | 62       | cloudflare |
 | 174  | cf.877774.xyz                                                         | 2606:4700:4406::ac40:9242            | IPv6   | h2   | ✅ 成功 | 62       | cloudflare |
 | 176  | zread.ai                                                              | 172.67.202.78                        | IPv4   | h2   | ✅ 成功 | 62       | cloudflare |
 | 177  | zread.ai                                                              | 2606:4700:3033::6815:4cf0            | IPv6   | h2   | ✅ 成功 | 62       | cloudflare |
@@ -122,7 +122,7 @@ none），说明无法与目标建立HTTP/3或其他现代协议连接
 | 412  | otto.ns.cloudflare.com                                                | 2803:f800:50::6ca2:c387              | IPv6   | h2   | ✅ 成功 | 62       | cloudflare |
 | 445  | japan.com                                                             | 2606:4700:20::681a:43c               | IPv6   | h2   | ✅ 成功 | 62       | cloudflare |
 | 6    | na.877774.xyz                                                         | 104.19.74.233                        | IPv4   | h2   | ✅ 成功 | 63       | cloudflare |
-| 11   | bhr01erx45.inzjddnkdz.de5.net                                         | 2606:4700:3031::6815:49fa            | IPv6   | h2   | ✅ 成功 | 63       | cloudflare |
+| 11   | yx-auto.pages.dev                                         | 2606:4700:3031::6815:49fa            | IPv6   | h2   | ✅ 成功 | 63       | cloudflare |
 | 25   | toy-people.com                                                        | 2606:4700:20::681a:224               | IPv6   | h2   | ✅ 成功 | 63       | cloudflare |
 | 35   | decker.ns.cloudflare.com                                              | 2606:4700:58::a29f:2c9b              | IPv6   | h2   | ✅ 成功 | 63       | cloudflare |
 | 70   | steamdb.info                                                          | 104.20.34.212                        | IPv4   | h2   | ✅ 成功 | 63       | cloudflare |
@@ -165,7 +165,7 @@ none），说明无法与目标建立HTTP/3或其他现代协议连接
 | 347  | dnschecker.org                                                        | 104.26.6.89                          | IPv4   | h2   | ✅ 成功 | 63       | cloudflare |
 | 352  | dnschecker.org                                                        | 2606:4700:20::ac43:49d8              | IPv6   | h2   | ✅ 成功 | 63       | cloudflare |
 | 357  | julio.ns.cloudflare.com                                               | 2606:4700:58::a29f:2cd1              | IPv6   | h2   | ✅ 成功 | 63       | cloudflare |
-| 369  | 04c6cf21-1294-4fae-8bf8-715bbc897b60.masx201.dpdns.org                | 2606:4700:3033::ac43:a162            | IPv6   | h2   | ✅ 成功 | 63       | cloudflare |
+| 369  | yx-auto.pages.dev                | 2606:4700:3033::ac43:a162            | IPv6   | h2   | ✅ 成功 | 63       | cloudflare |
 | 380  | www.udemy.com                                                         | 2606:4700::6810:8fed                 | IPv6   | h2   | ✅ 成功 | 63       | cloudflare |
 | 397  | 104.26.13.31                                                          | 104.26.13.31                         | IPv4   | h2   | ✅ 成功 | 63       | cloudflare |
 | 401  | eur.877774.xyz                                                        | 104.21.26.150                        | IPv4   | h2   | ✅ 成功 | 63       | cloudflare |

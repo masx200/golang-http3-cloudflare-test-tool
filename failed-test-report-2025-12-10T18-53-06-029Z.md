@@ -60,14 +60,14 @@ none），说明无法与目标建立HTTP/3或其他现代协议连接
 |------|-----------|--------|--------|------|------|----------|--------|| 343 |
 www.glassdoor.com | 104.16.25.46 | IPv4 | h2 | ✅ 成功 | 57 | cloudflare | | 436
 | pranab.ns.cloudflare.com | 108.162.195.199 | IPv4 | h2 | ✅ 成功 | 57 |
-cloudflare | | 120 | ae8a9c24-83de.masx200.ddns-ip.net |
-2606:4700:3030::6815:e29 | IPv6 | h2 | ✅ 成功 | 58 | cloudflare | | 173 |
-huxley.ns.cloudflare.com | 2a06:98c1:50::ac40:23bc | IPv6 | h2 | ✅ 成功 | 58 |
-cloudflare | | 335 | toy-people.com | 2606:4700:20::ac43:4812 | IPv6 | h2 | ✅
-成功 | 58 | cloudflare | | 376 | cmcc.877774.xyz | 104.16.148.244 | IPv4 | h2 |
-✅ 成功 | 58 | cloudflare | | 228 | cf.877771.xyz | 2606:4700:3033::6815:50b4 |
-IPv6 | h2 | ✅ 成功 | 59 | cloudflare | | 359 | cmcc.877774.xyz | 104.16.149.9 |
-IPv4 | h2 | ✅ 成功 | 59 | cloudflare | | 393 | uriah.ns.cloudflare.com |
+cloudflare | | 120 | yx-auto.pages.dev | 2606:4700:3030::6815:e29 | IPv6 | h2 |
+✅ 成功 | 58 | cloudflare | | 173 | huxley.ns.cloudflare.com |
+2a06:98c1:50::ac40:23bc | IPv6 | h2 | ✅ 成功 | 58 | cloudflare | | 335 |
+toy-people.com | 2606:4700:20::ac43:4812 | IPv6 | h2 | ✅ 成功 | 58 | cloudflare
+| | 376 | cmcc.877774.xyz | 104.16.148.244 | IPv4 | h2 | ✅ 成功 | 58 |
+cloudflare | | 228 | cf.877771.xyz | 2606:4700:3033::6815:50b4 | IPv6 | h2 | ✅
+成功 | 59 | cloudflare | | 359 | cmcc.877774.xyz | 104.16.149.9 | IPv4 | h2 | ✅
+成功 | 59 | cloudflare | | 393 | uriah.ns.cloudflare.com |
 2803:f800:50::6ca2:c3c2 | IPv6 | h2 | ✅ 成功 | 59 | cloudflare | | 412 |
 kyree.ns.cloudflare.com | 2606:4700:58::a29f:2ccf | IPv6 | h2 | ✅ 成功 | 59 |
 cloudflare | | 85 | tasteatlas.com | 2606:4700::6811:2469 | IPv6 | h2 | ✅ 成功
@@ -166,13 +166,13 @@ cloudflare | | 417 | icook.hk | 2606:4700:3031::6815:5ad2 | IPv6 | h2 | ✅ 成�
 | 68 | cloudflare | | 445 | wilson.ns.cloudflare.com | 2606:4700:58::a29f:2c6e |
 IPv6 | h2 | ✅ 成功 | 68 | cloudflare | | 59 | 172.64.41.88 | 172.64.41.88 |
 IPv4 | h2 | ✅ 成功 | 69 | cloudflare | | 63 | ip.gs | 172.67.160.28 | IPv4 | h2
-| ✅ 成功 | 69 | cloudflare | | 118 | ae8a9c24-83de.masx200.ddns-ip.net |
-172.67.157.182 | IPv4 | h2 | ✅ 成功 | 69 | cloudflare | | 175 |
-www.digitalocean.com | 104.19.174.68 | IPv4 | h2 | ✅ 成功 | 69 | cloudflare | |
-244 | xn--b6gac.eu.org | 2606:4700:3035::6815:5a4e | IPv6 | h2 | ✅ 成功 | 69 |
-cloudflare | | 258 | [2606:4700:440f::53aa:4126] | 2606:4700:440f::53aa:4126 |
-IPv6 | h2 | ✅ 成功 | 69 | cloudflare | | 291 | fbi.gov | 104.16.148.244 | IPv4
-| h2 | ✅ 成功 | 69 | cloudflare |
+| ✅ 成功 | 69 | cloudflare | | 118 | yx-auto.pages.dev | 172.67.157.182 | IPv4
+| h2 | ✅ 成功 | 69 | cloudflare | | 175 | www.digitalocean.com | 104.19.174.68
+| IPv4 | h2 | ✅ 成功 | 69 | cloudflare | | 244 | xn--b6gac.eu.org |
+2606:4700:3035::6815:5a4e | IPv6 | h2 | ✅ 成功 | 69 | cloudflare | | 258 |
+[2606:4700:440f::53aa:4126] | 2606:4700:440f::53aa:4126 | IPv6 | h2 | ✅ 成功 |
+69 | cloudflare | | 291 | fbi.gov | 104.16.148.244 | IPv4 | h2 | ✅ 成功 | 69 |
+cloudflare |
 
 ### 延迟分布分析
 

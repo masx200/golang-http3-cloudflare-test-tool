@@ -93,8 +93,8 @@
 | 173  | japan.com                                                                           | 2606:4700:20::ac43:465c                 | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:20::ac43:465c]:443: connect: network is unreachable                 |
 | 174  | [2606:4700:4403::7357:544f]                                                         | 2606:4700:4403::7357:544f               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:4403::7357:544f]:443: connect: network is unreachable               |
 | 176  | [2606:4700:4409::5b5b:7758]                                                         | 2606:4700:4409::5b5b:7758               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:4409::5b5b:7758]:443: connect: network is unreachable               |
-| 179  | ae8a9c24-83de.masx200.ddns-ip.net                                                   | 2606:4700:3030::6815:e29                | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3030::6815:e29]:443: connect: network is unreachable                |
-| 180  | ae8a9c24-83de.masx200.ddns-ip.net                                                   | 2606:4700:3031::ac43:9db6               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3031::ac43:9db6]:443: connect: network is unreachable               |
+| 179  | yx-auto.pages.dev                                                                   | 2606:4700:3030::6815:e29                | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3030::6815:e29]:443: connect: network is unreachable                |
+| 180  | yx-auto.pages.dev                                                                   | 2606:4700:3031::ac43:9db6               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3031::ac43:9db6]:443: connect: network is unreachable               |
 | 185  | craig.ns.cloudflare.com                                                             | 2606:4700:58::a29f:2cc0                 | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:58::a29f:2cc0]:443: connect: network is unreachable                 |
 | 186  | craig.ns.cloudflare.com                                                             | 2803:f800:50::6ca2:c3c0                 | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2803:f800:50::6ca2:c3c0]:443: connect: network is unreachable                 |
 | 187  | craig.ns.cloudflare.com                                                             | 2a06:98c1:50::ac40:23c0                 | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2a06:98c1:50::ac40:23c0]:443: connect: network is unreachable                 |
@@ -181,8 +181,8 @@
 | 413  | abdullah.ns.cloudflare.com                                                          | 2a06:98c1:50::ac40:23cb                 | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2a06:98c1:50::ac40:23cb]:443: connect: network is unreachable                 |
 | 416  | yx-auto.pages.dev                                                                   | 2606:4700:310c::ac42:2c90               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:310c::ac42:2c90]:443: connect: network is unreachable               |
 | 417  | yx-auto.pages.dev                                                                   | 2606:4700:310c::ac42:2f70               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:310c::ac42:2f70]:443: connect: network is unreachable               |
-| 423  | 04c6cf21-1294-4fae-8bf8-715bbc897b60.masx201.dpdns.org                              | 2606:4700:3034::6815:9e6                | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3034::6815:9e6]:443: connect: network is unreachable                |
-| 424  | 04c6cf21-1294-4fae-8bf8-715bbc897b60.masx201.dpdns.org                              | 2606:4700:3033::ac43:a162               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3033::ac43:a162]:443: connect: network is unreachable               |
+| 423  | yx-auto.pages.dev                              | 2606:4700:3034::6815:9e6                | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3034::6815:9e6]:443: connect: network is unreachable                |
+| 424  | yx-auto.pages.dev                              | 2606:4700:3033::ac43:a162               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3033::ac43:a162]:443: connect: network is unreachable               |
 | 429  | local-aria2-webui.masx200.ddns-ip.net                                               | 2606:4700:3030::6815:e29                | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3030::6815:e29]:443: connect: network is unreachable                |
 | 430  | local-aria2-webui.masx200.ddns-ip.net                                               | 2606:4700:3031::ac43:9db6               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3031::ac43:9db6]:443: connect: network is unreachable               |
 | 437  | bowen.ns.cloudflare.com                                                             | 2606:4700:58::a29f:2c53                 | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:58::a29f:2c53]:443: connect: network is unreachable                 |
@@ -245,7 +245,7 @@ uriah.ns.cloudflare.com (3次), cris.ns.cloudflare.com
 
 | 序号 | 主机/域名 | 目标IP | IP版本 | 协议 | 状态 | 延迟(ms) | 服务器 |
 |------|-----------|--------|--------|------|------|----------|--------|| 422 |
-04c6cf21-1294-4fae-8bf8-715bbc897b60.masx201.dpdns.org | 104.21.9.230 | IPv4 |
+yx-auto.pages.dev | 104.21.9.230 | IPv4 |
 h3 | ✅ 成功 | 33 | cloudflare | | 292 | otto.ns.cloudflare.com | 172.64.35.135
 | IPv4 | h3 | ✅ 成功 | 34 | cloudflare | | 42 | www.wto.org | 104.18.41.190 |
 IPv4 | h3 | ✅ 成功 | 35 | cloudflare | | 166 | gamer.com.tw | 104.18.3.197 |
@@ -256,7 +256,7 @@ IPv4 | h3 | ✅ 成功 | 36 | cloudflare | | 425 | www.glassdoor.com | 104.16.25
 104.21.47.209 | IPv4 | h3 | ✅ 成功 | 37 | cloudflare | | 247 | iplocation.io |
 172.67.70.100 | IPv4 | h3 | ✅ 成功 | 37 | cloudflare | | 358 | 172.67.79.211 |
 172.67.79.211 | IPv4 | h3 | ✅ 成功 | 37 | cloudflare | | 421 |
-04c6cf21-1294-4fae-8bf8-715bbc897b60.masx201.dpdns.org | 172.67.161.98 | IPv4 |
+yx-auto.pages.dev | 172.67.161.98 | IPv4 |
 h3 | ✅ 成功 | 37 | cloudflare | | 140 | na.877774.xyz | 104.18.187.25 | IPv4 |
 h3 | ✅ 成功 | 38 | cloudflare | | 143 | cf.090227.xyz | 172.66.44.77 | IPv4 |
 h3 | ✅ 成功 | 38 | cloudflare | | 163 | ip.gs | 172.67.160.28 | IPv4 | h3 | ✅
@@ -267,22 +267,22 @@ IPv4 | h3 | ✅ 成功 | 38 | cloudflare | | 208 | huxley.ns.cloudflare.com |
 172.64.35.188 | IPv4 | h3 | ✅ 成功 | 39 | cloudflare | | 264 | www.okcupid.com
 | 104.16.144.63 | IPv4 | h3 | ✅ 成功 | 39 | cloudflare | | 101 | comicabc.com |
 172.67.174.21 | IPv4 | h3 | ✅ 成功 | 40 | cloudflare | | 177 |
-ae8a9c24-83de.masx200.ddns-ip.net | 104.21.14.41 | IPv4 | h3 | ✅ 成功 | 40 |
-cloudflare | | 373 | whatismyipaddress.com | 104.19.222.79 | IPv4 | h3 | ✅ 成功
-| 40 | cloudflare | | 401 | cmcc.877774.xyz | 104.16.149.1 | IPv4 | h3 | ✅ 成功
-| 40 | cloudflare | | 463 | zread.ai | 104.21.76.240 | IPv4 | h3 | ✅ 成功 | 40
-| cloudflare | | 468 | ipinfo.in | 104.21.21.129 | IPv4 | h3 | ✅ 成功 | 40 |
-cloudflare | | 243 | 172.64.159.6 | 172.64.159.6 | IPv4 | h3 | ✅ 成功 | 41 |
-cloudflare | | 365 | 172.64.35.24 | 172.64.35.24 | IPv4 | h3 | ✅ 成功 | 41 |
-cloudflare | | 117 | 172.67.181.209 | 172.67.181.209 | IPv4 | h3 | ✅ 成功 | 42
-| cloudflare | | 256 | julio.ns.cloudflare.com | 108.162.195.209 | IPv4 | h3 |
-✅ 成功 | 42 | cloudflare | | 346 | 172.64.33.67 | 172.64.33.67 | IPv4 | h3 | ✅
-成功 | 42 | cloudflare | | 448 | cfip.xxxxxxxx.tk | 104.16.232.223 | IPv4 | h3 |
-✅ 成功 | 42 | cloudflare | | 63 | www.udemy.com | 104.16.142.237 | IPv4 | h3 |
-✅ 成功 | 43 | cloudflare | | 99 | www.visa.cn | 162.159.153.2 | IPv4 | h3 | ✅
-成功 | 43 | cloudflare | | 148 | sullivan.ns.cloudflare.com | 172.64.35.161 |
-IPv4 | h3 | ✅ 成功 | 43 | cloudflare | | 268 | trevor.ns.cloudflare.com |
-108.162.195.154 | IPv4 | h3 | ✅ 成功 | 43 | cloudflare | | 477 |
+yx-auto.pages.dev | 104.21.14.41 | IPv4 | h3 | ✅ 成功 | 40 | cloudflare | | 373
+| whatismyipaddress.com | 104.19.222.79 | IPv4 | h3 | ✅ 成功 | 40 | cloudflare
+| | 401 | cmcc.877774.xyz | 104.16.149.1 | IPv4 | h3 | ✅ 成功 | 40 | cloudflare
+| | 463 | zread.ai | 104.21.76.240 | IPv4 | h3 | ✅ 成功 | 40 | cloudflare | |
+468 | ipinfo.in | 104.21.21.129 | IPv4 | h3 | ✅ 成功 | 40 | cloudflare | | 243
+| 172.64.159.6 | 172.64.159.6 | IPv4 | h3 | ✅ 成功 | 41 | cloudflare | | 365 |
+172.64.35.24 | 172.64.35.24 | IPv4 | h3 | ✅ 成功 | 41 | cloudflare | | 117 |
+172.67.181.209 | 172.67.181.209 | IPv4 | h3 | ✅ 成功 | 42 | cloudflare | | 256
+| julio.ns.cloudflare.com | 108.162.195.209 | IPv4 | h3 | ✅ 成功 | 42 |
+cloudflare | | 346 | 172.64.33.67 | 172.64.33.67 | IPv4 | h3 | ✅ 成功 | 42 |
+cloudflare | | 448 | cfip.xxxxxxxx.tk | 104.16.232.223 | IPv4 | h3 | ✅ 成功 |
+42 | cloudflare | | 63 | www.udemy.com | 104.16.142.237 | IPv4 | h3 | ✅ 成功 |
+43 | cloudflare | | 99 | www.visa.cn | 162.159.153.2 | IPv4 | h3 | ✅ 成功 | 43
+| cloudflare | | 148 | sullivan.ns.cloudflare.com | 172.64.35.161 | IPv4 | h3 |
+✅ 成功 | 43 | cloudflare | | 268 | trevor.ns.cloudflare.com | 108.162.195.154 |
+IPv4 | h3 | ✅ 成功 | 43 | cloudflare | | 477 |
 04c6cf21-1294-4fae-8bf8-715bbc897b60.masx200.netlib.re | 104.21.47.252 | IPv4 |
 h3 | ✅ 成功 | 43 | cloudflare | | 426 | www.glassdoor.com | 104.17.64.70 | IPv4
 | h3 | ✅ 成功 | 44 | cloudflare | | 427 | local-aria2-webui.masx200.ddns-ip.net
@@ -332,27 +332,27 @@ cloudflare | | 74 | 104.18.42.26 | 104.18.42.26 | IPv4 | h3 | ✅ 成功 | 52 |
 cloudflare | | 91 | cu.877774.xyz | 104.26.4.115 | IPv4 | h3 | ✅ 成功 | 52 |
 cloudflare | | 96 | cu.877774.xyz | 104.26.4.111 | IPv4 | h3 | ✅ 成功 | 52 |
 cloudflare | | 120 | asia.877774.xyz | 104.17.142.146 | IPv4 | h3 | ✅ 成功 | 52
-| cloudflare | | 178 | ae8a9c24-83de.masx200.ddns-ip.net | 172.67.157.182 | IPv4
-| h3 | ✅ 成功 | 52 | cloudflare | | 182 | craig.ns.cloudflare.com |
-108.162.195.192 | IPv4 | h3 | ✅ 成功 | 52 | cloudflare | | 190 |
-www.hugedomains.com | 104.26.7.37 | IPv4 | h3 | ✅ 成功 | 52 | cloudflare | |
-203 | ct.877774.xyz | 172.64.229.173 | IPv4 | h3 | ✅ 成功 | 52 | cloudflare | |
-215 | lewis.ns.cloudflare.com | 172.64.35.159 | IPv4 | h3 | ✅ 成功 | 52 |
-cloudflare | | 251 | cf.zhetengsha.eu.org | 172.66.47.179 | IPv4 | h3 | ✅ 成功
-| 52 | cloudflare | | 385 | cmcc.877774.xyz | 104.16.149.11 | IPv4 | h3 | ✅
-成功 | 52 | cloudflare | | 451 | cfip.xxxxxxxx.tk | 190.93.246.67 | IPv4 | h3 |
-✅ 成功 | 52 | cloudflare | | 21 | uriah.ns.cloudflare.com | 172.64.35.194 |
-IPv4 | h3 | ✅ 成功 | 53 | cloudflare | | 38 | www.visa.com.hk | 104.18.21.69 |
-IPv4 | h3 | ✅ 成功 | 53 | cloudflare | | 90 | cu.877774.xyz | 104.26.4.114 |
-IPv4 | h3 | ✅ 成功 | 53 | cloudflare | | 233 | cf.877774.xyz | 104.18.41.190 |
-IPv4 | h3 | ✅ 成功 | 53 | cloudflare | | 238 | www.whatismyip.com |
-104.26.13.23 | IPv4 | h3 | ✅ 成功 | 53 | cloudflare | | 246 | iplocation.io |
-104.26.11.222 | IPv4 | h3 | ✅ 成功 | 53 | cloudflare | | 294 |
-otto.ns.cloudflare.com | 108.162.195.135 | IPv4 | h3 | ✅ 成功 | 53 | cloudflare
-| | 318 | time.is | 104.26.13.54 | IPv4 | h3 | ✅ 成功 | 53 | cloudflare | | 383
-| cmcc.877774.xyz | 104.16.149.9 | IPv4 | h3 | ✅ 成功 | 53 | cloudflare | | 454
-| cfip.xxxxxxxx.tk | 104.27.21.118 | IPv4 | h3 | ✅ 成功 | 53 | cloudflare | |
-46 | dnschecker.org | 104.26.7.89 | IPv4 | h3 | ✅ 成功 | 54 | cloudflare |
+| cloudflare | | 178 | yx-auto.pages.dev | 172.67.157.182 | IPv4 | h3 | ✅ 成功
+| 52 | cloudflare | | 182 | craig.ns.cloudflare.com | 108.162.195.192 | IPv4 |
+h3 | ✅ 成功 | 52 | cloudflare | | 190 | www.hugedomains.com | 104.26.7.37 |
+IPv4 | h3 | ✅ 成功 | 52 | cloudflare | | 203 | ct.877774.xyz | 172.64.229.173 |
+IPv4 | h3 | ✅ 成功 | 52 | cloudflare | | 215 | lewis.ns.cloudflare.com |
+172.64.35.159 | IPv4 | h3 | ✅ 成功 | 52 | cloudflare | | 251 |
+cf.zhetengsha.eu.org | 172.66.47.179 | IPv4 | h3 | ✅ 成功 | 52 | cloudflare | |
+385 | cmcc.877774.xyz | 104.16.149.11 | IPv4 | h3 | ✅ 成功 | 52 | cloudflare |
+| 451 | cfip.xxxxxxxx.tk | 190.93.246.67 | IPv4 | h3 | ✅ 成功 | 52 | cloudflare
+| | 21 | uriah.ns.cloudflare.com | 172.64.35.194 | IPv4 | h3 | ✅ 成功 | 53 |
+cloudflare | | 38 | www.visa.com.hk | 104.18.21.69 | IPv4 | h3 | ✅ 成功 | 53 |
+cloudflare | | 90 | cu.877774.xyz | 104.26.4.114 | IPv4 | h3 | ✅ 成功 | 53 |
+cloudflare | | 233 | cf.877774.xyz | 104.18.41.190 | IPv4 | h3 | ✅ 成功 | 53 |
+cloudflare | | 238 | www.whatismyip.com | 104.26.13.23 | IPv4 | h3 | ✅ 成功 |
+53 | cloudflare | | 246 | iplocation.io | 104.26.11.222 | IPv4 | h3 | ✅ 成功 |
+53 | cloudflare | | 294 | otto.ns.cloudflare.com | 108.162.195.135 | IPv4 | h3 |
+✅ 成功 | 53 | cloudflare | | 318 | time.is | 104.26.13.54 | IPv4 | h3 | ✅ 成功
+| 53 | cloudflare | | 383 | cmcc.877774.xyz | 104.16.149.9 | IPv4 | h3 | ✅ 成功
+| 53 | cloudflare | | 454 | cfip.xxxxxxxx.tk | 104.27.21.118 | IPv4 | h3 | ✅
+成功 | 53 | cloudflare | | 46 | dnschecker.org | 104.26.7.89 | IPv4 | h3 | ✅
+成功 | 54 | cloudflare |
 
 ### 延迟分布分析
 

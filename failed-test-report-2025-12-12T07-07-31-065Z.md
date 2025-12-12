@@ -77,8 +77,8 @@ none），说明无法与目标建立HTTP/3或其他现代协议连接
 | 140  | www.visa.com.hk                                                       | 104.18.20.69                            | IPv4   | h2   | ✅ 成功 | 36       | cloudflare |
 | 149  | local-aria2-webui.masx200.ddns-ip.net                                 | 104.21.14.41                            | IPv4   | h2   | ✅ 成功 | 36       | cloudflare |
 | 150  | local-aria2-webui.masx200.ddns-ip.net                                 | 2606:4700:3031::ac43:9db6               | IPv6   | h2   | ✅ 成功 | 36       | cloudflare |
-| 188  | 04c6cf21-1294-4fae-8bf8-715bbc897b60.masx201.dpdns.org                | 172.67.161.98                           | IPv4   | h2   | ✅ 成功 | 36       | cloudflare |
-| 190  | 04c6cf21-1294-4fae-8bf8-715bbc897b60.masx201.dpdns.org                | 2606:4700:3034::6815:9e6                | IPv6   | h2   | ✅ 成功 | 36       | cloudflare |
+| 188  | yx-auto.pages.dev                | 172.67.161.98                           | IPv4   | h2   | ✅ 成功 | 36       | cloudflare |
+| 190  | yx-auto.pages.dev                | 2606:4700:3034::6815:9e6                | IPv6   | h2   | ✅ 成功 | 36       | cloudflare |
 | 249  | www.wto.org                                                           | 104.18.41.190                           | IPv4   | h2   | ✅ 成功 | 36       | cloudflare |
 | 261  | stock.hostmonit.com                                                   | 2606:4700:3037::6815:7c1                | IPv6   | h2   | ✅ 成功 | 36       | cloudflare |
 | 311  | 172.67.75.172                                                         | 172.67.75.172                           | IPv4   | h2   | ✅ 成功 | 36       | cloudflare |
@@ -87,8 +87,8 @@ none），说明无法与目标建立HTTP/3或其他现代协议连接
 | 48   | xn--b6gac.eu.org                                                      | 104.21.90.78                            | IPv4   | h2   | ✅ 成功 | 37       | cloudflare |
 | 85   | time.is                                                               | 2606:4700:20::681a:d36                  | IPv6   | h2   | ✅ 成功 | 37       | cloudflare |
 | 108  | palera.in                                                             | 104.21.58.72                            | IPv4   | h2   | ✅ 成功 | 37       | cloudflare |
-| 118  | ae8a9c24-83de.masx200.ddns-ip.net                                     | 172.67.157.182                          | IPv4   | h2   | ✅ 成功 | 37       | cloudflare |
-| 120  | ae8a9c24-83de.masx200.ddns-ip.net                                     | 2606:4700:3030::6815:e29                | IPv6   | h2   | ✅ 成功 | 37       | cloudflare |
+| 118  | yx-auto.pages.dev                                                     | 172.67.157.182                          | IPv4   | h2   | ✅ 成功 | 37       | cloudflare |
+| 120  | yx-auto.pages.dev                                                     | 2606:4700:3030::6815:e29                | IPv6   | h2   | ✅ 成功 | 37       | cloudflare |
 | 137  | silkbook.com                                                          | 2606:4700:20::681a:8a0                  | IPv6   | h2   | ✅ 成功 | 37       | cloudflare |
 | 168  | dnschecker.org                                                        | 2606:4700:20::681a:659                  | IPv6   | h2   | ✅ 成功 | 37       | cloudflare |
 | 180  | cf.877774.xyz                                                         | 2a06:98c1:3102::6812:29be               | IPv6   | h2   | ✅ 成功 | 37       | cloudflare |
@@ -104,7 +104,7 @@ none），说明无法与目标建立HTTP/3或其他现代协议连接
 | 353  | iplocation.io                                                         | 2606:4700:20::681a:bde                  | IPv6   | h2   | ✅ 成功 | 37       | cloudflare |
 | 356  | 172.67.120.0                                                          | 172.67.120.0                            | IPv4   | h2   | ✅ 成功 | 37       | cloudflare |
 | 376  | www.hugedomains.com                                                   | 2606:4700:20::681a:625                  | IPv6   | h2   | ✅ 成功 | 37       | cloudflare |
-| 382  | 6a507fac-b8e4-45be-b2f0-9310f72c7eca.b.3.b.f.0.7.4.0.1.0.0.2.ip6.arpa | 104.21.6.60                             | IPv4   | h2   | ✅ 成功 | 37       | cloudflare |
+| 382  | yx-auto.pages.dev | 104.21.6.60                             | IPv4   | h2   | ✅ 成功 | 37       | cloudflare |
 | 400  | freeyx.cloudflare88.eu.org                                            | 141.101.121.18                          | IPv4   | h2   | ✅ 成功 | 37       | cloudflare |
 | 401  | freeyx.cloudflare88.eu.org                                            | 2606:4700:3009:aa59:4b67:cd47:f6a2:e5d6 | IPv6   | h2   | ✅ 成功 | 37       | cloudflare |
 | 403  | toy-people.com                                                        | 172.67.72.18                            | IPv4   | h2   | ✅ 成功 | 37       | cloudflare |
@@ -148,7 +148,7 @@ none），说明无法与目标建立HTTP/3或其他现代协议连接
 | 87   | time.is                                                               | 2606:4700:20::ac43:449d                 | IPv6   | h2   | ✅ 成功 | 39       | cloudflare |
 | 111  | palera.in                                                             | 2606:4700:3035::6815:3a48               | IPv6   | h2   | ✅ 成功 | 39       | cloudflare |
 | 117  | ip.sb                                                                 | 2606:4700:20::681a:d1f                  | IPv6   | h2   | ✅ 成功 | 39       | cloudflare |
-| 121  | ae8a9c24-83de.masx200.ddns-ip.net                                     | 2606:4700:3031::ac43:9db6               | IPv6   | h2   | ✅ 成功 | 39       | cloudflare |
+| 121  | yx-auto.pages.dev                                                     | 2606:4700:3031::ac43:9db6               | IPv6   | h2   | ✅ 成功 | 39       | cloudflare |
 | 128  | singapore.com                                                         | 104.26.13.140                           | IPv4   | h2   | ✅ 成功 | 39       | cloudflare |
 | 130  | singapore.com                                                         | 2606:4700:20::681a:c8c                  | IPv6   | h2   | ✅ 成功 | 39       | cloudflare |
 | 144  | whatismyipaddress.com                                                 | 2606:4700::6813:df4f                    | IPv6   | h2   | ✅ 成功 | 39       | cloudflare |

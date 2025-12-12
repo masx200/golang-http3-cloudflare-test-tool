@@ -56,7 +56,7 @@ none），说明无法与目标建立HTTP/3或其他现代协议连接
 | ---- | ------------------------------------- | ------------------------- | ------ | ---- | ------- | -------- | ---------- |
 | 74   | iplocation.io                         | 2606:4700:20::681a:bde    | IPv6   | h2   | ✅ 成功 | 40       | cloudflare |
 | 127  | sullivan.ns.cloudflare.com            | 2803:f800:50::6ca2:c3a1   | IPv6   | h2   | ✅ 成功 | 43       | cloudflare |
-| 322  | ae8a9c24-83de.masx200.ddns-ip.net     | 2606:4700:3030::6815:e29  | IPv6   | h2   | ✅ 成功 | 43       | cloudflare |
+| 322  | yx-auto.pages.dev                     | 2606:4700:3030::6815:e29  | IPv6   | h2   | ✅ 成功 | 43       | cloudflare |
 | 334  | whatismyipaddress.com                 | 104.19.223.79             | IPv4   | h2   | ✅ 成功 | 43       | cloudflare |
 | 347  | local-aria2-webui.masx200.ddns-ip.net | 172.67.157.182            | IPv4   | h2   | ✅ 成功 | 43       | cloudflare |
 | 415  | www.digitalocean.com                  | 2606:4700::6813:ae44      | IPv6   | h2   | ✅ 成功 | 43       | cloudflare |
@@ -87,7 +87,7 @@ none），说明无法与目标建立HTTP/3或其他现代协议连接
 | 282  | moura.ns.cloudflare.com               | 108.162.195.217           | IPv4   | h2   | ✅ 成功 | 46       | cloudflare |
 | 289  | time.is                               | 104.26.13.54              | IPv4   | h2   | ✅ 成功 | 46       | cloudflare |
 | 307  | benedict.ns.cloudflare.com            | 2a06:98c1:50::ac40:23cd   | IPv6   | h2   | ✅ 成功 | 46       | cloudflare |
-| 320  | ae8a9c24-83de.masx200.ddns-ip.net     | 172.67.157.182            | IPv4   | h2   | ✅ 成功 | 46       | cloudflare |
+| 320  | yx-auto.pages.dev                     | 172.67.157.182            | IPv4   | h2   | ✅ 成功 | 46       | cloudflare |
 | 329  | singapore.com                         | 104.26.13.140             | IPv4   | h2   | ✅ 成功 | 46       | cloudflare |
 | 358  | ashton.ns.cloudflare.com              | 2a06:98c1:50::ac40:23ad   | IPv6   | h2   | ✅ 成功 | 46       | cloudflare |
 | 419  | eur.877774.xyz                        | 104.21.29.164             | IPv4   | h2   | ✅ 成功 | 46       | cloudflare |

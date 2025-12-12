@@ -36,7 +36,7 @@
 | 204  | bowen.ns.cloudflare.com                                | Unknown | Unknown | none | N/A    | 0        | N/A    | DNS解析失败: Post "https://deno-dns-over-https-server.g18uibxgnb.de5.net/": context deadline exceeded |
 | 205  | cf.090227.xyz                                          | Unknown | Unknown | none | N/A    | 0        | N/A    | DNS解析失败: Post "https://deno-dns-over-https-server.g18uibxgnb.de5.net/": context deadline exceeded |
 | 256  | ip.gs                                                  | Unknown | Unknown | none | N/A    | 0        | N/A    | DNS解析失败: Post "https://deno-dns-over-https-server.g18uibxgnb.de5.net/": context deadline exceeded |
-| 295  | 04c6cf21-1294-4fae-8bf8-715bbc897b60.masx201.dpdns.org | Unknown | Unknown | none | N/A    | 0        | N/A    | DNS解析失败: Post "https://deno-dns-over-https-server.g18uibxgnb.de5.net/": context deadline exceeded |
+| 295  | yx-auto.pages.dev | Unknown | Unknown | none | N/A    | 0        | N/A    | DNS解析失败: Post "https://deno-dns-over-https-server.g18uibxgnb.de5.net/": context deadline exceeded |
 | 298  | tasteatlas.com                                         | Unknown | Unknown | none | N/A    | 0        | N/A    | DNS解析失败: Post "https://deno-dns-over-https-server.g18uibxgnb.de5.net/": context deadline exceeded |
 | 349  | stock.hostmonit.com                                    | Unknown | Unknown | none | N/A    | 0        | N/A    | DNS解析失败: Post "https://deno-dns-over-https-server.g18uibxgnb.de5.net/": context deadline exceeded |
 | 351  | www.csgo.com                                           | Unknown | Unknown | none | N/A    | 0        | N/A    | DNS解析失败: Post "https://deno-dns-over-https-server.g18uibxgnb.de5.net/": context deadline exceeded |
@@ -155,9 +155,9 @@ cloudflare | | 305 | icook.tw | 2606:4700:10::ac42:9e73 | IPv6 | h2 | ✅ 成功
 67 | cloudflare | | 191 | www.whatismyip.com | 172.67.69.129 | IPv4 | h2 | ✅
 成功 | 68 | cloudflare | | 214 | moura.ns.cloudflare.com |
 2a06:98c1:50::ac40:23d9 | IPv6 | h2 | ✅ 成功 | 68 | cloudflare | | 222 |
-ae8a9c24-83de.masx200.ddns-ip.net | 2606:4700:3030::6815:e29 | IPv6 | h2 | ✅
-成功 | 68 | cloudflare | | 224 | time.is | 172.67.68.157 | IPv4 | h2 | ✅ 成功 |
-68 | cloudflare | | 226 | time.is | 104.26.12.54 | IPv4 | h2 | ✅ 成功 | 68 |
+yx-auto.pages.dev | 2606:4700:3030::6815:e29 | IPv6 | h2 | ✅ 成功 | 68 |
+cloudflare | | 224 | time.is | 172.67.68.157 | IPv4 | h2 | ✅ 成功 | 68 |
+cloudflare | | 226 | time.is | 104.26.12.54 | IPv4 | h2 | ✅ 成功 | 68 |
 cloudflare | | 261 | silkbook.com | 2606:4700:20::681a:8a0 | IPv6 | h2 | ✅ 成功
 | 68 | cloudflare | | 292 | cf.877774.xyz | 2a06:98c1:3102::6812:29be | IPv6 |
 h2 | ✅ 成功 | 68 | cloudflare | | 301 | 172.67.79.211 | 172.67.79.211 | IPv4 |
@@ -187,18 +187,18 @@ cloudflare | | 341 | ifconfig.co | 104.21.54.91 | IPv4 | h2 | ✅ 成功 | 70 |
 cloudflare | | 168 | zread.ai | 104.21.76.240 | IPv4 | h2 | ✅ 成功 | 71 |
 cloudflare | | 187 | dylan.ns.cloudflare.com | 2a06:98c1:50::ac40:23bb | IPv6 |
 h2 | ✅ 成功 | 71 | cloudflare | | 200 | bestcf.030101.xyz | 104.16.149.55 |
-IPv4 | h2 | ✅ 成功 | 71 | cloudflare | | 220 |
-ae8a9c24-83de.masx200.ddns-ip.net | 172.67.157.182 | IPv4 | h2 | ✅ 成功 | 71 |
-cloudflare | | 227 | time.is | 2606:4700:20::681a:c36 | IPv6 | h2 | ✅ 成功 | 71
-| cloudflare | | 276 | dnschecker.org | 2606:4700:20::ac43:49d8 | IPv6 | h2 | ✅
-成功 | 71 | cloudflare | | 350 | www.7749tv.com | 104.19.133.4 | IPv4 | h2 | ✅
-成功 | 71 | cloudflare | | 356 | japan.com | 2606:4700:20::ac43:465c | IPv6 | h2
-| ✅ 成功 | 71 | cloudflare | | 174 | cloudflare-ip.mofashi.ltd |
-2606:4700:3037::ac43:9bac | IPv6 | h2 | ✅ 成功 | 72 | cloudflare | | 239 |
-singapore.com | 104.26.13.140 | IPv4 | h2 | ✅ 成功 | 72 | cloudflare | | 258 |
-silkbook.com | 172.67.75.208 | IPv4 | h2 | ✅ 成功 | 72 | cloudflare | | 260 |
-silkbook.com | 104.26.9.160 | IPv4 | h2 | ✅ 成功 | 72 | cloudflare | | 321 |
-104.19.175.123 | 104.19.175.123 | IPv4 | h2 | ✅ 成功 | 72 | cloudflare |
+IPv4 | h2 | ✅ 成功 | 71 | cloudflare | | 220 | yx-auto.pages.dev |
+172.67.157.182 | IPv4 | h2 | ✅ 成功 | 71 | cloudflare | | 227 | time.is |
+2606:4700:20::681a:c36 | IPv6 | h2 | ✅ 成功 | 71 | cloudflare | | 276 |
+dnschecker.org | 2606:4700:20::ac43:49d8 | IPv6 | h2 | ✅ 成功 | 71 | cloudflare
+| | 350 | www.7749tv.com | 104.19.133.4 | IPv4 | h2 | ✅ 成功 | 71 | cloudflare
+| | 356 | japan.com | 2606:4700:20::ac43:465c | IPv6 | h2 | ✅ 成功 | 71 |
+cloudflare | | 174 | cloudflare-ip.mofashi.ltd | 2606:4700:3037::ac43:9bac |
+IPv6 | h2 | ✅ 成功 | 72 | cloudflare | | 239 | singapore.com | 104.26.13.140 |
+IPv4 | h2 | ✅ 成功 | 72 | cloudflare | | 258 | silkbook.com | 172.67.75.208 |
+IPv4 | h2 | ✅ 成功 | 72 | cloudflare | | 260 | silkbook.com | 104.26.9.160 |
+IPv4 | h2 | ✅ 成功 | 72 | cloudflare | | 321 | 104.19.175.123 | 104.19.175.123
+| IPv4 | h2 | ✅ 成功 | 72 | cloudflare |
 
 ### 延迟分布分析
 
