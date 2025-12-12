@@ -51,7 +51,7 @@
                 ></v-select>
               </v-col>
             </v-row>
-            <v-row>
+                                  <v-row>
               <v-col cols="12" md="3">
                 <v-select
                   v-model="filters.asName"
@@ -61,8 +61,6 @@
                   @update:model-value="applyFilters"
                 ></v-select>
               </v-col>
-            </v-row>
-            <v-row>
               <v-col cols="12" md="3">
                 <v-select
                   v-model="filters.statusFilter"
