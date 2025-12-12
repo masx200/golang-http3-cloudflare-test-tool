@@ -417,6 +417,7 @@ export default {
         statusFilter: 'success'
       }
       filteredResults.value = [...allResults.value]
+      applyFilters()
     }
     
     // 刷新数据
