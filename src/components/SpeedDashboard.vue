@@ -145,8 +145,9 @@
 
 <script>
 import { ref, onMounted, computed } from 'vue'
-
+import {VDateInput}from "vuetify/lib/labs/VDateInput/VDateInput.js"
 export default {
+  components:{VDateInput},
   name: 'SpeedDashboard',
   setup() {
     const loading = ref(true)
@@ -363,10 +364,30 @@ export default {
 
       // 按测试日期筛选
       if (filters.value.testDate) {
+        console.log('Filtering by test date:', filters.value.testDate)
+        console.log('Sample generated_at values:', results.slice(0, 3).map(r => r.generatedAt))
+
         results = results.filter(r => {
-          if (!r.generatedAt) return false
-          const testDate = new Date(r.generatedAt).toISOString().split('T')[0]
-          return testDate === filters.value.testDate
+          if (!r.generatedAt) {
+            console.log('Missing generatedAt for result:', r)
+            return false
+          }
+
+          // 尝试多种日期格式解析
+          let testDate
+          try {
+            // 直接比较日期字符串格式
+            const generatedDate = new Date(r.generatedAt).toISOString().split('T')[0]
+            const filterDate = new Date(filters.value.testDate).toISOString().split('T')[0]
+
+            console.log(`Comparing: ${generatedDate} === ${filterDate}`)
+            testDate = generatedDate === filterDate
+          } catch (error) {
+            console.error('Date parsing error:', error)
+            return false
+          }
+
+          return testDate
         })
         console.log('After test date filter:', results.length)
       }
