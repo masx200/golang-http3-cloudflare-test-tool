@@ -55,7 +55,7 @@
         },
         {
           "index": 8,
-          "host": "bhr01erx45.inzjddnkdz.de5.net",
+          "host": "yx-auto.pages.dev",
           "target_ip": "2606:4700:3031::6815:49fa",
           "ip_version": "IPv6",
           "protocol": "none",
@@ -68,7 +68,7 @@
         },
         {
           "index": 9,
-          "host": "bhr01erx45.inzjddnkdz.de5.net",
+          "host": "yx-auto.pages.dev",
           "target_ip": "2606:4700:3034::ac43:97cf",
           "ip_version": "IPv6",
           "protocol": "none",
@@ -2365,7 +2365,7 @@
     },
     {
       "index": 8,
-      "host": "bhr01erx45.inzjddnkdz.de5.net",
+      "host": "yx-auto.pages.dev",
       "target_ip": "2606:4700:3031::6815:49fa",
       "ip_version": "IPv6",
       "protocol": "none",
@@ -2378,7 +2378,7 @@
     },
     {
       "index": 9,
-      "host": "bhr01erx45.inzjddnkdz.de5.net",
+      "host": "yx-auto.pages.dev",
       "target_ip": "2606:4700:3034::ac43:97cf",
       "ip_version": "IPv6",
       "protocol": "none",
@@ -5903,7 +5903,7 @@
     },
     {
       "index": 6,
-      "host": "bhr01erx45.inzjddnkdz.de5.net",
+      "host": "yx-auto.pages.dev",
       "target_ip": "104.21.73.250",
       "ip_version": "IPv4",
       "protocol": "h3",
