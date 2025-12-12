@@ -7,8 +7,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // 配置要替换的文本
-const oldText = `bhr01erx45.inzjddnkdz.de5.net`;
-const newText = "bhr01erx45.inzjddnkdz.de5.net";
+const oldText = `yx-auto.pages.dev`;
+const newText = "yx-auto.pages.dev";
 
 // 支持的文件扩展名
 const extensions = [".js", ".yml", ".json", ".txt", "*.md"];

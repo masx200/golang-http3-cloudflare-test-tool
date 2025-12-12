@@ -1155,7 +1155,7 @@
     "error_msg": null
   },
   {
-    "host": "********-****-****-****-************.*.*.*.*.*.*.*.*.*.*.*.*.***.****",
+    "host": "yx-auto.pages.dev",
     "target_ip": "",
     "ip_version": "",
     "success": false,

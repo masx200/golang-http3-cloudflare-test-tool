@@ -2164,7 +2164,7 @@
       "DNS解析错误: 其他DNS错误": [
         {
           "index": 179,
-          "host": "********-****-****-****-************.*.*.*.*.*.*.*.*.*.*.*.*.***.****",
+          "host": "yx-auto.pages.dev",
           "target_ip": "Unknown",
           "ip_version": "Unknown",
           "protocol": "none",
@@ -2997,7 +2997,7 @@
     },
     {
       "index": 179,
-      "host": "********-****-****-****-************.*.*.*.*.*.*.*.*.*.*.*.*.***.****",
+      "host": "yx-auto.pages.dev",
       "target_ip": "Unknown",
       "ip_version": "Unknown",
       "protocol": "none",
