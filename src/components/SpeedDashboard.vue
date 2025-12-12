@@ -54,6 +54,17 @@
             <v-row>
               <v-col cols="12" md="3">
                 <v-select
+                  v-model="filters.asName"
+                  :items="asNameOptions"
+                  label="ISP名称"
+                  clearable
+                  @update:model-value="applyFilters"
+                ></v-select>
+              </v-col>
+            </v-row>
+            <v-row>
+              <v-col cols="12" md="3">
+                <v-select
                   v-model="filters.statusFilter"
                   :items="statusOptions"
                   label="测试状态"
@@ -142,6 +153,7 @@ export default {
     const filters = ref({
       country: null,
       asn: null,
+      asName: null,
       ipVersion: null,
       protocol: null,
       statusFilter: 'all' // 'all', 'success', 'failed'
@@ -195,7 +207,13 @@ export default {
       console.log('ASN options:', asns)
       return asns
     })
-    
+
+    const asNameOptions = computed(() => {
+      const asNames = [...new Set(allResults.value.map(r => r.asName).filter(Boolean))]
+      console.log('AS Name options:', asNames)
+      return asNames
+    })
+
     const protocolOptions = computed(() => {
       const protocols = [...new Set(allResults.value.map(r => r.protocol).filter(Boolean))]
       return protocols
@@ -234,7 +252,8 @@ export default {
                   ...test,
                   testEnvironment: `${report.test_environment?.ip_info?.country || 'Unknown'} (${report.test_environment?.ip_info?.as_name || 'Unknown'})`,
                   country: report.test_environment?.ip_info?.country,
-                  asn: report.test_environment?.ip_info?.asn
+                  asn: report.test_environment?.ip_info?.asn,
+                  asName: report.test_environment?.ip_info?.as_name
                 }
                 results.push(result)
                 console.log('Added success test:', result)
@@ -248,7 +267,8 @@ export default {
                   ...test,
                   testEnvironment: `${report.test_environment?.ip_info?.country || 'Unknown'} (${report.test_environment?.ip_info?.as_name || 'Unknown'})`,
                   country: report.test_environment?.ip_info?.country,
-                  asn: report.test_environment?.ip_info?.asn
+                  asn: report.test_environment?.ip_info?.asn,
+                  asName: report.test_environment?.ip_info?.as_name
                 }
                 results.push(result)
                 console.log('Added failed test:', result)
@@ -262,6 +282,7 @@ export default {
         console.log('All loaded results:', results)
         console.log('Unique countries:', [...new Set(results.map(r => r.country))])
         console.log('Unique ASNs:', [...new Set(results.map(r => r.asn))])
+        console.log('Unique AS Names:', [...new Set(results.map(r => r.asName))])
 
         testReports.value = reports
         allResults.value = results
@@ -291,7 +312,13 @@ export default {
         results = results.filter(r => r.asn === filters.value.asn)
         console.log('After ASN filter:', results.length)
       }
-      
+
+      // 按ISP名称筛选
+      if (filters.value.asName) {
+        results = results.filter(r => r.asName === filters.value.asName)
+        console.log('After AS Name filter:', results.length)
+      }
+
       // 按IP版本筛选
       if (filters.value.ipVersion) {
         results = results.filter(r => r.ip_version === filters.value.ipVersion)
@@ -322,6 +349,7 @@ export default {
       filters.value = {
         country: null,
         asn: null,
+        asName: null,
         ipVersion: null,
         protocol: null,
         statusFilter: 'all'
@@ -348,6 +376,7 @@ export default {
       filters,
       countryOptions,
       asnOptions,
+      asNameOptions,
       protocolOptions,
       statusOptions,
       getLatencyColor,
