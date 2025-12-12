@@ -249,7 +249,7 @@ src/
     "doh_resolve_domain": "example.com",
     "test_sni_host": "example.com",
     "test_host_header": "example.com",
-    "doh_url": "https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query",
+    "doh_url": "https://deno-dns-over-https-server.g18uibxgnb.de5.net/",
     "port": 443,
     "prefer_ipv6": false,
     "resolve_mode": "https", // "https", "a_aaaa", "direct"

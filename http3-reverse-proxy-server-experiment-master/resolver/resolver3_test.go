@@ -59,14 +59,14 @@ func TestResolver73(t *testing.T) {
 }
 func GetQueryCallbacks7() generic.MapInterface[string, func(m *dns.Msg) (r *dns.Msg, err error)] {
 	return generic.MapImplementFromMap(map[string]func(m *dns.Msg) (r *dns.Msg, err error){
-		"https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query": func(m *dns.Msg) (r *dns.Msg, err error) {
-			return DohClient(m, "https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query")
-		}, "https://dns.alidns.com/dns-query": func(m *dns.Msg) (r *dns.Msg, err error) {
-			return DohClient(m, "https://dns.alidns.com/dns-query")
-		}, "https://unfiltered.adguard-dns.com/dns-query": func(m *dns.Msg) (r *dns.Msg, err error) {
-			return DoHTTP3Client(m, "https://unfiltered.adguard-dns.com/dns-query")
-		}, "https://security.cloudflare-dns.com/dns-query": func(m *dns.Msg) (r *dns.Msg, err error) {
-			return DoHTTP3Client(m, "https://security.cloudflare-dns.com/dns-query")
+		"https://deno-dns-over-https-server.g18uibxgnb.de5.net/": func(m *dns.Msg) (r *dns.Msg, err error) {
+			return DohClient(m, "https://deno-dns-over-https-server.g18uibxgnb.de5.net/")
+		}, "https://deno-dns-over-https-server.g18uibxgnb.de5.net/": func(m *dns.Msg) (r *dns.Msg, err error) {
+			return DohClient(m, "https://deno-dns-over-https-server.g18uibxgnb.de5.net/")
+		}, "https://deno-dns-over-https-server.g18uibxgnb.de5.net/": func(m *dns.Msg) (r *dns.Msg, err error) {
+			return DoHTTP3Client(m, "https://deno-dns-over-https-server.g18uibxgnb.de5.net/")
+		}, "https://deno-dns-over-https-server.g18uibxgnb.de5.net/": func(m *dns.Msg) (r *dns.Msg, err error) {
+			return DoHTTP3Client(m, "https://deno-dns-over-https-server.g18uibxgnb.de5.net/")
 		}})
 }
 func TestResolver47(t *testing.T) {

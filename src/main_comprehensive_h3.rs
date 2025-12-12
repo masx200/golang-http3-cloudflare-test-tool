@@ -48,7 +48,7 @@ impl Default for ComprehensiveTestConfig {
             timeout_seconds: 30,
             enable_ipv6: false,
             dns_resolve_mode: "https".to_string(),
-            doh_server: "https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query".to_string(),
+            doh_server: "https://deno-dns-over-https-server.g18uibxgnb.de5.net/".to_string(),
             test_paths: vec![
                 "/".to_string(),
                 "/cdn-cgi/trace".to_string(),
@@ -210,7 +210,7 @@ pub fn parse_command_line() -> ComprehensiveTestConfig {
                 .long("doh-server")
                 .value_name("URL")
                 .help("DNS over HTTPS server URL")
-                .default_value("https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query"),
+                .default_value("https://deno-dns-over-https-server.g18uibxgnb.de5.net/"),
         )
         .get_matches();
 

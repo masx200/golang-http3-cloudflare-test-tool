@@ -222,7 +222,7 @@ google.com           142.250.196.206 IPv4     HTTP/3         成功     189ms   
   "timeout_seconds": 30,
   "enable_ipv6": false,
   "dns_resolve_mode": "https",
-  "doh_server": "https://doh.server.com/dns-query",
+  "doh_server": "https://deno-dns-over-https-server.g18uibxgnb.de5.net/",
   "test_paths": ["/", "/api/v1/test"],
   "use_fallback": true,
   "max_field_section_size": 8192
@@ -273,7 +273,7 @@ cargo build --release
 
 ```bash
 # 使用不同的 DoH 服务器
-./rust-http3-cloudflare-test-tool --doh-server https://1.1.1.1/dns-query
+./rust-http3-cloudflare-test-tool --doh-server https://deno-dns-over-https-server.g18uibxgnb.de5.net/
 ```
 
 ### 2. 调试和日志

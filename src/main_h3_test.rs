@@ -55,7 +55,7 @@ impl Default for H3IntegrationTest {
                 doh_resolve_domain: "local-aria2-webui.masx200.ddns-ip.net".to_string(),
                 test_sni_host: "local-aria2-webui.masx200.ddns-ip.net".to_string(),
                 test_host_header: "local-aria2-webui.masx200.ddns-ip.net".to_string(),
-                doh_url: "https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query"
+                doh_url: "https://deno-dns-over-https-server.g18uibxgnb.de5.net/"
                     .to_string(),
                 port: 443,
                 prefer_ipv6: Some(false),
@@ -385,7 +385,7 @@ pub async fn run_http3_integration_tests() -> Result<()> {
                 doh_resolve_domain: "local-aria2-webui.masx200.ddns-ip.net".to_string(),
                 test_sni_host: "local-aria2-webui.masx200.ddns-ip.net".to_string(),
                 test_host_header: "local-aria2-webui.masx200.ddns-ip.net".to_string(),
-                doh_url: "https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query"
+                doh_url: "https://deno-dns-over-https-server.g18uibxgnb.de5.net/"
                     .to_string(),
                 port: 443,
                 prefer_ipv6: Some(false),
@@ -403,7 +403,7 @@ pub async fn run_http3_integration_tests() -> Result<()> {
                 doh_resolve_domain: "google.com".to_string(),
                 test_sni_host: "google.com".to_string(),
                 test_host_header: "google.com".to_string(),
-                doh_url: "https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query"
+                doh_url: "https://deno-dns-over-https-server.g18uibxgnb.de5.net/"
                     .to_string(),
                 port: 443,
                 prefer_ipv6: Some(false),
@@ -589,7 +589,7 @@ pub fn get_default_integration_test_configs() -> Vec<H3IntegrationTest> {
                 doh_resolve_domain: "local-aria2-webui.masx200.ddns-ip.net".to_string(),
                 test_sni_host: "local-aria2-webui.masx200.ddns-ip.net".to_string(),
                 test_host_header: "local-aria2-webui.masx200.ddns-ip.net".to_string(),
-                doh_url: "https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query"
+                doh_url: "https://deno-dns-over-https-server.g18uibxgnb.de5.net/"
                     .to_string(),
                 port: 443,
                 prefer_ipv6: Some(false),
@@ -607,7 +607,7 @@ pub fn get_default_integration_test_configs() -> Vec<H3IntegrationTest> {
                 doh_resolve_domain: "local-aria2-webui.masx200.ddns-ip.net".to_string(),
                 test_sni_host: "local-aria2-webui.masx200.ddns-ip.net".to_string(),
                 test_host_header: "local-aria2-webui.masx200.ddns-ip.net".to_string(),
-                doh_url: "https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query"
+                doh_url: "https://deno-dns-over-https-server.g18uibxgnb.de5.net/"
                     .to_string(),
                 port: 443,
                 prefer_ipv6: Some(false),
@@ -625,7 +625,7 @@ pub fn get_default_integration_test_configs() -> Vec<H3IntegrationTest> {
                 doh_resolve_domain: "www.google.com".to_string(),
                 test_sni_host: "www.google.com".to_string(),
                 test_host_header: "www.google.com".to_string(),
-                doh_url: "https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query"
+                doh_url: "https://deno-dns-over-https-server.g18uibxgnb.de5.net/"
                     .to_string(),
                 port: 443,
                 prefer_ipv6: Some(false),

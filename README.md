@@ -58,7 +58,7 @@
 
      # 指定 DoH 服务
      ./http3-test-tool -domain "hello-world-deno-deploy.a1u06h9fe9y5bozbmgz3.qzz.io" \
-       -doh-url "https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query"
+       -doh-url "https://deno-dns-over-https-server.g18uibxgnb.de5.net/"
      ```
 
 ### 2. 使用配置文件
@@ -71,7 +71,7 @@
          "doh_resolve_domain": "local-aria2-webui.masx200.ddns-ip.net",
          "test_sni_host": "local-aria2-webui.masx200.ddns-ip.net",
          "test_host_header": "local-aria2-webui.masx200.ddns-ip.net",
-         "doh_url": "https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query",
+         "doh_url": "https://deno-dns-over-https-server.g18uibxgnb.de5.net/",
          "port": 443,
          "prefer_ipv6": false,
          "resolve_mode": "https"
@@ -80,7 +80,7 @@
          "doh_resolve_domain": "local-aria2-webui.masx200.ddns-ip.net",
          "test_sni_host": "local-aria2-webui.masx200.ddns-ip.net",
          "test_host_header": "local-aria2-webui.masx200.ddns-ip.net",
-         "doh_url": "https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query",
+         "doh_url": "https://deno-dns-over-https-server.g18uibxgnb.de5.net/",
          "port": 443,
          "prefer_ipv6": false,
          "resolve_mode": "direct",
@@ -123,7 +123,7 @@
         "protocol": "h3",
         "latency_ms": 127,
         "server_header": "cloudflare",
-        "dns_source": "DoH (https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query)"
+        "dns_source": "DoH (https://deno-dns-over-https-server.g18uibxgnb.de5.net/)"
       },
       {
         "domain_used": "local-aria2-webui.masx200.ddns-ip.net",
@@ -136,7 +136,7 @@
         "protocol": "h2",
         "latency_ms": 156,
         "server_header": "cloudflare",
-        "dns_source": "DoH (https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query)"
+        "dns_source": "DoH (https://deno-dns-over-https-server.g18uibxgnb.de5.net/)"
       }
     ]
     ```
@@ -149,7 +149,7 @@
     | --------------- | -------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
     | `-config`       | ""                                                                                                             | 配置文件路径                         |
     | `-domain`       | ""                                                                                                             | 测试域名                             |
-    | `-doh-url`      | "https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query" | DoH 服务 URL                         |
+    | `-doh-url`      | "https://deno-dns-over-https-server.g18uibxgnb.de5.net/" | DoH 服务 URL                         |
     | `-resolve-mode` | "https"                                                                                                        | DNS 解析模式 (https, a_aaaa, direct) |
     | `-test-url`     | "https://hello-world-deno-deploy.a1u06h9fe9y5bozbmgz3.qzz.io"                                                  | 测试 URL                             |
     | `-port`         | 443                                                                                                            | 目标端口                             |

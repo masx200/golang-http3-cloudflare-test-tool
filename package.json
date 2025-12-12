@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "extract": "go run -v ./extract_hosts.go",
-    "check": "node ip-info.js && go run -v  host_connectivity_check.go -verbose  -dohip 104.21.95.9 --doh-url https://ykxkqhbc8x.apuk83ea3z.de5.net/token/4yF6nSCifSLs8lfkb4t8OWP69kfpgiun/https/one.one.one.one/dns-query",
+    "check": "node ip-info.js && go run -v  host_connectivity_check.go -verbose  -dohip 104.21.95.9 --doh-url https://deno-dns-over-https-server.g18uibxgnb.de5.net/",
     "start": "node ip-info.js && node generate-test-report.js"
   },
   "repository": {

@@ -15,3 +15,5 @@ host_connectivity_check.exe
 node_modules
 #上游节点-workers.txt
 *.exe
+dist
+.vscode/extensions.json
