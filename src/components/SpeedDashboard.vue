@@ -52,7 +52,7 @@
               </v-col>
             </v-row>
                                   <v-row>
-              <v-col cols="12" md="3">
+              <v-col cols="12" md="2">
                 <v-select
                   v-model="filters.asName"
                   :items="asNameOptions"
@@ -61,7 +61,7 @@
                   @update:model-value="applyFilters"
                 ></v-select>
               </v-col>
-              <v-col cols="12" md="3">
+              <v-col cols="12" md="2">
                 <v-select
                   v-model="filters.statusFilter"
                   :items="statusOptions"
@@ -69,7 +69,15 @@
                   @update:model-value="applyFilters"
                 ></v-select>
               </v-col>
-              <v-col cols="12" md="3">
+              <v-col cols="12" md="2">
+                <v-date-input
+                  v-model="filters.testDate"
+                  label="测试日期"
+                  clearable
+                  @update:model-value="applyFilters"
+                ></v-date-input>
+              </v-col>
+              <v-col cols="12" md="2">
                 <v-btn @click="clearFilters" color="primary" block>清除筛选</v-btn>
               </v-col>
             </v-row>
@@ -154,6 +162,7 @@ export default {
       asName: null,
       ipVersion: null,
       protocol: null,
+      testDate: null,
       statusFilter: 'success' // 'all', 'success', 'failed'
     })
 
@@ -253,7 +262,8 @@ export default {
                   testEnvironment: `${report.test_environment?.ip_info?.country || 'Unknown'} (${report.test_environment?.ip_info?.as_name || 'Unknown'})`,
                   country: report.test_environment?.ip_info?.country,
                   asn: report.test_environment?.ip_info?.asn,
-                  asName: report.test_environment?.ip_info?.as_name
+                  asName: report.test_environment?.ip_info?.as_name,
+                  generatedAt: report.report_info?.generated_at
                 }
                 results.push(result)
               })
@@ -267,7 +277,8 @@ export default {
                   testEnvironment: `${report.test_environment?.ip_info?.country || 'Unknown'} (${report.test_environment?.ip_info?.as_name || 'Unknown'})`,
                   country: report.test_environment?.ip_info?.country,
                   asn: report.test_environment?.ip_info?.asn,
-                  asName: report.test_environment?.ip_info?.as_name
+                  asName: report.test_environment?.ip_info?.as_name,
+                  generatedAt: report.report_info?.generated_at
                 }
                 results.push(result)
               })
@@ -350,6 +361,16 @@ export default {
         console.log('After protocol filter:', results.length)
       }
 
+      // 按测试日期筛选
+      if (filters.value.testDate) {
+        results = results.filter(r => {
+          if (!r.generatedAt) return false
+          const testDate = new Date(r.generatedAt).toISOString().split('T')[0]
+          return testDate === filters.value.testDate
+        })
+        console.log('After test date filter:', results.length)
+      }
+
       // 按成功/失败筛选
       if (filters.value.statusFilter === 'success') {
         results = results.filter(r => r.success)
@@ -371,6 +392,7 @@ export default {
         asName: null,
         ipVersion: null,
         protocol: null,
+        testDate: null,
         statusFilter: 'success'
       }
       filteredResults.value = [...allResults.value]
