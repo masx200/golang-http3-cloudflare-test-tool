@@ -185,12 +185,14 @@ export default {
     
     // 筛选选项
     const countryOptions = computed(() => {
-      const countries = [...new Set(testReports.value.map(r => r.test_environment?.ip_info?.country).filter(Boolean))]
+      const countries = [...new Set(allResults.value.map(r => r.country).filter(Boolean))]
+      console.log('Country options:', countries)
       return countries
     })
-    
+
     const asnOptions = computed(() => {
-      const asns = [...new Set(testReports.value.map(r => r.test_environment?.ip_info?.asn).filter(Boolean))]
+      const asns = [...new Set(allResults.value.map(r => r.asn).filter(Boolean))]
+      console.log('ASN options:', asns)
       return asns
     })
     
@@ -228,27 +230,39 @@ export default {
             // 添加成功测试
             if (report.top_latency_records && Array.isArray(report.top_latency_records)) {
               report.top_latency_records.forEach(test => {
-                results.push({
+                const result = {
                   ...test,
-                  testEnvironment: `${report.test_environment?.ip_info?.country || 'Unknown'} (${report.test_environment?.ip_info?.as_name || 'Unknown'})`
-                })
+                  testEnvironment: `${report.test_environment?.ip_info?.country || 'Unknown'} (${report.test_environment?.ip_info?.as_name || 'Unknown'})`,
+                  country: report.test_environment?.ip_info?.country,
+                  asn: report.test_environment?.ip_info?.asn
+                }
+                results.push(result)
+                console.log('Added success test:', result)
               })
             }
-            
+
             // 添加失败测试
             if (report.failed_tests && Array.isArray(report.failed_tests)) {
               report.failed_tests.forEach(test => {
-                results.push({
+                const result = {
                   ...test,
-                  testEnvironment: `${report.test_environment?.ip_info?.country || 'Unknown'} (${report.test_environment?.ip_info?.as_name || 'Unknown'})`
-                })
+                  testEnvironment: `${report.test_environment?.ip_info?.country || 'Unknown'} (${report.test_environment?.ip_info?.as_name || 'Unknown'})`,
+                  country: report.test_environment?.ip_info?.country,
+                  asn: report.test_environment?.ip_info?.asn
+                }
+                results.push(result)
+                console.log('Added failed test:', result)
               })
             }
           } catch (error) {
             console.error(`Error loading report ${path}:`, error)
           }
         }
-        
+
+        console.log('All loaded results:', results)
+        console.log('Unique countries:', [...new Set(results.map(r => r.country))])
+        console.log('Unique ASNs:', [...new Set(results.map(r => r.asn))])
+
         testReports.value = reports
         allResults.value = results
         filteredResults.value = results
@@ -262,44 +276,44 @@ export default {
     // 应用筛选
     const applyFilters = () => {
       let results = [...allResults.value]
-      
+
+      console.log('Applying filters:', filters.value)
+      console.log('Results before filtering:', results.length)
+
       // 按国家筛选
       if (filters.value.country) {
-        results = results.filter(r => {
-          const report = testReports.value.find(report => 
-            report.top_latency_records?.includes(r) || report.failed_tests?.includes(r)
-          )
-          return report?.test_environment?.ip_info?.country === filters.value.country
-        })
+        results = results.filter(r => r.country === filters.value.country)
+        console.log('After country filter:', results.length)
       }
-      
+
       // 按ASN筛选
       if (filters.value.asn) {
-        results = results.filter(r => {
-          const report = testReports.value.find(report => 
-            report.top_latency_records?.includes(r) || report.failed_tests?.includes(r)
-          )
-          return report?.test_environment?.ip_info?.asn === filters.value.asn
-        })
+        results = results.filter(r => r.asn === filters.value.asn)
+        console.log('After ASN filter:', results.length)
       }
       
       // 按IP版本筛选
       if (filters.value.ipVersion) {
         results = results.filter(r => r.ip_version === filters.value.ipVersion)
+        console.log('After IP version filter:', results.length)
       }
-      
+
       // 按协议筛选
       if (filters.value.protocol) {
         results = results.filter(r => r.protocol === filters.value.protocol)
+        console.log('After protocol filter:', results.length)
       }
-      
+
       // 按成功/失败筛选
       if (filters.value.statusFilter === 'success') {
         results = results.filter(r => r.success)
+        console.log('After success filter:', results.length)
       } else if (filters.value.statusFilter === 'failed') {
         results = results.filter(r => !r.success)
+        console.log('After failed filter:', results.length)
       }
-      
+
+      console.log('Final filtered results:', results.length)
       filteredResults.value = results
     }
     
