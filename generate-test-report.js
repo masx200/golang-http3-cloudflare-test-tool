@@ -1,6 +1,13 @@
 #!/usr/bin/env node
 
-import { existsSync, readFileSync, writeFileSync, appendFileSync, readdirSync, statSync } from "fs";
+import {
+  appendFileSync,
+  existsSync,
+  readdirSync,
+  readFileSync,
+  statSync,
+  writeFileSync,
+} from "fs";
 import { basename, join } from "path";
 import { Command } from "commander";
 import IPInfoFetcher from "./ip-info.js";
@@ -16,20 +23,24 @@ function findLatestConnectivityResultsFile() {
 
     // 筛选出 connectivity_results-*.json 格式的文件
     const connectivityFiles = files
-      .filter(file => file.startsWith('connectivity_results-') && file.endsWith('.json'))
-      .map(file => {
+      .filter((file) =>
+        file.startsWith("connectivity_results-") && file.endsWith(".json")
+      )
+      .map((file) => {
         const filePath = join(process.cwd(), file);
         const stats = statSync(filePath);
         return {
           name: file,
           path: filePath,
-          mtime: stats.mtime
+          mtime: stats.mtime,
         };
       })
       .sort((a, b) => b.mtime - a.mtime); // 按修改时间降序排序
 
     if (connectivityFiles.length > 0) {
-      console.log(`找到最新的 connectivity_results 文件: ${connectivityFiles[0].name}`);
+      console.log(
+        `找到最新的 connectivity_results 文件: ${connectivityFiles[0].name}`,
+      );
       return connectivityFiles[0].path;
     } else {
       console.log("未找到 connectivity_results-*.json 文件，使用默认文件名");
@@ -91,7 +102,7 @@ class TestReportGenerator {
           asn: "unknown",
           as_name: "unknown",
           source: "failed",
-          error: error.message
+          error: error.message,
         };
         return false;
       }
@@ -336,8 +347,6 @@ class TestReportGenerator {
 | 序号 | 主机/域名 | 目标IP | IP版本 | 协议 | 状态 | 延迟(ms) | 服务器 |
 |------|-----------|--------|--------|------|------|----------|--------|
 `;
-
-
 
         topLatencyRecords.forEach((test) => {
           const host = test.host.length > 200
@@ -1177,8 +1186,12 @@ async function main() {
   if (generatorOptions.includeIPInfo && generator.ipInfo) {
     console.log("\n🌐 测试环境信息:");
     console.log(`   IP地址: ${generator.ipInfo.ip}`);
-    console.log(`   位置: ${generator.ipInfo.country} (${generator.ipInfo.country_code})`);
-    console.log(`   网络: ${generator.ipInfo.as_name || generator.ipInfo.org || "N/A"}`);
+    console.log(
+      `   位置: ${generator.ipInfo.country} (${generator.ipInfo.country_code})`,
+    );
+    console.log(
+      `   网络: ${generator.ipInfo.as_name || generator.ipInfo.org || "N/A"}`,
+    );
   }
 }
 

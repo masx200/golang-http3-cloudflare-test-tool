@@ -36,7 +36,7 @@
 | 257  | 172.67.49.134            | 172.67.49.134   | IPv4   | none | N/A    | 0        | N/A    | dial tcp 172.67.49.134:443: i/o timeout   |
 | 317  | trevor.ns.cloudflare.com | 108.162.195.154 | IPv4   | none | N/A    | 0        | N/A    | dial tcp 108.162.195.154:443: i/o timeout |
 | 343  | 175.212.207.13           | 175.212.207.13  | IPv4   | none | N/A    | 0        | N/A    | dial tcp 175.212.207.13:443: i/o timeout  |
-| 487  | 104.26.6.112           | 104.26.6.112  | IPv4   | none | N/A    | 0        | N/A    | dial tcp 104.26.6.112:443: i/o timeout  |
+| 487  | 104.26.6.112             | 104.26.6.112    | IPv4   | none | N/A    | 0        | N/A    | dial tcp 104.26.6.112:443: i/o timeout    |
 | 492  | 52.76.110.129            | 52.76.110.129   | IPv4   | none | N/A    | 0        | N/A    | dial tcp 52.76.110.129:443: i/o timeout   |
 | 493  | 3.0.50.69                | 3.0.50.69       | IPv4   | none | N/A    | 0        | N/A    | dial tcp 3.0.50.69:443: i/o timeout       |
 

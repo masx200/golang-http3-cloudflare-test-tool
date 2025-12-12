@@ -2,17 +2,22 @@
 
 ## 功能概述
 
-`generate-test-report.js` 现在支持自动检测最新生成的 `connectivity_results` 文件，无需手动指定文件路径。
+`generate-test-report.js` 现在支持自动检测最新生成的 `connectivity_results`
+文件，无需手动指定文件路径。
 
 ## 工作原理
 
 ### 自动检测逻辑
-1. **文件扫描**: 扫描当前目录下所有以 `connectivity_results-` 开头、以 `.json` 结尾的文件
+
+1. **文件扫描**: 扫描当前目录下所有以 `connectivity_results-` 开头、以 `.json`
+   结尾的文件
 2. **时间排序**: 按文件修改时间降序排序，最新的文件排在前面
 3. **智能选择**: 自动选择最新的文件作为默认输入文件
-4. **容错处理**: 如果没有找到符合条件的文件，回退到默认的 `connectivity_results.json`
+4. **容错处理**: 如果没有找到符合条件的文件，回退到默认的
+   `connectivity_results.json`
 
 ### 文件匹配规则
+
 - **支持格式**: `connectivity_results-*.json`
 - **示例文件名**:
   - `connectivity_results-20251212-145425.json`
@@ -22,6 +27,7 @@
 ## 使用方式
 
 ### 自动模式（推荐）
+
 ```bash
 # 使用默认的自动检测功能
 npm run start
@@ -31,6 +37,7 @@ node generate-test-report.js
 ```
 
 ### 手动指定文件
+
 ```bash
 # 手动指定特定的文件
 node generate-test-report.js -f connectivity_results-20251212-145425.json
@@ -40,6 +47,7 @@ node generate-test-report.js -f ./results/connectivity_results-latest.json
 ```
 
 ### 禁用自动检测
+
 ```bash
 # 如果有多个文件，想要使用默认的 connectivity_results.json
 node generate-test-report.js -f connectivity_results.json
@@ -62,6 +70,7 @@ node generate-test-report.js [options]
 ## 输出示例
 
 ### 自动检测成功
+
 ```
 找到最新的 connectivity_results 文件: connectivity_results-20251212-145425.json
 HTTP/3 连接测试失败报告生成器 v2.0.0
@@ -73,6 +82,7 @@ IP信息: 启用
 ```
 
 ### 回退到默认文件
+
 ```
 未找到 connectivity_results-*.json 文件，使用默认文件名
 HTTP/3 连接测试失败报告生成器 v2.0.0
@@ -109,6 +119,7 @@ HTTP/3 连接测试失败报告生成器 v2.0.0
 ## 技术实现细节
 
 ### 核心代码
+
 ```javascript
 function findLatestConnectivityResultsFile() {
   try {
@@ -117,20 +128,24 @@ function findLatestConnectivityResultsFile() {
 
     // 筛选出 connectivity_results-*.json 格式的文件
     const connectivityFiles = files
-      .filter(file => file.startsWith('connectivity_results-') && file.endsWith('.json'))
-      .map(file => {
+      .filter((file) =>
+        file.startsWith("connectivity_results-") && file.endsWith(".json")
+      )
+      .map((file) => {
         const filePath = join(process.cwd(), file);
         const stats = statSync(filePath);
         return {
           name: file,
           path: filePath,
-          mtime: stats.mtime
+          mtime: stats.mtime,
         };
       })
       .sort((a, b) => b.mtime - a.mtime); // 按修改时间降序排序
 
     if (connectivityFiles.length > 0) {
-      console.log(`找到最新的 connectivity_results 文件: ${connectivityFiles[0].name}`);
+      console.log(
+        `找到最新的 connectivity_results 文件: ${connectivityFiles[0].name}`,
+      );
       return connectivityFiles[0].path;
     } else {
       console.log("未找到 connectivity_results-*.json 文件，使用默认文件名");
@@ -144,6 +159,7 @@ function findLatestConnectivityResultsFile() {
 ```
 
 ### 路径处理
+
 ```javascript
 // 处理文件路径：如果已经是绝对路径，直接使用；否则使用相对路径
 let resultsFilePath;
@@ -174,19 +190,25 @@ if (options.file.startsWith("/") || /^[A-Za-z]:/.test(options.file)) {
 ## 故障排除
 
 ### 问题：找不到文件
+
 **解决方案**：
+
 - 检查文件命名是否符合 `connectivity_results-*.json` 格式
 - 确认文件确实存在于当前工作目录
 - 使用 `-f` 参数手动指定文件路径
 
 ### 问题：路径错误
+
 **解决方案**：
+
 - 检查当前工作目录是否正确
 - 使用绝对路径：`node generate-test-report.js -f /path/to/file.json`
 - 检查文件权限
 
 ### 问题：使用错误的文件
+
 **解决方案**：
+
 - 手动指定文件：`node generate-test-report.js -f desired-file.json`
 - 检查文件的修改时间：`ls -la connectivity_results-*.json`
 - 删除不需要的旧文件

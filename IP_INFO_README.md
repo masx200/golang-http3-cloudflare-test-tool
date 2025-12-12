@@ -5,12 +5,14 @@
 ## 功能特性
 
 ### 🌐 IP地址信息获取
+
 - **多API支持**: 使用 `ipinfo.io` 和 `ifconfig.co` 两个API服务
 - **容错机制**: 如果一个API失败，会自动尝试另一个
 - **丰富信息**: 获取IP地址、地理位置、网络组织、时区等详细信息
 - **安全认证**: 使用Bearer Token进行API认证
 
 ### 📊 报告集成
+
 - **Markdown报告**: 在测试失败报告中显示详细的网络环境信息
 - **JSON报告**: 在结构化数据中包含IP信息
 - **命令行输出**: 在控制台显示IP信息摘要
@@ -18,6 +20,7 @@
 ## 修改的脚本
 
 ### npm run check
+
 ```bash
 # 修改前
 go run -v host_connectivity_check.go -verbose
@@ -27,6 +30,7 @@ node ip-info.js && go run -v host_connectivity_check.go -verbose
 ```
 
 ### npm run start
+
 ```bash
 # 修改前
 node generate-test-report.js
@@ -38,14 +42,18 @@ node ip-info.js && node generate-test-report.js
 ## 新增文件
 
 ### ip-info.js
+
 IP地址信息获取工具，支持：
+
 - 异步获取IP信息
 - 多API容错机制
 - 格式化输出（Markdown/JSON）
 - 错误处理和重试
 
 ### generate-test-report.js (增强)
+
 测试报告生成器已增强，新增功能：
+
 - 集成IP信息获取
 - 在报告中包含网络环境信息
 - 新增命令行选项 `--no-ip-info` 禁用IP信息
@@ -53,6 +61,7 @@ IP地址信息获取工具，支持：
 ## 使用示例
 
 ### 获取IP信息
+
 ```bash
 # 直接运行IP信息获取
 node ip-info.js
@@ -73,11 +82,13 @@ node ip-info.js
 ```
 
 ### 生成包含IP信息的测试报告
+
 ```bash
 npm run start
 ```
 
 ### 生成不包含IP信息的测试报告
+
 ```bash
 node generate-test-report.js --no-ip-info
 ```
@@ -85,6 +96,7 @@ node generate-test-report.js --no-ip-info
 ## 报告中的IP信息示例
 
 ### Markdown报告
+
 ```
 ## 🌐 当前测试环境信息
 
@@ -101,6 +113,7 @@ node generate-test-report.js --no-ip-info
 ```
 
 ### JSON报告
+
 ```json
 {
   "test_environment": {
@@ -123,11 +136,13 @@ node generate-test-report.js --no-ip-info
 ## API配置
 
 ### ipinfo.io
+
 - **URL**: `https://api.ipinfo.io/lite/me`
 - **认证**: Bearer Token
 - **信息**: IP、ASN、网络组织、地理位置
 
 ### ifconfig.co
+
 - **URL**: `https://ifconfig.co/json`
 - **认证**: 无需认证
 - **信息**: IP、地理位置、坐标、时区、User-Agent

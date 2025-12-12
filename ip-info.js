@@ -25,7 +25,7 @@ class IPInfoFetcher {
       time_zone: null,
       org: null,
       user_agent: null,
-      source: "unknown"
+      source: "unknown",
     };
   }
 
@@ -36,7 +36,7 @@ class IPInfoFetcher {
     try {
       console.log("正在从 ipinfo.io 获取IP信息...");
       const { stdout } = await execAsync(
-        'curl -s https://api.ipinfo.io/lite/me -H "Authorization: Bearer e1d992dda9d73e"'
+        'curl -s https://api.ipinfo.io/lite/me -H "Authorization: Bearer e1d992dda9d73e"',
       );
 
       const data = JSON.parse(stdout);
@@ -51,7 +51,7 @@ class IPInfoFetcher {
         country: data.country,
         continent_code: data.continent_code,
         continent: data.continent,
-        source: "ipinfo.io"
+        source: "ipinfo.io",
       };
 
       console.log(`✅ ipinfo.io 获取成功: ${data.ip} (${data.country})`);
@@ -68,7 +68,7 @@ class IPInfoFetcher {
   async fetchFromIfConfig() {
     try {
       console.log("正在从 ifconfig.co 获取IP信息...");
-      const { stdout } = await execAsync('curl -s https://ifconfig.co/json');
+      const { stdout } = await execAsync("curl -s https://ifconfig.co/json");
 
       const data = JSON.parse(stdout);
 
@@ -83,7 +83,7 @@ class IPInfoFetcher {
         asn: data.asn,
         as_name: data.asn_org,
         user_agent: data.user_agent,
-        source: this.ipinfo.source === "unknown" ? "ifconfig.co" : "combined"
+        source: this.ipinfo.source === "unknown" ? "ifconfig.co" : "combined",
       };
 
       console.log(`✅ ifconfig.co 获取成功: ${data.ip} (${data.country})`);
@@ -109,8 +109,7 @@ class IPInfoFetcher {
     // 如果失败，尝试 ifconfig.co
     if (!success) {
       success = await this.fetchFromIfConfig();
-    }
-    // 如果 ipinfo.io 成功，也尝试 ifconfig.co 来获取更多信息
+    } // 如果 ipinfo.io 成功，也尝试 ifconfig.co 来获取更多信息
     else {
       await this.fetchFromIfConfig();
     }
@@ -118,11 +117,15 @@ class IPInfoFetcher {
     if (success) {
       console.log("✅ IP信息获取完成");
       console.log(`   IP地址: ${this.ipinfo.ip}`);
-      console.log(`   国家: ${this.ipinfo.country} (${this.ipinfo.country_code})`);
+      console.log(
+        `   国家: ${this.ipinfo.country} (${this.ipinfo.country_code})`,
+      );
       console.log(`   ASN: ${this.ipinfo.asn}`);
       console.log(`   组织: ${this.ipinfo.as_name || this.ipinfo.org}`);
       if (this.ipinfo.latitude && this.ipinfo.longitude) {
-        console.log(`   坐标: ${this.ipinfo.latitude}, ${this.ipinfo.longitude}`);
+        console.log(
+          `   坐标: ${this.ipinfo.latitude}, ${this.ipinfo.longitude}`,
+        );
       }
       if (this.ipinfo.time_zone) {
         console.log(`   时区: ${this.ipinfo.time_zone}`);
@@ -137,7 +140,7 @@ class IPInfoFetcher {
         asn: "unknown",
         as_name: "unknown",
         source: "failed",
-        error: "所有IP信息API都失败了"
+        error: "所有IP信息API都失败了",
       };
     }
 
@@ -160,11 +163,13 @@ class IPInfoFetcher {
 - **网络域名**: ${this.ipinfo.as_domain || "N/A"}`;
 
     if (this.ipinfo.continent) {
-      markdown += `\n- **大洲**: ${this.ipinfo.continent} (${this.ipinfo.continent_code})`;
+      markdown +=
+        `\n- **大洲**: ${this.ipinfo.continent} (${this.ipinfo.continent_code})`;
     }
 
     if (this.ipinfo.latitude && this.ipinfo.longitude) {
-      markdown += `\n- **地理坐标**: ${this.ipinfo.latitude}, ${this.ipinfo.longitude}`;
+      markdown +=
+        `\n- **地理坐标**: ${this.ipinfo.latitude}, ${this.ipinfo.longitude}`;
     }
 
     if (this.ipinfo.time_zone) {
@@ -188,7 +193,7 @@ class IPInfoFetcher {
   formatAsJSON() {
     return {
       timestamp: new Date().toISOString(),
-      ip_info: this.ipinfo
+      ip_info: this.ipinfo,
     };
   }
 }
