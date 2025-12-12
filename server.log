@@ -1,0 +1,64 @@
+{"level":30,"time":1764556337326,"pid":20196,"hostname":"WIN-8DSRCLAOG3E","msg":"config>{\"host\":\"192.168.31.193\",\"user\":\"root\",\"password\":\"******\",\"database\":\"cg_manage\",\"port\":3306}"}
+{"level":30,"time":1764556337327,"pid":20196,"hostname":"WIN-8DSRCLAOG3E","msg":"MySQL MCP server running on stdio"}
+{"level":30,"time":1764556337440,"pid":7696,"hostname":"WIN-8DSRCLAOG3E","msg":"config>{\"host\":\"192.168.31.193\",\"user\":\"root\",\"password\":\"******\",\"database\":\"cg_manage\",\"port\":3306}"}
+{"level":30,"time":1764556337440,"pid":7696,"hostname":"WIN-8DSRCLAOG3E","msg":"MySQL MCP server running on stdio"}
+{"level":30,"time":1764556405596,"pid":13884,"hostname":"WIN-8DSRCLAOG3E","msg":"config>{\"host\":\"192.168.31.193\",\"user\":\"root\",\"password\":\"******\",\"database\":\"cg_manage\",\"port\":3306}"}
+{"level":30,"time":1764556405596,"pid":13884,"hostname":"WIN-8DSRCLAOG3E","msg":"MySQL MCP server running on stdio"}
+{"level":30,"time":1764556405654,"pid":15548,"hostname":"WIN-8DSRCLAOG3E","msg":"config>{\"host\":\"192.168.31.193\",\"user\":\"root\",\"password\":\"******\",\"database\":\"cg_manage\",\"port\":3306}"}
+{"level":30,"time":1764556405654,"pid":15548,"hostname":"WIN-8DSRCLAOG3E","msg":"MySQL MCP server running on stdio"}
+{"level":30,"time":1764558614781,"pid":14692,"hostname":"WIN-8DSRCLAOG3E","msg":"config>{\"host\":\"192.168.31.193\",\"user\":\"root\",\"password\":\"******\",\"database\":\"cg_manage\",\"port\":3306}"}
+{"level":30,"time":1764558614781,"pid":14692,"hostname":"WIN-8DSRCLAOG3E","msg":"MySQL MCP server running on stdio"}
+{"level":30,"time":1764558614906,"pid":22444,"hostname":"WIN-8DSRCLAOG3E","msg":"config>{\"host\":\"192.168.31.193\",\"user\":\"root\",\"password\":\"******\",\"database\":\"cg_manage\",\"port\":3306}"}
+{"level":30,"time":1764558614906,"pid":22444,"hostname":"WIN-8DSRCLAOG3E","msg":"MySQL MCP server running on stdio"}
+{"level":30,"time":1764567946263,"pid":14604,"hostname":"WIN-8DSRCLAOG3E","msg":"config>{\"host\":\"192.168.31.193\",\"user\":\"root\",\"password\":\"******\",\"database\":\"cg_manage\",\"port\":3306}"}
+{"level":30,"time":1764567946263,"pid":14604,"hostname":"WIN-8DSRCLAOG3E","msg":"MySQL MCP server running on stdio"}
+{"level":30,"time":1764567946290,"pid":3408,"hostname":"WIN-8DSRCLAOG3E","msg":"config>{\"host\":\"192.168.31.193\",\"user\":\"root\",\"password\":\"******\",\"database\":\"cg_manage\",\"port\":3306}"}
+{"level":30,"time":1764567946290,"pid":3408,"hostname":"WIN-8DSRCLAOG3E","msg":"MySQL MCP server running on stdio"}
+{"level":30,"time":1764568710712,"pid":2612,"hostname":"WIN-8DSRCLAOG3E","msg":"config>{\"host\":\"192.168.31.193\",\"user\":\"root\",\"password\":\"******\",\"database\":\"cg_manage\",\"port\":3306}"}
+{"level":30,"time":1764568710712,"pid":2612,"hostname":"WIN-8DSRCLAOG3E","msg":"MySQL MCP server running on stdio"}
+{"level":30,"time":1764578837224,"pid":10140,"hostname":"WIN-8DSRCLAOG3E","msg":"config>{\"host\":\"192.168.31.193\",\"user\":\"root\",\"password\":\"******\",\"database\":\"cg_manage\",\"port\":3306}"}
+{"level":30,"time":1764578837224,"pid":10140,"hostname":"WIN-8DSRCLAOG3E","msg":"MySQL MCP server running on stdio"}
+{"level":30,"time":1764578837318,"pid":21516,"hostname":"WIN-8DSRCLAOG3E","msg":"config>{\"host\":\"192.168.31.193\",\"user\":\"root\",\"password\":\"******\",\"database\":\"cg_manage\",\"port\":3306}"}
+{"level":30,"time":1764578837318,"pid":21516,"hostname":"WIN-8DSRCLAOG3E","msg":"MySQL MCP server running on stdio"}
+{"level":30,"time":1764579033001,"pid":25100,"hostname":"WIN-8DSRCLAOG3E","msg":"config>{\"host\":\"192.168.31.193\",\"user\":\"root\",\"password\":\"******\",\"database\":\"cg_manage\",\"port\":3306}"}
+{"level":30,"time":1764579033001,"pid":25100,"hostname":"WIN-8DSRCLAOG3E","msg":"MySQL MCP server running on stdio"}
+{"level":30,"time":1764579033117,"pid":10292,"hostname":"WIN-8DSRCLAOG3E","msg":"config>{\"host\":\"192.168.31.193\",\"user\":\"root\",\"password\":\"******\",\"database\":\"cg_manage\",\"port\":3306}"}
+{"level":30,"time":1764579033117,"pid":10292,"hostname":"WIN-8DSRCLAOG3E","msg":"MySQL MCP server running on stdio"}
+{"level":30,"time":1765158023137,"pid":21272,"hostname":"WIN-8DSRCLAOG3E","msg":"config>{\"host\":\"192.168.31.193\",\"user\":\"root\",\"password\":\"******\",\"database\":\"cg_manage\",\"port\":3306}"}
+{"level":30,"time":1765158023137,"pid":21272,"hostname":"WIN-8DSRCLAOG3E","msg":"MySQL MCP server running on stdio"}
+{"level":30,"time":1765158039159,"pid":22504,"hostname":"WIN-8DSRCLAOG3E","msg":"config>{\"host\":\"192.168.31.193\",\"user\":\"root\",\"password\":\"******\",\"database\":\"cg_manage\",\"port\":3306}"}
+{"level":30,"time":1765158039159,"pid":22504,"hostname":"WIN-8DSRCLAOG3E","msg":"MySQL MCP server running on stdio"}
+{"level":30,"time":1765158327285,"pid":11884,"hostname":"WIN-8DSRCLAOG3E","msg":"config>{\"host\":\"192.168.31.193\",\"user\":\"root\",\"password\":\"******\",\"database\":\"cg_manage\",\"port\":3306}"}
+{"level":30,"time":1765158327285,"pid":11884,"hostname":"WIN-8DSRCLAOG3E","msg":"MySQL MCP server running on stdio"}
+{"level":30,"time":1765172759939,"pid":26024,"hostname":"WIN-8DSRCLAOG3E","msg":"config>{\"host\":\"192.168.31.193\",\"user\":\"root\",\"password\":\"******\",\"database\":\"cg_manage\",\"port\":3306}"}
+{"level":30,"time":1765172759940,"pid":26024,"hostname":"WIN-8DSRCLAOG3E","msg":"MySQL MCP server running on stdio"}
+{"level":30,"time":1765172760064,"pid":17672,"hostname":"WIN-8DSRCLAOG3E","msg":"config>{\"host\":\"192.168.31.193\",\"user\":\"root\",\"password\":\"******\",\"database\":\"cg_manage\",\"port\":3306}"}
+{"level":30,"time":1765172760065,"pid":17672,"hostname":"WIN-8DSRCLAOG3E","msg":"MySQL MCP server running on stdio"}
+{"level":30,"time":1765181501916,"pid":33940,"hostname":"WIN-8DSRCLAOG3E","msg":"config>{\"host\":\"192.168.31.193\",\"user\":\"root\",\"password\":\"******\",\"database\":\"cg_manage\",\"port\":3306}"}
+{"level":30,"time":1765181501917,"pid":33940,"hostname":"WIN-8DSRCLAOG3E","msg":"MySQL MCP server running on stdio"}
+{"level":30,"time":1765181502022,"pid":26008,"hostname":"WIN-8DSRCLAOG3E","msg":"config>{\"host\":\"192.168.31.193\",\"user\":\"root\",\"password\":\"******\",\"database\":\"cg_manage\",\"port\":3306}"}
+{"level":30,"time":1765181502022,"pid":26008,"hostname":"WIN-8DSRCLAOG3E","msg":"MySQL MCP server running on stdio"}
+{"level":30,"time":1765183653513,"pid":9904,"hostname":"WIN-8DSRCLAOG3E","msg":"config>{\"host\":\"192.168.31.193\",\"user\":\"root\",\"password\":\"******\",\"database\":\"cg_manage\",\"port\":3306}"}
+{"level":30,"time":1765183653513,"pid":9904,"hostname":"WIN-8DSRCLAOG3E","msg":"MySQL MCP server running on stdio"}
+{"level":30,"time":1765183653620,"pid":11268,"hostname":"WIN-8DSRCLAOG3E","msg":"config>{\"host\":\"192.168.31.193\",\"user\":\"root\",\"password\":\"******\",\"database\":\"cg_manage\",\"port\":3306}"}
+{"level":30,"time":1765183653621,"pid":11268,"hostname":"WIN-8DSRCLAOG3E","msg":"MySQL MCP server running on stdio"}
+{"level":30,"time":1765186633924,"pid":28248,"hostname":"WIN-8DSRCLAOG3E","msg":"config>{\"host\":\"192.168.31.193\",\"user\":\"root\",\"password\":\"******\",\"database\":\"cg_manage\",\"port\":3306}"}
+{"level":30,"time":1765186633924,"pid":28248,"hostname":"WIN-8DSRCLAOG3E","msg":"MySQL MCP server running on stdio"}
+{"level":30,"time":1765186636722,"pid":27368,"hostname":"WIN-8DSRCLAOG3E","msg":"config>{\"host\":\"192.168.31.193\",\"user\":\"root\",\"password\":\"******\",\"database\":\"cg_manage\",\"port\":3306}"}
+{"level":30,"time":1765186636723,"pid":27368,"hostname":"WIN-8DSRCLAOG3E","msg":"MySQL MCP server running on stdio"}
+{"level":30,"time":1765427947207,"pid":8748,"hostname":"WIN-8DSRCLAOG3E","msg":"config>{\"host\":\"192.168.31.193\",\"user\":\"root\",\"password\":\"******\",\"database\":\"cg_manage\",\"port\":3306}"}
+{"level":30,"time":1765427947207,"pid":9804,"hostname":"WIN-8DSRCLAOG3E","msg":"config>{\"host\":\"192.168.31.193\",\"user\":\"root\",\"password\":\"******\",\"database\":\"cg_manage\",\"port\":3306}"}
+{"level":30,"time":1765427947207,"pid":8748,"hostname":"WIN-8DSRCLAOG3E","msg":"MySQL MCP server running on stdio"}
+{"level":30,"time":1765427947207,"pid":9804,"hostname":"WIN-8DSRCLAOG3E","msg":"MySQL MCP server running on stdio"}
+{"level":30,"time":1765511527047,"pid":2836,"hostname":"WIN-8DSRCLAOG3E","msg":"config>{\"host\":\"192.168.31.193\",\"user\":\"root\",\"password\":\"******\",\"database\":\"cg_manage\",\"port\":3306}"}
+{"level":30,"time":1765511527047,"pid":2836,"hostname":"WIN-8DSRCLAOG3E","msg":"MySQL MCP server running on stdio"}
+{"level":30,"time":1765511527158,"pid":260,"hostname":"WIN-8DSRCLAOG3E","msg":"config>{\"host\":\"192.168.31.193\",\"user\":\"root\",\"password\":\"******\",\"database\":\"cg_manage\",\"port\":3306}"}
+{"level":30,"time":1765511527158,"pid":260,"hostname":"WIN-8DSRCLAOG3E","msg":"MySQL MCP server running on stdio"}
+{"level":30,"time":1765521715374,"pid":28500,"hostname":"WIN-8DSRCLAOG3E","msg":"config>{\"host\":\"192.168.31.193\",\"user\":\"root\",\"password\":\"******\",\"database\":\"cg_manage\",\"port\":3306}"}
+{"level":30,"time":1765521715375,"pid":28500,"hostname":"WIN-8DSRCLAOG3E","msg":"MySQL MCP server running on stdio"}
+{"level":30,"time":1765521715402,"pid":13404,"hostname":"WIN-8DSRCLAOG3E","msg":"config>{\"host\":\"192.168.31.193\",\"user\":\"root\",\"password\":\"******\",\"database\":\"cg_manage\",\"port\":3306}"}
+{"level":30,"time":1765521715402,"pid":13404,"hostname":"WIN-8DSRCLAOG3E","msg":"MySQL MCP server running on stdio"}
+{"level":30,"time":1765525464324,"pid":30384,"hostname":"WIN-8DSRCLAOG3E","msg":"config>{\"host\":\"192.168.31.193\",\"user\":\"root\",\"password\":\"******\",\"database\":\"cg_manage\",\"port\":3306}"}
+{"level":30,"time":1765525464325,"pid":30384,"hostname":"WIN-8DSRCLAOG3E","msg":"MySQL MCP server running on stdio"}
+{"level":30,"time":1765525465630,"pid":31784,"hostname":"WIN-8DSRCLAOG3E","msg":"config>{\"host\":\"192.168.31.193\",\"user\":\"root\",\"password\":\"******\",\"database\":\"cg_manage\",\"port\":3306}"}
+{"level":30,"time":1765525465630,"pid":31784,"hostname":"WIN-8DSRCLAOG3E","msg":"MySQL MCP server running on stdio"}
