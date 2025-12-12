@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar title="网络测速结果仪表板" color="primary" dark>
+    <v-app-bar title="网络测速结果仪表板-cloudflare优选ip地址" color="primary" dark>
       <v-spacer></v-spacer>
       <v-btn icon @click="refreshData">
         <v-icon>mdi-refresh</v-icon>
