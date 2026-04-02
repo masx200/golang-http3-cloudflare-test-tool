@@ -60,8 +60,8 @@
 | 73   | www.pcmag.com                                                                       | 2606:4700::6810:1476                    | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700::6810:1476]:443: connect: network is unreachable                    |
 | 79   | bestcf.030101.xyz                                                                   | 2606:4700:0:bfb9:840c:e0cf:682e:d6f0    | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:0:bfb9:840c:e0cf:682e:d6f0]:443: connect: network is unreachable    |
 | 80   | bestcf.030101.xyz                                                                   | 2606:4700:0:bffe:110b:db0f:7987:8a53    | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:0:bffe:110b:db0f:7987:8a53]:443: connect: network is unreachable    |
-| 87   | cf.877771.xyz                                                                       | 2606:4700:3033::6815:50b4               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3033::6815:50b4]:443: connect: network is unreachable               |
-| 88   | cf.877771.xyz                                                                       | 2606:4700:3033::ac43:98b7               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3033::ac43:98b7]:443: connect: network is unreachable               |
+| 87   | 4444.cloudflare.182682.xyz                                                                       | 2606:4700:3033::6815:50b4               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3033::6815:50b4]:443: connect: network is unreachable               |
+| 88   | 4444.cloudflare.182682.xyz                                                                       | 2606:4700:3033::ac43:98b7               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3033::ac43:98b7]:443: connect: network is unreachable               |
 | 102  | comicabc.com                                                                        | 2606:4700:3036::6815:400a               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3036::6815:400a]:443: connect: network is unreachable               |
 | 103  | comicabc.com                                                                        | 2606:4700:3030::ac43:ae15               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3030::ac43:ae15]:443: connect: network is unreachable               |
 | 107  | silkbook.com                                                                        | 2606:4700:20::681a:9a0                  | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:20::681a:9a0]:443: connect: network is unreachable                  |
@@ -279,17 +279,17 @@ cloudflare | | 117 | 172.67.181.209 | 172.67.181.209 | IPv4 | h3 | ✅ 成功 | 
 ✅ 成功 | 42 | cloudflare | | 346 | 172.64.33.67 | 172.64.33.67 | IPv4 | h3 | ✅
 成功 | 42 | cloudflare | | 448 | cfip.xxxxxxxx.tk | 104.16.232.223 | IPv4 | h3 |
 ✅ 成功 | 42 | cloudflare | | 63 | www.udemy.com | 104.16.142.237 | IPv4 | h3 |
-✅ 成功 | 43 | cloudflare | | 99 | www.visa.cn | 162.159.153.2 | IPv4 | h3 | ✅
+✅ 成功 | 43 | cloudflare | | 99 | www.4444.cloudflare.182682.xyz | 162.159.153.2 | IPv4 | h3 | ✅
 成功 | 43 | cloudflare | | 148 | sullivan.ns.cloudflare.com | 172.64.35.161 |
 IPv4 | h3 | ✅ 成功 | 43 | cloudflare | | 268 | trevor.ns.cloudflare.com |
-108.162.195.154 | IPv4 | h3 | ✅ 成功 | 43 | cloudflare | | 477 |
+4444.cloudflare.182682.xyz | IPv4 | h3 | ✅ 成功 | 43 | cloudflare | | 477 |
 04c6cf21-1294-4fae-8bf8-715bbc897b60.masx200.netlib.re | 104.21.47.252 | IPv4 |
 h3 | ✅ 成功 | 43 | cloudflare | | 426 | www.glassdoor.com | 104.17.64.70 | IPv4
 | h3 | ✅ 成功 | 44 | cloudflare | | 427 | local-aria2-webui.masx200.ddns-ip.net
 | 104.21.14.41 | IPv4 | h3 | ✅ 成功 | 44 | cloudflare | | 266 | www.okcupid.com
 | 104.16.239.254 | IPv4 | h3 | ✅ 成功 | 45 | cloudflare | | 431 | ipv4.ip.sb |
 104.26.12.31 | IPv4 | h3 | ✅ 成功 | 45 | cloudflare | | 456 | cfip.xxxxxxxx.tk
-| 104.16.241.229 | IPv4 | h3 | ✅ 成功 | 45 | cloudflare | | 86 | cf.877771.xyz
+| 104.16.241.229 | IPv4 | h3 | ✅ 成功 | 45 | cloudflare | | 86 | 4444.cloudflare.182682.xyz
 | 104.21.80.180 | IPv4 | h3 | ✅ 成功 | 46 | cloudflare | | 142 | na.877774.xyz
 | 104.18.38.235 | IPv4 | h3 | ✅ 成功 | 46 | cloudflare | | 332 |
 72806a5a-a251-48b4-a523-dfbd1c981ec0.ce225219-fea4-47a0-bb82-70b612b27ab7.netlib.re

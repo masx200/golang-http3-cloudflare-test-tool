@@ -129,8 +129,8 @@
 | 250  | [2606:4700:440f::53aa:4126]                                           | 2606:4700:440f::53aa:4126               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:440f::53aa:4126]:443: connect: network is unreachable               |
 | 255  | fbi.gov                                                               | 2606:4700::6810:94f4                    | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700::6810:94f4]:443: connect: network is unreachable                    |
 | 256  | fbi.gov                                                               | 2606:4700::6810:95f4                    | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700::6810:95f4]:443: connect: network is unreachable                    |
-| 286  | cf.877771.xyz                                                         | 2606:4700:3033::ac43:98b7               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3033::ac43:98b7]:443: connect: network is unreachable               |
-| 287  | cf.877771.xyz                                                         | 2606:4700:3033::6815:50b4               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3033::6815:50b4]:443: connect: network is unreachable               |
+| 286  | 4444.cloudflare.182682.xyz                                                         | 2606:4700:3033::ac43:98b7               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3033::ac43:98b7]:443: connect: network is unreachable               |
+| 287  | 4444.cloudflare.182682.xyz                                                         | 2606:4700:3033::6815:50b4               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3033::6815:50b4]:443: connect: network is unreachable               |
 | 288  | [2606:4700:8de6::5fa2:799e]                                           | 2606:4700:8de6::5fa2:799e               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:8de6::5fa2:799e]:443: connect: network is unreachable               |
 | 305  | benedict.ns.cloudflare.com                                            | 2606:4700:58::a29f:2ccd                 | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:58::a29f:2ccd]:443: connect: network is unreachable                 |
 | 306  | benedict.ns.cloudflare.com                                            | 2803:f800:50::6ca2:c3cd                 | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2803:f800:50::6ca2:c3cd]:443: connect: network is unreachable                 |
@@ -281,7 +281,7 @@ cfip.xxxxxxxx.tk | 104.17.127.110 | IPv4 | h3 | ✅ 成功 | 76 | cloudflare | |
 | cfip.1323123.xyz | 104.16.133.220 | IPv4 | h3 | ✅ 成功 | 77 | cloudflare | |
 245 | time.is | 104.26.12.54 | IPv4 | h3 | ✅ 成功 | 77 | cloudflare | | 320 |
 104.17.68.85 | 104.17.68.85 | IPv4 | h3 | ✅ 成功 | 77 | cloudflare | | 467 |
-www.visa.cn | 162.159.153.2 | IPv4 | h3 | ✅ 成功 | 77 | cloudflare | | 481 |
+www.4444.cloudflare.182682.xyz | 162.159.153.2 | IPv4 | h3 | ✅ 成功 | 77 | cloudflare | | 481 |
 cfip.xxxxxxxx.tk | 190.93.246.67 | IPv4 | h3 | ✅ 成功 | 77 | cloudflare | | 45
 | cf.877774.xyz | 104.18.41.190 | IPv4 | h3 | ✅ 成功 | 78 | cloudflare | | 90 |
 iplocation.io | 104.26.10.222 | IPv4 | h3 | ✅ 成功 | 78 | cloudflare | | 98 |
@@ -308,7 +308,7 @@ h3 | ✅ 成功 | 80 | cloudflare | | 19 | ip.gs | 172.67.160.28 | IPv4 | h3 | �
 成功 | 81 | cloudflare | | 24 | www.ipchicken.com | 104.26.7.112 | IPv4 | h3 |
 ✅ 成功 | 81 | cloudflare | | 237 | xn--b6gac.eu.org | 172.67.153.253 | IPv4 |
 h3 | ✅ 成功 | 81 | cloudflare | | 430 | trevor.ns.cloudflare.com |
-108.162.195.154 | IPv4 | h3 | ✅ 成功 | 81 | cloudflare | | 437 |
+4444.cloudflare.182682.xyz | IPv4 | h3 | ✅ 成功 | 81 | cloudflare | | 437 |
 whatismyipaddress.com | 104.19.223.79 | IPv4 | h3 | ✅ 成功 | 81 | cloudflare |
 | 446 | icook.tw | 172.66.158.115 | IPv4 | h3 | ✅ 成功 | 81 | cloudflare | | 33
 | 172.64.38.15 | 172.64.38.15 | IPv4 | h3 | ✅ 成功 | 82 | cloudflare | | 96 |

@@ -56,8 +56,8 @@
 | 64   | uriah.ns.cloudflare.com                                                             | 2606:4700:58::a29f:2cc2                 | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:58::a29f:2cc2]:443: connect: network is unreachable                 |
 | 65   | uriah.ns.cloudflare.com                                                             | 2803:f800:50::6ca2:c3c2                 | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2803:f800:50::6ca2:c3c2]:443: connect: network is unreachable                 |
 | 66   | uriah.ns.cloudflare.com                                                             | 2a06:98c1:50::ac40:23c2                 | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2a06:98c1:50::ac40:23c2]:443: connect: network is unreachable                 |
-| 77   | cf.877771.xyz                                                                       | 2606:4700:3033::ac43:98b7               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3033::ac43:98b7]:443: connect: network is unreachable               |
-| 78   | cf.877771.xyz                                                                       | 2606:4700:3033::6815:50b4               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3033::6815:50b4]:443: connect: network is unreachable               |
+| 77   | 4444.cloudflare.182682.xyz                                                                       | 2606:4700:3033::ac43:98b7               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3033::ac43:98b7]:443: connect: network is unreachable               |
+| 78   | 4444.cloudflare.182682.xyz                                                                       | 2606:4700:3033::6815:50b4               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3033::6815:50b4]:443: connect: network is unreachable               |
 | 82   | ashton.ns.cloudflare.com                                                            | 2606:4700:58::a29f:2cad                 | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:58::a29f:2cad]:443: connect: network is unreachable                 |
 | 83   | ashton.ns.cloudflare.com                                                            | 2803:f800:50::6ca2:c3ad                 | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2803:f800:50::6ca2:c3ad]:443: connect: network is unreachable                 |
 | 84   | ashton.ns.cloudflare.com                                                            | 2a06:98c1:50::ac40:23ad                 | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2a06:98c1:50::ac40:23ad]:443: connect: network is unreachable                 |
@@ -356,7 +356,7 @@ IPv4 | h3 | ✅ 成功 | 84 | cloudflare | | 431 | zread.ai | 172.67.202.78 | IP
 | h3 | ✅ 成功 | 84 | cloudflare | | 492 | cfip.xxxxxxxx.tk | 190.93.244.201 |
 IPv4 | h3 | ✅ 成功 | 84 | cloudflare | | 69 | saas.sin.fan | 162.159.36.20 |
 IPv4 | h3 | ✅ 成功 | 85 | cloudflare | | 72 | na.877774.xyz | 104.19.74.233 |
-IPv4 | h3 | ✅ 成功 | 85 | cloudflare | | 76 | cf.877771.xyz | 172.67.152.183 |
+IPv4 | h3 | ✅ 成功 | 85 | cloudflare | | 76 | 4444.cloudflare.182682.xyz | 172.67.152.183 |
 IPv4 | h3 | ✅ 成功 | 85 | cloudflare | | 111 | 172.64.148.15 | 172.64.148.15 |
 IPv4 | h3 | ✅ 成功 | 85 | cloudflare | | 112 | 104.18.254.88 | 104.18.254.88 |
 IPv4 | h3 | ✅ 成功 | 85 | cloudflare | | 138 | craig.ns.cloudflare.com |

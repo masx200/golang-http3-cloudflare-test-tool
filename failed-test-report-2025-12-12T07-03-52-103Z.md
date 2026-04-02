@@ -81,8 +81,8 @@
 | 100  | craig.ns.cloudflare.com                                               | 2a06:98c1:50::ac40:23c0                 | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2a06:98c1:50::ac40:23c0]:443: connect: network is unreachable                 |
 | 119  | xn--b6gac.eu.org                                                      | 2606:4700:3037::ac43:99fd               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3037::ac43:99fd]:443: connect: network is unreachable               |
 | 120  | xn--b6gac.eu.org                                                      | 2606:4700:3035::6815:5a4e               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3035::6815:5a4e]:443: connect: network is unreachable               |
-| 123  | cf.877771.xyz                                                         | 2606:4700:3033::ac43:98b7               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3033::ac43:98b7]:443: connect: network is unreachable               |
-| 124  | cf.877771.xyz                                                         | 2606:4700:3033::6815:50b4               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3033::6815:50b4]:443: connect: network is unreachable               |
+| 123  | 4444.cloudflare.182682.xyz                                                         | 2606:4700:3033::ac43:98b7               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3033::ac43:98b7]:443: connect: network is unreachable               |
+| 124  | 4444.cloudflare.182682.xyz                                                         | 2606:4700:3033::6815:50b4               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3033::6815:50b4]:443: connect: network is unreachable               |
 | 131  | pranab.ns.cloudflare.com                                              | 2606:4700:58::a29f:2cc7                 | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:58::a29f:2cc7]:443: connect: network is unreachable                 |
 | 132  | pranab.ns.cloudflare.com                                              | 2803:f800:50::6ca2:c3c7                 | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2803:f800:50::6ca2:c3c7]:443: connect: network is unreachable                 |
 | 133  | pranab.ns.cloudflare.com                                              | 2a06:98c1:50::ac40:23c7                 | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2a06:98c1:50::ac40:23c7]:443: connect: network is unreachable                 |
@@ -267,7 +267,7 @@ wilson.ns.cloudflare.com (3次), iplocation.io
 | 341  | uriah.ns.cloudflare.com                                | 108.162.195.194 | IPv4   | h3   | ✅ 成功 | 75       | cloudflare |
 | 95   | craig.ns.cloudflare.com                                | 108.162.195.192 | IPv4   | h3   | ✅ 成功 | 76       | cloudflare |
 | 427  | lewis.ns.cloudflare.com                                | 172.64.35.159   | IPv4   | h3   | ✅ 成功 | 77       | cloudflare |
-| 107  | www.visa.cn                                            | 162.159.152.2   | IPv4   | h3   | ✅ 成功 | 78       | cloudflare |
+| 107  | www.4444.cloudflare.182682.xyz                                            | 162.159.152.2   | IPv4   | h3   | ✅ 成功 | 78       | cloudflare |
 | 228  | time.is                                                | 104.26.12.54    | IPv4   | h3   | ✅ 成功 | 78       | cloudflare |
 | 335  | dnschecker.org                                         | 104.26.7.89     | IPv4   | h3   | ✅ 成功 | 78       | cloudflare |
 | 130  | pranab.ns.cloudflare.com                               | 172.64.35.199   | IPv4   | h3   | ✅ 成功 | 80       | cloudflare |
@@ -334,7 +334,7 @@ wilson.ns.cloudflare.com (3次), iplocation.io
 | 364  | tasteatlas.com                                         | 104.17.36.105   | IPv4   | h3   | ✅ 成功 | 97       | cloudflare |
 | 433  | eur.877774.xyz                                         | 104.21.26.150   | IPv4   | h3   | ✅ 成功 | 97       | cloudflare |
 | 68   | 104.18.254.88                                          | 104.18.254.88   | IPv4   | h3   | ✅ 成功 | 98       | cloudflare |
-| 106  | www.visa.cn                                            | 162.159.153.2   | IPv4   | h3   | ✅ 成功 | 98       | cloudflare |
+| 106  | www.4444.cloudflare.182682.xyz                                            | 162.159.153.2   | IPv4   | h3   | ✅ 成功 | 98       | cloudflare |
 | 112  | cu.877774.xyz                                          | 104.26.4.112    | IPv4   | h3   | ✅ 成功 | 98       | cloudflare |
 | 140  | cmcc.877774.xyz                                        | 104.16.148.8    | IPv4   | h3   | ✅ 成功 | 98       | cloudflare |
 | 220  | cf.zhetengsha.eu.org                                   | 172.64.152.241  | IPv4   | h3   | ✅ 成功 | 98       | cloudflare |

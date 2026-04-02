@@ -112,8 +112,8 @@
 | 212  | bowen.ns.cloudflare.com                                               | 2a06:98c1:50::ac40:2353                 | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2a06:98c1:50::ac40:2353]:443: connect: network is unreachable                 |
 | 216  | www.ipget.net                                                         | 2606:4700:3031::ac43:cf1a               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3031::ac43:cf1a]:443: connect: network is unreachable               |
 | 217  | www.ipget.net                                                         | 2606:4700:3036::6815:fd4                | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3036::6815:fd4]:443: connect: network is unreachable                |
-| 222  | cf.877771.xyz                                                         | 2606:4700:3033::6815:50b4               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3033::6815:50b4]:443: connect: network is unreachable               |
-| 223  | cf.877771.xyz                                                         | 2606:4700:3033::ac43:98b7               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3033::ac43:98b7]:443: connect: network is unreachable               |
+| 222  | 4444.cloudflare.182682.xyz                                                         | 2606:4700:3033::6815:50b4               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3033::6815:50b4]:443: connect: network is unreachable               |
+| 223  | 4444.cloudflare.182682.xyz                                                         | 2606:4700:3033::ac43:98b7               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3033::ac43:98b7]:443: connect: network is unreachable               |
 | 227  | ip.sb                                                                 | 2606:4700:20::681a:d1f                  | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:20::681a:d1f]:443: connect: network is unreachable                  |
 | 228  | ip.sb                                                                 | 2606:4700:20::ac43:4bac                 | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:20::ac43:4bac]:443: connect: network is unreachable                 |
 | 229  | ip.sb                                                                 | 2606:4700:20::681a:c1f                  | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:20::681a:c1f]:443: connect: network is unreachable                  |
@@ -250,7 +250,7 @@ cloudflare | | 352 | decker.ns.cloudflare.com | 172.64.35.155 | IPv4 | h3 | ✅
 成功 | 43 | cloudflare | | 434 | otto.ns.cloudflare.com | 108.162.195.135 | IPv4
 | h3 | ✅ 成功 | 43 | cloudflare | | 447 |
 04c6cf21-1294-4fae-8bf8-715bbc897b60.masx201.dpdns.org | 104.21.9.230 | IPv4 |
-h3 | ✅ 成功 | 43 | cloudflare | | 220 | cf.877771.xyz | 104.21.80.180 | IPv4 |
+h3 | ✅ 成功 | 43 | cloudflare | | 220 | 4444.cloudflare.182682.xyz | 104.21.80.180 | IPv4 |
 h3 | ✅ 成功 | 44 | cloudflare | | 289 | cmcc.877774.xyz | 104.16.148.4 | IPv4 |
 h3 | ✅ 成功 | 44 | cloudflare | | 356 | 172.64.159.6 | 172.64.159.6 | IPv4 | h3
 | ✅ 成功 | 44 | cloudflare | | 214 | www.ipget.net | 104.21.15.212 | IPv4 | h3
@@ -274,7 +274,7 @@ cloudflare | | 249 | 172.67.120.0 | 172.67.120.0 | IPv4 | h3 | ✅ 成功 | 52 |
 cloudflare | | 308 | cmcc.877774.xyz | 104.16.149.10 | IPv4 | h3 | ✅ 成功 | 52
 | cloudflare | | 309 | sullivan.ns.cloudflare.com | 108.162.195.161 | IPv4 | h3
 | ✅ 成功 | 52 | cloudflare | | 359 | cris.ns.cloudflare.com | 172.64.35.202 |
-IPv4 | h3 | ✅ 成功 | 52 | cloudflare | | 422 | www.visa.cn | 162.159.153.2 |
+IPv4 | h3 | ✅ 成功 | 52 | cloudflare | | 422 | www.4444.cloudflare.182682.xyz | 162.159.153.2 |
 IPv4 | h3 | ✅ 成功 | 52 | cloudflare | | 132 | 104.19.223.58 | 104.19.223.58 |
 IPv4 | h3 | ✅ 成功 | 54 | cloudflare | | 261 | cu.877774.xyz | 104.26.4.116 |
 IPv4 | h3 | ✅ 成功 | 54 | cloudflare | | 305 | cmcc.877774.xyz | 104.16.149.7 |

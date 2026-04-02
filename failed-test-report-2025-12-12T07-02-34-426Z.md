@@ -153,8 +153,8 @@
 | 268  | cf.0sm.com                                                            | 2606:4700:3032::6815:785              | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3032::6815:785]:443: connect: network is unreachable              |
 | 269  | cf.0sm.com                                                            | 2606:4700:3037::ac43:bb91             | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3037::ac43:bb91]:443: connect: network is unreachable             |
 | 271  | [2606:4700:9add::880:52fc]                                            | 2606:4700:9add::880:52fc              | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:9add::880:52fc]:443: connect: network is unreachable              |
-| 275  | cf.877771.xyz                                                         | 2606:4700:3033::6815:50b4             | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3033::6815:50b4]:443: connect: network is unreachable             |
-| 276  | cf.877771.xyz                                                         | 2606:4700:3033::ac43:98b7             | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3033::ac43:98b7]:443: connect: network is unreachable             |
+| 275  | 4444.cloudflare.182682.xyz                                                         | 2606:4700:3033::6815:50b4             | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3033::6815:50b4]:443: connect: network is unreachable             |
+| 276  | 4444.cloudflare.182682.xyz                                                         | 2606:4700:3033::ac43:98b7             | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3033::ac43:98b7]:443: connect: network is unreachable             |
 | 279  | icook.hk                                                              | 2606:4700:3031::6815:5ad2             | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3031::6815:5ad2]:443: connect: network is unreachable             |
 | 280  | icook.hk                                                              | 2606:4700:3037::ac43:a168             | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3037::ac43:a168]:443: connect: network is unreachable             |
 | 288  | www.hugedomains.com                                                   | 2606:4700:20::ac43:46bf               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:20::ac43:46bf]:443: connect: network is unreachable               |
@@ -255,7 +255,7 @@ none），说明无法与目标建立HTTP/3或其他现代协议连接
 | 184  | japan.com                                                             | 104.26.5.60     | IPv4   | h3   | ✅ 成功 | 38       | cloudflare |
 | 204  | eur.877774.xyz                                                        | 104.21.26.150   | IPv4   | h3   | ✅ 成功 | 39       | cloudflare |
 | 207  | abdullah.ns.cloudflare.com                                            | 108.162.195.203 | IPv4   | h3   | ✅ 成功 | 40       | cloudflare |
-| 350  | www.visa.cn                                                           | 162.159.153.2   | IPv4   | h3   | ✅ 成功 | 40       | cloudflare |
+| 350  | www.4444.cloudflare.182682.xyz                                                           | 162.159.153.2   | IPv4   | h3   | ✅ 成功 | 40       | cloudflare |
 | 165  | otto.ns.cloudflare.com                                                | 172.64.35.135   | IPv4   | h3   | ✅ 成功 | 41       | cloudflare |
 | 250  | 104.16.45.84                                                          | 104.16.45.84    | IPv4   | h3   | ✅ 成功 | 41       | cloudflare |
 | 356  | cu.877774.xyz                                                         | 104.26.4.113    | IPv4   | h3   | ✅ 成功 | 41       | cloudflare |
@@ -301,7 +301,7 @@ none），说明无法与目标建立HTTP/3或其他现代协议连接
 | 324  | www.okcupid.com                                                       | 104.17.48.63    | IPv4   | h3   | ✅ 成功 | 61       | cloudflare |
 | 341  | www.visa.com.sg                                                       | 104.18.13.229   | IPv4   | h3   | ✅ 成功 | 61       | cloudflare |
 | 342  | www.visa.com.sg                                                       | 104.18.12.229   | IPv4   | h3   | ✅ 成功 | 61       | cloudflare |
-| 351  | www.visa.cn                                                           | 162.159.152.2   | IPv4   | h3   | ✅ 成功 | 61       | cloudflare |
+| 351  | www.4444.cloudflare.182682.xyz                                                           | 162.159.152.2   | IPv4   | h3   | ✅ 成功 | 61       | cloudflare |
 | 421  | asia.877774.xyz                                                       | 104.17.142.146  | IPv4   | h3   | ✅ 成功 | 61       | cloudflare |
 | 425  | bowen.ns.cloudflare.com                                               | 172.64.35.83    | IPv4   | h3   | ✅ 成功 | 61       | cloudflare |
 | 141  | 04c6cf21-1294-4fae-8bf8-715bbc897b60.masx201.dpdns.org                | 172.67.161.98   | IPv4   | h3   | ✅ 成功 | 62       | cloudflare |

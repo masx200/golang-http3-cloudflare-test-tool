@@ -96,8 +96,8 @@
 | 176  | abdullah.ns.cloudflare.com                                            | 2606:4700:58::a29f:2ccb                 | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:58::a29f:2ccb]:443: connect: network is unreachable                 |
 | 177  | abdullah.ns.cloudflare.com                                            | 2803:f800:50::6ca2:c3cb                 | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2803:f800:50::6ca2:c3cb]:443: connect: network is unreachable                 |
 | 178  | abdullah.ns.cloudflare.com                                            | 2a06:98c1:50::ac40:23cb                 | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2a06:98c1:50::ac40:23cb]:443: connect: network is unreachable                 |
-| 181  | cf.877771.xyz                                                         | 2606:4700:3033::ac43:98b7               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3033::ac43:98b7]:443: connect: network is unreachable               |
-| 182  | cf.877771.xyz                                                         | 2606:4700:3033::6815:50b4               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3033::6815:50b4]:443: connect: network is unreachable               |
+| 181  | 4444.cloudflare.182682.xyz                                                         | 2606:4700:3033::ac43:98b7               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3033::ac43:98b7]:443: connect: network is unreachable               |
+| 182  | 4444.cloudflare.182682.xyz                                                         | 2606:4700:3033::6815:50b4               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3033::6815:50b4]:443: connect: network is unreachable               |
 | 215  | time.is                                                               | 2606:4700:20::681a:c36                  | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:20::681a:c36]:443: connect: network is unreachable                  |
 | 216  | time.is                                                               | 2606:4700:20::ac43:449d                 | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:20::ac43:449d]:443: connect: network is unreachable                 |
 | 217  | time.is                                                               | 2606:4700:20::681a:d36                  | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:20::681a:d36]:443: connect: network is unreachable                  |
@@ -249,7 +249,7 @@ otto.ns.cloudflare.com | 108.162.195.135 | IPv4 | h3 | ✅ 成功 | 55 | cloudfl
 | | 212 | time.is | 172.67.68.157 | IPv4 | h3 | ✅ 成功 | 58 | cloudflare | |
 414 | www.ipchicken.com | 172.67.68.101 | IPv4 | h3 | ✅ 成功 | 58 | cloudflare
 | | 108 | japan.com | 172.67.70.92 | IPv4 | h3 | ✅ 成功 | 60 | cloudflare | |
-365 | trevor.ns.cloudflare.com | 108.162.195.154 | IPv4 | h3 | ✅ 成功 | 60 |
+365 | trevor.ns.cloudflare.com | 4444.cloudflare.182682.xyz | IPv4 | h3 | ✅ 成功 | 60 |
 cloudflare | | 254 | singapore.com | 104.26.13.140 | IPv4 | h3 | ✅ 成功 | 61 |
 cloudflare | | 440 | asia.877774.xyz | 104.17.142.146 | IPv4 | h3 | ✅ 成功 | 61
 | cloudflare | | 423 | cf.877774.xyz | 104.18.41.190 | IPv4 | h3 | ✅ 成功 | 62
@@ -312,7 +312,7 @@ cloudflare | | 187 | cmcc.877774.xyz | 104.16.149.10 | IPv4 | h3 | ✅ 成功 | 
 pranab.ns.cloudflare.com | 162.159.44.199 | IPv4 | h3 | ✅ 成功 | 101 |
 cloudflare | | 44 | ifconfig.co | 104.21.54.91 | IPv4 | h3 | ✅ 成功 | 102 |
 cloudflare | | 128 | ct.877774.xyz | 172.64.229.173 | IPv4 | h3 | ✅ 成功 | 102
-| cloudflare | | 180 | cf.877771.xyz | 172.67.152.183 | IPv4 | h3 | ✅ 成功 |
+| cloudflare | | 180 | 4444.cloudflare.182682.xyz | 172.67.152.183 | IPv4 | h3 | ✅ 成功 |
 102 | cloudflare | | 207 | cmcc.877774.xyz | 104.16.149.4 | IPv4 | h3 | ✅ 成功
 | 102 | cloudflare | | 387 | damien.ns.cloudflare.com | 162.159.44.168 | IPv4 |
 h3 | ✅ 成功 | 102 | cloudflare | | 448 | cloudflare-ip.mofashi.ltd |

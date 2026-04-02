@@ -143,8 +143,8 @@
 | 319  | huxley.ns.cloudflare.com              | 2a06:98c1:50::ac40:23bc                 | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2a06:98c1:50::ac40:23bc]:443: connect: network is unreachable                 |
 | 322  | cf.090227.xyz                         | 2606:4700:310c::ac42:2fb3               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:310c::ac42:2fb3]:443: connect: network is unreachable               |
 | 323  | cf.090227.xyz                         | 2606:4700:310c::ac42:2c4d               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:310c::ac42:2c4d]:443: connect: network is unreachable               |
-| 326  | cf.877771.xyz                         | 2606:4700:3033::6815:50b4               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3033::6815:50b4]:443: connect: network is unreachable               |
-| 327  | cf.877771.xyz                         | 2606:4700:3033::ac43:98b7               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3033::ac43:98b7]:443: connect: network is unreachable               |
+| 326  | 4444.cloudflare.182682.xyz                         | 2606:4700:3033::6815:50b4               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3033::6815:50b4]:443: connect: network is unreachable               |
+| 327  | 4444.cloudflare.182682.xyz                         | 2606:4700:3033::ac43:98b7               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3033::ac43:98b7]:443: connect: network is unreachable               |
 | 333  | ip.gs                                 | 2606:4700:3035::ac43:a01c               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3035::ac43:a01c]:443: connect: network is unreachable               |
 | 334  | ip.gs                                 | 2606:4700:3036::6815:eb0                | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3036::6815:eb0]:443: connect: network is unreachable                |
 | 336  | [2606:4700:4403::7357:544f]           | 2606:4700:4403::7357:544f               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:4403::7357:544f]:443: connect: network is unreachable               |
@@ -248,7 +248,7 @@ braden.ns.cloudflare.com (3次), trevor.ns.cloudflare.com
 |------|-----------|--------|--------|------|------|----------|--------|| 383 |
 172.64.229.249 | 172.64.229.249 | IPv4 | h3 | ✅ 成功 | 44 | cloudflare | | 466
 | ct.877774.xyz | 172.64.229.217 | IPv4 | h3 | ✅ 成功 | 50 | cloudflare | | 48
-| www.visa.cn | 162.159.152.2 | IPv4 | h3 | ✅ 成功 | 58 | cloudflare | | 455 |
+| www.4444.cloudflare.182682.xyz | 162.159.152.2 | IPv4 | h3 | ✅ 成功 | 58 | cloudflare | | 455 |
 benedict.ns.cloudflare.com | 172.64.35.205 | IPv4 | h3 | ✅ 成功 | 58 |
 cloudflare | | 335 | 104.18.37.40 | 104.18.37.40 | IPv4 | h3 | ✅ 成功 | 60 |
 cloudflare | | 417 | www.4chan.org | 104.16.228.229 | IPv4 | h3 | ✅ 成功 | 60 |
@@ -278,7 +278,7 @@ cloudflare | | 220 | cmcc.877774.xyz | 104.16.149.11 | IPv4 | h3 | ✅ 成功 | 
 | ✅ 成功 | 99 | cloudflare | | 88 | ipinfo.in | 104.21.21.129 | IPv4 | h3 | ✅
 成功 | 100 | cloudflare | | 131 | ip.sb | 172.67.75.172 | IPv4 | h3 | ✅ 成功 |
 100 | cloudflare | | 154 | www.pcmag.com | 104.16.20.118 | IPv4 | h3 | ✅ 成功 |
-100 | cloudflare | | 325 | cf.877771.xyz | 172.67.152.183 | IPv4 | h3 | ✅ 成功
+100 | cloudflare | | 325 | 4444.cloudflare.182682.xyz | 172.67.152.183 | IPv4 | h3 | ✅ 成功
 | 100 | cloudflare | | 376 | na.877774.xyz | 104.18.38.235 | IPv4 | h3 | ✅ 成功
 | 100 | cloudflare | | 146 | singapore.com | 104.26.12.140 | IPv4 | h3 | ✅ 成功
 | 101 | cloudflare | | 195 | cf.877774.xyz | 172.64.146.66 | IPv4 | h3 | ✅ 成功
@@ -338,7 +338,7 @@ cris.ns.cloudflare.com | 172.64.35.202 | IPv4 | h3 | ✅ 成功 | 117 | cloudfla
 | | 171 | steamdb.info | 104.20.34.212 | IPv4 | h3 | ✅ 成功 | 118 | cloudflare
 | | 260 | zread.ai | 104.21.76.240 | IPv4 | h3 | ✅ 成功 | 118 | cloudflare | |
 267 | 104.18.42.26 | 104.18.42.26 | IPv4 | h3 | ✅ 成功 | 118 | cloudflare | |
-49 | www.visa.cn | 162.159.153.2 | IPv4 | h3 | ✅ 成功 | 119 | cloudflare | |
+49 | www.4444.cloudflare.182682.xyz | 162.159.153.2 | IPv4 | h3 | ✅ 成功 | 119 | cloudflare | |
 198 | cf.zhetengsha.eu.org | 172.66.44.77 | IPv4 | h3 | ✅ 成功 | 119 |
 cloudflare | | 222 | cmcc.877774.xyz | 104.16.149.244 | IPv4 | h3 | ✅ 成功 |
 119 | cloudflare | | 299 | silkbook.com | 172.67.75.208 | IPv4 | h3 | ✅ 成功 |

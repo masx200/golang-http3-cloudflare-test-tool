@@ -145,8 +145,8 @@
 | 298  | moura.ns.cloudflare.com                                               | 2606:4700:58::a29f:2cd9            | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:58::a29f:2cd9]:443: connect: network is unreachable            |
 | 299  | moura.ns.cloudflare.com                                               | 2803:f800:50::6ca2:c3d9            | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2803:f800:50::6ca2:c3d9]:443: connect: network is unreachable            |
 | 300  | moura.ns.cloudflare.com                                               | 2a06:98c1:50::ac40:23d9            | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2a06:98c1:50::ac40:23d9]:443: connect: network is unreachable            |
-| 304  | cf.877771.xyz                                                         | 2606:4700:3033::6815:50b4          | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3033::6815:50b4]:443: connect: network is unreachable          |
-| 305  | cf.877771.xyz                                                         | 2606:4700:3033::ac43:98b7          | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3033::ac43:98b7]:443: connect: network is unreachable          |
+| 304  | 4444.cloudflare.182682.xyz                                                         | 2606:4700:3033::6815:50b4          | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3033::6815:50b4]:443: connect: network is unreachable          |
+| 305  | 4444.cloudflare.182682.xyz                                                         | 2606:4700:3033::ac43:98b7          | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3033::ac43:98b7]:443: connect: network is unreachable          |
 | 310  | time.is                                                               | 2606:4700:20::ac43:449d            | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:20::ac43:449d]:443: connect: network is unreachable            |
 | 311  | time.is                                                               | 2606:4700:20::681a:d36             | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:20::681a:d36]:443: connect: network is unreachable             |
 | 312  | time.is                                                               | 2606:4700:20::681a:c36             | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:20::681a:c36]:443: connect: network is unreachable             |
@@ -327,9 +327,9 @@ h3 | ✅ 成功 | 128 | cloudflare | | 262 | huxley.ns.cloudflare.com |
 cfip.1323123.xyz | 104.16.133.220 | IPv4 | h3 | ✅ 成功 | 133 | cloudflare | |
 256 | ip.sb | 104.26.13.31 | IPv4 | h3 | ✅ 成功 | 133 | cloudflare | | 437 |
 bowen.ns.cloudflare.com | 108.162.195.83 | IPv4 | h3 | ✅ 成功 | 133 |
-cloudflare | | 453 | trevor.ns.cloudflare.com | 108.162.195.154 | IPv4 | h3 | ✅
+cloudflare | | 453 | trevor.ns.cloudflare.com | 4444.cloudflare.182682.xyz | IPv4 | h3 | ✅
 成功 | 133 | cloudflare | | 25 | singapore.com | 172.67.75.194 | IPv4 | h3 | ✅
-成功 | 134 | cloudflare | | 202 | www.visa.cn | 162.159.153.2 | IPv4 | h3 | ✅
+成功 | 134 | cloudflare | | 202 | www.4444.cloudflare.182682.xyz | 162.159.153.2 | IPv4 | h3 | ✅
 成功 | 134 | cloudflare | | 366 | cf.090227.xyz | 172.66.44.77 | IPv4 | h3 | ✅
 成功 | 134 | cloudflare | | 391 | sullivan.ns.cloudflare.com | 162.159.44.161 |
 IPv4 | h3 | ✅ 成功 | 134 | cloudflare | | 95 | ct.877774.xyz | 172.64.229.173 |

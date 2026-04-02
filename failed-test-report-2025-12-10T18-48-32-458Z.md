@@ -67,8 +67,8 @@
 | 93   | benedict.ns.cloudflare.com                                            | 2606:4700:58::a29f:2ccd                 | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:58::a29f:2ccd]:443: connect: network is unreachable                 |
 | 94   | benedict.ns.cloudflare.com                                            | 2803:f800:50::6ca2:c3cd                 | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2803:f800:50::6ca2:c3cd]:443: connect: network is unreachable                 |
 | 95   | benedict.ns.cloudflare.com                                            | 2a06:98c1:50::ac40:23cd                 | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2a06:98c1:50::ac40:23cd]:443: connect: network is unreachable                 |
-| 99   | cf.877771.xyz                                                         | 2606:4700:3033::6815:50b4               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3033::6815:50b4]:443: connect: network is unreachable               |
-| 100  | cf.877771.xyz                                                         | 2606:4700:3033::ac43:98b7               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3033::ac43:98b7]:443: connect: network is unreachable               |
+| 99   | 4444.cloudflare.182682.xyz                                                         | 2606:4700:3033::6815:50b4               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3033::6815:50b4]:443: connect: network is unreachable               |
+| 100  | 4444.cloudflare.182682.xyz                                                         | 2606:4700:3033::ac43:98b7               | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:3033::ac43:98b7]:443: connect: network is unreachable               |
 | 107  | singapore.com                                                         | 2606:4700:20::ac43:4bc2                 | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:20::ac43:4bc2]:443: connect: network is unreachable                 |
 | 108  | singapore.com                                                         | 2606:4700:20::681a:d8c                  | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:20::681a:d8c]:443: connect: network is unreachable                  |
 | 109  | singapore.com                                                         | 2606:4700:20::681a:c8c                  | IPv6   | none | N/A    | 0        | N/A    | dial tcp [2606:4700:20::681a:c8c]:443: connect: network is unreachable                  |
@@ -301,7 +301,7 @@ h3 | ✅ 成功 | 109 | cloudflare | | 352 | 198.62.62.4 | 198.62.62.4 | IPv4 | 
 104.18.37.40 | IPv4 | h3 | ✅ 成功 | 109 | cloudflare | | 466 | cmcc.877774.xyz
 | 104.16.148.6 | IPv4 | h3 | ✅ 成功 | 109 | cloudflare | | 76 | 172.64.146.16 |
 172.64.146.16 | IPv4 | h3 | ✅ 成功 | 110 | cloudflare | | 196 | icook.hk |
-104.21.90.210 | IPv4 | h3 | ✅ 成功 | 110 | cloudflare | | 259 | www.visa.cn |
+104.21.90.210 | IPv4 | h3 | ✅ 成功 | 110 | cloudflare | | 259 | www.4444.cloudflare.182682.xyz |
 162.159.153.2 | IPv4 | h3 | ✅ 成功 | 110 | cloudflare | | 464 | cmcc.877774.xyz
 | 104.16.148.4 | IPv4 | h3 | ✅ 成功 | 110 | cloudflare | | 45 |
 dylan.ns.cloudflare.com | 172.64.35.187 | IPv4 | h3 | ✅ 成功 | 111 | cloudflare
