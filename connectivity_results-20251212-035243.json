@@ -2164,7 +2164,7 @@
     "protocol": "",
     "latency_ms": null,
     "server_header": null,
-    "error_msg": "DNS解析失败: Post \"https://deno-dns-over-https-server.g18uibxgnb.de5.net/\": context deadline exceeded"
+    "error_msg": "DNS解析失败: Post \"https://61919494499.security.cloudflare-dns.com/dns-query\": context deadline exceeded"
   },
   {
     "host": "xn--b6gac.eu.org",
@@ -2175,7 +2175,7 @@
     "protocol": "",
     "latency_ms": null,
     "server_header": null,
-    "error_msg": "DNS解析失败: Post \"https://deno-dns-over-https-server.g18uibxgnb.de5.net/\": context deadline exceeded"
+    "error_msg": "DNS解析失败: Post \"https://61919494499.security.cloudflare-dns.com/dns-query\": context deadline exceeded"
   },
   {
     "host": "bestcf.030101.xyz",
@@ -2208,7 +2208,7 @@
     "protocol": "",
     "latency_ms": null,
     "server_header": null,
-    "error_msg": "DNS解析失败: Post \"https://deno-dns-over-https-server.g18uibxgnb.de5.net/\": context deadline exceeded"
+    "error_msg": "DNS解析失败: Post \"https://61919494499.security.cloudflare-dns.com/dns-query\": context deadline exceeded"
   },
   {
     "host": "fbi.gov",
@@ -2219,7 +2219,7 @@
     "protocol": "",
     "latency_ms": null,
     "server_header": null,
-    "error_msg": "DNS解析失败: Post \"https://deno-dns-over-https-server.g18uibxgnb.de5.net/\": context deadline exceeded"
+    "error_msg": "DNS解析失败: Post \"https://61919494499.security.cloudflare-dns.com/dns-query\": context deadline exceeded"
   },
   {
     "host": "saas.sin.fan",
@@ -2230,7 +2230,7 @@
     "protocol": "",
     "latency_ms": null,
     "server_header": null,
-    "error_msg": "DNS解析失败: Post \"https://deno-dns-over-https-server.g18uibxgnb.de5.net/\": context deadline exceeded"
+    "error_msg": "DNS解析失败: Post \"https://61919494499.security.cloudflare-dns.com/dns-query\": context deadline exceeded"
   },
   {
     "host": "bowen.ns.cloudflare.com",
@@ -2241,7 +2241,7 @@
     "protocol": "",
     "latency_ms": null,
     "server_header": null,
-    "error_msg": "DNS解析失败: Post \"https://deno-dns-over-https-server.g18uibxgnb.de5.net/\": context deadline exceeded"
+    "error_msg": "DNS解析失败: Post \"https://61919494499.security.cloudflare-dns.com/dns-query\": context deadline exceeded"
   },
   {
     "host": "cf.090227.xyz",
@@ -2252,7 +2252,7 @@
     "protocol": "",
     "latency_ms": null,
     "server_header": null,
-    "error_msg": "DNS解析失败: Post \"https://deno-dns-over-https-server.g18uibxgnb.de5.net/\": context deadline exceeded"
+    "error_msg": "DNS解析失败: Post \"https://61919494499.security.cloudflare-dns.com/dns-query\": context deadline exceeded"
   },
   {
     "host": "141.147.185.63",
@@ -2813,7 +2813,7 @@
     "protocol": "",
     "latency_ms": null,
     "server_header": null,
-    "error_msg": "DNS解析失败: Post \"https://deno-dns-over-https-server.g18uibxgnb.de5.net/\": context deadline exceeded"
+    "error_msg": "DNS解析失败: Post \"https://61919494499.security.cloudflare-dns.com/dns-query\": context deadline exceeded"
   },
   {
     "host": "www.visa.com.hk",
@@ -3242,7 +3242,7 @@
     "protocol": "",
     "latency_ms": null,
     "server_header": null,
-    "error_msg": "DNS解析失败: Post \"https://deno-dns-over-https-server.g18uibxgnb.de5.net/\": context deadline exceeded"
+    "error_msg": "DNS解析失败: Post \"https://61919494499.security.cloudflare-dns.com/dns-query\": context deadline exceeded"
   },
   {
     "host": "gamer.com.tw",
@@ -3275,7 +3275,7 @@
     "protocol": "",
     "latency_ms": null,
     "server_header": null,
-    "error_msg": "DNS解析失败: Post \"https://deno-dns-over-https-server.g18uibxgnb.de5.net/\": context deadline exceeded"
+    "error_msg": "DNS解析失败: Post \"https://61919494499.security.cloudflare-dns.com/dns-query\": context deadline exceeded"
   },
   {
     "host": "104.17.142.12",
@@ -3836,7 +3836,7 @@
     "protocol": "",
     "latency_ms": null,
     "server_header": null,
-    "error_msg": "DNS解析失败: Post \"https://deno-dns-over-https-server.g18uibxgnb.de5.net/\": context deadline exceeded"
+    "error_msg": "DNS解析失败: Post \"https://61919494499.security.cloudflare-dns.com/dns-query\": context deadline exceeded"
   },
   {
     "host": "www.7749tv.com",
@@ -3858,7 +3858,7 @@
     "protocol": "",
     "latency_ms": null,
     "server_header": null,
-    "error_msg": "DNS解析失败: Post \"https://deno-dns-over-https-server.g18uibxgnb.de5.net/\": context deadline exceeded"
+    "error_msg": "DNS解析失败: Post \"https://61919494499.security.cloudflare-dns.com/dns-query\": context deadline exceeded"
   },
   {
     "host": "japan.com",

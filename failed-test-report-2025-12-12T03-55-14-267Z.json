@@ -36,7 +36,7 @@
           "status_code": null,
           "latency_ms": 0,
           "server_header": "N/A",
-          "error_msg": "DNS解析失败: Post \"https://deno-dns-over-https-server.g18uibxgnb.de5.net/\": dial tcp: lookup xget.a1u06h9fe9y5bozbmgz3.qzz.io on 127.0.0.53:53: server misbehaving",
+          "error_msg": "DNS解析失败: Post \"https://61919494499.security.cloudflare-dns.com/dns-query\": dial tcp: lookup xget.a1u06h9fe9y5bozbmgz3.qzz.io on 127.0.0.53:53: server misbehaving",
           "timestamp": "2025-12-12T03:55:14.266Z",
           "success": false
         },
@@ -49,7 +49,7 @@
           "status_code": null,
           "latency_ms": 0,
           "server_header": "N/A",
-          "error_msg": "DNS解析失败: Post \"https://deno-dns-over-https-server.g18uibxgnb.de5.net/\": dial tcp: lookup xget.a1u06h9fe9y5bozbmgz3.qzz.io on 127.0.0.53:53: server misbehaving",
+          "error_msg": "DNS解析失败: Post \"https://61919494499.security.cloudflare-dns.com/dns-query\": dial tcp: lookup xget.a1u06h9fe9y5bozbmgz3.qzz.io on 127.0.0.53:53: server misbehaving",
           "timestamp": "2025-12-12T03:55:14.266Z",
           "success": false
         },
@@ -62,7 +62,7 @@
           "status_code": null,
           "latency_ms": 0,
           "server_header": "N/A",
-          "error_msg": "DNS解析失败: Post \"https://deno-dns-over-https-server.g18uibxgnb.de5.net/\": dial tcp: lookup xget.a1u06h9fe9y5bozbmgz3.qzz.io on 127.0.0.53:53: server misbehaving",
+          "error_msg": "DNS解析失败: Post \"https://61919494499.security.cloudflare-dns.com/dns-query\": dial tcp: lookup xget.a1u06h9fe9y5bozbmgz3.qzz.io on 127.0.0.53:53: server misbehaving",
           "timestamp": "2025-12-12T03:55:14.266Z",
           "success": false
         },
@@ -75,7 +75,7 @@
           "status_code": null,
           "latency_ms": 0,
           "server_header": "N/A",
-          "error_msg": "DNS解析失败: Post \"https://deno-dns-over-https-server.g18uibxgnb.de5.net/\": dial tcp: lookup xget.a1u06h9fe9y5bozbmgz3.qzz.io on 127.0.0.53:53: server misbehaving",
+          "error_msg": "DNS解析失败: Post \"https://61919494499.security.cloudflare-dns.com/dns-query\": dial tcp: lookup xget.a1u06h9fe9y5bozbmgz3.qzz.io on 127.0.0.53:53: server misbehaving",
           "timestamp": "2025-12-12T03:55:14.266Z",
           "success": false
         },
@@ -266,7 +266,7 @@
       "status_code": null,
       "latency_ms": 0,
       "server_header": "N/A",
-      "error_msg": "DNS解析失败: Post \"https://deno-dns-over-https-server.g18uibxgnb.de5.net/\": dial tcp: lookup xget.a1u06h9fe9y5bozbmgz3.qzz.io on 127.0.0.53:53: server misbehaving",
+      "error_msg": "DNS解析失败: Post \"https://61919494499.security.cloudflare-dns.com/dns-query\": dial tcp: lookup xget.a1u06h9fe9y5bozbmgz3.qzz.io on 127.0.0.53:53: server misbehaving",
       "timestamp": "2025-12-12T03:55:14.266Z",
       "success": false
     },
@@ -279,7 +279,7 @@
       "status_code": null,
       "latency_ms": 0,
       "server_header": "N/A",
-      "error_msg": "DNS解析失败: Post \"https://deno-dns-over-https-server.g18uibxgnb.de5.net/\": dial tcp: lookup xget.a1u06h9fe9y5bozbmgz3.qzz.io on 127.0.0.53:53: server misbehaving",
+      "error_msg": "DNS解析失败: Post \"https://61919494499.security.cloudflare-dns.com/dns-query\": dial tcp: lookup xget.a1u06h9fe9y5bozbmgz3.qzz.io on 127.0.0.53:53: server misbehaving",
       "timestamp": "2025-12-12T03:55:14.266Z",
       "success": false
     },
@@ -292,7 +292,7 @@
       "status_code": null,
       "latency_ms": 0,
       "server_header": "N/A",
-      "error_msg": "DNS解析失败: Post \"https://deno-dns-over-https-server.g18uibxgnb.de5.net/\": dial tcp: lookup xget.a1u06h9fe9y5bozbmgz3.qzz.io on 127.0.0.53:53: server misbehaving",
+      "error_msg": "DNS解析失败: Post \"https://61919494499.security.cloudflare-dns.com/dns-query\": dial tcp: lookup xget.a1u06h9fe9y5bozbmgz3.qzz.io on 127.0.0.53:53: server misbehaving",
       "timestamp": "2025-12-12T03:55:14.266Z",
       "success": false
     },
@@ -305,7 +305,7 @@
       "status_code": null,
       "latency_ms": 0,
       "server_header": "N/A",
-      "error_msg": "DNS解析失败: Post \"https://deno-dns-over-https-server.g18uibxgnb.de5.net/\": dial tcp: lookup xget.a1u06h9fe9y5bozbmgz3.qzz.io on 127.0.0.53:53: server misbehaving",
+      "error_msg": "DNS解析失败: Post \"https://61919494499.security.cloudflare-dns.com/dns-query\": dial tcp: lookup xget.a1u06h9fe9y5bozbmgz3.qzz.io on 127.0.0.53:53: server misbehaving",
       "timestamp": "2025-12-12T03:55:14.266Z",
       "success": false
     },
