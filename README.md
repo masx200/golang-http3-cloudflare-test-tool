@@ -1,311 +1,296 @@
-# 🚀 HTTP/3 Cloudflare 测试工具
+# 网络测速结果仪表板-cloudflare优选ip地址
 
-     [![Go Version](https://img.shields.io/badge/Go-1.21+-blue.svg)](https://golang.org/)
-     [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-     [![HTTP/3](https://img.shields.io/badge/Protocol-HTTP%2F3-orange.svg)](https://en.wikipedia.org/wiki/HTTP/3)
-     [![QUIC](https://img.shields.io/badge/Transport-QUIC-purple.svg)](https://en.wikipedia.org/wiki/QUIC)
+好的，这是一个为你生成的 `README.md`
+文件，详细介绍了项目的功能、技术栈以及如何运行和使用。
 
-     一个用于测试 Cloudflare HTTP/3 服务的 Go 语言工具，支持多种 DNS 解析方式和协议回退机制。
+---
 
-## ✨ 功能特性
+![Vue](https://img.shields.io/badge/Vue-3-green.svg)
+![Vite](https://img.shields.io/badge/Vite-4.0+-blue.svg)
+![Vuetify](https://img.shields.io/badge/Vuetify-3.0+-blueviolet.svg)
 
-    - 🔥 **HTTP/3 支持** - 基于 QUIC 协议的最新 HTTP 协议
-    - 🌐 **多协议回退** - HTTP/3 → HTTP/2 → HTTP/1.1 智能回退
-    - 🔍 **多种 DNS 解析** - DoH、DoQ、DoT、传统 DNS 支持
-    - ⚡ **并发测试** - 多 IP 地址并发连接测试
-    - 📊 **详细报告** - JSON 格式的详细测试结果
-    - ⚙️ **灵活配置** - 支持配置文件和命令行参数
-    - 🛡️ **IPv4/IPv6** - 完整的双栈 IP 地址支持
-    - 🎯 **IP 地址过滤** - 智能过滤无效和特定 IP 地址
+这是一个基于 Vue 3 和 Vuetify
+的前端项目，用于可视化和分析网络连接测速结果。它可以动态加载多个 JSON
+报告文件，并提供强大的排序和筛选功能，帮助用户快速分析网络性能。
 
-## 🚀 快速开始
+## 功能特性
 
-### 安装依赖
+- **动态数据加载**: 使用 Vite 的 `import.meta.glob` 功能，自动读取并加载
+  `public` 目录下所有符合 `failed-test-report-*.json` 命名格式的报告文件。
+- **综合数据展示**: 在一个统一的表格中展示所有成功和失败的测试记录。
+- **多维度排序**:
+  支持按任意列进行排序，默认按网络延迟（`latency_ms`）升序排列，方便快速找到最优节点。
+- **高级筛选**: 提供丰富的筛选选项，可以根据以下条件过滤结果：
+  - 测试环境国家
+  - 自治系统号 (ASN)
+  - IP 版本
+  - 网络协议
+  - 测试成功/失败状态
+- **统计概览**: 在页面顶部直观展示总测试数、成功数、失败数和平均延迟等关键指标。
+- **响应式设计**: 基于 Vuetify 的 Material Design
+  组件，提供在不同设备上都有良好体验的响应式布局。
+- **视觉化延迟**:
+  使用不同颜色的标签来区分延迟等级（绿色=快，红色=慢），使结果一目了然。
 
-    ```bash
-    go mod tidy
-    ```
+## 技术栈
 
-### 构建项目
+- **前端框架**: [Vue 3](https://vuejs.org/) (Composition API)
+- **构建工具**: [Vite](https://vitejs.dev/)
+- **UI 组件库**: [Vuetify 3](https://vuetifyjs.com/)
+- **数据加载**: Vite `import.meta.glob`
 
-    ```bash
-    go build -o http3-test-tool main.go
-    ```
+## 快速开始
 
-### 运行测试
+### 前置要求
 
-     ```bash
-     # 使用默认配置
-     ./http3-test-tool
+- [Node.js](https://nodejs.org/) (推荐 v16+)
+- [npm](https://www.npmjs.com/) 或 [yarn](https://yarnpkg.com/)
 
-     # 指定测试域名
-     ./http3-test-tool -domain "example.com"
+### 安装和运行
 
-     # 使用配置文件
-     ./http3-test-tool -config "config.json"
+1. **克隆项目**
 
-     # 详细输出模式
-     ./http3-test-tool -verbose
-     ```
+   ```bash
+   git clone <your-repository-url>
+   cd network-speed-dashboard-Cloudflare-preferred-IP-address
+   ```
 
-## 📋 使用示例
+2. **安装依赖**
 
-### 1. 基本测试
+   ```bash
+   npm install
+   ```
 
-     ```bash
-     # 测试 Cloudflare 服务
-     ./http3-test-tool -domain "local-aria2-webui.masx200.ddns-ip.net" -test-url "https://local-aria2-webui.masx200.ddns-ip.net"
+3. **启动开发服务器**
 
-     # 指定 DoH 服务
-     ./http3-test-tool -domain "hello-world-deno-deploy.a1u06h9fe9y5bozbmgz3.qzz.io" \
-       -doh-url "https://deno-dns-over-https-server.g18uibxgnb.de5.net/"
-     ```
+   ```bash
+   npm run dev
+   ```
 
-### 2. 使用配置文件
+4. **访问应用** 打开浏览器访问 `http://localhost:5173` (Vite
+   默认端口)，应用会自动打开。
 
-     创建 `config.json`:
+## 项目结构
 
-     ```json
-     [
-       {
-         "doh_resolve_domain": "local-aria2-webui.masx200.ddns-ip.net",
-         "test_sni_host": "local-aria2-webui.masx200.ddns-ip.net",
-         "test_host_header": "local-aria2-webui.masx200.ddns-ip.net",
-         "doh_url": "https://deno-dns-over-https-server.g18uibxgnb.de5.net/",
-         "port": 443,
-         "prefer_ipv6": false,
-         "resolve_mode": "https"
-       },
-       {
-         "doh_resolve_domain": "local-aria2-webui.masx200.ddns-ip.net",
-         "test_sni_host": "local-aria2-webui.masx200.ddns-ip.net",
-         "test_host_header": "local-aria2-webui.masx200.ddns-ip.net",
-         "doh_url": "https://deno-dns-over-https-server.g18uibxgnb.de5.net/",
-         "port": 443,
-         "prefer_ipv6": false,
-         "resolve_mode": "direct",
-         "direct_ips": ["162.159.140.220", "172.67.214.232"]
-       }
-     ]
-     ```
+```
+network-speed-dashboard-Cloudflare-preferred-IP-address/
+├── public/                  # 静态资源
+│   └── failed-test-report-*.json  # 测速报告文件存放于此
+├── src/
+│   ├── components/
+│   │   └── SpeedDashboard.vue  # 主要的仪表板组件
+│   ├── plugins/
+│   │   └── vuetify.js      # Vuetify 配置和插件设置
+│   ├── App.vue             # 根组件
+│   └── main.js             # 应用入口文件
+├── index.html              # HTML 模板
+├── package.json            # 项目依赖和脚本
+└── vite.config.js          # Vite 配置文件
+```
 
-     运行测试:
+## 数据格式说明
 
-     ```bash
-     ./http3-test-tool -config config.json
-     ```
+为了让应用能够正确读取和解析数据，请将你的测速结果 JSON 文件放置在 `public`
+目录下，并遵循 `failed-test-report-*.json` 的命名格式（例如
+`failed-test-report-20231212-154327.json`）。
 
-### 3. DNS 解析模式
+每个 JSON 文件应包含以下关键结构：
 
-     ```bash
-     # DNS over HTTPS (DoH) - RFC 8484
-     ./http3-test-tool -resolve-mode "https" -domain "example.com"
-
-     # 传统 A/AAAA 记录查询
-     ./http3-test-tool -resolve-mode "a_aaaa" -domain "example.com"
-
-     # 直接 IP 地址模式
-     ./http3-test-tool -resolve-mode "direct" -domain "example.com"
-     ```
-
-## 📊 输出示例
-
-    ```json
-    [
-      {
-        "domain_used": "local-aria2-webui.masx200.ddns-ip.net",
-        "target_ip": "162.159.140.220",
-        "ip_version": "IPv4",
-        "sni_host": "local-aria2-webui.masx200.ddns-ip.net",
-        "host_header": "local-aria2-webui.masx200.ddns-ip.net",
-        "success": true,
-        "status_code": 200,
-        "protocol": "h3",
-        "latency_ms": 127,
-        "server_header": "cloudflare",
-        "dns_source": "DoH (https://deno-dns-over-https-server.g18uibxgnb.de5.net/)"
-      },
-      {
-        "domain_used": "local-aria2-webui.masx200.ddns-ip.net",
-        "target_ip": "2606:4700:d0::a29f:4801",
-        "ip_version": "IPv6",
-        "sni_host": "local-aria2-webui.masx200.ddns-ip.net",
-        "host_header": "local-aria2-webui.masx200.ddns-ip.net",
-        "success": true,
-        "status_code": 200,
-        "protocol": "h2",
-        "latency_ms": 156,
-        "server_header": "cloudflare",
-        "dns_source": "DoH (https://deno-dns-over-https-server.g18uibxgnb.de5.net/)"
-      }
-    ]
-    ```
-
-## ⚙️ 配置选项
-
-### 命令行参数
-
-    | 参数            | 默认值                                                                                                         | 说明                                 |
-    | --------------- | -------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
-    | `-config`       | ""                                                                                                             | 配置文件路径                         |
-    | `-domain`       | ""                                                                                                             | 测试域名                             |
-    | `-doh-url`      | "https://deno-dns-over-https-server.g18uibxgnb.de5.net/" | DoH 服务 URL                         |
-    | `-resolve-mode` | "https"                                                                                                        | DNS 解析模式 (https, a_aaaa, direct) |
-    | `-test-url`     | "https://hello-world-deno-deploy.a1u06h9fe9y5bozbmgz3.qzz.io"                                                  | 测试 URL                             |
-    | `-port`         | 443                                                                                                            | 目标端口                             |
-    | `-verbose`      | false                                                                                                          | 详细输出模式                         |
-
-### 配置文件格式
-
-    ```json
+```json
+{
+  "report_info": { ... },
+  "latency_statistics": { ... },
+  "error_analysis": { ... },
+  "statistics": { ... },
+  "failed_tests": [
+    // 失败的测试记录数组
     {
-      "doh_resolve_domain": "要解析的域名",
-      "test_sni_host": "SNI 主机名",
-      "test_host_header": "HTTP Host 头",
-      "doh_url": "DNS over HTTPS 服务 URL",
-      "port": 443,
-      "prefer_ipv6": false,
-      "resolve_mode": "https",
-      "direct_ips": ["直接 IP 地址列表"]
+      "index": 141,
+      "host": "cfip.xxxxxxxx.tk",
+      "target_ip": "198.41.212.130",
+      "ip_version": "IPv4",
+      "protocol": "none",
+      "status_code": null,
+      "latency_ms": 0,
+      "server_header": "N/A",
+      "error_msg": "dial tcp ...",
+      "timestamp": "2025-12-12T07:43:34.062Z",
+      "success": false
     }
-    ```
+  ],
+  "top_latency_records": [
+    // 成功的（或延迟最低的）测试记录数组
+    {
+      "index": 4,
+      "host": "ct.877774.xyz",
+      "target_ip": "172.64.229.174",
+      "ip_version": "IPv4",
+      "protocol": "h3",
+      "status_code": 200,
+      "latency_ms": 146,
+      "server_header": "cloudflare",
+      "error_msg": "No error message",
+      "timestamp": "2025-12-12T07:43:34.062Z",
+      "success": true
+    }
+  ],
+  "test_environment": {
+    "timestamp": "2025-12-12T07:43:34.075Z",
+    "ip_info": {
+      "ip": "2409:891f:8223:a9e6:b8fa:1abc:1a83:143b",
+      "asn": "AS24400",
+      "as_name": "Shanghai Mobile Communications Co.,Ltd.",
+      "country": "China"
+      // ... 其他 IP 信息
+    }
+  }
+}
+```
 
-## 🏗️ 项目架构
+应用主要读取 `failed_tests`、`top_latency_records` 和 `test_environment`
+这三个部分来生成表格和筛选器。
 
-    ```
-    ├── main.go                    # 主程序入口
-    ├── config.json                # 配置文件示例
-    ├── go.mod                     # Go 模块定义
-    ├── README.md                  # 项目文档
-    ├── CLAUDE.md                  # Claude 开发指南
-    ├── http3-reverse-proxy-server-experiment/  # HTTP/3 实验库
-    │   ├── h3/                    # HTTP/3 实现
-    │   ├── dns/                   # DNS 解析服务
-    │   ├── load_balance/          # 负载均衡
-    │   └── adapter/               # 协议适配器
-    └── src/                       # 原始 Rust 代码（参考）
-        └── main.rs               # Rust 版本实现
-    ```
+## 如何使用
 
-## 🛠️ 开发指南
+1. **筛选数据**:
+   - 在页面顶部的筛选卡片中，使用下拉菜单选择国家、ASN、IP版本或协议。
+   - 使用复选框控制是否显示成功或失败的测试。
+   - 点击 "清除筛选" 按钮可以重置所有筛选条件。
 
-### 构建
+2. **查看统计**:
+   - 筛选卡片下方的四个统计卡片会实时显示当前筛选结果下的总测试数、成功数、失败数和平均延迟。
 
-    ```bash
-    go build -v ./...
-    ```
+3. **排序和搜索**:
+   - 在结果表格中，点击任意列的标题可以按该列进行升序或降序排序。
+   - 使用表格右上角的搜索框可以按主机名、IP 地址等关键词进行全文搜索。
 
-### 测试
+## 构建生产版本
 
-     ```bash
-     # 运行所有测试
-     go test -v ./...
+当你准备好将应用部署到生产环境时，可以运行以下命令：
 
-     # 运行特定包测试
-     go test -v ./h3/
-     go test -v ./dns/
-     go test -v ./load_balance/
-     ```
+```bash
+npm run build
+```
 
-### 性能分析
+这会在项目根目录下生成一个 `dist`
+文件夹，里面包含了所有优化和压缩后的静态文件，你可以将它们部署到任何静态文件服务器上。
 
-    ```bash
-    # 启用 pprof 调试
-    go run main.go -debug-pprof
-    ```
+## 许可证
 
-## 📚 核心组件
+[MIT](LICENSE)
 
-### 1. DNS 解析引擎
+# Vuetify (Default)
 
-    - **DoH (DNS over HTTPS)**: RFC 8484 标准实现
-    - **传统 DNS**: A/AAAA 记录查询
-    - **直接模式**: 使用预定义 IP 地址
+This is the official scaffolding tool for Vuetify, designed to give you a head
+start in building your new Vuetify application. It sets up a base template with
+all the necessary configurations and standard directory structure, enabling you
+to begin development without the hassle of setting up the project from scratch.
 
-### 2. HTTP/3 传输层
+## ❗️ Important Links
 
-    - 基于 QUIC 协议实现
-    - 连接池和轮询机制
-    - 自定义 IP 绑定支持
+- 📄 [Docs](https://vuetifyjs.com/)
+- 🚨 [Issues](https://issues.vuetifyjs.com/)
+- 🏬 [Store](https://store.vuetifyjs.com/)
+- 🎮 [Playground](https://play.vuetifyjs.com/)
+- 💬 [Discord](https://community.vuetifyjs.com)
 
-### 3. 协议回退机制
+## 💿 Install
 
-    - HTTP/3 (QUIC) → HTTP/2 (TCP) → HTTP/1.1
-    - 自动检测和切换
-    - 详细连接状态报告
+Set up your project using your preferred package manager. Use the corresponding
+command to install the dependencies:
 
-### 4. 负载均衡系统
+| Package Manager                                           | Command        |
+| --------------------------------------------------------- | -------------- |
+| [yarn](https://yarnpkg.com/getting-started)               | `yarn install` |
+| [npm](https://docs.npmjs.com/cli/v7/commands/npm-install) | `npm install`  |
+| [pnpm](https://pnpm.io/installation)                      | `pnpm install` |
+| [bun](https://bun.sh/#getting-started)                    | `bun install`  |
 
-    - 随机负载均衡算法
-    - 主被动健康检查
-    - 故障转移策略
+After completing the installation, your environment is ready for Vuetify
+development.
 
-## 🔒 安全特性
+## ✨ Features
 
-    - ✅ **IP 地址过滤** - 自动过滤无效和恶意 IP
-    - ✅ **SNI 配置** - 支持 Server Name Indication
-    - ✅ **超时保护** - 防止连接挂起
-    - ✅ **并发控制** - 合理的并发限制
+- 🖼️ **Optimized Front-End Stack**: Leverage the latest Vue 3 and Vuetify 3 for
+  a modern, reactive UI development experience. [Vue 3](https://v3.vuejs.org/) |
+  [Vuetify 3](https://vuetifyjs.com/en/)
+- 🗃️ **State Management**: Integrated with [Pinia](https://pinia.vuejs.org/),
+  the intuitive, modular state management solution for Vue.
+- 🚦 **Routing and Layouts**: Utilizes Vue Router for SPA navigation and
+  vite-plugin-vue-layouts-next for organizing Vue file layouts.
+  [Vue Router](https://router.vuejs.org/) |
+  [vite-plugin-vue-layouts-next](https://github.com/loicduong/vite-plugin-vue-layouts-next)
+- 💻 **Enhanced Development Experience**: Benefit from TypeScript's static type
+  checking and the ESLint plugin suite for Vue, ensuring code quality and
+  consistency. [TypeScript](https://www.typescriptlang.org/) |
+  [ESLint Plugin Vue](https://eslint.vuejs.org/)
+- ⚡ **Next-Gen Tooling**: Powered by Vite, experience fast cold starts and
+  instant HMR (Hot Module Replacement). [Vite](https://vitejs.dev/)
+- 🧩 **Automated Component Importing**: Streamline your workflow with
+  unplugin-vue-components, automatically importing components as you use them.
+  [unplugin-vue-components](https://github.com/antfu/unplugin-vue-components)
+- 🛠️ **Strongly-Typed Vue**: Use vue-tsc for type-checking your Vue components,
+  and enjoy a robust development experience.
+  [vue-tsc](https://github.com/johnsoncodehk/volar/tree/master/packages/vue-tsc)
 
-## 🌍 支持的协议
+These features are curated to provide a seamless development experience from
+setup to deployment, ensuring that your Vuetify application is both powerful and
+maintainable.
 
-    | 协议     | 说明                    | 状态   |
-    | -------- | ----------------------- | ------ |
-    | HTTP/3   | 基于 QUIC 的下一代 HTTP | ✅ 支持 |
-    | HTTP/2   | 二进制帧协议            | ✅ 支持 |
-    | HTTP/1.1 | 传统文本协议            | ✅ 支持 |
-    | DoH      | DNS over HTTPS          | ✅ 支持 |
-    | DoQ      | DNS over QUIC           | ✅ 支持 |
-    | DoT      | DNS over TLS            | ✅ 支持 |
+## 💡 Usage
 
-## 🤝 贡献指南
+This section covers how to start the development server and build your project
+for production.
 
-     我们欢迎各种形式的贡献！
+### Starting the Development Server
 
-     1. **Fork 项目**
-        ```bash
-        git clone https://gitee.com/masx200/golang-http3-cloudflare-test-tool.git
-        ```
+To start the development server with hot-reload, run the following command. The
+server will be accessible at [http://localhost:3000](http://localhost:3000):
 
-     2. **创建功能分支**
-        ```bash
-        git checkout -b feature/amazing-feature
-        ```
+```bash
+yarn dev
+```
 
-     3. **提交更改**
-        ```bash
-        git commit -m 'Add amazing feature'
-        ```
+(Repeat for npm, pnpm, and bun with respective commands.)
 
-     4. **推送分支**
-        ```bash
-        git push origin feature/amazing-feature
-        ```
+> Add NODE_OPTIONS='--no-warnings' to suppress the JSON import warnings that
+> happen as part of the Vuetify import mapping. If you are on Node
+> [v21.3.0](https://nodejs.org/en/blog/release/v21.3.0) or higher, you can
+> change this to NODE_OPTIONS='--disable-warning=5401'. If you don't mind the
+> warning, you can remove this from your package.json dev script.
 
-     5. **创建 Pull Request**
+### Building for Production
 
-## 📄 许可证
+To build your project for production, use:
 
-    本项目采用 [MIT 许可证](LICENSE)。
+```bash
+yarn build
+```
 
-## 🙏 致谢
+(Repeat for npm, pnpm, and bun with respective commands.)
 
-    - [quic-go](https://github.com/quic-go/quic-go) - QUIC 协议 Go 实现
-    - [miekg/dns](https://github.com/miekg/dns) - DNS 库
-    - [gin-gonic](https://github.com/gin-gonic/gin) - HTTP Web 框架
-    - [Cloudflare](https://local-aria2-webui.masx200.ddns-ip.net/) - HTTP/3 服务支持
+Once the build process is completed, your application will be ready for
+deployment in a production environment.
 
-## 📞 联系方式
+## 💪 Support Vuetify Development
 
-     - 项目主页: [Gitee](https://gitee.com/masx200/golang-http3-cloudflare-test-tool)
-     - 问题反馈: [Issues](https://gitee.com/masx200/golang-http3-cloudflare-test-tool/issues)
+This project is built with [Vuetify](https://vuetifyjs.com/en/), a UI Library
+with a comprehensive collection of Vue components. Vuetify is an MIT licensed
+Open Source project that has been made possible due to the generous
+contributions by our
+[sponsors and backers](https://vuetifyjs.com/introduction/sponsors-and-backers/).
+If you are interested in supporting this project, please consider:
 
-     ---
+- [Requesting Enterprise Support](https://support.vuetifyjs.com/)
+- [Sponsoring John on Github](https://github.com/users/johnleider/sponsorship)
+- [Sponsoring Kael on Github](https://github.com/users/kaelwd/sponsorship)
+- [Supporting the team on Open Collective](https://opencollective.com/vuetify)
+- [Becoming a sponsor on Patreon](https://www.patreon.com/vuetify)
+- [Becoming a subscriber on Tidelift](https://tidelift.com/subscription/npm/vuetify)
+- [Making a one-time donation with Paypal](https://paypal.me/vuetify)
 
-     <div align="center">
+## 📑 License
 
-     **🌟 如果这个项目对您有帮助，请给我们一个 Star！🌟**
+[MIT](http://opensource.org/licenses/MIT)
 
-     Made with ❤️ by [masx200](https://gitee.com/masx200)
-
-     </div>
+Copyright (c) 2016-present Vuetify, LLC

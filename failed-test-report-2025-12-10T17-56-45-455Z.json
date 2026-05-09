@@ -27,142 +27,9 @@
       "连接超时: 上下文超时": 1
     },
     "grouped_tests": {
-      "DNS解析错误: 其他DNS错误": [
-        {
-          "index": 3,
-          "host": "168.138.184.172",
-          "target_ip": "168.138.184.172",
-          "ip_version": "IPv4",
-          "protocol": "h2",
-          "status_code": null,
-          "latency_ms": 0,
-          "server_header": "N/A",
-          "error_msg": "Get \"https://local-aria2-webui.masx200.ddns-ip.net:443/\": remote error: tls: unrecognized name",
-          "timestamp": "2025-12-10T17:56:45.453Z",
-          "success": false
-        }
-      ],
-      "连接超时: I/O超时": [
-        {
-          "index": 5,
-          "host": "104.26.6.112",
-          "target_ip": "104.26.6.112",
-          "ip_version": "IPv4",
-          "protocol": "none",
-          "status_code": null,
-          "latency_ms": 0,
-          "server_header": "N/A",
-          "error_msg": "dial tcp 104.26.6.112:443: i/o timeout",
-          "timestamp": "2025-12-10T17:56:45.453Z",
-          "success": false
-        },
-        {
-          "index": 6,
-          "host": "172.64.201.25",
-          "target_ip": "172.64.201.25",
-          "ip_version": "IPv4",
-          "protocol": "none",
-          "status_code": null,
-          "latency_ms": 0,
-          "server_header": "N/A",
-          "error_msg": "dial tcp 172.64.201.25:443: i/o timeout",
-          "timestamp": "2025-12-10T17:56:45.453Z",
-          "success": false
-        },
-        {
-          "index": 90,
-          "host": "104.26.6.112",
-          "target_ip": "104.26.6.112",
-          "ip_version": "IPv4",
-          "protocol": "none",
-          "status_code": null,
-          "latency_ms": 0,
-          "server_header": "N/A",
-          "error_msg": "dial tcp 104.26.6.112:443: i/o timeout",
-          "timestamp": "2025-12-10T17:56:45.453Z",
-          "success": false
-        },
-        {
-          "index": 118,
-          "host": "104.26.6.112",
-          "target_ip": "104.26.6.112",
-          "ip_version": "IPv4",
-          "protocol": "none",
-          "status_code": null,
-          "latency_ms": 0,
-          "server_header": "N/A",
-          "error_msg": "dial tcp 104.26.6.112:443: i/o timeout",
-          "timestamp": "2025-12-10T17:56:45.453Z",
-          "success": false
-        },
-        {
-          "index": 158,
-          "host": "cfip.xxxxxxxx.tk",
-          "target_ip": "198.41.212.130",
-          "ip_version": "IPv4",
-          "protocol": "none",
-          "status_code": null,
-          "latency_ms": 0,
-          "server_header": "N/A",
-          "error_msg": "dial tcp 198.41.212.130:443: i/o timeout",
-          "timestamp": "2025-12-10T17:56:45.453Z",
-          "success": false
-        },
-        {
-          "index": 171,
-          "host": "104.26.6.112",
-          "target_ip": "104.26.6.112",
-          "ip_version": "IPv4",
-          "protocol": "none",
-          "status_code": null,
-          "latency_ms": 0,
-          "server_header": "N/A",
-          "error_msg": "dial tcp 104.26.6.112:443: i/o timeout",
-          "timestamp": "2025-12-10T17:56:45.453Z",
-          "success": false
-        },
-        {
-          "index": 215,
-          "host": "104.26.6.112",
-          "target_ip": "104.26.6.112",
-          "ip_version": "IPv4",
-          "protocol": "none",
-          "status_code": null,
-          "latency_ms": 0,
-          "server_header": "N/A",
-          "error_msg": "dial tcp 104.26.6.112:443: i/o timeout",
-          "timestamp": "2025-12-10T17:56:45.453Z",
-          "success": false
-        },
-        {
-          "index": 292,
-          "host": "104.26.6.112",
-          "target_ip": "104.26.6.112",
-          "ip_version": "IPv4",
-          "protocol": "none",
-          "status_code": null,
-          "latency_ms": 0,
-          "server_header": "N/A",
-          "error_msg": "dial tcp 104.26.6.112:443: i/o timeout",
-          "timestamp": "2025-12-10T17:56:45.453Z",
-          "success": false
-        }
-      ],
-      "连接超时: 上下文超时": [
-        {
-          "index": 172,
-          "host": "20.247.137.183",
-          "target_ip": "20.247.137.183",
-          "ip_version": "IPv4",
-          "protocol": "h2",
-          "status_code": null,
-          "latency_ms": 0,
-          "server_header": "N/A",
-          "error_msg": "Get \"https://local-aria2-webui.masx200.ddns-ip.net:443/\": context deadline exceeded",
-          "timestamp": "2025-12-10T17:56:45.453Z",
-          "success": false
-        }
-      ]
+      "DNS解析错误: 其他DNS错误": [],
+      "连接超时: I/O超时": [],
+      "连接超时: 上下文超时": []
     },
     "error_patterns": {
       "超时集中度分析": "共有 8 次超时，主要集中在IP段 175.212（1 次），可能存在网络路由问题或目标服务器负载过高",
@@ -195,138 +62,7 @@
       "连接超时: 上下文超时": 1
     }
   },
-  "failed_tests": [
-    {
-      "index": 3,
-      "host": "168.138.184.172",
-      "target_ip": "168.138.184.172",
-      "ip_version": "IPv4",
-      "protocol": "h2",
-      "status_code": null,
-      "latency_ms": 0,
-      "server_header": "N/A",
-      "error_msg": "Get \"https://local-aria2-webui.masx200.ddns-ip.net:443/\": remote error: tls: unrecognized name",
-      "timestamp": "2025-12-10T17:56:45.453Z",
-      "success": false
-    },
-    {
-      "index": 5,
-      "host": "104.26.6.112",
-      "target_ip": "104.26.6.112",
-      "ip_version": "IPv4",
-      "protocol": "none",
-      "status_code": null,
-      "latency_ms": 0,
-      "server_header": "N/A",
-      "error_msg": "dial tcp 104.26.6.112:443: i/o timeout",
-      "timestamp": "2025-12-10T17:56:45.453Z",
-      "success": false
-    },
-    {
-      "index": 6,
-      "host": "172.64.201.25",
-      "target_ip": "172.64.201.25",
-      "ip_version": "IPv4",
-      "protocol": "none",
-      "status_code": null,
-      "latency_ms": 0,
-      "server_header": "N/A",
-      "error_msg": "dial tcp 172.64.201.25:443: i/o timeout",
-      "timestamp": "2025-12-10T17:56:45.453Z",
-      "success": false
-    },
-    {
-      "index": 90,
-      "host": "104.26.6.112",
-      "target_ip": "104.26.6.112",
-      "ip_version": "IPv4",
-      "protocol": "none",
-      "status_code": null,
-      "latency_ms": 0,
-      "server_header": "N/A",
-      "error_msg": "dial tcp 104.26.6.112:443: i/o timeout",
-      "timestamp": "2025-12-10T17:56:45.453Z",
-      "success": false
-    },
-    {
-      "index": 118,
-      "host": "104.26.6.112",
-      "target_ip": "104.26.6.112",
-      "ip_version": "IPv4",
-      "protocol": "none",
-      "status_code": null,
-      "latency_ms": 0,
-      "server_header": "N/A",
-      "error_msg": "dial tcp 104.26.6.112:443: i/o timeout",
-      "timestamp": "2025-12-10T17:56:45.453Z",
-      "success": false
-    },
-    {
-      "index": 158,
-      "host": "cfip.xxxxxxxx.tk",
-      "target_ip": "198.41.212.130",
-      "ip_version": "IPv4",
-      "protocol": "none",
-      "status_code": null,
-      "latency_ms": 0,
-      "server_header": "N/A",
-      "error_msg": "dial tcp 198.41.212.130:443: i/o timeout",
-      "timestamp": "2025-12-10T17:56:45.453Z",
-      "success": false
-    },
-    {
-      "index": 171,
-      "host": "104.26.6.112",
-      "target_ip": "104.26.6.112",
-      "ip_version": "IPv4",
-      "protocol": "none",
-      "status_code": null,
-      "latency_ms": 0,
-      "server_header": "N/A",
-      "error_msg": "dial tcp 104.26.6.112:443: i/o timeout",
-      "timestamp": "2025-12-10T17:56:45.453Z",
-      "success": false
-    },
-    {
-      "index": 172,
-      "host": "20.247.137.183",
-      "target_ip": "20.247.137.183",
-      "ip_version": "IPv4",
-      "protocol": "h2",
-      "status_code": null,
-      "latency_ms": 0,
-      "server_header": "N/A",
-      "error_msg": "Get \"https://local-aria2-webui.masx200.ddns-ip.net:443/\": context deadline exceeded",
-      "timestamp": "2025-12-10T17:56:45.453Z",
-      "success": false
-    },
-    {
-      "index": 215,
-      "host": "104.26.6.112",
-      "target_ip": "104.26.6.112",
-      "ip_version": "IPv4",
-      "protocol": "none",
-      "status_code": null,
-      "latency_ms": 0,
-      "server_header": "N/A",
-      "error_msg": "dial tcp 104.26.6.112:443: i/o timeout",
-      "timestamp": "2025-12-10T17:56:45.453Z",
-      "success": false
-    },
-    {
-      "index": 292,
-      "host": "104.26.6.112",
-      "target_ip": "104.26.6.112",
-      "ip_version": "IPv4",
-      "protocol": "none",
-      "status_code": null,
-      "latency_ms": 0,
-      "server_header": "N/A",
-      "error_msg": "dial tcp 104.26.6.112:443: i/o timeout",
-      "timestamp": "2025-12-10T17:56:45.453Z",
-      "success": false
-    }
-  ],
+  "failed_tests": [],
   "top_latency_records": [
     {
       "index": 154,
@@ -356,7 +92,7 @@
     },
     {
       "index": 309,
-      "host": "cf.877771.xyz",
+      "host": "4444.cloudflare.182682.xyz",
       "target_ip": "2606:4700:3033::ac43:98b7",
       "ip_version": "IPv6",
       "protocol": "h2",
@@ -590,7 +326,7 @@
     },
     {
       "index": 308,
-      "host": "cf.877771.xyz",
+      "host": "4444.cloudflare.182682.xyz",
       "target_ip": "172.67.152.183",
       "ip_version": "IPv4",
       "protocol": "h2",
@@ -629,8 +365,8 @@
     },
     {
       "index": 397,
-      "host": "172.67.49.134",
-      "target_ip": "172.67.49.134",
+      "host": "cf.877774.xyz",
+      "target_ip": "cf.877774.xyz",
       "ip_version": "IPv4",
       "protocol": "h2",
       "status_code": 200,
@@ -642,7 +378,7 @@
     },
     {
       "index": 411,
-      "host": "silkbook.com",
+      "host": "456.cloudflare.182682.xyz",
       "target_ip": "104.26.9.160",
       "ip_version": "IPv4",
       "protocol": "h2",
@@ -1071,7 +807,7 @@
     },
     {
       "index": 310,
-      "host": "cf.877771.xyz",
+      "host": "4444.cloudflare.182682.xyz",
       "target_ip": "2606:4700:3033::6815:50b4",
       "ip_version": "IPv6",
       "protocol": "h2",
@@ -1409,7 +1145,7 @@
     },
     {
       "index": 412,
-      "host": "silkbook.com",
+      "host": "456.cloudflare.182682.xyz",
       "target_ip": "2606:4700:20::ac43:4bd0",
       "ip_version": "IPv6",
       "protocol": "h2",

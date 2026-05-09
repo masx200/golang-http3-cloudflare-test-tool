@@ -121,9 +121,18 @@ jobs:
         with:
           go-version: "1.21"
 
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
       - name: Install dependencies
         run: npm install -g cnpm --registry=https://registry.npmmirror.com && cnpm install
-
+      - name: Run fetch script
+        run: npm run fetch
       - name: Run extract script
         run: npm run extract
 
@@ -141,6 +150,10 @@ jobs:
             echo "未找到 connectivity_results-*.json 文件，使用默认文件"
             npm run start
           fi
+
+      - run: npm run clean
+
+      - run: npm run merge-results
 
       - name: Check for changes
         id: verify-changed-files

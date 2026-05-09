@@ -782,17 +782,6 @@
   },
   {
     "host": "trevor.ns.cloudflare.com",
-    "target_ip": "108.162.195.154",
-    "ip_version": "IPv4",
-    "success": false,
-    "status_code": null,
-    "protocol": "none",
-    "latency_ms": 0,
-    "server_header": null,
-    "error_msg": "dial tcp 108.162.195.154:443: i/o timeout"
-  },
-  {
-    "host": "trevor.ns.cloudflare.com",
     "target_ip": "2606:4700:58::a29f:2c9a",
     "ip_version": "IPv6",
     "success": true,
@@ -1023,7 +1012,7 @@
     "error_msg": null
   },
   {
-    "host": "www.visa.cn",
+    "host": "www.4444.cloudflare.182682.xyz",
     "target_ip": "162.159.152.2",
     "ip_version": "IPv4",
     "success": true,
@@ -1034,7 +1023,7 @@
     "error_msg": null
   },
   {
-    "host": "www.visa.cn",
+    "host": "www.4444.cloudflare.182682.xyz",
     "target_ip": "162.159.153.2",
     "ip_version": "IPv4",
     "success": true,
@@ -1386,7 +1375,7 @@
     "error_msg": null
   },
   {
-    "host": "cf.877771.xyz",
+    "host": "4444.cloudflare.182682.xyz",
     "target_ip": "188.114.97.3",
     "ip_version": "IPv4",
     "success": true,
@@ -1397,7 +1386,7 @@
     "error_msg": null
   },
   {
-    "host": "cf.877771.xyz",
+    "host": "4444.cloudflare.182682.xyz",
     "target_ip": "188.114.96.3",
     "ip_version": "IPv4",
     "success": true,
@@ -1408,7 +1397,7 @@
     "error_msg": null
   },
   {
-    "host": "cf.877771.xyz",
+    "host": "4444.cloudflare.182682.xyz",
     "target_ip": "2606:4700:3033::6815:50b4",
     "ip_version": "IPv6",
     "success": true,
@@ -1419,7 +1408,7 @@
     "error_msg": null
   },
   {
-    "host": "cf.877771.xyz",
+    "host": "4444.cloudflare.182682.xyz",
     "target_ip": "2606:4700:3033::ac43:98b7",
     "ip_version": "IPv6",
     "success": true,
@@ -1714,17 +1703,6 @@
     "latency_ms": 655,
     "server_header": "cloudflare",
     "error_msg": null
-  },
-  {
-    "host": "172.67.49.134",
-    "target_ip": "172.67.49.134",
-    "ip_version": "IPv4",
-    "success": false,
-    "status_code": null,
-    "protocol": "none",
-    "latency_ms": 0,
-    "server_header": null,
-    "error_msg": "dial tcp 172.67.49.134:443: i/o timeout"
   },
   {
     "host": "www.4chan.org",
@@ -2762,17 +2740,6 @@
   },
   {
     "host": "cfip.xxxxxxxx.tk",
-    "target_ip": "104.20.255.53",
-    "ip_version": "IPv4",
-    "success": false,
-    "status_code": null,
-    "protocol": "none",
-    "latency_ms": 0,
-    "server_header": null,
-    "error_msg": "dial tcp 104.20.255.53:443: i/o timeout"
-  },
-  {
-    "host": "cfip.xxxxxxxx.tk",
     "target_ip": "190.93.246.67",
     "ip_version": "IPv4",
     "success": true,
@@ -2803,17 +2770,6 @@
     "latency_ms": 421,
     "server_header": "cloudflare",
     "error_msg": null
-  },
-  {
-    "host": "cfip.xxxxxxxx.tk",
-    "target_ip": "198.41.212.130",
-    "ip_version": "IPv4",
-    "success": false,
-    "status_code": null,
-    "protocol": "none",
-    "latency_ms": 0,
-    "server_header": null,
-    "error_msg": "dial tcp 198.41.212.130:443: i/o timeout"
   },
   {
     "host": "cfip.xxxxxxxx.tk",
@@ -3641,17 +3597,6 @@
     "error_msg": null
   },
   {
-    "host": "141.147.185.63",
-    "target_ip": "141.147.185.63",
-    "ip_version": "IPv4",
-    "success": false,
-    "status_code": null,
-    "protocol": "none",
-    "latency_ms": 0,
-    "server_header": null,
-    "error_msg": "dial tcp 141.147.185.63:443: i/o timeout"
-  },
-  {
     "host": "172.67.106.26",
     "target_ip": "172.67.106.26",
     "ip_version": "IPv4",
@@ -3806,7 +3751,7 @@
     "error_msg": null
   },
   {
-    "host": "silkbook.com",
+    "host": "456.cloudflare.182682.xyz",
     "target_ip": "104.26.9.160",
     "ip_version": "IPv4",
     "success": true,
@@ -3817,7 +3762,7 @@
     "error_msg": null
   },
   {
-    "host": "silkbook.com",
+    "host": "456.cloudflare.182682.xyz",
     "target_ip": "104.26.8.160",
     "ip_version": "IPv4",
     "success": true,
@@ -3828,7 +3773,7 @@
     "error_msg": null
   },
   {
-    "host": "silkbook.com",
+    "host": "456.cloudflare.182682.xyz",
     "target_ip": "172.67.75.208",
     "ip_version": "IPv4",
     "success": true,
@@ -3839,7 +3784,7 @@
     "error_msg": null
   },
   {
-    "host": "silkbook.com",
+    "host": "456.cloudflare.182682.xyz",
     "target_ip": "2606:4700:20::681a:9a0",
     "ip_version": "IPv6",
     "success": true,
@@ -3850,7 +3795,7 @@
     "error_msg": null
   },
   {
-    "host": "silkbook.com",
+    "host": "456.cloudflare.182682.xyz",
     "target_ip": "2606:4700:20::681a:8a0",
     "ip_version": "IPv6",
     "success": true,
@@ -3861,7 +3806,7 @@
     "error_msg": null
   },
   {
-    "host": "silkbook.com",
+    "host": "456.cloudflare.182682.xyz",
     "target_ip": "2606:4700:20::ac43:4bd0",
     "ip_version": "IPv6",
     "success": true,
@@ -4774,17 +4719,6 @@
     "error_msg": null
   },
   {
-    "host": "172.64.201.25",
-    "target_ip": "172.64.201.25",
-    "ip_version": "IPv4",
-    "success": false,
-    "status_code": null,
-    "protocol": "none",
-    "latency_ms": 0,
-    "server_header": null,
-    "error_msg": "dial tcp 172.64.201.25:443: i/o timeout"
-  },
-  {
     "host": "gamer.com.tw",
     "target_ip": "104.18.3.197",
     "ip_version": "IPv4",
@@ -4904,17 +4838,6 @@
     "latency_ms": 1073,
     "server_header": "cloudflare",
     "error_msg": null
-  },
-  {
-    "host": "3.0.50.69",
-    "target_ip": "3.0.50.69",
-    "ip_version": "IPv4",
-    "success": false,
-    "status_code": null,
-    "protocol": "none",
-    "latency_ms": 0,
-    "server_header": null,
-    "error_msg": "dial tcp 3.0.50.69:443: i/o timeout"
   },
   {
     "host": "stock.hostmonit.com",

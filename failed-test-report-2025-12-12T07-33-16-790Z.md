@@ -41,25 +41,25 @@
 
 #### 连接超时: 上下文超时 (8 次测试)
 
-| 序号 | 主机/域名                                              | 目标IP                    | IP版本  | 协议 | 状态码 | 延迟(ms) | 服务器 | 错误信息                                                                                              |
-| ---- | ------------------------------------------------------ | ------------------------- | ------- | ---- | ------ | -------- | ------ | ----------------------------------------------------------------------------------------------------- |
-| 32   | cmcc.877774.xyz                                        | Unknown                   | Unknown | none | N/A    | 0        | N/A    | DNS解析失败: Post "https://deno-dns-over-https-server.g18uibxgnb.de5.net/": context deadline exceeded |
-| 106  | comicabc.com                                           | 104.21.64.10              | IPv4    | h2   | N/A    | 0        | N/A    | Get "https://local-aria2-webui.masx200.ddns-ip.net:443/": context deadline exceeded                   |
-| 153  | icook.hk                                               | 104.21.90.210             | IPv4    | h2   | N/A    | 0        | N/A    | Get "https://local-aria2-webui.masx200.ddns-ip.net:443/": context deadline exceeded                   |
-| 155  | icook.hk                                               | 2606:4700:3037::ac43:a168 | IPv6    | h2   | N/A    | 0        | N/A    | Get "https://local-aria2-webui.masx200.ddns-ip.net:443/": context deadline exceeded                   |
-| 177  | braden.ns.cloudflare.com                               | Unknown                   | Unknown | none | N/A    | 0        | N/A    | DNS解析失败: Post "https://deno-dns-over-https-server.g18uibxgnb.de5.net/": context deadline exceeded |
-| 256  | uriah.ns.cloudflare.com                                | Unknown                   | Unknown | none | N/A    | 0        | N/A    | DNS解析失败: Post "https://deno-dns-over-https-server.g18uibxgnb.de5.net/": context deadline exceeded |
-| 337  | yx-auto.pages.dev | 172.67.161.98             | IPv4    | h2   | N/A    | 0        | N/A    | Get "https://local-aria2-webui.masx200.ddns-ip.net:443/": context deadline exceeded                   |
-| 351  | www.7749tv.com                                         | Unknown                   | Unknown | none | N/A    | 0        | N/A    | DNS解析失败: Post "https://deno-dns-over-https-server.g18uibxgnb.de5.net/": context deadline exceeded |
+| 序号 | 主机/域名                | 目标IP                    | IP版本  | 协议 | 状态码 | 延迟(ms) | 服务器 | 错误信息                                                                                                 |
+| ---- | ------------------------ | ------------------------- | ------- | ---- | ------ | -------- | ------ | -------------------------------------------------------------------------------------------------------- |
+| 32   | cmcc.877774.xyz          | Unknown                   | Unknown | none | N/A    | 0        | N/A    | DNS解析失败: Post "https://61919494499.security.cloudflare-dns.com/dns-query": context deadline exceeded |
+| 106  | comicabc.com             | 104.21.64.10              | IPv4    | h2   | N/A    | 0        | N/A    | Get "https://local-aria2-webui.masx200.ddns-ip.net:443/": context deadline exceeded                      |
+| 153  | icook.hk                 | 104.21.90.210             | IPv4    | h2   | N/A    | 0        | N/A    | Get "https://local-aria2-webui.masx200.ddns-ip.net:443/": context deadline exceeded                      |
+| 155  | icook.hk                 | 2606:4700:3037::ac43:a168 | IPv6    | h2   | N/A    | 0        | N/A    | Get "https://local-aria2-webui.masx200.ddns-ip.net:443/": context deadline exceeded                      |
+| 177  | braden.ns.cloudflare.com | Unknown                   | Unknown | none | N/A    | 0        | N/A    | DNS解析失败: Post "https://61919494499.security.cloudflare-dns.com/dns-query": context deadline exceeded |
+| 256  | uriah.ns.cloudflare.com  | Unknown                   | Unknown | none | N/A    | 0        | N/A    | DNS解析失败: Post "https://61919494499.security.cloudflare-dns.com/dns-query": context deadline exceeded |
+| 337  | yx-auto.pages.dev        | 172.67.161.98             | IPv4    | h2   | N/A    | 0        | N/A    | Get "https://local-aria2-webui.masx200.ddns-ip.net:443/": context deadline exceeded                      |
+| 351  | www.7749tv.com           | Unknown                   | Unknown | none | N/A    | 0        | N/A    | DNS解析失败: Post "https://61919494499.security.cloudflare-dns.com/dns-query": context deadline exceeded |
 
 #### 连接超时: I/O超时 (5 次测试)
 
 | 序号 | 主机/域名        | 目标IP         | IP版本 | 协议 | 状态码 | 延迟(ms) | 服务器 | 错误信息                                 |
 | ---- | ---------------- | -------------- | ------ | ---- | ------ | -------- | ------ | ---------------------------------------- |
 | 42   | cfip.xxxxxxxx.tk | 198.41.212.130 | IPv4   | none | N/A    | 0        | N/A    | dial tcp 198.41.212.130:443: i/o timeout |
-| 74   | 172.67.49.134    | 172.67.49.134  | IPv4   | none | N/A    | 0        | N/A    | dial tcp 172.67.49.134:443: i/o timeout  |
+| 74   | cf.877774.xyz    | cf.877774.xyz  | IPv4   | none | N/A    | 0        | N/A    | dial tcp cf.877774.xyz:443: i/o timeout  |
 | 217  | 141.147.185.63   | 141.147.185.63 | IPv4   | none | N/A    | 0        | N/A    | dial tcp 141.147.185.63:443: i/o timeout |
-| 303  | 172.64.201.25    | 172.64.201.25  | IPv4   | none | N/A    | 0        | N/A    | dial tcp 172.64.201.25:443: i/o timeout  |
+| 303  | ct.877774.xyz    | ct.877774.xyz  | IPv4   | none | N/A    | 0        | N/A    | dial tcp ct.877774.xyz:443: i/o timeout  |
 | 346  | 3.0.50.69        | 3.0.50.69      | IPv4   | none | N/A    | 0        | N/A    | dial tcp 3.0.50.69:443: i/o timeout      |
 
 #### DNS解析错误: 其他DNS错误 (3 次测试)
@@ -99,7 +99,7 @@ none），说明无法与目标建立HTTP/3或其他现代协议连接
 | 220  | singapore.com               | 172.67.75.194                        | IPv4   | h3   | ✅ 成功 | 189      | cloudflare |
 | 184  | www.ipchicken.com           | 172.67.68.101                        | IPv4   | h3   | ✅ 成功 | 193      | cloudflare |
 | 219  | singapore.com               | 104.26.12.140                        | IPv4   | h3   | ✅ 成功 | 193      | cloudflare |
-| 225  | silkbook.com                | 104.26.9.160                         | IPv4   | h3   | ✅ 成功 | 193      | cloudflare |
+| 225  | 456.cloudflare.182682.xyz   | 104.26.9.160                         | IPv4   | h3   | ✅ 成功 | 193      | cloudflare |
 | 318  | japan.com                   | 104.26.4.60                          | IPv4   | h3   | ✅ 成功 | 196      | cloudflare |
 | 320  | japan.com                   | 172.67.70.92                         | IPv4   | h3   | ✅ 成功 | 197      | cloudflare |
 | 147  | www.whatismyip.com          | 172.67.69.129                        | IPv4   | h3   | ✅ 成功 | 198      | cloudflare |
@@ -107,7 +107,7 @@ none），说明无法与目标建立HTTP/3或其他现代协议连接
 | 58   | iplocation.io               | 104.26.10.222                        | IPv4   | h3   | ✅ 成功 | 202      | cloudflare |
 | 69   | cu.877774.xyz               | 104.26.4.117                         | IPv4   | h3   | ✅ 成功 | 204      | cloudflare |
 | 71   | www.hugedomains.com         | 172.67.70.191                        | IPv4   | h3   | ✅ 成功 | 204      | cloudflare |
-| 224  | silkbook.com                | 104.26.8.160                         | IPv4   | h3   | ✅ 成功 | 204      | cloudflare |
+| 224  | 456.cloudflare.182682.xyz   | 104.26.8.160                         | IPv4   | h3   | ✅ 成功 | 204      | cloudflare |
 | 26   | 172.67.75.172               | 172.67.75.172                        | IPv4   | h3   | ✅ 成功 | 206      | cloudflare |
 | 319  | japan.com                   | 104.26.5.60                          | IPv4   | h3   | ✅ 成功 | 206      | cloudflare |
 | 56   | iplocation.io               | 172.67.70.100                        | IPv4   | h3   | ✅ 成功 | 211      | cloudflare |
@@ -133,7 +133,7 @@ none），说明无法与目标建立HTTP/3或其他现代协议连接
 | 41   | 168.138.165.174             | 168.138.165.174                      | IPv4   | h2   | ✅ 成功 | 280      | cloudflare |
 | 11   | ipv4.ip.sb                  | 104.26.12.31                         | IPv4   | h3   | ✅ 成功 | 294      | cloudflare |
 | 57   | iplocation.io               | 104.26.11.222                        | IPv4   | h3   | ✅ 成功 | 312      | cloudflare |
-| 226  | silkbook.com                | 172.67.75.208                        | IPv4   | h3   | ✅ 成功 | 357      | cloudflare |
+| 226  | 456.cloudflare.182682.xyz   | 172.67.75.208                        | IPv4   | h3   | ✅ 成功 | 357      | cloudflare |
 | 72   | www.hugedomains.com         | 104.26.7.37                          | IPv4   | h3   | ✅ 成功 | 363      | cloudflare |
 | 209  | www.glassdoor.com           | 104.17.64.70                         | IPv4   | h3   | ✅ 成功 | 367      | cloudflare |
 | 20   | 104.16.45.84                | 104.16.45.84                         | IPv4   | h3   | ✅ 成功 | 379      | cloudflare |

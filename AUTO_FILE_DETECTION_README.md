@@ -128,8 +128,9 @@ function findLatestConnectivityResultsFile() {
 
     // 筛选出 connectivity_results-*.json 格式的文件
     const connectivityFiles = files
-      .filter((file) =>
-        file.startsWith("connectivity_results-") && file.endsWith(".json")
+      .filter(
+        (file) =>
+          file.startsWith("connectivity_results-") && file.endsWith(".json"),
       )
       .map((file) => {
         const filePath = join(process.cwd(), file);

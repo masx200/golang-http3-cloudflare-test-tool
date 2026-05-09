@@ -7,8 +7,10 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // 配置要替换的文本
-const oldText = `90ab0c4c-8a87-4e24-a0b0-6609f464918e`;
-const newText = "90ab0c4c-8a87-4e24-a0b0-6609f464918e";
+const oldText = `********-****-****-****-************`;
+const newText = "********-****-****-****-************";
+
+//.replaceAll(/\d/g,"*").replaceAll(/\w/g,"*");
 
 // 支持的文件扩展名
 const extensions = [".js", ".yml", ".json", ".txt"];

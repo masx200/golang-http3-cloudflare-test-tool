@@ -27,7 +27,7 @@
 | 序号 | 主机/域名        | 目标IP         | IP版本 | 协议 | 状态码 | 延迟(ms) | 服务器 | 错误信息                                 |
 | ---- | ---------------- | -------------- | ------ | ---- | ------ | -------- | ------ | ---------------------------------------- |
 | 107  | cfip.xxxxxxxx.tk | 198.41.212.130 | IPv4   | none | N/A    | 0        | N/A    | dial tcp 198.41.212.130:443: i/o timeout |
-| 404  | 172.64.201.25    | 172.64.201.25  | IPv4   | none | N/A    | 0        | N/A    | dial tcp 172.64.201.25:443: i/o timeout  |
+| 404  | ct.877774.xyz    | ct.877774.xyz  | IPv4   | none | N/A    | 0        | N/A    | dial tcp ct.877774.xyz:443: i/o timeout  |
 
 ### 📈 错误分析总结
 
@@ -56,7 +56,7 @@ none），说明无法与目标建立HTTP/3或其他现代协议连接
 | ---- | ------------------------------------- | ------------------------- | ------ | ---- | ------- | -------- | ---------- |
 | 74   | iplocation.io                         | 2606:4700:20::681a:bde    | IPv6   | h2   | ✅ 成功 | 40       | cloudflare |
 | 127  | sullivan.ns.cloudflare.com            | 2803:f800:50::6ca2:c3a1   | IPv6   | h2   | ✅ 成功 | 43       | cloudflare |
-| 322  | yx-auto.pages.dev                     | 2606:4700:3030::6815:e29  | IPv6   | h2   | ✅ 成功 | 43       | cloudflare |
+| 322  | ae8a9c24-83de.masx200.ddns-ip.net     | 2606:4700:3030::6815:e29  | IPv6   | h2   | ✅ 成功 | 43       | cloudflare |
 | 334  | whatismyipaddress.com                 | 104.19.223.79             | IPv4   | h2   | ✅ 成功 | 43       | cloudflare |
 | 347  | local-aria2-webui.masx200.ddns-ip.net | 172.67.157.182            | IPv4   | h2   | ✅ 成功 | 43       | cloudflare |
 | 415  | www.digitalocean.com                  | 2606:4700::6813:ae44      | IPv6   | h2   | ✅ 成功 | 43       | cloudflare |
@@ -76,7 +76,7 @@ none），说明无法与目标建立HTTP/3或其他现代协议连接
 | 411  | 104.26.13.31                          | 104.26.13.31              | IPv4   | h2   | ✅ 成功 | 45       | cloudflare |
 | 78   | www.4chan.org                         | 104.16.229.229            | IPv4   | h2   | ✅ 成功 | 46       | cloudflare |
 | 89   | huxley.ns.cloudflare.com              | 2a06:98c1:50::ac40:23bc   | IPv6   | h2   | ✅ 成功 | 46       | cloudflare |
-| 95   | cf.877771.xyz                         | 2606:4700:3033::6815:50b4 | IPv6   | h2   | ✅ 成功 | 46       | cloudflare |
+| 95   | 4444.cloudflare.182682.xyz                         | 2606:4700:3033::6815:50b4 | IPv6   | h2   | ✅ 成功 | 46       | cloudflare |
 | 109  | cfip.xxxxxxxx.tk                      | 104.18.228.35             | IPv4   | h2   | ✅ 成功 | 46       | cloudflare |
 | 145  | cu.877774.xyz                         | 104.26.4.114              | IPv4   | h2   | ✅ 成功 | 46       | cloudflare |
 | 148  | cu.877774.xyz                         | 104.26.4.117              | IPv4   | h2   | ✅ 成功 | 46       | cloudflare |
@@ -87,7 +87,7 @@ none），说明无法与目标建立HTTP/3或其他现代协议连接
 | 282  | moura.ns.cloudflare.com               | 108.162.195.217           | IPv4   | h2   | ✅ 成功 | 46       | cloudflare |
 | 289  | time.is                               | 104.26.13.54              | IPv4   | h2   | ✅ 成功 | 46       | cloudflare |
 | 307  | benedict.ns.cloudflare.com            | 2a06:98c1:50::ac40:23cd   | IPv6   | h2   | ✅ 成功 | 46       | cloudflare |
-| 320  | yx-auto.pages.dev                     | 172.67.157.182            | IPv4   | h2   | ✅ 成功 | 46       | cloudflare |
+| 320  | ae8a9c24-83de.masx200.ddns-ip.net     | 172.67.157.182            | IPv4   | h2   | ✅ 成功 | 46       | cloudflare |
 | 329  | singapore.com                         | 104.26.13.140             | IPv4   | h2   | ✅ 成功 | 46       | cloudflare |
 | 358  | ashton.ns.cloudflare.com              | 2a06:98c1:50::ac40:23ad   | IPv6   | h2   | ✅ 成功 | 46       | cloudflare |
 | 419  | eur.877774.xyz                        | 104.21.29.164             | IPv4   | h2   | ✅ 成功 | 46       | cloudflare |
@@ -116,8 +116,8 @@ none），说明无法与目标建立HTTP/3或其他现代协议连接
 | 442  | damien.ns.cloudflare.com              | 2a06:98c1:50::ac40:23a8   | IPv6   | h2   | ✅ 成功 | 47       | cloudflare |
 | 9    | comicabc.com                          | 2606:4700:3030::ac43:ae15 | IPv6   | h2   | ✅ 成功 | 48       | cloudflare |
 | 84   | huxley.ns.cloudflare.com              | 108.162.195.188           | IPv4   | h2   | ✅ 成功 | 48       | cloudflare |
-| 93   | cf.877771.xyz                         | 104.21.80.180             | IPv4   | h2   | ✅ 成功 | 48       | cloudflare |
-| 94   | cf.877771.xyz                         | 172.67.152.183            | IPv4   | h2   | ✅ 成功 | 48       | cloudflare |
+| 93   | 4444.cloudflare.182682.xyz                         | 104.21.80.180             | IPv4   | h2   | ✅ 成功 | 48       | cloudflare |
+| 94   | 4444.cloudflare.182682.xyz                         | 172.67.152.183            | IPv4   | h2   | ✅ 成功 | 48       | cloudflare |
 | 126  | sullivan.ns.cloudflare.com            | 2606:4700:58::a29f:2ca1   | IPv6   | h2   | ✅ 成功 | 48       | cloudflare |
 | 142  | cu.877774.xyz                         | 104.26.4.111              | IPv4   | h2   | ✅ 成功 | 48       | cloudflare |
 | 157  | pranab.ns.cloudflare.com              | 172.64.35.199             | IPv4   | h2   | ✅ 成功 | 48       | cloudflare |

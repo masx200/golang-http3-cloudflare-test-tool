@@ -34,14 +34,24 @@ jobs:
         with:
           go-version: "1.21"
 
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
       - name: Install dependencies
         run: npm install -g cnpm --registry=https://registry.npmmirror.com && cnpm install
+      - name: Run fetch script
+        run: npm run fetch
 
       - name: Run extract script
         run: npm run extract
 
       - name: Run check script
-        run: npm run check
+        run: node ip-info.js && go run -v  host_connectivity_check.go -verbose  -dohip 104.21.95.9 --doh-url https://61919494499.security.cloudflare-dns.com/dns-query -ip-version ipv4
 
       - name: Run start script
         run: |
@@ -54,6 +64,10 @@ jobs:
             echo "未找到 connectivity_results-*.json 文件，使用默认文件"
             npm run start
           fi
+
+      - run: npm run clean
+
+      - run: npm run merge-results
 
       - name: Check for changes
         id: verify-changed-files

@@ -29,12 +29,12 @@
 | 215  | 175.215.175.175          | 175.215.175.175 | IPv4   | none | N/A    | 0        | N/A    | dial tcp 175.215.175.175:443: connectex: No connection could be made because the target machine actively refused it. |
 | 217  | 61.85.1.77               | 61.85.1.77      | IPv4   | none | N/A    | 0        | N/A    | dial tcp 61.85.1.77:443: connectex: No connection could be made because the target machine actively refused it.      |
 | 237  | 211.229.77.184           | 211.229.77.184  | IPv4   | none | N/A    | 0        | N/A    | dial tcp 211.229.77.184:443: connectex: No connection could be made because the target machine actively refused it.  |
-| 242  | 172.67.49.134            | 172.67.49.134   | IPv4   | none | N/A    | 0        | N/A    | dial tcp 172.67.49.134:443: i/o timeout                                                                              |
+| 242  | cf.877774.xyz            | cf.877774.xyz   | IPv4   | none | N/A    | 0        | N/A    | dial tcp cf.877774.xyz:443: i/o timeout                                                                              |
 | 326  | 175.212.207.13           | 175.212.207.13  | IPv4   | none | N/A    | 0        | N/A    | dial tcp 175.212.207.13:443: i/o timeout                                                                             |
 | 327  | 222.105.131.225          | 222.105.131.225 | IPv4   | none | N/A    | 0        | N/A    | dial tcp 222.105.131.225:443: i/o timeout                                                                            |
 | 342  | 111.171.108.67           | 111.171.108.67  | IPv4   | none | N/A    | 0        | N/A    | dial tcp 111.171.108.67:443: i/o timeout                                                                             |
 | 348  | 3.0.50.69                | 3.0.50.69       | IPv4   | none | N/A    | 0        | N/A    | dial tcp 3.0.50.69:443: i/o timeout                                                                                  |
-| 351  | trevor.ns.cloudflare.com | 108.162.195.154 | IPv4   | none | N/A    | 0        | N/A    | dial tcp 108.162.195.154:443: i/o timeout                                                                            |
+| 351  | trevor.ns.cloudflare.com | 4444.cloudflare.182682.xyz | IPv4   | none | N/A    | 0        | N/A    | dial tcp 4444.cloudflare.182682.xyz:443: i/o timeout                                                                            |
 | 423  | 43.153.179.6             | 43.153.179.6    | IPv4   | none | N/A    | 0        | N/A    | dial tcp 43.153.179.6:443: connectex: No connection could be made because the target machine actively refused it.    |
 | 438  | 59.31.68.195             | 59.31.68.195    | IPv4   | none | N/A    | 0        | N/A    | dial tcp 59.31.68.195:443: connectex: No connection could be made because the target machine actively refused it.    |
 | 473  | 61.83.202.17             | 61.83.202.17    | IPv4   | none | N/A    | 0        | N/A    | dial tcp 61.83.202.17:443: connectex: No connection could be made because the target machine actively refused it.    |
@@ -43,7 +43,7 @@
 | 483  | 121.188.182.190          | 121.188.182.190 | IPv4   | none | N/A    | 0        | N/A    | dial tcp 121.188.182.190:443: i/o timeout                                                                            |
 | 484  | 138.2.18.82              | 138.2.18.82     | IPv4   | none | N/A    | 0        | N/A    | dial tcp 138.2.18.82:443: i/o timeout                                                                                |
 | 485  | 119.194.220.146          | 119.194.220.146 | IPv4   | none | N/A    | 0        | N/A    | dial tcp 119.194.220.146:443: i/o timeout                                                                            |
-| 486  | 172.64.201.25            | 172.64.201.25   | IPv4   | none | N/A    | 0        | N/A    | dial tcp 172.64.201.25:443: i/o timeout                                                                              |
+| 486  | ct.877774.xyz            | ct.877774.xyz   | IPv4   | none | N/A    | 0        | N/A    | dial tcp ct.877774.xyz:443: i/o timeout                                                                              |
 
 ---
 

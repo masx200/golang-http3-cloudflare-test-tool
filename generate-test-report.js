@@ -23,8 +23,9 @@ function findLatestConnectivityResultsFile() {
 
     // 筛选出 connectivity_results-*.json 格式的文件
     const connectivityFiles = files
-      .filter((file) =>
-        file.startsWith("connectivity_results-") && file.endsWith(".json")
+      .filter(
+        (file) =>
+          file.startsWith("connectivity_results-") && file.endsWith(".json"),
       )
       .map((file) => {
         const filePath = join(process.cwd(), file);
@@ -55,7 +56,7 @@ function findLatestConnectivityResultsFile() {
 /**
  * 生成HTTP/3连接测试失败报告
  * 从connectivity_results.json中提取所有失败的测试结果并生成格式化报告
- * 新增功能：输出延迟最低的前100条记录
+ * 新增功能：输出延迟最低的前2000条记录
  */
 
 class TestReportGenerator {
@@ -67,7 +68,7 @@ class TestReportGenerator {
     this.ipInfo = null; // 存储IP信息
     this.ipFetcher = new IPInfoFetcher(); // IP信息获取器
     this.options = {
-      topLatencyCount: options.topLatencyCount || 100,
+      topLatencyCount: options.topLatencyCount || 2000,
       includeLatencySection: options.includeLatencySection !== false,
       includeIPInfo: options.includeIPInfo !== false,
       ...options,
@@ -164,7 +165,8 @@ class TestReportGenerator {
 
       // 计算延迟统计
       if (
-        result.latency_ms && typeof result.latency_ms === "number" &&
+        result.latency_ms &&
+        typeof result.latency_ms === "number" &&
         result.latency_ms > 0
       ) {
         totalLatency += result.latency_ms;
@@ -203,10 +205,11 @@ class TestReportGenerator {
    */
   getTopLatencyRecords(count = this.options.topLatencyCount) {
     // 过滤出有有效延迟数据的记录
-    const validLatencyTests = this.allTests.filter((test) =>
-      test.latency_ms &&
-      typeof test.latency_ms === "number" &&
-      test.latency_ms > 0
+    const validLatencyTests = this.allTests.filter(
+      (test) =>
+        test.latency_ms &&
+        typeof test.latency_ms === "number" &&
+        test.latency_ms > 0,
     );
 
     // 按延迟升序排序
@@ -283,7 +286,7 @@ class TestReportGenerator {
             `|------|-----------|--------|--------|------|--------|----------|--------|----------|\n`;
 
           tests.forEach((test) => {
-            const host = test.host.length > 200
+            const host = test.host.length > 2000
               ? test.host.substring(0, 170) + "..."
               : test.host;
             const errorMsg = test.error_msg.length > 500
@@ -349,7 +352,7 @@ class TestReportGenerator {
 `;
 
         topLatencyRecords.forEach((test) => {
-          const host = test.host.length > 200
+          const host = test.host.length > 2000
             ? test.host.substring(0, 170) + "..."
             : test.host;
           const serverHeader = test.server_header.length > 150
@@ -814,8 +817,9 @@ class TestReportGenerator {
         ipPatterns[ipPrefix] = (ipPatterns[ipPrefix] || 0) + 1;
       });
 
-      const topIpPattern = Object.entries(ipPatterns)
-        .sort(([, a], [, b]) => b - a)[0];
+      const topIpPattern = Object.entries(ipPatterns).sort(
+        ([, a], [, b]) => b - a,
+      )[0];
 
       if (topIpPattern) {
         patterns[`超时集中度分析`] =
@@ -833,10 +837,12 @@ class TestReportGenerator {
 
     // 分析协议分布
     const protocolDistribution = {};
-    Object.values(groupedTests).flat().forEach((test) => {
-      protocolDistribution[test.protocol] =
-        (protocolDistribution[test.protocol] || 0) + 1;
-    });
+    Object.values(groupedTests)
+      .flat()
+      .forEach((test) => {
+        protocolDistribution[test.protocol] =
+          (protocolDistribution[test.protocol] || 0) + 1;
+      });
 
     const noProtocolCount = protocolDistribution["none"] || 0;
     if (noProtocolCount > 0) {
@@ -845,12 +851,12 @@ class TestReportGenerator {
     }
 
     // 分析IP版本分布
-    const ipv4Count =
-      Object.values(groupedTests).flat().filter((t) => t.ip_version === "IPv4")
-        .length;
-    const ipv6Count =
-      Object.values(groupedTests).flat().filter((t) => t.ip_version === "IPv6")
-        .length;
+    const ipv4Count = Object.values(groupedTests)
+      .flat()
+      .filter((t) => t.ip_version === "IPv4").length;
+    const ipv6Count = Object.values(groupedTests)
+      .flat()
+      .filter((t) => t.ip_version === "IPv6").length;
 
     if (ipv4Count > 0 && ipv6Count === 0) {
       patterns[`IP版本分析`] =
@@ -865,9 +871,11 @@ class TestReportGenerator {
 
     // 分析特定的主机模式
     const hostCounts = {};
-    Object.values(groupedTests).flat().forEach((test) => {
-      hostCounts[test.host] = (hostCounts[test.host] || 0) + 1;
-    });
+    Object.values(groupedTests)
+      .flat()
+      .forEach((test) => {
+        hostCounts[test.host] = (hostCounts[test.host] || 0) + 1;
+      });
 
     const problematicHosts = Object.entries(hostCounts)
       .filter(([, count]) => count > 2)
@@ -875,9 +883,9 @@ class TestReportGenerator {
       .slice(0, 3);
 
     if (problematicHosts.length > 0) {
-      const hostList = problematicHosts.map(([host, count]) =>
-        `${host} (${count}次)`
-      ).join(", ");
+      const hostList = problematicHosts
+        .map(([host, count]) => `${host} (${count}次)`)
+        .join(", ");
       patterns[`问题主机分析`] =
         `以下主机出现多次失败：${hostList}，建议重点检查这些主机的网络状态和服务可用性`;
     }
@@ -1105,12 +1113,8 @@ async function main() {
     .name("generate-test-report")
     .description("HTTP/3 连接测试报告生成器")
     .version("2.0.0")
-    .option(
-      "-f, --file <path>",
-      "测试结果文件路径",
-      defaultFile,
-    )
-    .option("-c, --count <number>", "延迟最低的记录数量", "100")
+    .option("-f, --file <path>", "测试结果文件路径", defaultFile)
+    .option("-c, --count <number>", "延迟最低的记录数量", "2000")
     .option("--no-latency-section", "不包含延迟最低记录部分")
     .option("--no-ip-info", "不包含IP地址信息")
     .option("-o, --output <format>", "输出格式 (markdown, json, both)", "both");
