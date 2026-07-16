@@ -1,0 +1,100 @@
+{
+  "report_info": {
+    "generated_at": "2026-07-16T21:27:26.713Z",
+    "source_file": "connectivity_results-20260716-212726.json",
+    "total_tests": 945,
+    "failed_tests": 945,
+    "success_tests": 0,
+    "failure_rate": 100
+  },
+  "latency_statistics": {
+    "average_latency_ms": 0,
+    "min_latency_ms": null,
+    "max_latency_ms": 0,
+    "top_latency_count": 0,
+    "latency_ranges": {
+      "超快 (<50ms)": 0,
+      "快 (50-100ms)": 0,
+      "正常 (100-200ms)": 0,
+      "慢 (200-500ms)": 0,
+      "很慢 (>500ms)": 0
+    }
+  },
+  "error_analysis": {
+    "error_types": {
+      "未知错误": 129,
+      "DNS解析错误: 其他DNS错误": 814,
+      "连接超时: I/O超时": 2
+    },
+    "grouped_tests": {
+      "未知错误": [],
+      "DNS解析错误: 其他DNS错误": [],
+      "连接超时: I/O超时": []
+    },
+    "error_patterns": {
+      "超时集中度分析": "共有 2 次超时，主要集中在IP段 34.143（1 次），可能存在网络路由问题或目标服务器负载过高",
+      "协议协商分析": "有 132 次失败是因为协议协商失败（protocol: none），说明无法与目标建立HTTP/3或其他现代协议连接",
+      "IP版本分析": "IPv4失败 815 次，IPv6失败 129 次，两种协议都存在问题",
+      "问题主机分析": "以下主机出现多次失败：cmcc.877774.xyz (26次), ct.877774.xyz (8次), cfip.xxxxxxxx.tk (7次)，建议重点检查这些主机的网络状态和服务可用性"
+    },
+    "main_error_distribution": {
+      "DNS解析错误": {
+        "count": 814,
+        "percentage": "86.1"
+      },
+      "未知错误": {
+        "count": 129,
+        "percentage": "13.7"
+      },
+      "连接超时": {
+        "count": 2,
+        "percentage": "0.2"
+      }
+    }
+  },
+  "statistics": {
+    "by_ip_version": {
+      "ipv4": 815,
+      "ipv6": 129
+    },
+    "by_protocol": {
+      "none": 132,
+      "h2": 813
+    },
+    "by_error_type": {
+      "未知错误": 129,
+      "DNS解析错误: 其他DNS错误": 814,
+      "连接超时: I/O超时": 2
+    }
+  },
+  "failed_tests": [],
+  "top_latency_records": [],
+  "test_environment": {
+    "timestamp": "2026-07-16T21:27:26.714Z",
+    "ip_info": {
+      "country": "美国",
+      "organization": "Microsoft Azure",
+      "country_code": "US",
+      "isp": "Microsoft Azure",
+      "region": "亚利桑那州 凤凰城 — 微软云 Azure",
+      "asn_organization": "Microsoft Corporation",
+      "region_code": "AZ",
+      "asn": 8075,
+      "city": "Phoenix",
+      "offset": -25200,
+      "postal_code": "85036",
+      "timezone": "America/Phoenix",
+      "latitude": 33.4532,
+      "ip": "57.154.5.68",
+      "continent_code": "NA",
+      "longitude": -112.0748,
+      "as_name": "cloud",
+      "as_domain": "microsoft.com",
+      "continent": "North America",
+      "time_zone": "America/Phoenix",
+      "org": "Microsoft Azure",
+      "user_agent": null,
+      "source": "combined"
+    }
+  }
+}
