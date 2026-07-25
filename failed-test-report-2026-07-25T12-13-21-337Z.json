@@ -1,0 +1,104 @@
+{
+  "report_info": {
+    "generated_at": "2026-07-25T12:13:21.366Z",
+    "source_file": "connectivity_results-20260725-121320.json",
+    "total_tests": 1108,
+    "failed_tests": 1108,
+    "success_tests": 0,
+    "failure_rate": 100
+  },
+  "latency_statistics": {
+    "average_latency_ms": 0,
+    "min_latency_ms": null,
+    "max_latency_ms": 0,
+    "top_latency_count": 0,
+    "latency_ranges": {
+      "超快 (<50ms)": 0,
+      "快 (50-100ms)": 0,
+      "正常 (100-200ms)": 0,
+      "慢 (200-500ms)": 0,
+      "很慢 (>500ms)": 0
+    }
+  },
+  "error_analysis": {
+    "error_types": {
+      "DNS解析错误: 其他DNS错误": 1105,
+      "连接超时: I/O超时": 3
+    },
+    "grouped_tests": {
+      "DNS解析错误: 其他DNS错误": [],
+      "连接超时: I/O超时": []
+    },
+    "error_patterns": {
+      "超时集中度分析": "共有 3 次超时，主要集中在IP段 198.41（1 次），可能存在网络路由问题或目标服务器负载过高",
+      "协议协商分析": "有 4 次失败是因为协议协商失败（protocol: none），说明无法与目标建立HTTP/3或其他现代协议连接",
+      "IP版本分析": "IPv4失败 812 次，IPv6失败 295 次，两种协议都存在问题",
+      "问题主机分析": "以下主机出现多次失败：cmcc.877774.xyz (26次), cloudflare.182682.xyz (10次), 6666.cloudflare.182682.xyz (10次)，建议重点检查这些主机的网络状态和服务可用性"
+    },
+    "main_error_distribution": {
+      "DNS解析错误": {
+        "count": 1105,
+        "percentage": "99.7"
+      },
+      "连接超时": {
+        "count": 3,
+        "percentage": "0.3"
+      }
+    }
+  },
+  "statistics": {
+    "by_ip_version": {
+      "ipv4": 812,
+      "ipv6": 295
+    },
+    "by_protocol": {
+      "h2": 1104,
+      "none": 4
+    },
+    "by_error_type": {
+      "DNS解析错误: 其他DNS错误": 1105,
+      "连接超时: I/O超时": 3
+    }
+  },
+  "failed_tests": [],
+  "top_latency_records": [],
+  "test_environment": {
+    "timestamp": "2026-07-25T12:13:21.368Z",
+    "ip_info": {
+      "ip": "2a09:bac1:76a0:1a98::48c:6f",
+      "ip_decimal": 5.587809435062771e+37,
+      "country": "United States",
+      "country_iso": "US",
+      "country_eu": false,
+      "region_name": "California",
+      "region_code": "CA",
+      "metro_code": 803,
+      "zip_code": "90022",
+      "city": "East Los Angeles",
+      "latitude": 34.0261,
+      "longitude": -118.1756,
+      "time_zone": "America/Los_Angeles",
+      "asn": "AS13335",
+      "asn_org": "CLOUDFLARENET",
+      "user_agent": {
+        "product": "curl",
+        "version": "8.5.0",
+        "raw_value": "curl/8.5.0"
+      },
+      "region": "加利福尼亚州 东洛杉矶 — Cloudflare CDN 节点",
+      "organization": "Cloudflare Warp",
+      "isp": "Cloudflare Warp",
+      "asn_organization": "Cloudflare, Inc.",
+      "postal_code": "90022",
+      "continent_code": "NA",
+      "offset": -28800,
+      "timezone": "America/Los_Angeles",
+      "country_code": "US",
+      "as_name": "CLOUDFLARENET",
+      "as_domain": "cloudflare.com",
+      "continent": "North America",
+      "org": "Cloudflare Warp",
+      "source": "combined"
+    }
+  }
+}
