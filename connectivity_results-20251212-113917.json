@@ -925,17 +925,6 @@
   },
   {
     "host": "cfip.xxxxxxxx.tk",
-    "target_ip": "198.41.212.130",
-    "ip_version": "IPv4",
-    "success": false,
-    "status_code": null,
-    "protocol": "none",
-    "latency_ms": 0,
-    "server_header": null,
-    "error_msg": "dial tcp 198.41.212.130:443: i/o timeout"
-  },
-  {
-    "host": "cfip.xxxxxxxx.tk",
     "target_ip": "198.41.214.141",
     "ip_version": "IPv4",
     "success": true,
@@ -1153,17 +1142,6 @@
     "latency_ms": 63,
     "server_header": "cloudflare",
     "error_msg": null
-  },
-  {
-    "host": "yx-auto.pages.dev",
-    "target_ip": "",
-    "ip_version": "",
-    "success": false,
-    "status_code": null,
-    "protocol": "",
-    "latency_ms": null,
-    "server_header": null,
-    "error_msg": "DNS解析无结果"
   },
   {
     "host": "huxley.ns.cloudflare.com",
@@ -2871,17 +2849,6 @@
     "error_msg": null
   },
   {
-    "host": "**********.********************.***.**",
-    "target_ip": "",
-    "ip_version": "",
-    "success": false,
-    "status_code": null,
-    "protocol": "",
-    "latency_ms": null,
-    "server_header": null,
-    "error_msg": "DNS解析无结果"
-  },
-  {
     "host": "bowen.ns.cloudflare.com",
     "target_ip": "108.162.195.83",
     "ip_version": "IPv4",
@@ -3630,17 +3597,6 @@
     "error_msg": null
   },
   {
-    "host": "**********.**********.***.***",
-    "target_ip": "",
-    "ip_version": "",
-    "success": false,
-    "status_code": null,
-    "protocol": "",
-    "latency_ms": null,
-    "server_header": null,
-    "error_msg": "DNS解析无结果"
-  },
-  {
     "host": "[2606:4700:964f::6e2c:588e]",
     "target_ip": "2606:4700:964f::6e2c:588e",
     "ip_version": "IPv6",
@@ -4191,17 +4147,6 @@
     "error_msg": null
   },
   {
-    "host": "172.64.201.25",
-    "target_ip": "172.64.201.25",
-    "ip_version": "IPv4",
-    "success": false,
-    "status_code": null,
-    "protocol": "none",
-    "latency_ms": 0,
-    "server_header": null,
-    "error_msg": "dial tcp 172.64.201.25:443: i/o timeout"
-  },
-  {
     "host": "172.67.79.211",
     "target_ip": "172.67.79.211",
     "ip_version": "IPv4",
@@ -4642,28 +4587,6 @@
     "error_msg": null
   },
   {
-    "host": "japan.com",
-    "target_ip": "2606:4700:20::681a:53c",
-    "ip_version": "IPv6",
-    "success": false,
-    "status_code": null,
-    "protocol": "none",
-    "latency_ms": 0,
-    "server_header": null,
-    "error_msg": "dial tcp [2606:4700:20::681a:53c]:443: connect: network is unreachable"
-  },
-  {
-    "host": "japan.com",
-    "target_ip": "2606:4700:20::ac43:465c",
-    "ip_version": "IPv6",
-    "success": false,
-    "status_code": null,
-    "protocol": "none",
-    "latency_ms": 0,
-    "server_header": null,
-    "error_msg": "dial tcp [2606:4700:20::ac43:465c]:443: connect: network is unreachable"
-  },
-  {
     "host": "stock.hostmonit.com",
     "target_ip": "172.67.187.251",
     "ip_version": "IPv4",
@@ -4695,17 +4618,6 @@
     "latency_ms": 58,
     "server_header": "cloudflare",
     "error_msg": null
-  },
-  {
-    "host": "stock.hostmonit.com",
-    "target_ip": "2606:4700:3033::ac43:bbfb",
-    "ip_version": "IPv6",
-    "success": false,
-    "status_code": null,
-    "protocol": "none",
-    "latency_ms": 0,
-    "server_header": null,
-    "error_msg": "dial tcp [2606:4700:3033::ac43:bbfb]:443: connect: network is unreachable"
   },
   {
     "host": "ifconfig.co",
