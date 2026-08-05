@@ -1,0 +1,104 @@
+{
+  "report_info": {
+    "generated_at": "2026-08-05T19:27:54.772Z",
+    "source_file": "connectivity_results-20260805-192753.json",
+    "total_tests": 1069,
+    "failed_tests": 1069,
+    "success_tests": 0,
+    "failure_rate": 100
+  },
+  "latency_statistics": {
+    "average_latency_ms": 0,
+    "min_latency_ms": null,
+    "max_latency_ms": 0,
+    "top_latency_count": 0,
+    "latency_ranges": {
+      "超快 (<50ms)": 0,
+      "快 (50-100ms)": 0,
+      "正常 (100-200ms)": 0,
+      "慢 (200-500ms)": 0,
+      "很慢 (>500ms)": 0
+    }
+  },
+  "error_analysis": {
+    "error_types": {
+      "DNS解析错误: 其他DNS错误": 1065,
+      "连接超时: I/O超时": 4
+    },
+    "grouped_tests": {
+      "DNS解析错误: 其他DNS错误": [],
+      "连接超时: I/O超时": []
+    },
+    "error_patterns": {
+      "超时集中度分析": "共有 4 次超时，主要集中在IP段 198.41（2 次），可能存在网络路由问题或目标服务器负载过高",
+      "协议协商分析": "有 6 次失败是因为协议协商失败（protocol: none），说明无法与目标建立HTTP/3或其他现代协议连接",
+      "IP版本分析": "IPv4失败 782 次，IPv6失败 285 次，两种协议都存在问题",
+      "问题主机分析": "以下主机出现多次失败：cmcc.877774.xyz (26次), cfip.xxxxxxxx.tk (15次), cloudflare.182682.xyz (10次)，建议重点检查这些主机的网络状态和服务可用性"
+    },
+    "main_error_distribution": {
+      "DNS解析错误": {
+        "count": 1065,
+        "percentage": "99.6"
+      },
+      "连接超时": {
+        "count": 4,
+        "percentage": "0.4"
+      }
+    }
+  },
+  "statistics": {
+    "by_ip_version": {
+      "ipv4": 782,
+      "ipv6": 285
+    },
+    "by_protocol": {
+      "h2": 1063,
+      "none": 6
+    },
+    "by_error_type": {
+      "DNS解析错误: 其他DNS错误": 1065,
+      "连接超时: I/O超时": 4
+    }
+  },
+  "failed_tests": [],
+  "top_latency_records": [],
+  "test_environment": {
+    "timestamp": "2026-08-05T19:27:54.774Z",
+    "ip_info": {
+      "ip": "2a09:bac1:76a1:62b0::259:c7",
+      "ip_decimal": 5.587809435062926e+37,
+      "country": "United States",
+      "country_iso": "US",
+      "country_eu": false,
+      "region_name": "Virginia",
+      "region_code": "DC",
+      "metro_code": 511,
+      "zip_code": "20190",
+      "city": "Washington",
+      "latitude": 38.9609,
+      "longitude": -77.3429,
+      "time_zone": "America/New_York",
+      "asn": "AS13335",
+      "asn_org": "CLOUDFLARENET",
+      "user_agent": {
+        "product": "curl",
+        "version": "8.5.0",
+        "raw_value": "curl/8.5.0"
+      },
+      "region": "弗吉尼亚州 雷斯顿 — Cloudflare CDN 节点",
+      "organization": "Cloudflare Warp",
+      "isp": "Cloudflare Warp",
+      "asn_organization": "Cloudflare, Inc.",
+      "postal_code": "20016",
+      "continent_code": "NA",
+      "offset": -18000,
+      "timezone": "America/New_York",
+      "country_code": "US",
+      "as_name": "CLOUDFLARENET",
+      "as_domain": "cloudflare.com",
+      "continent": "North America",
+      "org": "Cloudflare Warp",
+      "source": "combined"
+    }
+  }
+}
