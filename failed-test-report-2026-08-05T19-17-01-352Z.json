@@ -1,0 +1,100 @@
+{
+  "report_info": {
+    "generated_at": "2026-08-05T19:17:01.376Z",
+    "source_file": "connectivity_results-20260805-191700.json",
+    "total_tests": 953,
+    "failed_tests": 953,
+    "success_tests": 0,
+    "failure_rate": 100
+  },
+  "latency_statistics": {
+    "average_latency_ms": 0,
+    "min_latency_ms": null,
+    "max_latency_ms": 0,
+    "top_latency_count": 0,
+    "latency_ranges": {
+      "超快 (<50ms)": 0,
+      "快 (50-100ms)": 0,
+      "正常 (100-200ms)": 0,
+      "慢 (200-500ms)": 0,
+      "很慢 (>500ms)": 0
+    }
+  },
+  "error_analysis": {
+    "error_types": {
+      "未知错误": 129,
+      "DNS解析错误: 其他DNS错误": 820,
+      "连接超时: I/O超时": 4
+    },
+    "grouped_tests": {
+      "未知错误": [],
+      "DNS解析错误: 其他DNS错误": [],
+      "连接超时: I/O超时": []
+    },
+    "error_patterns": {
+      "超时集中度分析": "共有 4 次超时，主要集中在IP段 34.143（1 次），可能存在网络路由问题或目标服务器负载过高",
+      "协议协商分析": "有 135 次失败是因为协议协商失败（protocol: none），说明无法与目标建立HTTP/3或其他现代协议连接",
+      "IP版本分析": "IPv4失败 822 次，IPv6失败 129 次，两种协议都存在问题",
+      "问题主机分析": "以下主机出现多次失败：cmcc.877774.xyz (26次), cfip.xxxxxxxx.tk (15次), ct.877774.xyz (8次)，建议重点检查这些主机的网络状态和服务可用性"
+    },
+    "main_error_distribution": {
+      "DNS解析错误": {
+        "count": 820,
+        "percentage": "86.0"
+      },
+      "未知错误": {
+        "count": 129,
+        "percentage": "13.5"
+      },
+      "连接超时": {
+        "count": 4,
+        "percentage": "0.4"
+      }
+    }
+  },
+  "statistics": {
+    "by_ip_version": {
+      "ipv4": 822,
+      "ipv6": 129
+    },
+    "by_protocol": {
+      "none": 135,
+      "h2": 818
+    },
+    "by_error_type": {
+      "未知错误": 129,
+      "DNS解析错误: 其他DNS错误": 820,
+      "连接超时: I/O超时": 4
+    }
+  },
+  "failed_tests": [],
+  "top_latency_records": [],
+  "test_environment": {
+    "timestamp": "2026-08-05T19:17:01.378Z",
+    "ip_info": {
+      "region": "弗吉尼亚州 华盛顿 — 微软云 Azure",
+      "organization": "Microsoft Azure",
+      "region_code": "VA",
+      "isp": "Microsoft Azure",
+      "city": "Dulles",
+      "asn_organization": "Microsoft Corporation",
+      "postal_code": "20189",
+      "asn": 8075,
+      "latitude": 39.0367,
+      "ip": "52.188.87.4",
+      "continent_code": "NA",
+      "offset": -18000,
+      "country": "美国",
+      "timezone": "America/New_York",
+      "country_code": "US",
+      "longitude": -77.4209,
+      "as_name": "Microsoft Corporation",
+      "as_domain": "microsoft.com",
+      "continent": "North America",
+      "time_zone": "America/New_York",
+      "org": "Microsoft Azure",
+      "user_agent": null,
+      "source": "combined"
+    }
+  }
+}
